@@ -9,6 +9,5 @@ public class Matricula {
 	ModoPago tipoPago;
 	private Date fecha;
 	private boolean pagado;
-	private int attribute;
 
 }
