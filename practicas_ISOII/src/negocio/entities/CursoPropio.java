@@ -12,7 +12,6 @@ public class CursoPropio {
 	Collection<Materia> materias;
 	EstadoCurso estado;
 	TipoCurso tipo;
-	CursoPropioDAO cursoPropioDao;
 	private String id;
 	private String nombre;
 	private int ECTS;
