@@ -9,6 +9,6 @@ public class Materia {
 	private double horas;
 	private Date fechaInicio;
 	private Date fechaFin;
-	CursoPropio curso;
+	CursoPropio curso; //puede cambiar
 
 }
