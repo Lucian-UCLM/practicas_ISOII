@@ -12,7 +12,16 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 	 * @param curso
 	 */
 	public int crearNuevoCurso(CursoPropio curso) {
-		// TODO - implement CursoPropioDAO.crearNuevoCurso
+		/*boolean res = false;
+		String sql = "";
+		sql="INSERT INTO APP.CURSOS (CURSOID, FECHA, PRECIO, PLAZAS, TIPO, LOCALIZACION, NOMBRE, CERTIFICACION) VALUES("
+				+ "'"+c.getId()+"','"+format.format(c.getFecha())+"','"+c.getPrecio()+"',"
+				+ "'"+c.getPlazas()+"','"+c.getTipoCurso()+"','"+c.getLocalizacion()+"',"
+				+ "'"+c.getNombreCurso()+"','"+c.getCertificacionMin()+"')";
+		if(GestorBD.getAgenteBD().insert(sql)==1) {
+			res=true;
+		}
+		return res;*/
 		throw new UnsupportedOperationException();
 	}
 
@@ -21,7 +30,16 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 	 * @param curso
 	 */
 	public CursoPropio seleccionarCurso(CursoPropio curso) {
-		// TODO - implement CursoPropioDAO.seleccionarCurso
+		/*String sql= "SELECT CURSOID FROM CURSOS WHERE CURSOID = '"+id+"'";
+		Curso curso= null;
+		ArrayList<Object> aux = null;
+		ArrayList<Object> res =GestorBD.getAgenteBD().select(sql);
+		if (res.size() == 1){
+			curso = new Curso((int) res.get(0), (Date) res.get(1),
+					(double) res.get(2), (int) res.get(3), (String) res.get(4),
+					(String) res.get(5), (String) res.get(6), (int) res.get(7));
+		}
+		return curso;*/
 		throw new UnsupportedOperationException();
 	}
 
