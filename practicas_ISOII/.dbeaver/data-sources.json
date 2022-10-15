@@ -1,0 +1,90 @@
+{
+	"folders": {},
+	"connections": {
+		"derby-183dc8f8807-23087b2f64764d66": {
+			"provider": "generic",
+			"driver": "derby",
+			"name": "dbderby",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\Carlos\\git\\practicas_ISOII\\practicas_ISOII\\dbderby",
+				"url": "jdbc:derby:C:\\Users\\Carlos\\git\\practicas_ISOII\\practicas_ISOII\\dbderby",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"virtual-models": {
+		"derby-183dc8f8807-23087b2f64764d66": {
+			"ROOT": {
+				"@properties": {
+					"erd.diagram.state": {
+						"serialized": "\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202210152044\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"derby-183dc8f8807-23087b2f64764d66\"\u003e\u003centity id\u003d\"1\" name\u003d\"CENTRO\" fq-name\u003d\"ROOT.CENTRO\" order\u003d\"2\" x\u003d\"468\" y\u003d\"454\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"CURSOPROPIO\" fq-name\u003d\"ROOT.CURSOPROPIO\" order\u003d\"5\" x\u003d\"380\" y\u003d\"70\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"ESTUDIANTE\" fq-name\u003d\"ROOT.ESTUDIANTE\" order\u003d\"0\" x\u003d\"138\" y\u003d\"36\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"MATERIA\" fq-name\u003d\"ROOT.MATERIA\" order\u003d\"6\" x\u003d\"808\" y\u003d\"35\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"MATRICULA\" fq-name\u003d\"ROOT.MATRICULA\" order\u003d\"7\" x\u003d\"138\" y\u003d\"336\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"6\" name\u003d\"PROFESOR\" fq-name\u003d\"ROOT.PROFESOR\" order\u003d\"1\" x\u003d\"816\" y\u003d\"264\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"7\" name\u003d\"PROFESOREXTERNO\" fq-name\u003d\"ROOT.PROFESOREXTERNO\" order\u003d\"4\" x\u003d\"985\" y\u003d\"484\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"8\" name\u003d\"PROFESORUCLM\" fq-name\u003d\"ROOT.PROFESORUCLM\" order\u003d\"3\" x\u003d\"696\" y\u003d\"463\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations\u003e\u003crelation name\u003d\"CURSOPROPIO_FK\" fq-name\u003d\"ROOT.CURSOPROPIO.CURSOPROPIO_FK\" type\u003d\"fk\" pk-ref\u003d\"1\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"MATERIA_FK_1\" fq-name\u003d\"ROOT.MATERIA.MATERIA_FK_1\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"4\"/\u003e\u003crelation name\u003d\"MATRICULA_FK\" fq-name\u003d\"ROOT.MATRICULA.MATRICULA_FK\" type\u003d\"fk\" pk-ref\u003d\"2\" fk-ref\u003d\"5\"/\u003e\u003crelation name\u003d\"MATRICULA_FK_1\" fq-name\u003d\"ROOT.MATRICULA.MATRICULA_FK_1\" type\u003d\"fk\" pk-ref\u003d\"3\" fk-ref\u003d\"5\"/\u003e\u003crelation name\u003d\"CURSOPROPIO_FK_1\" fq-name\u003d\"ROOT.CURSOPROPIO.CURSOPROPIO_FK_1\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"CURSOPROPIO_FK_2\" fq-name\u003d\"ROOT.CURSOPROPIO.CURSOPROPIO_FK_2\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"2\"/\u003e\u003crelation name\u003d\"PROFESOREXTERNO_FK\" fq-name\u003d\"ROOT.PROFESOREXTERNO.PROFESOREXTERNO_FK\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"7\"/\u003e\u003crelation name\u003d\"PROFESORUCLM_FK\" fq-name\u003d\"ROOT.PROFESORUCLM.PROFESORUCLM_FK\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"8\"/\u003e\u003crelation name\u003d\"MATERIA_FK\" fq-name\u003d\"ROOT.MATERIA.MATERIA_FK\" type\u003d\"fk\" pk-ref\u003d\"6\" fk-ref\u003d\"4\"/\u003e\u003c/relations\u003e\u003c/diagram\u003e"
+					}
+				},
+				":MATRICULA": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202210151935\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"derby-183dc8f8807-23087b2f64764d66\"\u003e\u003centity id\u003d\"1\" name\u003d\"CENTRO\" fq-name\u003d\"ROOT.CENTRO\" order\u003d\"0\" x\u003d\"336\" y\u003d\"425\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"CURSOPROPIO\" fq-name\u003d\"ROOT.CURSOPROPIO\" order\u003d\"1\" x\u003d\"336\" y\u003d\"181\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"PROFESOR\" fq-name\u003d\"ROOT.PROFESOR\" order\u003d\"2\" x\u003d\"741\" y\u003d\"169\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"MATERIA\" fq-name\u003d\"ROOT.MATERIA\" order\u003d\"3\" x\u003d\"526\" y\u003d\"60\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"PROFESORUCLM\" fq-name\u003d\"ROOT.PROFESORUCLM\" order\u003d\"4\" border-width\u003d\"3\" x\u003d\"668\" y\u003d\"402\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"6\" name\u003d\"PROFESOREXTERNO\" fq-name\u003d\"ROOT.PROFESOREXTERNO\" order\u003d\"5\" x\u003d\"871\" y\u003d\"479\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"7\" name\u003d\"MATRICULA\" fq-name\u003d\"ROOT.MATRICULA\" order\u003d\"6\" x\u003d\"122\" y\u003d\"418\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"8\" name\u003d\"ESTUDIANTE\" fq-name\u003d\"ROOT.ESTUDIANTE\" order\u003d\"7\" x\u003d\"146\" y\u003d\"77\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations/\u003e\u003c/diagram\u003e"
+						}
+					},
+					"constraints": {
+						"MATRICULA_VK": {
+							"type": "vpk",
+							"attributes": [
+								"ESTUDIANTE"
+							]
+						}
+					}
+				},
+				":PROFESOREXTERNO": {
+					"properties": {
+						"erd.diagram.state": {
+							"serialized": "\u003cdiagram version\u003d\"1\" name\u003d\"empty\" time\u003d\"202210151934\"\u003e\u003centities\u003e\u003cdata-source id\u003d\"derby-183dc8f8807-23087b2f64764d66\"\u003e\u003centity id\u003d\"1\" name\u003d\"PROFESORUCLM\" fq-name\u003d\"ROOT.PROFESORUCLM\" order\u003d\"0\" x\u003d\"763\" y\u003d\"388\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"2\" name\u003d\"PROFESOR\" fq-name\u003d\"ROOT.PROFESOR\" order\u003d\"1\" x\u003d\"881\" y\u003d\"230\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"3\" name\u003d\"MATERIA\" fq-name\u003d\"ROOT.MATERIA\" order\u003d\"2\" x\u003d\"625\" y\u003d\"41\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"4\" name\u003d\"CURSOPROPIO\" fq-name\u003d\"ROOT.CURSOPROPIO\" order\u003d\"3\" x\u003d\"422\" y\u003d\"135\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"5\" name\u003d\"CENTRO\" fq-name\u003d\"ROOT.CENTRO\" order\u003d\"4\" x\u003d\"497\" y\u003d\"435\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"6\" name\u003d\"ESTUDIANTE\" fq-name\u003d\"ROOT.ESTUDIANTE\" order\u003d\"5\" x\u003d\"109\" y\u003d\"35\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"7\" name\u003d\"MATRICULA\" fq-name\u003d\"ROOT.MATRICULA\" order\u003d\"6\" x\u003d\"162\" y\u003d\"328\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003centity id\u003d\"8\" name\u003d\"PROFESOREXTERNO\" fq-name\u003d\"ROOT.PROFESOREXTERNO\" order\u003d\"7\" border-width\u003d\"3\" x\u003d\"958\" y\u003d\"390\"\u003e\u003cpath name\u003d\"ROOT\"/\u003e\u003c/entity\u003e\u003c/data-source\u003e\u003c/entities\u003e\u003crelations/\u003e\u003c/diagram\u003e"
+						}
+					},
+					"constraints": {}
+				},
+				":CURSOPROPIO": {
+					"constraints": {
+						"CURSOPROPIO_VK": {
+							"type": "vpk",
+							"attributes": [
+								"DIRECTOR"
+							]
+						},
+						"CURSOPROPIO_VK": {
+							"type": "vpk",
+							"attributes": [
+								"SECRETARIO"
+							]
+						}
+					}
+				},
+				":PROFESOR": {
+					"constraints": {
+						"PROFESOR_VK": {
+							"type": "vpk",
+							"attributes": [
+								"NOMBRE"
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
