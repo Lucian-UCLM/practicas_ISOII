@@ -1,4 +1,4 @@
-.class
+*.class
 # Log file
 *.log
 
@@ -9,7 +9,7 @@
 .mtj.tmp/
 
 # Package Files #
-.jar
+*.jar
 *.war
 *.nar
 *.ear
