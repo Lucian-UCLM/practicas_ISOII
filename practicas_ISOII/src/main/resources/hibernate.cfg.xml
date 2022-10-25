@@ -5,8 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
-        <property name="hibernate.connection.password">root</property>
-        <property name="hibernate.connection.url">jdbc:derby:/test;create=true</property>
+        <property name="hibernate.connection.url">jdbc:derby:../practicas_ISOII\dbderby</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
         <property name="hibernate.show_sql">true</property>

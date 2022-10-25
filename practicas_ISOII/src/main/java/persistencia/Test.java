@@ -9,16 +9,12 @@ public class Test {
 
 	public static void main(String[]args) {
 		SessionFactory factory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Profesor.class).buildSessionFactory();
-		Session session=factory.getCurrentSession();
+		Session session=factory.openSession();
 		try {
-			System.out.println("v");
-			Profesor profe=new Profesor("01234567A", "Pablo", "Martínez Sosa", false);
+			Profesor profe=new Profesor("01234567D", "saHOLA", "dswdPO", false);
 			session.beginTransaction();
-			System.out.println("dd");
 			session.save(profe);
-			
 			session.getTransaction().commit();
-			System.out.println("fefea");
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
