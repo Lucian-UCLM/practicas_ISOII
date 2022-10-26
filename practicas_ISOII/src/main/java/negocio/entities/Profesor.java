@@ -8,13 +8,17 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "Profesor")
 public class Profesor {
+
 	@Id
 	@Column(name = "dni")
 	private String dni;
+
 	@Column(name = "nombre")
 	private String nombre;
+
 	@Column(name = "apellidos")
 	private String apellidos;
+
 	@Column(name = "doctor")
 	private boolean doctor;
 
