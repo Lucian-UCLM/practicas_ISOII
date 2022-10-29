@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "Materia")
@@ -13,21 +14,27 @@ public class Materia {
 	@Id
 	@Column(name = "nombre")
 	private String nombre;
-	
+
 	@Column(name = "horas")
 	private double horas;
-	
+
 	@Column(name = "fechainicio")
 	private Date fechaInicio;
-	
+
 	@Column(name = "fechafin")
 	private Date fechaFin;
-	
-	@Column(name = "responsable")
+
+	@Transient
 	Profesor responsable;
-	
-	@Column(name = "curso")
+
+	@Column(name = "responsable")
+	String idResponsable;
+
+	@Transient
 	CursoPropio curso;
+
+	@Column(name = "curso")
+	String idCurso;
 
 	public Materia() {
 
@@ -42,6 +49,8 @@ public class Materia {
 		this.fechaFin = fechaFin;
 		this.responsable = responsable;
 		this.curso = curso;
+		this.idResponsable = responsable.getDni();
+		this.idCurso = curso.getId();
 	}
 
 	public String getNombre() {
@@ -92,10 +101,27 @@ public class Materia {
 		this.curso = curso;
 	}
 
+	public String getIdResponsable() {
+		return idResponsable;
+	}
+
+	public void setIdResponsable(String idResponsable) {
+		this.idResponsable = idResponsable;
+	}
+
+	public String getIdCurso() {
+		return idCurso;
+	}
+
+	public void setIdCurso(String idCurso) {
+		this.idCurso = idCurso;
+	}
+
 	@Override
 	public String toString() {
 		return "Materia [nombre=" + nombre + ", horas=" + horas + ", fechaInicio=" + fechaInicio + ", fechaFin="
-				+ fechaFin + ", responsable=" + responsable + ", curso=" + curso + "]";
+				+ fechaFin + ", responsable=" + responsable + ", idResponsable=" + idResponsable + ", curso=" + curso
+				+ ", idCurso=" + idCurso + "]";
 	}
-	
+
 }

@@ -5,29 +5,36 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "Matricula")
 public class Matricula {
-	
+
 	@Id
 	@Column(name = "idmatricula")
 	private int idMatricula;
-	
+
 	@Column(name = "fecha")
 	private Date fecha;
-	
+
 	@Column(name = "pagado")
 	private boolean pagado;
-	
+
 	@Column(name = "tipopago")
 	ModoPago tipoPago;
-	
-	@Column(name = "estudiante")
+
+	@Transient
 	Estudiante estudiante;
-	
-	@Column(name = "titulo")
+
+	@Column(name = "estudiante")
+	String idEstudiante;
+
+	@Transient
 	CursoPropio titulo;
+
+	@Column(name = "titulo")
+	String idTitulo;
 
 	public Matricula() {
 
@@ -42,6 +49,8 @@ public class Matricula {
 		this.tipoPago = tipoPago;
 		this.estudiante = estudiante;
 		this.titulo = titulo;
+		this.idEstudiante = estudiante.getDni();
+		this.idTitulo = titulo.getId();
 	}
 
 	public int getIdMatricula() {
@@ -92,10 +101,27 @@ public class Matricula {
 		this.titulo = titulo;
 	}
 
+	public String getIdEstudiante() {
+		return idEstudiante;
+	}
+
+	public void setIdEstudiante(String idEstudiante) {
+		this.idEstudiante = idEstudiante;
+	}
+
+	public String getIdTitulo() {
+		return idTitulo;
+	}
+
+	public void setIdTitulo(String idTitulo) {
+		this.idTitulo = idTitulo;
+	}
+
 	@Override
 	public String toString() {
 		return "Matricula [idMatricula=" + idMatricula + ", fecha=" + fecha + ", pagado=" + pagado + ", tipoPago="
-				+ tipoPago + ", estudiante=" + estudiante + ", titulo=" + titulo + "]";
+				+ tipoPago + ", estudiante=" + estudiante + ", idEstudiante=" + idEstudiante + ", titulo=" + titulo
+				+ ", idTitulo=" + idTitulo + "]";
 	}
-	
+
 }

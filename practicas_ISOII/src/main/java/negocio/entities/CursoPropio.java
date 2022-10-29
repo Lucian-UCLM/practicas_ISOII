@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "CursoPropio")
@@ -38,29 +39,41 @@ public class CursoPropio {
 	@Column(name = "tipo")
 	TipoCurso tipo;
 
-	@Column(name = "centro")
+	@Transient
 	Centro centro;
 
-	@Column(name = "director")
+	@Column(name = "centro")
+	int idCentro;
+
+	@Transient
 	ProfesorUCLM director;
 
-	@Column(name = "secretario")
+	@Column(name = "director")
+	String idDirector;
+
+	@Transient
 	ProfesorUCLM secretario;
 
+	@Column(name = "secretario")
+	String idSecretario;
+
+	@Transient
 	Collection<Matricula> matriculas;
+
+	@Transient
 	Collection<Materia> materias;
 
 	public CursoPropio() {
 
 	}
-	
-	public CursoPropio(String id, String nombre, int eCTS, Date fechaInicio, Date fechaFin, double tasaMatricula,
+
+	public CursoPropio(String id, String nombre, int ECTS, Date fechaInicio, Date fechaFin, double tasaMatricula,
 			int edicion, EstadoCurso estado, TipoCurso tipo, Centro centro, ProfesorUCLM director,
 			ProfesorUCLM secretario) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		ECTS = eCTS;
+		this.ECTS = ECTS;
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.tasaMatricula = tasaMatricula;
@@ -70,8 +83,11 @@ public class CursoPropio {
 		this.centro = centro;
 		this.director = director;
 		this.secretario = secretario;
+		this.idCentro = centro.getIdCentro();
+		this.idDirector = director.getDniProfesor();
+		this.idSecretario = secretario.getDniProfesor();
 	}
-	
+
 	public String getId() {
 		return id;
 	}
@@ -180,6 +196,30 @@ public class CursoPropio {
 		return materias;
 	}
 
+	public int getIdCentro() {
+		return idCentro;
+	}
+
+	public void setIdCentro(int idCentro) {
+		this.idCentro = idCentro;
+	}
+
+	public String getIdDirector() {
+		return idDirector;
+	}
+
+	public void setIdDirector(String idDirector) {
+		this.idDirector = idDirector;
+	}
+
+	public String getIdSecretario() {
+		return idSecretario;
+	}
+
+	public void setIdSecretario(String idSecretario) {
+		this.idSecretario = idSecretario;
+	}
+
 	public void setMaterias(Collection<Materia> materias) {
 		this.materias = materias;
 	}
@@ -188,8 +228,9 @@ public class CursoPropio {
 	public String toString() {
 		return "CursoPropio [id=" + id + ", nombre=" + nombre + ", ECTS=" + ECTS + ", fechaInicio=" + fechaInicio
 				+ ", fechaFin=" + fechaFin + ", tasaMatricula=" + tasaMatricula + ", edicion=" + edicion + ", estado="
-				+ estado + ", tipo=" + tipo + ", centro=" + centro + ", director=" + director + ", secretario="
-				+ secretario + ", matriculas=" + matriculas + ", materias=" + materias + "]";
+				+ estado + ", tipo=" + tipo + ", centro=" + centro + ", idCentro=" + idCentro + ", director=" + director
+				+ ", idDirector=" + idDirector + ", secretario=" + secretario + ", idSecretario=" + idSecretario
+				+ ", matriculas=" + matriculas + ", materias=" + materias + "]";
 	}
-	
+
 }

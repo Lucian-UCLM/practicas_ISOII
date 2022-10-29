@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "Centro")
@@ -20,7 +21,10 @@ public class Centro {
 	@Column(name = "localizacion")
 	private String localizacion;
 
+	@Transient
 	Collection<CursoPropio> cursoPropios;
+	
+	@Transient
 	Collection<ProfesorUCLM> plantilla;
 
 	public Centro() {

@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "Estudiante")
@@ -26,6 +27,7 @@ public class Estudiante {
 	@Column(name = "cualificacion")
 	private String cualificacion;
 	
+	@Transient
 	Collection<Matricula> matriculas;
 	
 	public Estudiante() {
