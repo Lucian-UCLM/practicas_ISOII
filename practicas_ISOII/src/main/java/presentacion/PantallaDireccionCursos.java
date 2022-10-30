@@ -35,7 +35,10 @@ public class PantallaDireccionCursos extends JFrame{
 	private JTextField creditos_text;
 	private JTextField importe_text;
 	private JTextField centro_text;
-	private JTextField textField_1;
+	private JTextField fecha_inicio_text;
+	private JTextField fecha_final_text;
+	private JTextField edicion_text;
+	private JTextField estado_text;
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -70,7 +73,7 @@ public class PantallaDireccionCursos extends JFrame{
 		contentPane.add(curso_list);
 		
 		JButton nuevo_curso_button = new JButton("Nuevo Curso");
-		nuevo_curso_button.setBounds(403, 367, 158, 21);
+		nuevo_curso_button.setBounds(55, 764, 158, 21);
 		nuevo_curso_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				try {
@@ -84,17 +87,19 @@ public class PantallaDireccionCursos extends JFrame{
 		
 		JButton editar_curso_button = new JButton("Editar Curso");
 		editar_curso_button.setEnabled(false);
-		editar_curso_button.setBounds(571, 367, 158, 21);
+		editar_curso_button.setBounds(223, 764, 158, 21);
 		contentPane.add(editar_curso_button);
 		
-		JButton nueva_edicion_curso = new JButton("Nueva Edición");
-		nueva_edicion_curso.setEnabled(false);
-		nueva_edicion_curso.setBounds(738, 367, 158, 21);
-		nueva_edicion_curso.addActionListener(new ActionListener() {
+		
+		JButton edicion_button = new JButton("Nueva Edición");
+		edicion_button.setEnabled(false);
+		edicion_button.setBounds(390, 764, 158, 21);
+		edicion_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 			}
 		});
-		contentPane.add(nueva_edicion_curso);
+		contentPane.add(edicion_button);
 		
 		JLabel informacion_curso_label = new JLabel("Datos Curso");
 		informacion_curso_label.setBounds(403, 45, 90, 13);
@@ -102,7 +107,7 @@ public class PantallaDireccionCursos extends JFrame{
 		contentPane.add(informacion_curso_label);
 		
 		curso_table = new JTable();
-		curso_table.setBounds(403, 68, 493, 289);
+		curso_table.setBounds(403, 68, 493, 320);
 		curso_table.setFillsViewportHeight(true);
 		curso_table.setModel(new DefaultTableModel(
 			new Object[][] {
@@ -126,79 +131,130 @@ public class PantallaDireccionCursos extends JFrame{
 		contentPane.add(separator);
 		
 		nombre_text = new JTextField();
-		nombre_text.setBounds(404, 450, 316, 19);
+		nombre_text.setBounds(56, 462, 316, 19);
 		contentPane.add(nombre_text);
 		nombre_text.setColumns(10);
 		
 		creditos_text = new JTextField();
 		creditos_text.setColumns(10);
-		creditos_text.setBounds(730, 450, 60, 19);
+		creditos_text.setBounds(382, 462, 60, 19);
 		contentPane.add(creditos_text);
 		
 		importe_text = new JTextField();
 		importe_text.setColumns(10);
-		importe_text.setBounds(800, 450, 96, 19);
+		importe_text.setBounds(452, 462, 96, 19);
 		contentPane.add(importe_text);
 		
 		JLabel nombre_curso_label = new JLabel("Nombre curso");
-		nombre_curso_label.setBounds(403, 436, 91, 13);
+		nombre_curso_label.setBounds(55, 448, 91, 13);
 		contentPane.add(nombre_curso_label);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(403, 410, 493, 8);
+		separator_1.setBounds(55, 410, 841, 8);
 		contentPane.add(separator_1);
 		
 		JLabel creditos_label = new JLabel("Créditos");
-		creditos_label.setBounds(729, 436, 61, 13);
+		creditos_label.setBounds(381, 448, 61, 13);
 		contentPane.add(creditos_label);
 		
 		JLabel importe_label = new JLabel("Importe");
-		importe_label.setBounds(800, 436, 91, 13);
+		importe_label.setBounds(452, 448, 91, 13);
 		contentPane.add(importe_label);
 		
 		JLabel centro_label = new JLabel("Centro");
-		centro_label.setBounds(403, 493, 91, 13);
+		centro_label.setBounds(55, 505, 91, 13);
 		contentPane.add(centro_label);
 		
 		centro_text = new JTextField();
 		centro_text.setColumns(10);
-		centro_text.setBounds(404, 507, 386, 19);
+		centro_text.setBounds(56, 519, 386, 19);
 		contentPane.add(centro_text);
 		
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setBounds(800, 507, 96, 19);
-		contentPane.add(textField_1);
+		fecha_inicio_text = new JTextField();
+		fecha_inicio_text.setColumns(10);
+		fecha_inicio_text.setBounds(452, 519, 96, 19);
+		contentPane.add(fecha_inicio_text);
 		
-		JLabel duracion_label = new JLabel("Duración (meses)");
-		duracion_label.setBounds(800, 493, 119, 13);
-		contentPane.add(duracion_label);
+		JLabel fecha_inicio_label = new JLabel("Fecha de inicio");
+		fecha_inicio_label.setBounds(452, 505, 119, 13);
+		contentPane.add(fecha_inicio_label);
 		
 		JLabel materias_label = new JLabel("Materias");
-		materias_label.setBounds(403, 559, 91, 13);
+		materias_label.setBounds(55, 571, 91, 13);
 		contentPane.add(materias_label);
 		
 		JLabel prof_responsable_label = new JLabel("Profesor responsable");
-		prof_responsable_label.setBounds(594, 559, 135, 13);
+		prof_responsable_label.setBounds(246, 571, 135, 13);
 		contentPane.add(prof_responsable_label);
 		
 		JLabel otros_prof_label = new JLabel("Otros profesores");
-		otros_prof_label.setBounds(777, 559, 119, 13);
+		otros_prof_label.setBounds(429, 571, 119, 13);
 		contentPane.add(otros_prof_label);
 		
 		JList materias_list = new JList();
 		materias_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		materias_list.setBounds(403, 571, 119, 154);
+		materias_list.setBounds(55, 583, 119, 154);
 		contentPane.add(materias_list);
 		
 		JList prof_responsable_list = new JList();
 		prof_responsable_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		prof_responsable_list.setBounds(594, 571, 119, 154);
+		prof_responsable_list.setBounds(246, 583, 119, 154);
 		contentPane.add(prof_responsable_list);
 		
 		JList otros_profesores_list = new JList();
-		otros_profesores_list.setBounds(777, 571, 119, 154);
+		otros_profesores_list.setBounds(429, 583, 119, 154);
 		contentPane.add(otros_profesores_list);
+		
+		fecha_final_text = new JTextField();
+		fecha_final_text.setColumns(10);
+		fecha_final_text.setBounds(558, 519, 96, 19);
+		contentPane.add(fecha_final_text);
+		
+		JLabel fecha_final_label = new JLabel("Fecha de finalización");
+		fecha_final_label.setBounds(558, 505, 119, 13);
+		contentPane.add(fecha_final_label);
+		
+		edicion_text = new JTextField();
+		edicion_text.setColumns(10);
+		edicion_text.setBounds(558, 462, 96, 19);
+		contentPane.add(edicion_text);
+		
+		JLabel edicion_label = new JLabel("Edición");
+		edicion_label.setBounds(558, 448, 91, 13);
+		contentPane.add(edicion_label);
+		
+		JButton vaciar_button = new JButton("Vaciar todo");
+		vaciar_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				nombre_text.setText("");
+				centro_text.setText("");
+				creditos_text.setText("");
+				importe_text.setText("");
+				fecha_inicio_text.setText("");
+				fecha_final_text.setText("");
+				edicion_text.setText("");
+				estado_text.setText("");
+				materias_list.clearSelection();
+				prof_responsable_list.clearSelection();
+				otros_profesores_list.clearSelection();
+				editar_curso_button.disable();
+				edicion_button.disable();
+			}
+		});
+		vaciar_button.setBounds(558, 764, 158, 21);
+		contentPane.add(vaciar_button);
+		
+		estado_text = new JTextField();
+		estado_text.setEnabled(false);
+		estado_text.setEditable(false);
+		estado_text.setColumns(10);
+		estado_text.setBounds(664, 462, 96, 19);
+		contentPane.add(estado_text);
+		
+		JLabel estado_label = new JLabel("Estado");
+		estado_label.setEnabled(false);
+		estado_label.setBounds(664, 448, 91, 13);
+		contentPane.add(estado_label);
 	}
 	public void altaCurso() {
 		throw new UnsupportedOperationException();
