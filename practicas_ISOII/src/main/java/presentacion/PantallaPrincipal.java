@@ -36,7 +36,7 @@ public class PantallaPrincipal extends JFrame {
 	}
 	public PantallaPrincipal () {
 		setResizable(false);
-		setTitle("Pantalla Princiapl");
+		setTitle("Pantalla Principal");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 720, 450);
 		contentPane = new JPanel();
@@ -45,23 +45,75 @@ public class PantallaPrincipal extends JFrame {
 		contentPane.setLayout(null);
 		
 		JButton direccion = new JButton("Dirección");
+		direccion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							PantallaDireccionCursos frame = new PantallaDireccionCursos ();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					} 
+				}); 
+			}
+		});
 		direccion.setBounds(110, 145, 89, 23);
 		contentPane.add(direccion);
 		
 		JButton vicerectorado = new JButton("Vicerectorado");
 		vicerectorado.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							PantallaEmpleadosVicerrectorado frame = new PantallaEmpleadosVicerrectorado ();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					} 
+				}); 
 			}
 		});
-		vicerectorado.setBounds(110, 320, 114, 23);
+		vicerectorado.setBounds(110, 252, 114, 23);
 		contentPane.add(vicerectorado);
 		
 		JButton estudiante = new JButton("Estudiante");
+		estudiante.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							PantallaMatriculacion frame = new PantallaMatriculacion ();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					} 
+				}); 
+			}
+		});
 		estudiante.setBounds(454, 145, 89, 23);
 		contentPane.add(estudiante);
 		
 		JButton jefegabinete = new JButton("Jefe de Gabinete");
-		jefegabinete.setBounds(454, 320, 114, 23);
+		jefegabinete.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							PantallaJefeGabineteVicerrectorado frame = new PantallaJefeGabineteVicerrectorado ();
+							frame.setVisible(true);
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					} 
+				}); 
+			}
+		});
+		jefegabinete.setBounds(454, 252, 114, 23);
 		contentPane.add(jefegabinete);
 		
 		JLabel lblNewLabel = new JLabel("Seleccione modo para acceder al sistema");
@@ -69,5 +121,4 @@ public class PantallaPrincipal extends JFrame {
 		lblNewLabel.setBounds(147, 33, 396, 38);
 		contentPane.add(lblNewLabel);
 	}
-	
 }

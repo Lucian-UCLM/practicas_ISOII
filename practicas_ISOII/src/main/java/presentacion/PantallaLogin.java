@@ -68,7 +68,7 @@ public class PantallaLogin extends JFrame {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							PantallaDireccionCursos frame = new PantallaDireccionCursos ();
+							PantallaPrincipal frame = new PantallaPrincipal ();
 							frame.setVisible(true);
 						} catch (Exception e) {
 							e.printStackTrace();
