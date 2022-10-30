@@ -4,6 +4,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "ProfesorUCLM")
@@ -16,8 +17,11 @@ public class ProfesorUCLM extends Profesor {
 	@Column(name = "categoria")
 	CategoriaProfesor categoria;
 	
-	@Column(name = "centroadscripcion")
+	@Transient
 	Centro centroAdscripcion;
+	
+	@Column(name = "centroadscripcion")
+	int idCentroAdscripcion;
 
 	public ProfesorUCLM() {
 
@@ -28,6 +32,7 @@ public class ProfesorUCLM extends Profesor {
 		this.dniProfesor = dniProfesor;
 		this.categoria = categoria;
 		this.centroAdscripcion = centroAdscripcion;
+		this.idCentroAdscripcion= centroAdscripcion.getIdCentro();
 	}
 
 	public String getDniProfesor() {
@@ -54,10 +59,18 @@ public class ProfesorUCLM extends Profesor {
 		this.centroAdscripcion = centroAdscripcion;
 	}
 
+	public int getIdCentroAdscripcion() {
+		return idCentroAdscripcion;
+	}
+
+	public void setIdCentroAdscripcion(int idCentroAdscripcion) {
+		this.idCentroAdscripcion = idCentroAdscripcion;
+	}
+
 	@Override
 	public String toString() {
 		return "ProfesorUCLM [dniProfesor=" + dniProfesor + ", categoria=" + categoria + ", centroAdscripcion="
-				+ centroAdscripcion + "]";
+				+ centroAdscripcion + ", idCentroAdscripcion=" + idCentroAdscripcion + "]";
 	}
 	
 }
