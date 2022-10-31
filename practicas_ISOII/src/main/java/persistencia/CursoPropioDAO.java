@@ -23,8 +23,8 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 		throw new UnsupportedOperationException();
 	}
 
-	public CursoPropio editarCurso(CursoPropio curso) {
-		throw new UnsupportedOperationException();
+	public void editarCurso(CursoPropio curso) {
+		abstractEntityDAO.update(curso);
 	}
 
 	public List<CursoPropio> listarCursosPorEstado(EstadoCurso estado, Date fechaInicio, Date fechaFin) {
