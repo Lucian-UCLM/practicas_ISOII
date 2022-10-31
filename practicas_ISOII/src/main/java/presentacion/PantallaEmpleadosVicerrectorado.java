@@ -11,6 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 
+
 public class PantallaEmpleadosVicerrectorado extends JFrame {
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
