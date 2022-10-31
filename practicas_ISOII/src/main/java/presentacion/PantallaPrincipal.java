@@ -37,7 +37,7 @@ public class PantallaPrincipal extends JFrame {
 	public PantallaPrincipal () {
 		setResizable(false);
 		setTitle("Pantalla Principal");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 720, 450);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -59,7 +59,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		direccion.setBounds(110, 145, 89, 23);
+		direccion.setBounds(110, 145, 136, 23);
 		contentPane.add(direccion);
 		
 		JButton vicerectorado = new JButton("Vicerectorado");
@@ -77,7 +77,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		vicerectorado.setBounds(110, 252, 114, 23);
+		vicerectorado.setBounds(110, 252, 136, 23);
 		contentPane.add(vicerectorado);
 		
 		JButton estudiante = new JButton("Estudiante");
@@ -95,7 +95,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		estudiante.setBounds(454, 145, 89, 23);
+		estudiante.setBounds(433, 145, 136, 23);
 		contentPane.add(estudiante);
 		
 		JButton jefegabinete = new JButton("Jefe de Gabinete");
@@ -113,7 +113,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		jefegabinete.setBounds(454, 252, 114, 23);
+		jefegabinete.setBounds(433, 252, 136, 23);
 		contentPane.add(jefegabinete);
 		
 		JLabel lblNewLabel = new JLabel("Seleccione modo para acceder al sistema");

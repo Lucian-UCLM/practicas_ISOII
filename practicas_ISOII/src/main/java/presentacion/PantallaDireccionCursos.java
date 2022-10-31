@@ -53,7 +53,7 @@ public class PantallaDireccionCursos extends JFrame{
 	}
 	public PantallaDireccionCursos () {
 		setTitle("Dirección de cursos");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 967, 861);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
