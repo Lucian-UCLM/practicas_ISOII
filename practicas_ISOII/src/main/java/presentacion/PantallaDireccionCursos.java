@@ -2,17 +2,21 @@ package presentacion;
 
 import java.awt.EventQueue;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import javax.swing.JLabel;
-
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.util.Date;
+import java.util.Iterator;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
 import javax.swing.JList;
@@ -46,6 +50,8 @@ public class PantallaDireccionCursos extends JFrame {
 	private JTextField estado_text;
 	private JTextField id_text;
 	private JTextField tipo_text;
+	private JList curso_list;
+
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -76,7 +82,7 @@ public class PantallaDireccionCursos extends JFrame {
 		cursos_label.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		contentPane.add(cursos_label);
 
-		JList curso_list = new JList();
+		curso_list = new JList();
 		curso_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		curso_list.setBounds(55, 68, 240, 320);
 		contentPane.add(curso_list);
@@ -86,11 +92,11 @@ public class PantallaDireccionCursos extends JFrame {
 		nuevo_curso_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
-					gestor.realizarPropuestaCurso(id_text.getText(), nombre_text.getText(),
-							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
-							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
-							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,
-							TipoCurso.valueOf(tipo_text.getText()), "01234567A", "01234567B", 1);
+				gestor.realizarPropuestaCurso(id_text.getText(), nombre_text.getText(),
+						Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
+						new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
+						Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,
+						TipoCurso.valueOf(tipo_text.getText()), "01234567A", "01234567B", 1);
 			}
 		});
 		contentPane.add(nuevo_curso_button);
@@ -258,14 +264,34 @@ public class PantallaDireccionCursos extends JFrame {
 		tipo_text.setColumns(10);
 		tipo_text.setBounds(664, 519, 96, 19);
 		contentPane.add(tipo_text);
-		
+
 		JLabel id_label = new JLabel("Id");
 		id_label.setBounds(55, 504, 91, 13);
 		contentPane.add(id_label);
-		
+
 		JLabel tipo_label = new JLabel("Tipo");
 		tipo_label.setBounds(669, 504, 91, 13);
 		contentPane.add(tipo_label);
+
+		JButton btn_pruebas = new JButton("pruebas");
+		btn_pruebas.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GestorPropuestasCursos gestor = new GestorPropuestasCursos(); 
+				List lista = new ArrayList<>(); 
+				lista = gestor.listarCursos();
+				
+				DefaultListModel model_curso = new DefaultListModel();
+				
+				for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
+					model_curso.addElement(iterator.next());
+				}
+				
+				curso_list.setModel(model_curso);
+
+			}
+		});
+		btn_pruebas.setBounds(757, 616, 85, 21);
+		contentPane.add(btn_pruebas);
 	}
 
 	public void altaCurso() {

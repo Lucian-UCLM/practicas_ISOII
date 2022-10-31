@@ -22,6 +22,10 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 	public CursoPropio seleccionarCurso(CursoPropio curso) {
 		throw new UnsupportedOperationException();
 	}
+	
+	public List<CursoPropio> listarCursos(){
+		return abstractEntityDAO.showAll();
+	}
 
 	public void editarCurso(CursoPropio curso) {
 		abstractEntityDAO.update(curso);

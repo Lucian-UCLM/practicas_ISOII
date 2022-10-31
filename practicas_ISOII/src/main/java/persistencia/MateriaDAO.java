@@ -20,8 +20,8 @@ public class MateriaDAO extends AbstractEntityDAO {
 		throw new UnsupportedOperationException();
 	}
 
-	public Materia editarMateria(Materia materia) {
-		throw new UnsupportedOperationException();
+	public void editarMateria(Materia materia) {
+		abstractEntityDAO.update(materia);
 	}
 
 }
