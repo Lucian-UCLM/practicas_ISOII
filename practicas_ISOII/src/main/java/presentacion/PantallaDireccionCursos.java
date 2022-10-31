@@ -277,13 +277,14 @@ public class PantallaDireccionCursos extends JFrame {
 		btn_pruebas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GestorPropuestasCursos gestor = new GestorPropuestasCursos(); 
-				List lista = new ArrayList<>(); 
+				List<CursoPropio> lista = new ArrayList<>(); 
 				lista = gestor.listarCursos();
-				
 				DefaultListModel model_curso = new DefaultListModel();
-				
+				int i=0;
 				for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
-					model_curso.addElement(iterator.next());
+					model_curso.addElement(lista.get(i).getId());
+					iterator.next();
+					i++;
 				}
 				
 				curso_list.setModel(model_curso);
