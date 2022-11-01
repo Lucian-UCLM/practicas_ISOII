@@ -14,7 +14,7 @@ import jakarta.persistence.Transient;
 public class ProfesorUCLM extends Profesor {
 
 	@Id
-	@Column(name = "dni")
+	@Column(name = "profesor_dni")
 	private String dniProfesor;
 	
 	@Column(name = "categoria")

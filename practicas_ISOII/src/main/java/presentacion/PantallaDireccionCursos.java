@@ -283,6 +283,7 @@ public class PantallaDireccionCursos extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				GestorPropuestasCursos gestor = new GestorPropuestasCursos(); 
 				DefaultListModel model_centro = new DefaultListModel();
+				DefaultListModel model_profesor = new DefaultListModel();
 				List<CursoPropio> listacurso = new ArrayList<>();
 				List<ProfesorUCLM> listaprofesor = new ArrayList<>();
 				List<Centro> listacentro = new ArrayList<>(); 
@@ -297,15 +298,21 @@ public class PantallaDireccionCursos extends JFrame {
 				}
 				i=0;
 				for (Iterator iterator = listacentro.iterator(); iterator.hasNext();) {
-					model_centro.addElement(listacentro.get(i).getIdCentro()+"    "+listacentro.get(i).getNombre());
+					model_centro.addElement(listacentro.get(i).getIdCentro());
+					iterator.next();
+					i++;
+				}
+				i=0;
+				for (Iterator iterator = listaprofesor.iterator(); iterator.hasNext();) {
+					model_profesor.addElement(listaprofesor.get(i).getDniProfesor());
 					iterator.next();
 					i++;
 				}
 				
 				curso_list.setModel(model_curso);
 				centro_list.setModel(model_centro);
-				
-				System.out.println(listaprofesor.toString());
+				director_list.setModel(model_profesor);
+				secretario_list.setModel(model_profesor);
 
 			}
 		});

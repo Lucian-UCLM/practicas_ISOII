@@ -9,7 +9,7 @@ import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.Table;
 
 @Table(name = "Profesor")
-@MappedSuperclass
+@Inheritance(strategy=InheritanceType.JOINED)
 public class Profesor {
 
 	@Id
