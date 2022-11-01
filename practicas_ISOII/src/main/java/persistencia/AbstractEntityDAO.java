@@ -1,7 +1,6 @@
 package persistencia;
 
 import java.util.*;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -57,7 +56,7 @@ public abstract class AbstractEntityDAO<E> {
 	public List<E> showAll() {
 		Session sesion=getSession();
 		sesion.beginTransaction();
-		Query query = sesion.createQuery("from CursoPropio");
+		Query query = sesion.createQuery("from " + entityClass.getSimpleName());
 		list = (List<E>)query.list();
 		sesion.getTransaction().commit();
 		sesion.close();

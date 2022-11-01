@@ -3,15 +3,18 @@ package negocio.entities;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.PrimaryKeyJoinColumn;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "ProfesorUCLM")
+@PrimaryKeyJoinColumn(name = "dni")
 public class ProfesorUCLM extends Profesor {
 
 	@Id
-	@Column(name = "profesor_dni")
+	@Column(name = "dni")
 	private String dniProfesor;
 	
 	@Column(name = "categoria")

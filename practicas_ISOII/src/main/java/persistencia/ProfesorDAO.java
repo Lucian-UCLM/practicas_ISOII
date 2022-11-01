@@ -1,5 +1,7 @@
 package persistencia;
 
+import java.util.List;
+
 import negocio.entities.*;
 
 public class ProfesorDAO extends AbstractEntityDAO {
@@ -16,6 +18,10 @@ public class ProfesorDAO extends AbstractEntityDAO {
 		abstractEntityDAO.save(profesor);
 	}
 
+	public List<ProfesorUCLM> listarProfesorUCLM(){
+		return abstractEntityDAO.showAll();
+	}
+	
 	public Profesor listarProfesor(Profesor profesor) {
 		throw new UnsupportedOperationException();
 	}

@@ -1,5 +1,7 @@
 package persistencia;
 
+import java.util.List;
+
 import negocio.entities.*;
 
 public class CentroDAO extends AbstractEntityDAO {
@@ -16,6 +18,10 @@ public class CentroDAO extends AbstractEntityDAO {
 		abstractEntityDAO.save(centro);
 	}
 
+	public List<Centro> listarCentros(){
+		return abstractEntityDAO.showAll();
+	}
+	
 	public Centro editarCentro(Centro centro) {
 		throw new UnsupportedOperationException();
 	}

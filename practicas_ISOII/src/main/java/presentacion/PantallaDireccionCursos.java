@@ -33,8 +33,10 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import negocio.controllers.*;
+import negocio.entities.Centro;
 import negocio.entities.CursoPropio;
 import negocio.entities.EstadoCurso;
+import negocio.entities.ProfesorUCLM;
 import negocio.entities.TipoCurso;
 
 public class PantallaDireccionCursos extends JFrame {
@@ -51,6 +53,7 @@ public class PantallaDireccionCursos extends JFrame {
 	private JTextField id_text;
 	private JTextField tipo_text;
 	private JList curso_list;
+	DefaultListModel model_curso = new DefaultListModel();
 
 
 	public static void main(String[] args) {
@@ -97,6 +100,8 @@ public class PantallaDireccionCursos extends JFrame {
 						new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
 						Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,
 						TipoCurso.valueOf(tipo_text.getText()), "01234567A", "01234567B", 1);
+				model_curso.addElement(id_text.getText());
+				curso_list.setModel(model_curso);
 			}
 		});
 		contentPane.add(nuevo_curso_button);
@@ -193,7 +198,7 @@ public class PantallaDireccionCursos extends JFrame {
 
 		JList centro_list = new JList();
 		centro_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		centro_list.setBounds(55, 583, 119, 154);
+		centro_list.setBounds(55, 583, 158, 154);
 		contentPane.add(centro_list);
 
 		JList director_list = new JList();
@@ -277,17 +282,30 @@ public class PantallaDireccionCursos extends JFrame {
 		btn_pruebas.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				GestorPropuestasCursos gestor = new GestorPropuestasCursos(); 
-				List<CursoPropio> lista = new ArrayList<>(); 
-				lista = gestor.listarCursos();
-				DefaultListModel model_curso = new DefaultListModel();
+				DefaultListModel model_centro = new DefaultListModel();
+				List<CursoPropio> listacurso = new ArrayList<>();
+				List<ProfesorUCLM> listaprofesor = new ArrayList<>();
+				List<Centro> listacentro = new ArrayList<>(); 
+				listacurso = gestor.listarCursos();
+				listacentro=gestor.listarCentros();
+				listaprofesor= gestor.listarProfesoresUCLM();
 				int i=0;
-				for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
-					model_curso.addElement(lista.get(i).getId());
+				for (Iterator iterator = listacurso.iterator(); iterator.hasNext();) {
+					model_curso.addElement(listacurso.get(i).getId());
+					iterator.next();
+					i++;
+				}
+				i=0;
+				for (Iterator iterator = listacentro.iterator(); iterator.hasNext();) {
+					model_centro.addElement(listacentro.get(i).getIdCentro()+"    "+listacentro.get(i).getNombre());
 					iterator.next();
 					i++;
 				}
 				
 				curso_list.setModel(model_curso);
+				centro_list.setModel(model_centro);
+				
+				System.out.println(listaprofesor.toString());
 
 			}
 		});
