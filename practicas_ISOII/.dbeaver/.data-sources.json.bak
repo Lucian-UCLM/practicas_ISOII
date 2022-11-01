@@ -1,0 +1,30 @@
+{
+	"folders": {},
+	"connections": {
+		"derby-183dc66fa4c-5906bfbe04b9238c": {
+			"provider": "generic",
+			"driver": "derby",
+			"name": "dbderby",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\Carlos\\git\\practicas_ISOII\\practicas_ISOII\\dbderby",
+				"url": "jdbc:derby:C:\\Users\\Carlos\\git\\practicas_ISOII\\practicas_ISOII\\dbderby",
+				"type": "dev",
+				"auth-model": "native",
+				"handlers": {}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
