@@ -132,8 +132,29 @@ public class PantallaDireccionCursos extends JFrame {
 		JButton nuevo_curso_button = new JButton("Nuevo Curso");
 		nuevo_curso_button.setBounds(138, 414, 158, 21);
 		contentPane.add(nuevo_curso_button);
-
+		
+		JComboBox tipo_combobox = new JComboBox();
+		tipo_combobox.setModel(new DefaultComboBoxModel(new TipoCurso[] {TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,TipoCurso.FORMACION_AVANZADA,
+				TipoCurso.FORMACION_CONTINUA,TipoCurso.MICROCREDENCIALES,TipoCurso.CORTA_DURACION,TipoCurso.CURSOS_DE_VERANO,TipoCurso.FORMACION_DE_MAYORES}));
+		tipo_combobox.setToolTipText("-Cursos-\r\n");
+		tipo_combobox.setBounds(690, 303, 212, 22);
+		contentPane.add(tipo_combobox);
+		
 		JButton editar_curso_button = new JButton("Editar Curso");
+		editar_curso_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
+				if (!secretario_list.isSelectionEmpty() && !director_list.isSelectionEmpty() && !centro_list.isSelectionEmpty()) {
+					gestor.editarPropuestaCurso(id_text.getText(), nombre_text.getText(),
+							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
+							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
+							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipo_combobox.getModel().getElementAt(tipo_combobox.getSelectedIndex()).toString()), 
+							director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
+							secretario_list.getModel().getElementAt(secretario_list.getSelectedIndex()).toString(), 
+							Integer.parseInt(centro_list.getModel().getElementAt(centro_list.getSelectedIndex()).toString()));
+				}
+			}
+		});
 		editar_curso_button.setEnabled(false);
 		editar_curso_button.setBounds(306, 414, 158, 21);
 		contentPane.add(editar_curso_button);
@@ -251,13 +272,6 @@ public class PantallaDireccionCursos extends JFrame {
 		JLabel tipo_label = new JLabel("Tipo");
 		tipo_label.setBounds(695, 290, 91, 13);
 		contentPane.add(tipo_label);
-
-		JComboBox tipo_combobox = new JComboBox();
-		tipo_combobox.setModel(new DefaultComboBoxModel(new TipoCurso[] {TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,TipoCurso.FORMACION_AVANZADA,
-				TipoCurso.FORMACION_CONTINUA,TipoCurso.MICROCREDENCIALES,TipoCurso.CORTA_DURACION,TipoCurso.CURSOS_DE_VERANO,TipoCurso.FORMACION_DE_MAYORES}));
-		tipo_combobox.setToolTipText("-Cursos-\r\n");
-		tipo_combobox.setBounds(690, 303, 212, 22);
-		contentPane.add(tipo_combobox);
 
 		nuevo_curso_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
