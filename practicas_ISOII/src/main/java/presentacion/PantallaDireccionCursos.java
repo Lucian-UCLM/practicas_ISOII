@@ -52,15 +52,12 @@ public class PantallaDireccionCursos extends JFrame {
 	private JTextField estado_text;
 	private JTextField id_text;
 	private JTextField tipo_text;
-	private JList curso_list;
-	DefaultListModel model_curso = new DefaultListModel();
-
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PantallaDireccionCursos frame = new PantallaDireccionCursos();
+					PantallaLogin frame = new PantallaLogin();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -80,30 +77,58 @@ public class PantallaDireccionCursos extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
+		GestorPropuestasCursos gestor = new GestorPropuestasCursos(); 
+		DefaultListModel model_centro = new DefaultListModel();
+		DefaultListModel model_profesor = new DefaultListModel();
+		DefaultListModel model_curso = new DefaultListModel();
+
 		JLabel cursos_label = new JLabel("Cursos");
 		cursos_label.setBounds(55, 45, 45, 13);
 		cursos_label.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		contentPane.add(cursos_label);
 
-		curso_list = new JList();
+		JList curso_list = new JList();
 		curso_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		curso_list.setBounds(55, 68, 240, 320);
 		contentPane.add(curso_list);
 
+		JList centro_list = new JList();
+		centro_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		centro_list.setBounds(55, 583, 158, 154);
+		contentPane.add(centro_list);
+
+		JList director_list = new JList();
+		director_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+		director_list.setBounds(246, 583, 119, 154);
+		contentPane.add(director_list);
+
+		JList secretario_list = new JList();
+		secretario_list.setBounds(429, 583, 119, 154);
+		contentPane.add(secretario_list);
+		List<CursoPropio> listacurso = new ArrayList<>();
+		List<ProfesorUCLM> listaprofesor = new ArrayList<>();
+		List<Centro> listacentro = new ArrayList<>(); 
+
+		listacurso = gestor.listarCursos();
+		listacentro=gestor.listarCentros();
+		listaprofesor= gestor.listarProfesoresUCLM();
+		for (int i=0; i< listacurso.size(); i++) {
+			model_curso.addElement(listacurso.get(i).getId());
+		}
+		for (int i=0; i< listacentro.size(); i++) {
+			model_centro.addElement(listacentro.get(i).getIdCentro());
+		}
+		for (int i=0; i< listaprofesor.size(); i++) {
+			model_profesor.addElement(listaprofesor.get(i).getDniProfesor());
+		}
+
+		curso_list.setModel(model_curso);
+		centro_list.setModel(model_centro);
+		director_list.setModel(model_profesor);
+		secretario_list.setModel(model_profesor);
+
 		JButton nuevo_curso_button = new JButton("Nuevo Curso");
 		nuevo_curso_button.setBounds(55, 764, 158, 21);
-		nuevo_curso_button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
-				gestor.realizarPropuestaCurso(id_text.getText(), nombre_text.getText(),
-						Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
-						new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
-						Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,
-						TipoCurso.valueOf(tipo_text.getText()), "01234567A", "01234567B", 1);
-				model_curso.addElement(id_text.getText());
-				curso_list.setModel(model_curso);
-			}
-		});
 		contentPane.add(nuevo_curso_button);
 
 		JButton editar_curso_button = new JButton("Editar Curso");
@@ -129,14 +154,6 @@ public class PantallaDireccionCursos extends JFrame {
 		curso_table = new JTable();
 		curso_table.setBounds(403, 68, 493, 320);
 		curso_table.setFillsViewportHeight(true);
-		curso_table.setModel(new DefaultTableModel(new Object[][] {},
-				new String[] { "Centro", "Duraci\u00F3n (meses)", "Creditos", "Nombre" }) {
-			Class[] columnTypes = new Class[] { String.class, Integer.class, Integer.class, String.class };
-
-			public Class getColumnClass(int columnIndex) {
-				return columnTypes[columnIndex];
-			}
-		});
 		contentPane.add(curso_table);
 
 		JSeparator separator = new JSeparator();
@@ -196,20 +213,6 @@ public class PantallaDireccionCursos extends JFrame {
 		secretario_label.setBounds(429, 571, 119, 13);
 		contentPane.add(secretario_label);
 
-		JList centro_list = new JList();
-		centro_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		centro_list.setBounds(55, 583, 158, 154);
-		contentPane.add(centro_list);
-
-		JList director_list = new JList();
-		director_list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		director_list.setBounds(246, 583, 119, 154);
-		contentPane.add(director_list);
-
-		JList secretario_list = new JList();
-		secretario_list.setBounds(429, 583, 119, 154);
-		contentPane.add(secretario_list);
-
 		fecha_final_text = new JTextField();
 		fecha_final_text.setColumns(10);
 		fecha_final_text.setBounds(558, 519, 96, 19);
@@ -229,22 +232,6 @@ public class PantallaDireccionCursos extends JFrame {
 		contentPane.add(edicion_label);
 
 		JButton vaciar_button = new JButton("Vaciar todo");
-		vaciar_button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				nombre_text.setText("");
-				creditos_text.setText("");
-				importe_text.setText("");
-				fecha_inicio_text.setText("");
-				fecha_final_text.setText("");
-				edicion_text.setText("");
-				estado_text.setText("");
-				centro_list.clearSelection();
-				director_list.clearSelection();
-				secretario_list.clearSelection();
-				editar_curso_button.disable();
-				edicion_button.disable();
-			}
-		});
 		vaciar_button.setBounds(558, 764, 158, 21);
 		contentPane.add(vaciar_button);
 
@@ -277,47 +264,49 @@ public class PantallaDireccionCursos extends JFrame {
 		JLabel tipo_label = new JLabel("Tipo");
 		tipo_label.setBounds(669, 504, 91, 13);
 		contentPane.add(tipo_label);
-
-		JButton btn_pruebas = new JButton("pruebas");
-		btn_pruebas.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				GestorPropuestasCursos gestor = new GestorPropuestasCursos(); 
-				DefaultListModel model_centro = new DefaultListModel();
-				DefaultListModel model_profesor = new DefaultListModel();
-				List<CursoPropio> listacurso = new ArrayList<>();
-				List<ProfesorUCLM> listaprofesor = new ArrayList<>();
-				List<Centro> listacentro = new ArrayList<>(); 
-				listacurso = gestor.listarCursos();
-				listacentro=gestor.listarCentros();
-				listaprofesor= gestor.listarProfesoresUCLM();
-				int i=0;
-				for (Iterator iterator = listacurso.iterator(); iterator.hasNext();) {
-					model_curso.addElement(listacurso.get(i).getId());
-					iterator.next();
-					i++;
-				}
-				i=0;
-				for (Iterator iterator = listacentro.iterator(); iterator.hasNext();) {
-					model_centro.addElement(listacentro.get(i).getIdCentro());
-					iterator.next();
-					i++;
-				}
-				i=0;
-				for (Iterator iterator = listaprofesor.iterator(); iterator.hasNext();) {
-					model_profesor.addElement(listaprofesor.get(i).getDniProfesor());
-					iterator.next();
-					i++;
+		
+		nuevo_curso_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
+				if (!secretario_list.isSelectionEmpty() && !director_list.isSelectionEmpty() && !centro_list.isSelectionEmpty()) {
+					gestor.realizarPropuestaCurso(id_text.getText(), nombre_text.getText(),
+							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
+							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
+							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,
+							TipoCurso.valueOf(tipo_text.getText()), director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
+							secretario_list.getModel().getElementAt(secretario_list.getSelectedIndex()).toString(), 
+							Integer.parseInt(centro_list.getModel().getElementAt(centro_list.getSelectedIndex()).toString()));
+					
+					model_curso.addElement(id_text.getText());
+					curso_list.setModel(model_curso);
 				}
 				
-				curso_list.setModel(model_curso);
-				centro_list.setModel(model_centro);
-				director_list.setModel(model_profesor);
-				secretario_list.setModel(model_profesor);
-
 			}
 		});
-		btn_pruebas.setBounds(757, 616, 85, 21);
-		contentPane.add(btn_pruebas);
+		vaciar_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				nombre_text.setText("");
+				creditos_text.setText("");
+				importe_text.setText("");
+				fecha_inicio_text.setText("");
+				fecha_final_text.setText("");
+				edicion_text.setText("");
+				estado_text.setText("");
+				centro_list.clearSelection();
+				director_list.clearSelection();
+				secretario_list.clearSelection();
+				editar_curso_button.disable();
+				edicion_button.disable();
+			}
+		});
+		curso_table.setModel(new DefaultTableModel(new Object[][] {},
+				new String[] { "Centro", "Duraci\u00F3n (meses)", "Creditos", "Nombre" }) {
+			Class[] columnTypes = new Class[] { String.class, Integer.class, Integer.class, String.class };
+
+			public Class getColumnClass(int columnIndex) {
+				return columnTypes[columnIndex];
+			}
+		});
 	}
 
 	public void altaCurso() {
