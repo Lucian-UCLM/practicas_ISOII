@@ -10,11 +10,15 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import javax.swing.JLabel;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.Date;
 import java.util.Iterator;
 import java.awt.event.ActionEvent;
@@ -51,7 +55,6 @@ public class PantallaDireccionCursos extends JFrame {
 	private JTextField edicion_text;
 	private JTextField estado_text;
 	private JTextField id_text;
-	private JTextField tipo_text;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -194,11 +197,11 @@ public class PantallaDireccionCursos extends JFrame {
 
 		fecha_inicio_text = new JTextField();
 		fecha_inicio_text.setColumns(10);
-		fecha_inicio_text.setBounds(452, 519, 96, 19);
+		fecha_inicio_text.setBounds(246, 519, 126, 19);
 		contentPane.add(fecha_inicio_text);
 
 		JLabel fecha_inicio_label = new JLabel("Fecha de inicio");
-		fecha_inicio_label.setBounds(452, 505, 119, 13);
+		fecha_inicio_label.setBounds(246, 505, 119, 13);
 		contentPane.add(fecha_inicio_label);
 
 		JLabel centro_label = new JLabel("Centro");
@@ -215,11 +218,11 @@ public class PantallaDireccionCursos extends JFrame {
 
 		fecha_final_text = new JTextField();
 		fecha_final_text.setColumns(10);
-		fecha_final_text.setBounds(558, 519, 96, 19);
+		fecha_final_text.setBounds(382, 519, 151, 19);
 		contentPane.add(fecha_final_text);
 
 		JLabel fecha_final_label = new JLabel("Fecha de finalización");
-		fecha_final_label.setBounds(558, 505, 119, 13);
+		fecha_final_label.setBounds(382, 505, 119, 13);
 		contentPane.add(fecha_final_label);
 
 		edicion_text = new JTextField();
@@ -231,9 +234,9 @@ public class PantallaDireccionCursos extends JFrame {
 		edicion_label.setBounds(558, 448, 91, 13);
 		contentPane.add(edicion_label);
 
-		JButton vaciar_button = new JButton("Vaciar todo");
-		vaciar_button.setBounds(558, 764, 158, 21);
-		contentPane.add(vaciar_button);
+		JButton limpiar_button = new JButton("Limpiar todo");
+		limpiar_button.setBounds(558, 764, 158, 21);
+		contentPane.add(limpiar_button);
 
 		estado_text = new JTextField();
 		estado_text.setEnabled(false);
@@ -252,19 +255,21 @@ public class PantallaDireccionCursos extends JFrame {
 		id_text.setBounds(55, 519, 178, 19);
 		contentPane.add(id_text);
 
-		tipo_text = new JTextField();
-		tipo_text.setColumns(10);
-		tipo_text.setBounds(664, 519, 96, 19);
-		contentPane.add(tipo_text);
-
 		JLabel id_label = new JLabel("Id");
 		id_label.setBounds(55, 504, 91, 13);
 		contentPane.add(id_label);
 
 		JLabel tipo_label = new JLabel("Tipo");
-		tipo_label.setBounds(669, 504, 91, 13);
+		tipo_label.setBounds(548, 505, 91, 13);
 		contentPane.add(tipo_label);
-		
+
+		JComboBox tipo_combobox = new JComboBox();
+		tipo_combobox.setModel(new DefaultComboBoxModel(new TipoCurso[] {TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,TipoCurso.FORMACION_AVANZADA,
+				TipoCurso.FORMACION_CONTINUA,TipoCurso.MICROCREDENCIALES,TipoCurso.CORTA_DURACION,TipoCurso.CURSOS_DE_VERANO,TipoCurso.FORMACION_DE_MAYORES}));
+		tipo_combobox.setToolTipText("-Cursos-\r\n");
+		tipo_combobox.setBounds(543, 518, 212, 22);
+		contentPane.add(tipo_combobox);
+
 		nuevo_curso_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
@@ -272,18 +277,17 @@ public class PantallaDireccionCursos extends JFrame {
 					gestor.realizarPropuestaCurso(id_text.getText(), nombre_text.getText(),
 							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
 							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
-							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,
-							TipoCurso.valueOf(tipo_text.getText()), director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
+							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipo_combobox.getModel().getElementAt(tipo_combobox.getSelectedIndex()).toString()), 
+							director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
 							secretario_list.getModel().getElementAt(secretario_list.getSelectedIndex()).toString(), 
 							Integer.parseInt(centro_list.getModel().getElementAt(centro_list.getSelectedIndex()).toString()));
-					
+
 					model_curso.addElement(id_text.getText());
 					curso_list.setModel(model_curso);
 				}
-				
 			}
 		});
-		vaciar_button.addActionListener(new ActionListener() {
+		limpiar_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				nombre_text.setText("");
 				creditos_text.setText("");
@@ -292,11 +296,15 @@ public class PantallaDireccionCursos extends JFrame {
 				fecha_final_text.setText("");
 				edicion_text.setText("");
 				estado_text.setText("");
+				id_text.setText("");
+				edicion_text.setEditable(true);
+				id_text.setEditable(true);
+				edicion_label.setEnabled(true);
+				id_label.setEnabled(true);
+				curso_list.clearSelection();
 				centro_list.clearSelection();
 				director_list.clearSelection();
 				secretario_list.clearSelection();
-				editar_curso_button.disable();
-				edicion_button.disable();
 			}
 		});
 		curso_table.setModel(new DefaultTableModel(new Object[][] {},
@@ -307,6 +315,34 @@ public class PantallaDireccionCursos extends JFrame {
 				return columnTypes[columnIndex];
 			}
 		});
+
+		MouseListener mouseListener = new MouseAdapter() {
+			public void mouseClicked(MouseEvent e) {
+				if (e.getClickCount() == 2) {
+
+					String selectedItem = (String) curso_list.getSelectedValue();
+					//a completar con los campos que recogemos de la selección (ya tenemos el id del curso)
+					nombre_text.setText("");
+					creditos_text.setText("");
+					importe_text.setText("");
+					fecha_inicio_text.setText("");
+					fecha_final_text.setText("");
+					edicion_text.setText("");
+					estado_text.setText("");
+					id_text.setText(selectedItem);
+					edicion_text.setEditable(false);
+					id_text.setEditable(false);
+					edicion_label.setEnabled(false);
+					id_label.setEnabled(false);
+					
+					
+					// add selectedItem to your second list.
+
+				}
+			}
+		};
+		curso_list.addMouseListener(mouseListener);
+
 	}
 
 	public void altaCurso() {
