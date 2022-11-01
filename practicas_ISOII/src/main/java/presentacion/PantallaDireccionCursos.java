@@ -19,6 +19,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
 import java.awt.event.ActionEvent;
@@ -54,6 +55,9 @@ public class PantallaDireccionCursos extends JFrame {
 	private JTextField edicion_text;
 	private JTextField estado_text;
 	private JTextField id_text;
+	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
+	private String fecha_inicio;
+	private String fecha_fin;
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -132,29 +136,15 @@ public class PantallaDireccionCursos extends JFrame {
 		JButton nuevo_curso_button = new JButton("Nuevo Curso");
 		nuevo_curso_button.setBounds(138, 414, 158, 21);
 		contentPane.add(nuevo_curso_button);
-		
+
 		JComboBox tipo_combobox = new JComboBox();
 		tipo_combobox.setModel(new DefaultComboBoxModel(new TipoCurso[] {TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,TipoCurso.FORMACION_AVANZADA,
 				TipoCurso.FORMACION_CONTINUA,TipoCurso.MICROCREDENCIALES,TipoCurso.CORTA_DURACION,TipoCurso.CURSOS_DE_VERANO,TipoCurso.FORMACION_DE_MAYORES}));
 		tipo_combobox.setToolTipText("-Cursos-\r\n");
 		tipo_combobox.setBounds(690, 303, 212, 22);
 		contentPane.add(tipo_combobox);
-		
-		JButton editar_curso_button = new JButton("Editar Curso");
-		editar_curso_button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
-				if (!secretario_list.isSelectionEmpty() && !director_list.isSelectionEmpty() && !centro_list.isSelectionEmpty()) {
-					gestor.editarPropuestaCurso(id_text.getText(), nombre_text.getText(),
-							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
-							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
-							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipo_combobox.getModel().getElementAt(tipo_combobox.getSelectedIndex()).toString()), 
-							director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
-							secretario_list.getModel().getElementAt(secretario_list.getSelectedIndex()).toString(), 
-							Integer.parseInt(centro_list.getModel().getElementAt(centro_list.getSelectedIndex()).toString()));
-				}
-			}
-		});
+
+		JButton editar_curso_button = new JButton("Editar Curso");	
 		editar_curso_button.setEnabled(false);
 		editar_curso_button.setBounds(306, 414, 158, 21);
 		contentPane.add(editar_curso_button);
@@ -162,11 +152,6 @@ public class PantallaDireccionCursos extends JFrame {
 		JButton edicion_button = new JButton("Nueva Edición");
 		edicion_button.setEnabled(false);
 		edicion_button.setBounds(473, 414, 158, 21);
-		edicion_button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-
-			}
-		});
 		contentPane.add(edicion_button);
 
 		JSeparator separator = new JSeparator();
@@ -275,7 +260,6 @@ public class PantallaDireccionCursos extends JFrame {
 
 		nuevo_curso_button.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 				if (!secretario_list.isSelectionEmpty() && !director_list.isSelectionEmpty() && !centro_list.isSelectionEmpty()) {
 					gestor.realizarPropuestaCurso(id_text.getText(), nombre_text.getText(),
 							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
@@ -314,17 +298,52 @@ public class PantallaDireccionCursos extends JFrame {
 			}
 		});
 
+		editar_curso_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!secretario_list.isSelectionEmpty() && !director_list.isSelectionEmpty() && !centro_list.isSelectionEmpty()) {
+					gestor.editarPropuestaCurso(id_text.getText(), nombre_text.getText(),
+							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
+							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
+							Integer.parseInt(edicion_text.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipo_combobox.getModel().getElementAt(tipo_combobox.getSelectedIndex()).toString()), 
+							director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
+							secretario_list.getModel().getElementAt(secretario_list.getSelectedIndex()).toString(), 
+							Integer.parseInt(centro_list.getModel().getElementAt(centro_list.getSelectedIndex()).toString()));
+				}
+			}
+		});
+		
+		edicion_button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (!secretario_list.isSelectionEmpty() && !director_list.isSelectionEmpty() && !centro_list.isSelectionEmpty()) {
+					String[] id_num = id_text.getText().split("CPR");
+					gestor.realizarPropuestaCurso(id_text.getText() + "(1)" /* "CPR" + Integer.parseInt(id[1])+1 */, nombre_text.getText(),
+							Integer.parseInt(creditos_text.getText()), new Date(fecha_inicio_text.getText()),
+							new Date(fecha_final_text.getText()), Double.parseDouble(importe_text.getText()),
+							Integer.parseInt(edicion_text.getText())+1, EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipo_combobox.getModel().getElementAt(tipo_combobox.getSelectedIndex()).toString()), 
+							director_list.getModel().getElementAt(director_list.getSelectedIndex()).toString(), 
+							secretario_list.getModel().getElementAt(secretario_list.getSelectedIndex()).toString(), 
+							Integer.parseInt(centro_list.getModel().getElementAt(centro_list.getSelectedIndex()).toString()));
+
+					model_curso.addElement(id_text.getText()+ "(1)");
+					curso_list.setModel(model_curso);
+				}
+			}
+		});
+
 		MouseListener mouseListener = new MouseAdapter() {
 			public void mouseClicked(MouseEvent e) {
 				if (e.getClickCount() == 2) {
 
 					String selectedItem = (String) curso_list.getSelectedValue();
+					SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
 					CursoPropio curso = gestor.listarCurso(selectedItem);
+					fecha_inicio = formatter.format(curso.getFechaInicio());
+					fecha_fin = formatter.format(curso.getFechaFin());
 					nombre_text.setText(curso.getNombre().toString());
 					creditos_text.setText(curso.getECTS()+"");
 					importe_text.setText(curso.getTasaMatricula()+"");
-					fecha_inicio_text.setText(curso.getFechaInicio().toString());
-					fecha_final_text.setText(curso.getFechaFin().toString());
+					fecha_inicio_text.setText(fecha_inicio);
+					fecha_final_text.setText(fecha_fin);
 					edicion_text.setText(curso.getEdicion()+"");
 					estado_text.setText(curso.getEstado().toString());
 					id_text.setText(selectedItem);
@@ -355,18 +374,10 @@ public class PantallaDireccionCursos extends JFrame {
 							secretario_list.setSelectedIndex(i);
 						}
 					}
+					
 				}
 			}
 		};
 		curso_list.addMouseListener(mouseListener);
-	}
-
-	public void altaCurso() {
-		throw new UnsupportedOperationException();
-	}
-
-	public void edicionCurso() {
-		// TODO - implement PantallaDireccionCursos.edicionCurso
-		throw new UnsupportedOperationException();
 	}
 }
