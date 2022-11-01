@@ -56,11 +56,30 @@ public abstract class AbstractEntityDAO<E> {
 	public List<E> showAll() {
 		Session sesion=getSession();
 		sesion.beginTransaction();
+		System.out.println(entityClass);
 		Query query = sesion.createQuery("from " + entityClass.getSimpleName());
 		list = (List<E>)query.list();
 		sesion.getTransaction().commit();
 		sesion.close();
 		return list;
+	}
+	
+	public Object show(String id) {
+		Session sesion=getSession();
+		sesion.beginTransaction();
+		Object entidad = sesion.get(entityClass, id);
+		sesion.getTransaction().commit();
+		sesion.close();
+		return entidad;
+	}
+	
+	public Object show(int id) {
+		Session sesion=getSession();
+		sesion.beginTransaction();
+		Object entidad = sesion.get(entityClass, id);
+		sesion.getTransaction().commit();
+		sesion.close();
+		return entidad;
 	}
 	
 	public void operation() {

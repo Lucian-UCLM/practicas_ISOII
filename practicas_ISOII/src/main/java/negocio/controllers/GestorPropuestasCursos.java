@@ -39,6 +39,12 @@ public class GestorPropuestasCursos {
 		return cursodao.listarCursos();
 	}
 	
+	public CursoPropio listarCurso(String idCurso) {
+		CursoPropio curso = new CursoPropio();
+		curso.setId(idCurso);
+		return cursodao.listarCurso(curso);
+	}
+	
 	public List<ProfesorUCLM> listarProfesoresUCLM() {
 		return profesoruclmdao.listarProfesorUCLM();
 	}

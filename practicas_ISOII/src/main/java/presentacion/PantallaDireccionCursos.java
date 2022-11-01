@@ -322,21 +322,25 @@ public class PantallaDireccionCursos extends JFrame {
 
 					String selectedItem = (String) curso_list.getSelectedValue();
 					//a completar con los campos que recogemos de la selección (ya tenemos el id del curso)
-					nombre_text.setText("");
-					creditos_text.setText("");
-					importe_text.setText("");
-					fecha_inicio_text.setText("");
-					fecha_final_text.setText("");
-					edicion_text.setText("");
-					estado_text.setText("");
+					CursoPropio curso = gestor.listarCurso(selectedItem);
+					nombre_text.setText(curso.getNombre().toString());
+					creditos_text.setText(curso.getECTS()+"");
+					importe_text.setText(curso.getTasaMatricula()+"");
+					fecha_inicio_text.setText(curso.getFechaInicio().toString());
+					fecha_final_text.setText(curso.getFechaFin().toString());
+					edicion_text.setText(curso.getEdicion()+"");
+					estado_text.setText(curso.getEstado().toString());
 					id_text.setText(selectedItem);
 					edicion_text.setEditable(false);
 					id_text.setEditable(false);
 					edicion_label.setEnabled(false);
 					id_label.setEnabled(false);
-					
-					
-					// add selectedItem to your second list.
+					for (int i = 0; i < TipoCurso.values().length; i++) {
+						if(tipo_combobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
+							tipo_combobox.setSelectedItem(tipo_combobox.getModel().getElementAt(i));
+						}
+					}
+					director_list.setSelectedValue(curso.getDirector(), rootPaneCheckingEnabled);
 
 				}
 			}

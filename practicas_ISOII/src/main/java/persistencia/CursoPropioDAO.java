@@ -26,6 +26,10 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 	public List<CursoPropio> listarCursos(){
 		return abstractEntityDAO.showAll();
 	}
+	
+	public CursoPropio listarCurso(CursoPropio curso){
+		return (CursoPropio) abstractEntityDAO.show(curso.getId());
+	}
 
 	public void editarCurso(CursoPropio curso) {
 		abstractEntityDAO.update(curso);
