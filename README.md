@@ -1,4 +1,12 @@
-# Memoria
+# Empresaurios S.A.
+> Daniel Durán Fernández
+
+> Lucian Andrei Farcas   
+
+> Rubén García García   
+
+> Carlos Gutiérrez Palmeiro
+	
 # Índice
 1. [Control de versiones](#control)
     1. [Github](#github)
@@ -121,12 +129,8 @@ Todas las historias se pueden ver a través de nuestro Trello en el siguiente [e
 
   ### Base de Datos Embebida <a name="embebida"></a>
   La base de datos es embebida y está creada con DBeaver, esto implica que está integrada en el sistema por lo que no tiene contraseña, las tablas están localizadas en el usuario root. El diagrama es el siguiente:
+![diagrama_bbdd](/SOURCE_README/diagrama_bbdd.png)
 
-```
-
-Foto del diagrama de la base de datos
-
-```
   ### Acceso con hibernate <a name="hibernate"></a>
   Usaremos hibernate para librar carga de trabajo al hacer la persistencia ya que de esta forma no tendremos que hacer las sentencias a mano ni hacer daos extensos uno por uno.
   
@@ -298,38 +302,35 @@ public Object show(int id) {
   ### PantallaLogin <a name="login"></a>
   Consiste en una pantalla con 2 TextBox uno para introducir el usuario y otro para la contraseña, y un Button para loguearse en el sistema. Cuando se pulsa el botón login se lanza la pantalla principal que permite al usuario seleccionar el modo de la aplicación (PantallaDireccionCursos, PantallaJefeGabinete, PantallaEmpleadosVicerrectorado, PantallaMatricula).
   
-```
-
-foto del login y la pantalla principal
-
-```
+ PantallaLogin        |  Menu Principal
+:-------------------------:|:-------------------------:
+![login](/SOURCE_README/login.png)  |  ![menu_principal](/SOURCE_README/menu_principal.png)
+  
   
   ### PantallaDireccionCurso <a name="direccion"></a>
   En esta pantalla el usuario podrá ver una lista con todos los cursos guardados en la base de datos y podrá realizar diferentes acciones con ellos: cambiar el nombre, los creditos ECTS, el importe, el tipo, la fecha de inicio y fin, el centro, director y secretario.
 Para introducir un nuevo curso, no tiene que haber otro curso seleccionado (lo podemos deseleccionar con el botón “Limpiar todo”) rellenamos todos los campos y presionamos el botón “Nuevo Curso”.
+ PantallaDireccionCurso        |
+:-------------------------:|
+![direccion](/SOURCE_README/direccion.png)  |
 
-```
 
-foto de direccion de cursos
-
-```
 ***Las 3 pantallas restantes se han planteado para ver como serán desarrolladas en el futuro.***
   ### PantallaJefeGabinete <a name="gabinete"></a>
   En esta pantalla el jefe de gabinete podrá consultar diferente información sobre cursos seleccionando con los checkbox, filtrando por fechas de inicio y fin y por estado del curso
+   PantallaJefeGabinete        |
+:-------------------------:|
+![jefe_gabinete](/SOURCE_README/jede_gabinete.png)  |
 
-```
 
-foto de jefe de gabinete
-
-```
   ### PantallaEmpleadosVicerrectorado <a name="vicerectorado"></a>
   En esta pantalla se mostrarán los cursos disponibles y se podrán editar así como dar de alta los cursos que tengan estado validado
-  
-```
-
-foto de empleados vicerectorado
-
-```
+   PantallaEmpleadosVicerrectorado        |
+:-------------------------:|
+![vicerectorado](/SOURCE_README/vicerectorado.png)  |
 
   ### PantallaMatricula <a name="matricula"></a>
   En esta pantalla el usuario podrá matricularse en un curso, por lo que se mostrará una lista con todos los cursos disponibles, al pulsar el botón de realizar matricula se rellenarán los datos del estudiante que se esta matriculando así como el curso al que se quiere matricular. Podrá elegir con 2 botones el método de pago, paco con transferencia o con Tarjeta.
+    PantallaMatricula        |
+:-------------------------:|
+![matriculacion](/SOURCE_README/matriculacion.png)  |
