@@ -38,8 +38,9 @@ public class PantallaPrincipal extends JFrame {
 		setResizable(false);
 		setTitle("Pantalla Principal");
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		setBounds(100, 100, 720, 450);
+		setBounds(100, 100, 580, 280);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -59,7 +60,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		direccion.setBounds(110, 145, 136, 23);
+		direccion.setBounds(116, 85, 136, 23);
 		contentPane.add(direccion);
 		
 		JButton vicerectorado = new JButton("Vicerectorado");
@@ -77,7 +78,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		vicerectorado.setBounds(110, 252, 136, 23);
+		vicerectorado.setBounds(116, 151, 136, 23);
 		contentPane.add(vicerectorado);
 		
 		JButton estudiante = new JButton("Estudiante");
@@ -95,7 +96,7 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		estudiante.setBounds(433, 145, 136, 23);
+		estudiante.setBounds(322, 85, 136, 23);
 		contentPane.add(estudiante);
 		
 		JButton jefegabinete = new JButton("Jefe de Gabinete");
@@ -113,12 +114,12 @@ public class PantallaPrincipal extends JFrame {
 				}); 
 			}
 		});
-		jefegabinete.setBounds(433, 252, 136, 23);
+		jefegabinete.setBounds(322, 151, 136, 23);
 		contentPane.add(jefegabinete);
 		
 		JLabel lblNewLabel = new JLabel("Seleccione modo para acceder al sistema");
 		lblNewLabel.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 20));
-		lblNewLabel.setBounds(147, 33, 396, 38);
+		lblNewLabel.setBounds(91, 21, 396, 38);
 		contentPane.add(lblNewLabel);
 	}
 }

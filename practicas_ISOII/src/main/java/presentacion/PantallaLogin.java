@@ -37,9 +37,10 @@ public class PantallaLogin extends JFrame {
 	}
 	public PantallaLogin () {
 		setTitle("Interfaz de login");
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 356, 204);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);

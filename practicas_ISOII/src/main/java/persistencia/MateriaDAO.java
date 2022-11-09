@@ -3,32 +3,25 @@ package persistencia;
 import negocio.entities.*;
 
 public class MateriaDAO extends AbstractEntityDAO {
+	
+	private AbstractEntityDAO abstractEntityDAO;
 
-	/**
-	 * 
-	 * @param materia
-	 */
-	public int crearNuevaMateria(Materia materia) {
-		// TODO - implement MateriaDAO.crearNuevaMateria
-		throw new UnsupportedOperationException();
+	public MateriaDAO(Class entityClass) {
+		super(entityClass);
+		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
+		};
 	}
 
-	/**
-	 * 
-	 * @param materia
-	 */
+	public void crearNuevaMateria(Materia materia) {
+		abstractEntityDAO.save(materia);
+	}
+
 	public Materia listarMateria(Materia materia) {
-		// TODO - implement MateriaDAO.listarMateria
 		throw new UnsupportedOperationException();
 	}
 
-	/**
-	 * 
-	 * @param materia
-	 */
-	public Materia editarMateria(Materia materia) {
-		// TODO - implement MateriaDAO.editarMateria
-		throw new UnsupportedOperationException();
+	public void editarMateria(Materia materia) {
+		abstractEntityDAO.update(materia);
 	}
 
 }
