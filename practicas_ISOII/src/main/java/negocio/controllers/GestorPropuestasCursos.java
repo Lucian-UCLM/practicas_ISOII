@@ -38,6 +38,10 @@ public class GestorPropuestasCursos {
 		cursodao.editarCurso(curso);
 		return curso;
 	}
+	
+	public List<CursoPropio> listarCursosWhere(EstadoCurso estado) {
+		return cursodao.listarCursosWhere(estado);
+	}
 
 	public EstadoCurso evaluarPropuesta(CursoPropio curso) {
 		throw new UnsupportedOperationException();
