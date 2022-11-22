@@ -43,6 +43,10 @@ public class GestorPropuestasCursos {
 		return cursodao.listarCursosWhere(estado);
 	}
 
+	public List<CursoPropio> listarCursosWhere(TipoCurso tipo) {
+		return cursodao.listarCursosWhere(tipo);
+	}
+
 	public EstadoCurso evaluarPropuesta(CursoPropio curso) {
 		throw new UnsupportedOperationException();
 	}

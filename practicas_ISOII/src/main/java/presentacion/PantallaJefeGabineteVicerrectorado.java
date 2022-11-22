@@ -27,6 +27,7 @@ import javax.swing.text.AttributeSet.ColorAttribute;
 
 import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
+import negocio.entities.EstadoCurso;
 import negocio.entities.TipoCurso;
 
 import javax.swing.border.LineBorder;
@@ -36,6 +37,7 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
 
 public class PantallaJefeGabineteVicerrectorado extends JFrame {
 	private JPanel contentPane;
@@ -70,10 +72,11 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("Seleccione Campos");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblNewLabel.setBounds(29, 26, 125, 14);
-		contentPane.add(lblNewLabel);
+		JLabel not_selected_label = new JLabel("Seleccione Campos");
+		not_selected_label.setHorizontalAlignment(SwingConstants.LEFT);
+		not_selected_label.setFont(new Font("Tahoma", Font.BOLD, 11));
+		not_selected_label.setBounds(29, 26, 157, 14);
+		contentPane.add(not_selected_label);
 
 		JCheckBox chckbxNombre = new JCheckBox("Nombre");
 		chckbxNombre.setBounds(31, 47, 97, 23);
@@ -96,12 +99,10 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		contentPane.add(chckbxEdicin);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(
-				new TipoCurso[] { TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA, 
-						TipoCurso.FORMACION_AVANZADA,TipoCurso.FORMACION_CONTINUA, TipoCurso.MICROCREDENCIALES,
-						TipoCurso.CORTA_DURACION, TipoCurso.CURSOS_DE_VERANO, TipoCurso.FORMACION_DE_MAYORES}));
-		
-		comboBox.setBounds(21, 293, 133, 22);
+		comboBox.setMaximumRowCount(9);
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Ninguno seleccionado", "MASTER", "EXPERTO", "ESPECIALISTA", 
+				"FORMACION_AVANZADA", "FORMACION_CONTINUA", "MICROCREDENCIALES", "CORTA_DURACION", "CURSOS_DE_VERANO", "FORMACION_DE_MAYORES"}));
+		comboBox.setBounds(29, 292, 125, 22);
 		contentPane.add(comboBox);
 
 		campoFechaInicio = new JTextField();
@@ -125,23 +126,30 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		JButton botonConsulta = new JButton("Consultar");
 		botonConsulta.setBounds(31, 326, 89, 23);
 		contentPane.add(botonConsulta);
+		
+		JLabel Ingresos_label = new JLabel("Ingresos");
+		Ingresos_label.setFont(new Font("Tahoma", Font.BOLD, 13));
+		Ingresos_label.setBounds(290, 330, 97, 13);
+		contentPane.add(Ingresos_label);
+		
+		JLabel ingresos_cantidad_label = new JLabel("");
+		ingresos_cantidad_label.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
+		ingresos_cantidad_label.setBounds(398, 331, 216, 13);
+		contentPane.add(ingresos_cantidad_label);
 		setBounds(100, 100, 900, 400);
 		
 		botonConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
-						int numColumnas = 0;
-						int numFilas = 0;
-						List<CursoPropio> listacurso = new ArrayList<>();
-						listacurso = gestor.listarCursos();
-						//listacurso = gestor.listarCursosWhere(estado)
+						int numColumnas = 0,numFilas = 0;
+						double ingresos = 0.0;
+						List<CursoPropio> listacurso = new ArrayList<CursoPropio>();
 						String aux[] = new String[8];
-						
-						for (int j = 0; j < listacurso.size(); j++) {
-							model_curso.addElement(listacurso.get(numColumnas).getId());
-							numFilas++;
-							
+						if (comboBox.getModel().getSelectedItem().equals("Ninguno seleccionado")) {
+							listacurso = gestor.listarCursos();
+						}else {
+							listacurso = gestor.listarCursosWhere(TipoCurso.valueOf(comboBox.getModel().getElementAt(comboBox.getSelectedIndex()).toString()));
 						}
 						
 						if (chckbxNombre.isSelected()) {
@@ -179,22 +187,27 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 							numColumnas++;
 							
 						}
-						
+
+						for (int j = 0; j < listacurso.size(); j++) {
+							model_curso.addElement(listacurso.get(numColumnas).getId());
+							ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
+							numFilas++;
+						}
+						ingresos_cantidad_label.setText(String.valueOf(ingresos) + " €");
+						ingresos_cantidad_label.setForeground(Color.BLUE);
 						Object matriz[][] = new Object[numFilas][numColumnas];
 						String campos[] = new String[numColumnas];
 						System.out.println(numColumnas);
 						if (numColumnas == 0) {
-							lblNewLabel.setText("SELECCIONE CAMPOS");
+							not_selected_label.setText("SELECCIONE CAMPOS");
 						} else {
 
 							for (int k = 0; k < campos.length; k++) {
 								campos[k] = aux[k];
-								System.out.println(campos[k]);
 							}
 
 							for (int i = 0; i < listacurso.size(); i++) {
 								matriz[i][0] = listacurso.get(i).getNombre();
-								System.out.println(matriz[i][0]);
 							}
 
 							for (int j = 0; j < campos.length; j++) {
@@ -202,27 +215,22 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 								if (campos[j].equals("Centro")) {
 									for (int i = 0; i < listacurso.size(); i++) {
 										matriz[i][j] = listacurso.get(i).getIdCentro();
-										System.out.println(matriz[i][j]);
 									}
 								}if (campos[j].equals("Créditos")) {
 									for (int i = 0; i < listacurso.size(); i++) {
 										matriz[i][j] = listacurso.get(i).getECTS();
-										System.out.println(matriz[i][j]);
 									}
 								}if (campos[j].equals("Importe")) {
 									for (int i = 0; i < listacurso.size(); i++) {
 										matriz[i][j] = listacurso.get(i).getTasaMatricula();
-										System.out.println(matriz[i][j]);
 									}
 								}if (campos[j].equals("Edición")) {
 									for (int i = 0; i < listacurso.size(); i++) {
 										matriz[i][j] = listacurso.get(i).getEdicion();
-										System.out.println(matriz[i][j]);
 									}
 								}if (campos[j].equals("Estado")) {
 									for (int i = 0; i < listacurso.size(); i++) {
 										matriz[i][j] = listacurso.get(i).getEstado();
-										System.out.println(matriz[i][j]);
 									}
 								}
 							}
