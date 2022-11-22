@@ -27,6 +27,10 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 		return abstractEntityDAO.showAll();
 	}
 	
+	public List<CursoPropio> listarCursosWhere(EstadoCurso estado){
+		return abstractEntityDAO.showAllWhere("estado = "+estado.ordinal());
+	}
+	
 	public CursoPropio listarCurso(CursoPropio curso){
 		return (CursoPropio) abstractEntityDAO.show(curso.getId());
 	}

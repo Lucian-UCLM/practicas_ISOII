@@ -2,24 +2,30 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>empresaurios</groupId>
-	<artifactId>practicasiso2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>practicas_ISOII</artifactId>
+	<version>1.0.1-SNAPSHOT</version>
 
 	<name>practicasiso2</name>
 	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<url>https://github.com/Lucian-UCLM/practicas_ISOII.git</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
+		<sonar.organization>lucian-uclm</sonar.organization>
+  		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  		<sonar.projectKey>Lucian-UCLM_practicas_ISOII</sonar.projectKey>
+  		<sonar.login>14891a49bf1f697fe90e7b71c8a86255362c425e</sonar.login>
+  		<sonar.sources>.</sonar.sources>
+  		<sonar.inclusions>src/main/**</sonar.inclusions>
 	</properties>
-
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.11</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
