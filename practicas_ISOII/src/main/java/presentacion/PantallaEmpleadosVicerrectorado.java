@@ -31,6 +31,8 @@ import java.awt.Color;
 public class PantallaEmpleadosVicerrectorado extends JFrame {
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
+	private DefaultListModel model_curso = new DefaultListModel();
+	private DefaultListModel model_curso_aprobado = new DefaultListModel();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -63,7 +65,6 @@ public class PantallaEmpleadosVicerrectorado extends JFrame {
 		GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 		List<CursoPropio> lista = new ArrayList<>();
 		lista = gestor.listarCursosWhere(EstadoCurso.PROPUESTO);
-		DefaultListModel model_curso = new DefaultListModel();
 		int i = 0;
 		for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
 			model_curso.addElement(lista.get(i).getId());
@@ -90,15 +91,14 @@ public class PantallaEmpleadosVicerrectorado extends JFrame {
 		contentPane.add(curso_aprobado_list);
 
 		lista = gestor.listarCursosWhere(EstadoCurso.VALIDADO);
-		model_curso = new DefaultListModel();
 		i = 0;
 		for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
-			model_curso.addElement(lista.get(i).getId());
+			model_curso_aprobado.addElement(lista.get(i).getId());
 			iterator.next();
 			i++;
 		}
 
-		curso_aprobado_list.setModel(model_curso);
+		curso_aprobado_list.setModel(model_curso_aprobado);
 
 		JButton aplicar_button = new JButton("Aplicar");
 		aplicar_button.addActionListener(new ActionListener() {
@@ -111,13 +111,12 @@ public class PantallaEmpleadosVicerrectorado extends JFrame {
 							curso.getFechaInicio(), curso.getFechaFin(), curso.getTasaMatricula(), curso.getEdicion(),
 							EstadoCurso.valueOf(estado_combobox.getModel()
 									.getElementAt(estado_combobox.getSelectedIndex()).toString()),
-							curso.getTipo(), curso.getIdDirector(), curso.getIdSecretario(),
-							curso.getIdCentro());
-//					curso_list.remove(curso_list.getSelectedIndex());
-//					if (estado_combobox.getModel()
-//						.getElementAt(estado_combobox.getSelectedIndex()).toString().equals("VALIDADO")) {
-//						curso_aprobado_list.add(curso.getId());
-//					}
+							curso.getTipo(), curso.getIdDirector(), curso.getIdSecretario(), curso.getIdCentro());
+					if (estado_combobox.getModel().getElementAt(estado_combobox.getSelectedIndex()).toString()
+							.equals("VALIDADO")) {
+						model_curso_aprobado.addElement(curso.getId());
+					}
+					model_curso.removeElementAt(curso_list.getSelectedIndex());
 				}
 			}
 		});
@@ -136,9 +135,9 @@ public class PantallaEmpleadosVicerrectorado extends JFrame {
 					CursoPropio curso = gestor.listarCurso(selectedItem);
 					gestor.editarPropuestaCurso(curso.getId(), curso.getNombre(), curso.getECTS(),
 							curso.getFechaInicio(), curso.getFechaFin(), curso.getTasaMatricula(), curso.getEdicion(),
-							EstadoCurso.EN_IMPARTIZICION,
-							curso.getTipo(), curso.getIdDirector(), curso.getIdSecretario(),
-							curso.getIdCentro());
+							EstadoCurso.EN_IMPARTIZICION, curso.getTipo(), curso.getIdDirector(),
+							curso.getIdSecretario(), curso.getIdCentro());
+					model_curso_aprobado.removeElementAt(curso_aprobado_list.getSelectedIndex());
 				}
 			}
 		});
