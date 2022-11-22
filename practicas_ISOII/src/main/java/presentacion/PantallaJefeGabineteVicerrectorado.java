@@ -42,6 +42,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 	private JTextField campoFechaInicio;
 	private JTextField campoFechaFin;
 	private JTable table;
+	private DefaultListModel model_curso = new DefaultListModel();
 	GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 
 	public static void main(String[] args) {
@@ -58,6 +59,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 	}
 
 	public PantallaJefeGabineteVicerrectorado() {
+		inicializarComponentes();
 		setTitle("Interfaz de jefe de gabinete");
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 180, 400);
@@ -119,62 +121,63 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		JButton botonConsulta = new JButton("Consultar");
 		botonConsulta.setBounds(31, 326, 89, 23);
 		contentPane.add(botonConsulta);
+		
 		botonConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						int numColumnas = 0;
 						int numFilas = 0;
-						DefaultListModel model_curso = new DefaultListModel();
 						List<CursoPropio> listacurso = new ArrayList<>();
 						listacurso = gestor.listarCursos();
 						String aux[] = new String[8];
-
+						
+						for (int j = 0; j < listacurso.size(); j++) {
+							model_curso.addElement(listacurso.get(numColumnas).getId());
+							numFilas++;
+							
+						}
+						
 						if (chckbxNombre.isSelected()) {
 							aux[numColumnas] = chckbxNombre.getText();
 							numColumnas++;
-
-							for (int j = 0; j < listacurso.size(); j++) {
-								model_curso.addElement(listacurso.get(numColumnas).getId());
-								numFilas++;
-							}
-
+							
 						}
 						if (chckbxCentro.isSelected()) {
 							aux[numColumnas] = chckbxCentro.getText();
 							numColumnas++;
-
+							
 						}
 						if (chckbxCrditos.isSelected()) {
 							aux[numColumnas] = chckbxCrditos.getText();
 							numColumnas++;
-
+							
 						}
 						if (chckbxImporte.isSelected()) {
 							aux[numColumnas] = chckbxImporte.getText();
 							numColumnas++;
-
+							
 						}
 						if (chckbxEdicin.isSelected()) {
 							aux[numColumnas] = chckbxEdicin.getText();
 							numColumnas++;
-
+							
 						}
 						if (!campoFechaInicio.getText().equals("")) {
 							aux[numColumnas] = campoFechaInicio.getText();
 							numColumnas++;
-
+							
 						}
 						if (!campoFechaFin.getText().equals("")) {
 							aux[numColumnas] = campoFechaFin.getText();
 							numColumnas++;
-
+							
 						}
 						if (!comboBox.getSelectedItem().toString().equals("Estado")) {
 							aux[numColumnas] = comboBox.getSelectedItem().toString();
 							numColumnas++;
+							
 						}
-
 						Object matriz[][] = new Object[numFilas][numColumnas];
 
 						String campos[] = new String[numColumnas];
@@ -187,17 +190,17 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 								campos[k] = aux[k];
 								System.out.println(campos[k]);
 							}
-							
+
 							for (int i = 0; i < listacurso.size(); i++) {
 								matriz[i][0] = listacurso.get(i).getNombre();
 								System.out.println(matriz[i][0]);
 							}
-							
+
 							for (int j = 0; j < campos.length; j++) {
-								
+
 								if (campos[j].equals("Centro")) {
 									for (int i = 0; i < listacurso.size(); i++) {
-										matriz[i][j] = listacurso.get(i).getCentro();
+										matriz[i][j] = listacurso.get(i).getIdCentro();
 										System.out.println(matriz[i][j]);
 									}
 								}if (campos[j].equals("Créditos")) {
@@ -221,25 +224,22 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 										System.out.println(matriz[i][j]);
 									}
 								}if (campos[j].equals("Validado")) {
-									
+
 								}if (campos[j].equals("")) {
-									
+
 								}if (campos[j].equals("")) {
-									
+
 								}if (campos[j].equals("")) {
-									
+
 								}if (campos[j].equals("")) {
-									
+
 								}
-								
-								
-								
 							}
 
 							rellenarMatriz(matriz);
 							realizarConsulta(matriz, campos);
 							setBounds(100, 100, 900, 400);
-
+							table.removeEditor();
 						}
 
 					}
@@ -254,12 +254,17 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		scrollPane.setBounds(159, 47, 700, 277);
 		contentPane.add(scrollPane);
 
-		table = new JTable();
-		table.setModel(new DefaultTableModel(matrizInfo, campos));
+		table = new JTable(matrizInfo, campos);
+
 		table.setToolTipText("");
 		scrollPane.setViewportView(table);
+		table.setEnabled(false);
+		table.setRowSelectionAllowed(false);
 	}
 
+	private void inicializarComponentes() {
+
+	}
 	public Object[][] rellenarMatriz(Object[][] matriz) {
 
 		for (int columnas = 0; columnas < matriz.length; columnas++) {
