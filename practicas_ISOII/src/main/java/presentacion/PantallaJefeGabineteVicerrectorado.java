@@ -27,6 +27,7 @@ import javax.swing.text.AttributeSet.ColorAttribute;
 
 import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
+import negocio.entities.TipoCurso;
 
 import javax.swing.border.LineBorder;
 import javax.swing.plaf.synth.ColorType;
@@ -95,9 +96,12 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		contentPane.add(chckbxEdicin);
 
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] { "Estado", "Propuesto", "Validado", "Rechazado",
-				"En matriculación", "En impartición", "Terminado" }));
-		comboBox.setBounds(21, 293, 116, 22);
+		comboBox.setModel(new DefaultComboBoxModel(
+				new TipoCurso[] { TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA, 
+						TipoCurso.FORMACION_AVANZADA,TipoCurso.FORMACION_CONTINUA, TipoCurso.MICROCREDENCIALES,
+						TipoCurso.CORTA_DURACION, TipoCurso.CURSOS_DE_VERANO, TipoCurso.FORMACION_DE_MAYORES}));
+		
+		comboBox.setBounds(21, 293, 133, 22);
 		contentPane.add(comboBox);
 
 		campoFechaInicio = new JTextField();
@@ -121,6 +125,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		JButton botonConsulta = new JButton("Consultar");
 		botonConsulta.setBounds(31, 326, 89, 23);
 		contentPane.add(botonConsulta);
+		setBounds(100, 100, 900, 400);
 		
 		botonConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -130,6 +135,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 						int numFilas = 0;
 						List<CursoPropio> listacurso = new ArrayList<>();
 						listacurso = gestor.listarCursos();
+						//listacurso = gestor.listarCursosWhere(estado)
 						String aux[] = new String[8];
 						
 						for (int j = 0; j < listacurso.size(); j++) {
@@ -173,13 +179,8 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 							numColumnas++;
 							
 						}
-						if (!comboBox.getSelectedItem().toString().equals("Estado")) {
-							aux[numColumnas] = comboBox.getSelectedItem().toString();
-							numColumnas++;
-							
-						}
+						
 						Object matriz[][] = new Object[numFilas][numColumnas];
-
 						String campos[] = new String[numColumnas];
 						System.out.println(numColumnas);
 						if (numColumnas == 0) {
@@ -223,23 +224,12 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 										matriz[i][j] = listacurso.get(i).getEstado();
 										System.out.println(matriz[i][j]);
 									}
-								}if (campos[j].equals("Validado")) {
-
-								}if (campos[j].equals("")) {
-
-								}if (campos[j].equals("")) {
-
-								}if (campos[j].equals("")) {
-
-								}if (campos[j].equals("")) {
-
 								}
 							}
-
+							
 							rellenarMatriz(matriz);
 							realizarConsulta(matriz, campos);
 							setBounds(100, 100, 900, 400);
-							table.removeEditor();
 						}
 
 					}
