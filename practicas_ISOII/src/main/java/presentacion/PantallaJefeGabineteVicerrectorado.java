@@ -38,12 +38,11 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
+import com.toedter.calendar.JDateChooser;
 
 public class PantallaJefeGabineteVicerrectorado extends JFrame {
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
-	private JTextField campoFechaInicio;
-	private JTextField campoFechaFin;
 	private JTable table;
 	private DefaultListModel model_curso = new DefaultListModel();
 	GestorPropuestasCursos gestor = new GestorPropuestasCursos();
@@ -105,22 +104,12 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		comboBox.setBounds(29, 292, 125, 22);
 		contentPane.add(comboBox);
 
-		campoFechaInicio = new JTextField();
-		campoFechaInicio.setBounds(31, 206, 86, 20);
-		contentPane.add(campoFechaInicio);
-		campoFechaInicio.setColumns(10);
-
-		campoFechaFin = new JTextField();
-		campoFechaFin.setColumns(10);
-		campoFechaFin.setBounds(31, 262, 86, 20);
-		contentPane.add(campoFechaFin);
-
 		JLabel fechaInicio = new JLabel("Fecha Inicio");
-		fechaInicio.setBounds(41, 181, 73, 14);
+		fechaInicio.setBounds(29, 190, 73, 14);
 		contentPane.add(fechaInicio);
 
 		JLabel fechaFin = new JLabel("Fecha Fin");
-		fechaFin.setBounds(41, 237, 73, 14);
+		fechaFin.setBounds(29, 249, 73, 14);
 		contentPane.add(fechaFin);
 
 		JButton botonConsulta = new JButton("Consultar");
@@ -136,6 +125,14 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		ingresos_cantidad_label.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
 		ingresos_cantidad_label.setBounds(398, 331, 216, 13);
 		contentPane.add(ingresos_cantidad_label);
+		
+		JDateChooser campoFechaInicio = new JDateChooser();
+		campoFechaInicio.setBounds(29, 204, 146, 23);
+		contentPane.add(campoFechaInicio);
+		
+		JDateChooser campoFechaFin = new JDateChooser();
+		campoFechaFin.setBounds(29, 263, 146, 19);
+		contentPane.add(campoFechaFin);
 		setBounds(100, 100, 900, 400);
 		
 		botonConsulta.addActionListener(new ActionListener() {
@@ -145,6 +142,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 						int numColumnas = 0,numFilas = 0;
 						double ingresos = 0.0;
 						List<CursoPropio> listacurso = new ArrayList<CursoPropio>();
+						List<CursoPropio> listaConsulta = new ArrayList<CursoPropio>();
 						String aux[] = new String[8];
 						listacurso = gestor.listarCursos();
 						if (!comboBox.getModel().getSelectedItem().equals("Ninguno seleccionado")) {
@@ -176,23 +174,27 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 							numColumnas++;
 							
 						}
-						if (!campoFechaInicio.getText().equals("")) {
-							
-							
-						}
-						if (!campoFechaFin.getText().equals("")) {
-							
-							
-						}
 
 						for (int j = 0; j < listacurso.size(); j++) {
-//							if (campoFechaInicio.compareTo(listacurso.get(j).getFechaInicio()<=0 && campoFechaFin.compareTo(listacurso.get(j).getFechaFin()>=0)){
+//							if (campoFechaInicio.getDate().compareTo(listacurso.get(j).getFechaInicio())<=0 && campoFechaFin.getDate().compareTo(listacurso.get(j).getFechaFin())>=0){
 //								//Esta condicion sería cuando se cumple, es decir el curso se lleva a cabo entre las fechas introducidas. 
 //								//Ahora mismo no funciona por que los campos no son fechas
 //							}
-							model_curso.addElement(listacurso.get(j).getId());
-							ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
-							numFilas++;
+							if(campoFechaInicio.getDate() != null && campoFechaFin.getDate() !=null) {
+								if (campoFechaInicio.getDate().compareTo(listacurso.get(j).getFechaInicio())<=0 && campoFechaFin.getDate().compareTo(listacurso.get(j).getFechaFin())>=0){
+									model_curso.addElement(listacurso.get(j).getId());
+									listaConsulta.add(listacurso.get(j));
+									ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
+									numFilas++;
+								}
+							}else {
+								model_curso.addElement(listacurso.get(j).getId());
+								listaConsulta.add(listacurso.get(j));
+								ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
+								numFilas++;
+							}
+							
+							
 						}
 						Object matriz[][] = new Object[numFilas][numColumnas];
 						String campos[] = new String[numColumnas];
@@ -207,38 +209,36 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 								campos[k] = aux[k];
 							}
 
-							for (int i = 0; i < listacurso.size(); i++) {
-								matriz[i][0] = listacurso.get(i).getNombre();
+							for (int i = 0; i < listaConsulta.size(); i++) {
+								matriz[i][0] = listaConsulta.get(i).getNombre();
 							}
 
 							for (int j = 0; j < campos.length; j++) {
 
 								if (campos[j].equals("Centro")) {
-									for (int i = 0; i < listacurso.size(); i++) {
-										matriz[i][j] = listacurso.get(i).getIdCentro();
+									for (int i = 0; i < listaConsulta.size(); i++) {
+										matriz[i][j] = listaConsulta.get(i).getIdCentro();
 									}
 								}if (campos[j].equals("Créditos")) {
-									for (int i = 0; i < listacurso.size(); i++) {
-										matriz[i][j] = listacurso.get(i).getECTS();
+									for (int i = 0; i < listaConsulta.size(); i++) {
+										matriz[i][j] = listaConsulta.get(i).getECTS();
 									}
 								}if (campos[j].equals("Importe")) {
-									for (int i = 0; i < listacurso.size(); i++) {
-										matriz[i][j] = listacurso.get(i).getTasaMatricula();
+									for (int i = 0; i < listaConsulta.size(); i++) {
+										matriz[i][j] = listaConsulta.get(i).getTasaMatricula();
 									}
 								}if (campos[j].equals("Edición")) {
-									for (int i = 0; i < listacurso.size(); i++) {
-										matriz[i][j] = listacurso.get(i).getEdicion();
+									for (int i = 0; i < listaConsulta.size(); i++) {
+										matriz[i][j] = listaConsulta.get(i).getEdicion();
 									}
 								}if (campos[j].equals("Estado")) {
-									for (int i = 0; i < listacurso.size(); i++) {
-										matriz[i][j] = listacurso.get(i).getEstado();
+									for (int i = 0; i < listaConsulta.size(); i++) {
+										matriz[i][j] = listaConsulta.get(i).getEstado();
 									}
 								}
 							}
 							
-							//rellenarMatriz(matriz);
-							realizarConsulta(matriz, campos);
-							setBounds(100, 100, 900, 400);
+							mostrarConsulta(matriz, campos);
 						}
 
 					}
@@ -248,7 +248,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 
 	}
 
-	public void realizarConsulta(Object[][] matrizInfo, String campos[]) {
+	public void mostrarConsulta(Object[][] matrizInfo, String campos[]) {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(159, 47, 700, 277);
 		contentPane.add(scrollPane);
