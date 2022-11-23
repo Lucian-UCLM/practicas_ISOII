@@ -146,9 +146,8 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 						double ingresos = 0.0;
 						List<CursoPropio> listacurso = new ArrayList<CursoPropio>();
 						String aux[] = new String[8];
-						if (comboBox.getModel().getSelectedItem().equals("Ninguno seleccionado")) {
-							listacurso = gestor.listarCursos();
-						}else {
+						listacurso = gestor.listarCursos();
+						if (!comboBox.getModel().getSelectedItem().equals("Ninguno seleccionado")) {
 							listacurso = gestor.listarCursosWhere(TipoCurso.valueOf(comboBox.getModel().getElementAt(comboBox.getSelectedIndex()).toString()));
 						}
 						
@@ -178,30 +177,32 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 							
 						}
 						if (!campoFechaInicio.getText().equals("")) {
-							aux[numColumnas] = campoFechaInicio.getText();
-							numColumnas++;
+							
 							
 						}
 						if (!campoFechaFin.getText().equals("")) {
-							aux[numColumnas] = campoFechaFin.getText();
-							numColumnas++;
+							
 							
 						}
 
 						for (int j = 0; j < listacurso.size(); j++) {
-							model_curso.addElement(listacurso.get(numColumnas).getId());
+//							if (campoFechaInicio.compareTo(listacurso.get(j).getFechaInicio()<=0 && campoFechaFin.compareTo(listacurso.get(j).getFechaFin()>=0)){
+//								//Esta condicion sería cuando se cumple, es decir el curso se lleva a cabo entre las fechas introducidas. 
+//								//Ahora mismo no funciona por que los campos no son fechas
+//							}
+							model_curso.addElement(listacurso.get(j).getId());
 							ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
 							numFilas++;
 						}
-						ingresos_cantidad_label.setText(String.valueOf(ingresos) + " €");
-						ingresos_cantidad_label.setForeground(Color.BLUE);
 						Object matriz[][] = new Object[numFilas][numColumnas];
 						String campos[] = new String[numColumnas];
-						System.out.println(numColumnas);
 						if (numColumnas == 0) {
 							not_selected_label.setText("SELECCIONE CAMPOS");
+							not_selected_label.setForeground(Color.RED);
+							ingresos_cantidad_label.setText("");
 						} else {
-
+							ingresos_cantidad_label.setText(String.valueOf(ingresos) + " €");
+							ingresos_cantidad_label.setForeground(Color.BLUE);
 							for (int k = 0; k < campos.length; k++) {
 								campos[k] = aux[k];
 							}
@@ -235,7 +236,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 								}
 							}
 							
-							rellenarMatriz(matriz);
+							//rellenarMatriz(matriz);
 							realizarConsulta(matriz, campos);
 							setBounds(100, 100, 900, 400);
 						}
@@ -268,7 +269,6 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		for (int columnas = 0; columnas < matriz.length; columnas++) {
 			for (int filas = 0; filas < matriz[columnas].length; filas++) {
 
-				System.out.println("c" + matriz[columnas][filas]);
 
 			}
 		}
