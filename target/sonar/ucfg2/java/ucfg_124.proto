@@ -1,0 +1,21 @@
+
+=persistencia.ProfesorDAO#listarProfesorUCLM()Ljava/util/List;[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/ProfesorDAO.java (-"1*Å
+1[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/ProfesorDAO.java	 (¡
+æ
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/ProfesorDAO.java	 ($
+%0persistencia.AbstractEntityDAO"__id*3*1
+persistencia.ProfesorDAO"
+abstractEntityDAO„‡
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/ProfesorDAO.java	 ($
+%1java.util.List"8persistencia.AbstractEntityDAO#showAll()Ljava/util/List;*&
+$
+%0persistencia.AbstractEntityDAO2	showAll()"u
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/ProfesorDAO.java (%
+
+%1java.util.ListB
+persistencia.ProfesorDAO

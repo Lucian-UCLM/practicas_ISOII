@@ -1,0 +1,3 @@
+persistencia.CentroDAO#listarCentro(Lnegocio/entities/Centro;)Lnegocio/entities/Centro;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

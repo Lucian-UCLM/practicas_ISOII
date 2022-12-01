@@ -1,0 +1,53 @@
+
+=negocio.entities.ProfesorExterno#toString()Ljava/lang/String;c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java1 1("1*Û
+
+1c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2((½
+º
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2+ 2(6
+%0java.lang.String"__id*5*3"
+ negocio.entities.ProfesorExterno"
+dniProfesorÇ
+Ä
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(6
+%1java.lang.String"__concat*!
+ProfesorExterno [dniProfesor=*
+
+%0java.lang.String·
+´
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(H
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+, titulacion=¼
+¹
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2K 2(U
+%3java.lang.String"__id*4*2"
+ negocio.entities.ProfesorExterno"
+
+titulacion¾
+»
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(U
+%4java.lang.String"__concat*
+
+%2java.lang.String*
+
+%3java.lang.String«
+¨
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2([
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+]"
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2 2(\
+
+%5java.lang.StringB$"
+ negocio.entities.ProfesorExterno

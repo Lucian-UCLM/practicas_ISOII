@@ -1,0 +1,107 @@
+
+4negocio.entities.Centro#toString()Ljava/lang/String;Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaR R("1*
+1Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 S( 
+
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 S('
+%0java.lang.String"__concat*
+Centro [idCentro=*
+""ª
+§
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 S(5
+%1java.lang.String"__concat*
+
+%0java.lang.String*
+	, nombre=¦
+£
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS8 S(>
+%2java.lang.String"__id*'*%
+negocio.entities.Centro"
+nombreµ
+²
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 S(>
+%3java.lang.String"__concat*
+
+%1java.lang.String*
+
+%2java.lang.String°
+­
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 S(R
+%4java.lang.String"__concat*
+
+%3java.lang.String*
+, localizacion=¬
+©
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaSU S(a
+%5java.lang.String"__id*-*+
+negocio.entities.Centro"
+localizacionµ
+²
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 S(a
+%6java.lang.String"__concat*
+
+%4java.lang.String*
+
+%5java.lang.String°
+­
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 T(
+%7java.lang.String"__concat*
+
+%6java.lang.String*
+, cursoPropios=°
+­
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaT T(&
+%8java.util.Collection"__id*-*+
+negocio.entities.Centro"
+cursoPropios¹
+¶
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 T(&
+%9java.lang.String"__concat*
+
+%7java.lang.String*
+
+%8java.util.Collection®
+«
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 T(7
+%10java.lang.String"__concat*
+
+%9java.lang.String*
+, plantilla=®
+«
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaT: T(C
+%11java.util.Collection"__id***(
+negocio.entities.Centro"
+	plantilla¼
+¹
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 T(C
+%12java.lang.String"__concat*
+
+%10java.lang.String*
+
+%11java.util.Collection¤
+¡
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS	 T(I
+%13java.lang.String"__concat*
+
+%12java.lang.String*
+]"w
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaS T(J
+
+%13java.lang.StringB
+negocio.entities.Centro

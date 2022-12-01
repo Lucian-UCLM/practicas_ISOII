@@ -1,0 +1,3 @@
+persistencia.MatriculaDAO#seleccionarMatricula(Lnegocio/entities/Matricula;)Lnegocio/entities/Matricula;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

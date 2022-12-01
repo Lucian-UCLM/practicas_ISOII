@@ -1,0 +1,1 @@
+persistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;

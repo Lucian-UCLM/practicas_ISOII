@@ -1,0 +1,86 @@
+
+6negocio.entities.Profesor#toString()Ljava/lang/String;\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaI I("1*ë
+1\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(§
+¤
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(
+%0java.lang.String"__id*&*$
+negocio.entities.Profesor"
+dni±
+®
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(
+%1java.lang.String"__concat*
+Profesor [dni=*
+
+%0java.lang.String¬
+©
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(-
+%2java.lang.String"__concat*
+
+%1java.lang.String*
+	, nombre=ª
+§
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ0 J(6
+%3java.lang.String"__id*)*'
+negocio.entities.Profesor"
+nombre·
+´
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(6
+%4java.lang.String"__concat*
+
+%2java.lang.String*
+
+%3java.lang.String¯
+¬
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(G
+%5java.lang.String"__concat*
+
+%4java.lang.String*
+, apellidos=­
+ª
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJJ J(S
+%6java.lang.String"__id*,**
+negocio.entities.Profesor"
+	apellidos·
+´
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(S
+%7java.lang.String"__concat*
+
+%5java.lang.String*
+
+%6java.lang.String¬
+©
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(a
+%8java.lang.String"__concat*
+
+%7java.lang.String*
+	, doctor=¥
+¢
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(j
+%9java.lang.String"__concat*
+
+%8java.lang.String*
+""¥
+¢
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(p
+%10java.lang.String"__concat*
+
+%9java.lang.String*
+]"y
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(q
+
+%10java.lang.StringB
+negocio.entities.Profesor
