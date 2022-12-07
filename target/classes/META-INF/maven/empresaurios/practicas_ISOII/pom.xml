@@ -20,6 +20,7 @@
 	</properties>
 	
 	<dependencies>
+	<!-- https://mvnrepository.com/artifact/JUnit/JUnit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
@@ -52,7 +53,7 @@
 		    <artifactId>jcalendar</artifactId>
 		    <version>1.4</version>
 		</dependency>
-	</dependencies>
+			</dependencies>
 
 	<build>
 		<pluginManagement>
