@@ -1,3 +1,1 @@
-negocio.controllers.GestorMatriculacion#realizarMatriculacion(Lnegocio/entities/CursoPropio;Lnegocio/entities/Estudiante;)V
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+negocio.controllers.GestorMatriculacion#instance-init#

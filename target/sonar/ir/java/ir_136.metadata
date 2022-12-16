@@ -1,1 +1,1 @@
-persistencia.AbstractEntityDAO#show(I)Ljava/lang/Object;
+persistencia.AbstractEntityDAO#saveOrUpdate(Ljava/lang/Object;)V

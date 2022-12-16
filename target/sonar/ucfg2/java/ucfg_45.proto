@@ -1,12 +1,14 @@
 
 Anegocio.entities.Estudiante#getMatriculas()Ljava/util/Collection;^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaV V(+"1*œ
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaV V(+"1*¸
 1^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaW	 W(¶
-³
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaW	 W(Ò
+Ï
 ^
 TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaW	 W(
-%0java.util.Collection"__id*/*-
+%0java.util.Collection"__id*K
+
+__unknown_file (/*-
 negocio.entities.Estudiante"
 
 matriculas"~
@@ -14,4 +16,4 @@ matriculas"~
 TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaW W(
 
 %0java.util.CollectionB
-negocio.entities.Estudiante
+negocio.entities.EstudianteH

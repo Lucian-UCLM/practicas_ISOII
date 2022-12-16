@@ -1,3 +1,1 @@
-presentacion.PantallaEmpleadosVicerrectorado#evaluarCurso()V
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+persistencia.MateriaDAO#editarMateria(Lnegocio/entities/Materia;)V

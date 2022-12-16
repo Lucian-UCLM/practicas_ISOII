@@ -1,1 +1,1 @@
-persistencia.CursoPropioDAO#listarCursos()Ljava/util/List;
+persistencia.CursoPropioDAO#crearNuevoCurso(Lnegocio/entities/CursoPropio;)V

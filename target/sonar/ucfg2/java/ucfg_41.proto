@@ -1,12 +1,14 @@
 
 =negocio.entities.Estudiante#getTitulacion()Ljava/lang/String;^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaF F("1*”
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaF F("1*°
 1^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaG	 G(²
-¯
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaG	 G(Î
+Ë
 ^
 TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaG	 G(
-%0java.lang.String"__id*/*-
+%0java.lang.String"__id*K
+
+__unknown_file (/*-
 negocio.entities.Estudiante"
 
 titulacion"z
@@ -14,4 +16,4 @@ titulacion"z
 TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaG G(
 
 %0java.lang.StringB
-negocio.entities.Estudiante
+negocio.entities.EstudianteH

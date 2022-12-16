@@ -1,1 +1,3 @@
-negocio.entities.Profesor#instance-init#
+presentacion.PantallaLogin#login()V
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

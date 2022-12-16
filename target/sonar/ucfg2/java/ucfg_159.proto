@@ -1,16 +1,9 @@
 
-@negocio.entities.ProfesorUCLM#getDniProfesor()Ljava/lang/String;`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java) )("1*ù
-1`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java*	 *(∑
-¥
-`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java*	 *(
-%0java.lang.String"__id*2*0
-negocio.entities.ProfesorUCLM"
-dniProfesor"|
-`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java* *(
-
-%0java.lang.StringB!
-negocio.entities.ProfesorUCLM
+&negocio.entities.Centro#getIdCentro()IZ
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java) )("1*≈
+1Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java*	 *("d
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java* *(
+""B
+negocio.entities.CentroH

@@ -1,1 +1,3 @@
-persistencia.CentroDAO#listarCentros()Ljava/util/List;
+persistencia.EstudianteDAO#editarEstudiante(Lnegocio/entities/Estudiante;)Lnegocio/entities/Estudiante;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

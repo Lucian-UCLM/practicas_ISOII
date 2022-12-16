@@ -1,0 +1,3 @@
+negocio.controllers.GestorConsultas#listarEdicionesCursos(Ljava/util/Date;Ljava/util/Date;)Ljava/util/List;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

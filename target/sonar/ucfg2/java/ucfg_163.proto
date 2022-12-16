@@ -1,16 +1,18 @@
 
-Mnegocio.entities.ProfesorUCLM#getCentroAdscripcion()Lnegocio/entities/Centro;`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java9 9(#"1*²
-1`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java:	 :(Ä
-Á
-`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java:	 :(
-%0negocio.entities.Centro"__id*8*6
-negocio.entities.ProfesorUCLM"
-centroAdscripcion"ƒ
-`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java: :(
-
-%0negocio.entities.CentroB!
-negocio.entities.ProfesorUCLM
+;negocio.entities.Centro#getLocalizacion()Ljava/lang/String;Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java9 9("1*¢
+1Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java:	 :(È
+Å
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java:	 :(
+%0java.lang.String"__id*I
+
+__unknown_file (-*+
+negocio.entities.Centro"
+localizacion"v
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java: :(
+
+%0java.lang.StringB
+negocio.entities.CentroH

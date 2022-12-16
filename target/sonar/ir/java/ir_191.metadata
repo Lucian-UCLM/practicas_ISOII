@@ -1,1 +1,1 @@
-persistencia.CentroDAO#<init>(Ljava/lang/Class;)V
+persistencia.EstudianteDAO#crearNuevoEstudiante(Lnegocio/entities/Estudiante;)V

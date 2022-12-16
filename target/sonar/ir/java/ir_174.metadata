@@ -1,1 +1,1 @@
-negocio.entities.Centro#setIdCentro(I)V
+negocio.entities.ProfesorUCLM#toString()Ljava/lang/String;

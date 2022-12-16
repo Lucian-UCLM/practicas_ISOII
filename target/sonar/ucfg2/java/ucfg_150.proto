@@ -1,16 +1,18 @@
 
-Anegocio.entities.Materia#getCurso()Lnegocio/entities/CursoPropio;[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java` `("1*œ
-1[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaa	 a(³
-°
-[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaa	 a("
-%0negocio.entities.CursoPropio"__id*'*%
-negocio.entities.Materia"
-curso"ƒ
-[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaa a($
-"
-%0negocio.entities.CursoPropioB
-negocio.entities.Materia
+Pnegocio.entities.ProfesorUCLM#getCategoria()Lnegocio/entities/CategoriaProfesor;`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java1 1(&"1*Ü
+1`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java2	 2(ã
+à
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java2	 2((
+%0"negocio.entities.CategoriaProfesor"__id*L
+
+__unknown_file (0*.
+negocio.entities.ProfesorUCLM"
+	categoria"Ž
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.java2 2(*
+(
+%0"negocio.entities.CategoriaProfesorB!
+negocio.entities.ProfesorUCLMH

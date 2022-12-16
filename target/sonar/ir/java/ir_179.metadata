@@ -1,1 +1,1 @@
-negocio.entities.Centro#getCursoPropios()Ljava/util/Collection;
+negocio.entities.Centro#setIdCentro(I)V

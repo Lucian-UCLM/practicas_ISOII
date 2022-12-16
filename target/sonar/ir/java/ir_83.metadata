@@ -1,2 +1,3 @@
-persistencia.CursoPropioDAO#listarCursosWhere(Lnegocio/entities/EstadoCurso;)Ljava/util/List;
-java.lang.Enum#ordinal()I
+persistencia.CursoPropioDAO#seleccionarCurso(Lnegocio/entities/CursoPropio;)Lnegocio/entities/CursoPropio;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

@@ -1,1 +1,3 @@
-negocio.entities.CursoPropio#instance-init#
+persistencia.CentroDAO#editarCentro(Lnegocio/entities/Centro;)Lnegocio/entities/Centro;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

@@ -1,17 +1,72 @@
 
-Bnegocio.entities.ProfesorExterno#getTitulacion()Ljava/lang/String;c
-YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java( (("1*¨
+=negocio.entities.ProfesorExterno#toString()Ljava/lang/String;c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java1 1("1*Ì
 1c
-YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java)	 )(¼
-¹
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2((Ù
+Ö
 c
-YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java)	 )(
-%0java.lang.String"__id*4*2"
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2+ 2(6
+%0java.lang.String"__id*Q
+
+__unknown_file (5*3"
+ negocio.entities.ProfesorExterno"
+dniProfesor–
+“
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(6
+%1java.lang.String"__concat*ˆ
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2((!
+ProfesorExterno [dniProfesor=*
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2+ 2(6
+
+%0java.lang.String…
+‚
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(H
+%2java.lang.String"__concat*
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(6
+
+%1java.lang.String*x
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java29 2(H
+, titulacion=Ø
+Õ
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2K 2(U
+%3java.lang.String"__id*P
+
+__unknown_file (4*2"
  negocio.entities.ProfesorExterno"
 
-titulacion"
+titulacionŒ
+‰
 c
-YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java) )(
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(U
+%4java.lang.String"__concat*
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(H
 
-%0java.lang.StringB$"
- negocio.entities.ProfesorExterno
+%2java.lang.String*
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2K 2(U
+
+%3java.lang.Stringù
+ö
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2([
+%5java.lang.String"__concat*
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2	 2(U
+
+%4java.lang.String*l
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2X 2([
+]"
+c
+YC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorExterno.java2 2(\
+
+%5java.lang.StringB$"
+ negocio.entities.ProfesorExternoH

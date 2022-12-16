@@ -1,3 +1,1 @@
-negocio.controllers.GestorConsultas#consultarIngresos(Lnegocio/entities/TipoCurso;Ljava/util/Date;Ljava/util/Date;)Ljava/util/List;
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+negocio.entities.CursoPropio#setIdDirector(Ljava/lang/String;)V

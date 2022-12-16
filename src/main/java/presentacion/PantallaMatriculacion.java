@@ -55,7 +55,6 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		lblUsuarioReply.setBounds(95, 36, 81, 14);
 		contentPane.add(lblUsuarioReply);
 		
-		
 		JLabel lblListaCursos = new JLabel("ListaCursos");
 		lblListaCursos.setBounds(33, 64, 81, 14);
 		contentPane.add(lblListaCursos);

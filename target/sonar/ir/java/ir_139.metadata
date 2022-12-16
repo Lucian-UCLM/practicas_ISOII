@@ -1,1 +1,2 @@
-negocio.entities.Materia#<init>()V
+persistencia.AbstractEntityDAO#showAllWhere(Ljava/lang/String;)Ljava/util/List;
+java.lang.Class#getSimpleName()Ljava/lang/String;

@@ -1,1 +1,1 @@
-negocio.entities.Materia#toString()Ljava/lang/String;
+negocio.entities.Materia#setCurso(Lnegocio/entities/CursoPropio;)V

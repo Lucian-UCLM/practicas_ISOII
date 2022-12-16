@@ -1,1 +1,1 @@
-negocio.entities.Estudiante#getApellidos()Ljava/lang/String;
+negocio.entities.Estudiante#setNombre(Ljava/lang/String;)V

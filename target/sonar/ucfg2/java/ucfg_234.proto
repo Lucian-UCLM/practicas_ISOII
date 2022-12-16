@@ -1,345 +1,0 @@
-
-9negocio.entities.CursoPropio#toString()Ljava/lang/String;a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaä ä("1*ßF
-1a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(®
-«
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå å( 
-%0java.lang.String"__id*(*&
-negocio.entities.CursoPropio"
-id¸
-µ
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å( 
-%1java.lang.String"__concat*
-CursoPropio [id=*
-
-%0java.lang.String±
-®
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(.
-%2java.lang.String"__concat*
-
-%1java.lang.String*
-	, nombre=²
-¯
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå1 å(7
-%3java.lang.String"__id*,**
-negocio.entities.CursoPropio"
-nombre¼
-¹
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(7
-%4java.lang.String"__concat*
-
-%2java.lang.String*
-
-%3java.lang.String¯
-¬
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(C
-%5java.lang.String"__concat*
-
-%4java.lang.String*	
-, ECTS=ª
-§
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(J
-%6java.lang.String"__concat*
-
-%5java.lang.String*
-""¶
-³
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(]
-%7java.lang.String"__concat*
-
-%6java.lang.String*
-, fechaInicio=µ
-²
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå` å(k
-%8java.util.Date"__id*1*/
-negocio.entities.CursoPropio"
-fechaInicioº
-·
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 å(k
-%9java.lang.String"__concat*
-
-%7java.lang.String*
-
-%8java.util.Date´
-±
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(
-%10java.lang.String"__concat*
-
-%9java.lang.String*
-, fechaFin=³
-°
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaæ æ(
-%11java.util.Date"__id*.*,
-negocio.entities.CursoPropio"
-
-fechaFin½
-º
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(
-%12java.lang.String"__concat*
-
-%10java.lang.String*
-
-%11java.util.Dateº
-·
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(3
-%13java.lang.String"__concat*
-
-%12java.lang.String*
-, tasaMatricula=¬
-©
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(C
-%14java.lang.String"__concat*
-
-%13java.lang.String*
-""´
-±
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(R
-%15java.lang.String"__concat*
-
-%14java.lang.String*
-
-, edicion=¬
-©
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(\
-%16java.lang.String"__concat*
-
-%15java.lang.String*
-""³
-°
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 æ(j
-%17java.lang.String"__concat*
-
-%16java.lang.String*
-	, estado=¿
-¼
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaç ç(#
-%18negocio.entities.EstadoCurso"__id*,**
-negocio.entities.CursoPropio"
-estadoË
-È
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(
-%19java.lang.String"__concat*
-
-%17java.lang.String*%
-#
-%18negocio.entities.EstadoCurso±
-®
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(
-%20java.lang.String"__concat*
-
-%19java.lang.String*	
-, tipo=»
-¸
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaç ç(!
-%21negocio.entities.TipoCurso"__id***(
-negocio.entities.CursoPropio"
-tipoÉ
-Æ
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(
-%22java.lang.String"__concat*
-
-%20java.lang.String*#
-!
-%21negocio.entities.TipoCurso³
-°
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(-
-%23java.lang.String"__concat*
-
-%22java.lang.String*
-	, centro=º
-·
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaç0 ç(6
-%24negocio.entities.Centro"__id*,**
-negocio.entities.CursoPropio"
-centroÆ
-Ã
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(6
-%25java.lang.String"__concat*
-
-%23java.lang.String* 
-
-%24negocio.entities.Centroµ
-²
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(F
-%26java.lang.String"__concat*
-
-%25java.lang.String*
-, idCentro=¬
-©
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(Q
-%27java.lang.String"__concat*
-
-%26java.lang.String*
-""µ
-²
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(a
-%28java.lang.String"__concat*
-
-%27java.lang.String*
-, director=Â
-¿
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaçd ç(l$
-%29negocio.entities.ProfesorUCLM"__id*.*,
-negocio.entities.CursoPropio"
-
-directorÌ
-É
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 ç(l
-%30java.lang.String"__concat*
-
-%28java.lang.String*&
-$
-%29negocio.entities.ProfesorUCLM·
-´
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 è(
-%31java.lang.String"__concat*
-
-%30java.lang.String*
-, idDirector=·
-´
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaè è("
-%32java.lang.String"__id*0*.
-negocio.entities.CursoPropio"
-
-idDirector¿
-¼
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 è("
-%33java.lang.String"__concat*
-
-%31java.lang.String*
-
-%32java.lang.String·
-´
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 è(4
-%34java.lang.String"__concat*
-
-%33java.lang.String*
-, secretario=Ä
-Á
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaè7 è(A$
-%35negocio.entities.ProfesorUCLM"__id*0*.
-negocio.entities.CursoPropio"
-
-secretarioÌ
-É
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 è(A
-%36java.lang.String"__concat*
-
-%34java.lang.String*&
-$
-%35negocio.entities.ProfesorUCLM¹
-¶
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 è(U
-%37java.lang.String"__concat*
-
-%36java.lang.String*
-, idSecretario=¹
-¶
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaèX è(d
-%38java.lang.String"__id*2*0
-negocio.entities.CursoPropio"
-idSecretario¿
-¼
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 è(d
-%39java.lang.String"__concat*
-
-%37java.lang.String*
-
-%38java.lang.String·
-´
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 é(
-%40java.lang.String"__concat*
-
-%39java.lang.String*
-, matriculas=»
-¸
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaé é("
-%41java.util.Collection"__id*0*.
-negocio.entities.CursoPropio"
-
-matriculasÃ
-À
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 é("
-%42java.lang.String"__concat*
-
-%40java.lang.String*
-
-%41java.util.Collectionµ
-²
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 é(2
-%43java.lang.String"__concat*
-
-%42java.lang.String*
-, materias=¹
-¶
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaé5 é(=
-%44java.util.Collection"__id*.*,
-negocio.entities.CursoPropio"
-
-materiasÃ
-À
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 é(=
-%45java.lang.String"__concat*
-
-%43java.lang.String*
-
-%44java.util.Collection«
-¨
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå	 é(C
-%46java.lang.String"__concat*
-
-%45java.lang.String*
-]"~
-a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaå é(D
-
-%46java.lang.StringB 
-negocio.entities.CursoPropio

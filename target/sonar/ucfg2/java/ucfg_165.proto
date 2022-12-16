@@ -1,9 +1,18 @@
 
-7negocio.entities.ProfesorUCLM#getIdCentroAdscripcion()I`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaA A(""1*Ñ
-1`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaB	 B("j
-`
-VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaB B(
-""B!
-negocio.entities.ProfesorUCLM
+?negocio.entities.Centro#getCursoPropios()Ljava/util/Collection;Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaA  A(/"1*ª
+1Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaB	 B(Ì
+É
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaB	 B(
+%0java.util.Collection"__id*I
+
+__unknown_file (-*+
+negocio.entities.Centro"
+cursoPropios"z
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaB B(
+
+%0java.util.CollectionB
+negocio.entities.CentroH

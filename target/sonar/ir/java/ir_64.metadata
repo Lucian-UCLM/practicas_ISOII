@@ -1,1 +1,5 @@
-presentacion.PantallaJefeGabineteVicerrectorado#rellenarMatriz([[Ljava/lang/Object;)[[Ljava/lang/Object;
+presentacion.PantallaJefeGabineteVicerrectorado#mostrarConsulta([[Ljava/lang/Object;[Ljava/lang/String;)V
+javax.swing.JTable#<init>([[Ljava/lang/Object;[Ljava/lang/Object;)V
+javax.swing.JTable#instance-init#
+javax.swing.JScrollPane#instance-init#
+javax.swing.JScrollPane#<init>()V

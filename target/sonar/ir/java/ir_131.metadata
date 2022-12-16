@@ -1,1 +1,3 @@
-persistencia.AbstractEntityDAO#saveOrUpdate(Ljava/lang/Object;)V
+persistencia.AbstractEntityDAO#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setIdSecretario(Ljava/lang/String;)V
+negocio.entities.CursoPropio#getMaterias()Ljava/util/Collection;

@@ -77,9 +77,9 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 	private JComboBox<TipoCurso> tipocombobox;
 	
 	private GestorPropuestasCursos gestor;
-	private DefaultListModel<String> modelprofesor;
-	private DefaultListModel<String> modelcurso;
-	private DefaultListModel<Integer> modelcentro;
+	private DefaultListModel<String> modelprofesor = new DefaultListModel<>();
+	private DefaultListModel<String> modelcurso = new DefaultListModel<>();
+	private DefaultListModel<Integer> modelcentro = new DefaultListModel<>();
 	
 	
 	public PantallaDireccionCursos() {
@@ -97,10 +97,7 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 
-		gestor = new GestorPropuestasCursos(); 
-		modelcentro = new DefaultListModel<>();
-		modelprofesor = new DefaultListModel<>();
-		modelcurso = new DefaultListModel<>();
+		gestor = new GestorPropuestasCursos();
 
 		JLabel cursoslabel = new JLabel("Cursos");
 		cursoslabel.setBounds(55, 45, 45, 13);
@@ -259,7 +256,7 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		List<CursoPropio> listacurso = gestor.listarCursos();
 		List<ProfesorUCLM> listaprofesor = gestor.listarProfesoresUCLM();
 		List<Centro> listacentro = gestor.listarCentros(); 
-
+		
 		for (int i=0; i< listacurso.size(); i++) {
 			modelcurso.addElement(listacurso.get(i).getId());
 		}

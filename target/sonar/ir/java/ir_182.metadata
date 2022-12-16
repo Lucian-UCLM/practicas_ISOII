@@ -1,1 +1,1 @@
-negocio.entities.Centro#setPlantilla(Ljava/util/Collection;)V
+negocio.entities.Centro#getLocalizacion()Ljava/lang/String;

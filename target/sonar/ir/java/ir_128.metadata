@@ -1,1 +1,3 @@
-persistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;
+persistencia.ProfesorDAO#listarProfesor(Lnegocio/entities/Profesor;)Lnegocio/entities/Profesor;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

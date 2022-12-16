@@ -1,16 +1,19 @@
 
-Fnegocio.entities.CursoPropio#getEstado()Lnegocio/entities/EstadoCurso;a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java“ “("1*³
+>negocio.entities.CursoPropio#getIdDirector()Ljava/lang/String;a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaÏ Ï("1*º
 1a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java”	 ”(¾
-»
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaÐ	 Ð(Ò
+Ï
 a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java”	 ”("
-%0negocio.entities.EstadoCurso"__id*,**
-negocio.entities.CursoPropio"
-estado"‰
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaÐ	 Ð(
+%0java.lang.String"__id*L
+
+__unknown_file (0*.
+negocio.entities.CursoPropio"
+
+idDirector"}
 a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java” ”($
-"
-%0negocio.entities.EstadoCursoB 
-negocio.entities.CursoPropio
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaÐ Ð(
+
+%0java.lang.StringB 
+negocio.entities.CursoPropioH

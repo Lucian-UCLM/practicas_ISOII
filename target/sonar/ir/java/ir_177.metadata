@@ -1,1 +1,1 @@
-negocio.entities.Centro#getLocalizacion()Ljava/lang/String;
+negocio.entities.Centro#<init>(ILjava/lang/String;Ljava/lang/String;)V
