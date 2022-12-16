@@ -19,17 +19,12 @@ import java.awt.Font;
 
 public class PantallaPrincipal extends JFrame implements ActionListener {
 	private JPanel contentPane;
-	private JTextPane textPaneEstado;
 	
 	private JButton vicerectorado = new JButton("Vicerectorado");
 	private JButton direccion = new JButton("Dirección");
 	private JButton estudiante = new JButton("Estudiante");
 	private JButton jefegabinete = new JButton("Jefe de Gabinete");
 	
-	public static void main(String[] args) {
-		PantallaPrincipal frame = new PantallaPrincipal ();
-		frame.setVisible(true);
-	}
 	public PantallaPrincipal () {
 		inicializarElementos();
 	}

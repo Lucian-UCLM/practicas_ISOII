@@ -40,25 +40,12 @@ import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
 import com.toedter.calendar.JDateChooser;
 
-public class PantallaJefeGabineteVicerrectorado extends JFrame {
+public class PantallaJefeGabineteVicerrectorado extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
 	private JTable table;
 	private DefaultListModel model_curso = new DefaultListModel();
-	GestorPropuestasCursos gestor = new GestorPropuestasCursos();
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PantallaLogin frame = new PantallaLogin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 
 	public PantallaJefeGabineteVicerrectorado() {
 		inicializarComponentes();
@@ -274,5 +261,11 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		}
 
 		return matriz;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
