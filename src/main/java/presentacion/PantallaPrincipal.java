@@ -5,9 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-//import Presentacion.IU_Administrador;
-//import Presentacion.IU_InscribirSocio;
-
 import javax.swing.JLabel;
 
 import javax.swing.JButton;
@@ -16,28 +13,30 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
+import javax.swing.WindowConstants;
 import javax.swing.JTextField;
 import java.awt.Font;
 
-public class PantallaPrincipal extends JFrame {
+public class PantallaPrincipal extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
+	
+	private JButton vicerectorado = new JButton("Vicerectorado");
+	private JButton direccion = new JButton("Dirección");
+	private JButton estudiante = new JButton("Estudiante");
+	private JButton jefegabinete = new JButton("Jefe de Gabinete");
+	
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PantallaPrincipal frame = new PantallaPrincipal ();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			} 
-		}); 
+		PantallaPrincipal frame = new PantallaPrincipal ();
+		frame.setVisible(true);
 	}
 	public PantallaPrincipal () {
+		inicializarElementos();
+	}
+	public void inicializarElementos() {
 		setResizable(false);
 		setTitle("Pantalla Principal");
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 580, 280);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
@@ -45,81 +44,45 @@ public class PantallaPrincipal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton direccion = new JButton("Dirección");
-		direccion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							PantallaDireccionCursos frame = new PantallaDireccionCursos ();
-							frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					} 
-				}); 
-			}
-		});
-		direccion.setBounds(116, 85, 136, 23);
-		contentPane.add(direccion);
+		this.direccion.addActionListener(this);
+		this.direccion.setBounds(116, 85, 136, 23);
+		this.add(direccion);
 		
-		JButton vicerectorado = new JButton("Vicerectorado");
-		vicerectorado.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							PantallaEmpleadosVicerrectorado frame = new PantallaEmpleadosVicerrectorado ();
-							frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					} 
-				}); 
-			}
-		});
-		vicerectorado.setBounds(116, 151, 136, 23);
-		contentPane.add(vicerectorado);
+		this.vicerectorado.addActionListener(this);
+		this.vicerectorado.setBounds(116, 151, 136, 23);
+		this.add(vicerectorado);
 		
-		JButton estudiante = new JButton("Estudiante");
-		estudiante.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							PantallaMatriculacion frame = new PantallaMatriculacion ();
-							frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					} 
-				}); 
-			}
-		});
-		estudiante.setBounds(322, 85, 136, 23);
-		contentPane.add(estudiante);
+		this.estudiante.addActionListener(this);
+		this.estudiante.setBounds(322, 85, 136, 23);
+		this.add(estudiante);
 		
-		JButton jefegabinete = new JButton("Jefe de Gabinete");
-		jefegabinete.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							PantallaJefeGabineteVicerrectorado frame = new PantallaJefeGabineteVicerrectorado ();
-							frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					} 
-				}); 
-			}
-		});
-		jefegabinete.setBounds(322, 151, 136, 23);
-		contentPane.add(jefegabinete);
+		
+		this.jefegabinete.addActionListener(this);
+		this.jefegabinete.setBounds(322, 151, 136, 23);
+		this.add(jefegabinete);
 		
 		JLabel lblNewLabel = new JLabel("Seleccione modo para acceder al sistema");
 		lblNewLabel.setFont(new Font("Microsoft New Tai Lue", Font.BOLD, 20));
 		lblNewLabel.setBounds(91, 21, 396, 38);
 		contentPane.add(lblNewLabel);
 	}
+	public void actionPerformed(ActionEvent e) {
+		
+        if(e.getSource() == direccion) {
+        	PantallaDireccionCursos frame = new PantallaDireccionCursos ();
+			frame.setVisible(true);
+        }
+        if (e.getSource() == vicerectorado) {
+        	PantallaEmpleadosVicerrectorado frame = new PantallaEmpleadosVicerrectorado ();
+			frame.setVisible(true);
+        }
+        if (e.getSource() == estudiante) {
+        	PantallaMatriculacion frame = new PantallaMatriculacion ();
+			frame.setVisible(true);
+        }
+        if (e.getSource() == jefegabinete) {
+        	PantallaJefeGabineteVicerrectorado frame = new PantallaJefeGabineteVicerrectorado ();
+			frame.setVisible(true);
+        }
+    }
 }

@@ -16,5 +16,4 @@ public class GestorPropuestasCursosTest {
 //		assertTrue(comprobar curso eliminado);
 //		assertEquals(0, 0);
 	}
-
 }

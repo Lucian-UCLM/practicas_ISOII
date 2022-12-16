@@ -5,6 +5,7 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextPane;
+import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JList;
 import javax.swing.JLabel;
@@ -12,26 +13,26 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JTextField;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.Color;
 
-public class PantallaMatriculacion extends JFrame{
+public class PantallaMatriculacion extends JFrame implements ActionListener{
+	
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PantallaLogin frame = new PantallaLogin ();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			} 
-		}); 
-	}
+	private JList listCursos = new JList();
+	
 	public PantallaMatriculacion () {
+		inicializarElementos();
+	}
+	public void realizarMatriculacion() {
+		// TODO - implement PantallaMatriculaci�n.realizarMatriculacion
+		throw new UnsupportedOperationException();
+	}
+	public void inicializarElementos() {
 		setTitle("Interfaz de Matriculacion");
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 594, 450);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
@@ -39,7 +40,6 @@ public class PantallaMatriculacion extends JFrame{
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JList listCursos = new JList();
 		listCursos.setBounds(33, 89, 183, 263);
 		contentPane.add(listCursos);
 		
@@ -140,8 +140,9 @@ public class PantallaMatriculacion extends JFrame{
 		lblCursoMatriculadoReply.setBounds(386, 240, 145, 14);
 		contentPane.add(lblCursoMatriculadoReply);
 	}
-	public void realizarMatriculacion() {
-		// TODO - implement PantallaMatriculaci�n.realizarMatriculacion
-		throw new UnsupportedOperationException();
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }

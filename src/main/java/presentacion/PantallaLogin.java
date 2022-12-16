@@ -5,9 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-//import Presentacion.IU_Administrador;
-//import Presentacion.IU_InscribirSocio;
-
 import javax.swing.JLabel;
 
 import javax.swing.JButton;
@@ -16,28 +13,22 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
+import javax.swing.WindowConstants;
 import javax.swing.JTextField;
 
-public class PantallaLogin extends JFrame {
+public class PantallaLogin extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextPane textPaneEstado;
 	private JTextField textField;
 	private JTextField textField_1;
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PantallaLogin frame = new PantallaLogin ();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			} 
-		}); 
+		PantallaLogin frame = new PantallaLogin ();
+		frame.setVisible(true);
 	}
 	public PantallaLogin () {
+		super();
 		setTitle("Interfaz de login");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 356, 204);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
@@ -66,16 +57,8 @@ public class PantallaLogin extends JFrame {
 		JButton btnNewButton = new JButton("Login");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-							PantallaPrincipal frame = new PantallaPrincipal ();
-							frame.setVisible(true);
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					} 
-				});
+				PantallaPrincipal frame = new PantallaPrincipal ();
+				frame.setVisible(true);
 			}
 		});
 		btnNewButton.setBounds(129, 131, 70, 23);
@@ -97,5 +80,10 @@ public class PantallaLogin extends JFrame {
 	public void logout() {
 		// TODO - implement PantallaLogin.logout
 		throw new UnsupportedOperationException();
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
 	}
 }
