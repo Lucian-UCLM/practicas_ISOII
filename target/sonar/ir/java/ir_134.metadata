@@ -1,1 +1,3 @@
-persistencia.AbstractEntityDAO#save(Ljava/lang/Object;)V
+persistencia.AbstractEntityDAO#<init>(Ljava/lang/Class;)V
+org.hibernate.cfg.Configuration#instance-init#
+org.hibernate.cfg.Configuration#<init>()V

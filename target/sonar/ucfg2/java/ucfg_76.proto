@@ -1,39 +1,25 @@
 
-epersistencia.CursoPropioDAO#listarCurso(Lnegocio/entities/CursoPropio;)Lnegocio/entities/CursoPropio;^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java& &("1*¶
+:persistencia.CursoPropioDAO#listarCursos()Ljava/util/List;^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java (&"1*»
 1^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java' '((„
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java	 („
 ‡
 ^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java' '(($
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java	 ($
 %0persistencia.AbstractEntityDAO"__id*R
 
 __unknown_file (6*4
 persistencia.CursoPropioDAO"
-abstractEntityDAOÅ˛
+abstractEntityDAOÇˇ
 ^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java'. '(;
-%1java.lang.String"6negocio.entities.CursoPropio#getId()Ljava/lang/String;*C
-
-__unknown_file ('
-%
-cursonegocio.entities.CursoPropio2getId()⁄◊
-^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java' '(<
-%2java.lang.Object"Ipersistencia.AbstractEntityDAO#show(Ljava/lang/String;)Ljava/lang/Object;*B
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java	 ($
+%1java.util.List"8persistencia.AbstractEntityDAO#showAll()Ljava/util/List;*B
 
 __unknown_file (&
 $
-%0persistencia.AbstractEntityDAO*4
-
-__unknown_file (
-
-%1java.lang.String2show(Ljava/lang/String;)"z
+%0persistencia.AbstractEntityDAO2	showAll()"x
 ^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java' '(=
-
-%2java.lang.Object:á
-^
-TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java&  &(1%
-cursonegocio.entities.CursoPropioB
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java (%
+
+%1java.util.ListB
 persistencia.CursoPropioDAOH

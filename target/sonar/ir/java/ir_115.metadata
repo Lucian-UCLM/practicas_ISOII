@@ -1,1 +1,1 @@
-persistencia.MateriaDAO#editarMateria(Lnegocio/entities/Materia;)V
+persistencia.MateriaDAO#crearNuevaMateria(Lnegocio/entities/Materia;)V

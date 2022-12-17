@@ -1,1 +1,1 @@
-negocio.entities.Materia#setFechaInicio(Ljava/util/Date;)V
+negocio.entities.Materia#setHoras(D)V

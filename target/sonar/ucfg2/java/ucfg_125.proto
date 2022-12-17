@@ -1,24 +1,24 @@
 
-8persistencia.AbstractEntityDAO#show(I)Ljava/lang/Object;a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaW W("1*”
+8persistencia.AbstractEntityDAO#showAll()Ljava/util/List;a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java8 8("1*¦
 1a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaX X(•’
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java9 9(•’
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaX X(
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java9 9(
 %0org.hibernate.Session"Bpersistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;*>
 
 __unknown_file (" 
 persistencia.AbstractEntityDAO2getSession()È
 Å
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaX X(
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java9 9(
 sesionorg.hibernate.Session"__id*9
 
 __unknown_file (
 
 %0org.hibernate.Session­ª
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaY Y(
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java: :(
 %1org.hibernate.Transaction"Qorg.hibernate.SharedSessionContract#beginTransaction()Lorg/hibernate/Transaction;*=
 
 __unknown_file (!
@@ -26,62 +26,98 @@ WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntity
 sesionorg.hibernate.Session2beginTransaction()Ô
 Ñ
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaZ Z()
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java;- ;(8
 %2java.lang.Class"__id*O
 
 __unknown_file (3*1 
 persistencia.AbstractEntityDAO"
-entityClassƒ€
+entityClass÷ô
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaZ Z(.
-%3E"Porg.hibernate.Session#get(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*=
-
-__unknown_file (!
-
-sesionorg.hibernate.Session*3
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java;- ;(H
+%3java.lang.String"1java.lang.Class#getSimpleName()Ljava/lang/String;*3
 
 __unknown_file (
 
-%2java.lang.Class*"
-
-__unknown_file (
-""2(get(Ljava/lang/Class;Ljava/lang/Object;)°
-­
+%2java.lang.Class2getSimpleName()÷
+ô
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaZ Z(/
-entidadjava.lang.Object"__id*%
-
-__unknown_file (	
-
-%3E©¦
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java;# ;(H
+%4java.lang.String"__concat*n
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java[ [(
-%4org.hibernate.Transaction"Oorg.hibernate.SharedSessionContract#getTransaction()Lorg/hibernate/Transaction;*=
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java;# ;(*	
+from *}
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java;- ;(H
+
+%3java.lang.Stringïì
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java; ;(I
+%5org.hibernate.query.Query"Porg.hibernate.Session#createQuery(Ljava/lang/String;)Lorg/hibernate/query/Query;*=
+
+__unknown_file (!
+
+sesionorg.hibernate.Session*4
+
+__unknown_file (
+
+%4java.lang.String2createQuery(Ljava/lang/String;)Ï
+Ì
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java; ;(J"
+queryorg.hibernate.query.Query"__id*=
+
+__unknown_file (!
+
+%5org.hibernate.query.Queryøõ
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java< <(
+%6java.util.List"0org.hibernate.query.Query#list()Ljava/util/List;*@
+
+__unknown_file ($
+"
+queryorg.hibernate.query.Query2list()Ì
+É
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java< <(* 
+persistencia.AbstractEntityDAO"
+list"__id*2
+
+__unknown_file (
+
+%6java.util.List©¦
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java= =(
+%7org.hibernate.Transaction"Oorg.hibernate.SharedSessionContract#getTransaction()Lorg/hibernate/Transaction;*=
 
 __unknown_file (!
 
 sesionorg.hibernate.Session2getTransaction()ìé
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java[ [("
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java= =("
 
-%5void"/jakarta.persistence.EntityTransaction#commit()V*=
+%8void"/jakarta.persistence.EntityTransaction#commit()V*=
 
 __unknown_file (!
 
-%4org.hibernate.Transaction2commit()èå
+%7org.hibernate.Transaction2commit()èå
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java\ \(
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java> >(
 
-%6void",org.hibernate.SharedSessionContract#close()V*=
+%9void",org.hibernate.SharedSessionContract#close()V*=
 
 __unknown_file (!
 
-sesionorg.hibernate.Session2close()"‚
+sesionorg.hibernate.Session2close()Í
+Ê
 a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java] ](
-
-entidadjava.lang.Object: 
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java?	 ?(
+%10java.util.List"__id*H
 
-__unknown_file (
-""B" 
+__unknown_file (,** 
+persistencia.AbstractEntityDAO"
+list"|
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java? ?(
+
+%10java.util.ListB" 
 persistencia.AbstractEntityDAOH

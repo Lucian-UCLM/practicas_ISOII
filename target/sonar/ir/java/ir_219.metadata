@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getFechaInicio()Ljava/util/Date;
+negocio.entities.CursoPropio#getNombre()Ljava/lang/String;

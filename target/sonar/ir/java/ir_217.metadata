@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getECTS()I
+negocio.entities.CursoPropio#getId()Ljava/lang/String;

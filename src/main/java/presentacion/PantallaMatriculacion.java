@@ -1,10 +1,7 @@
 package presentacion;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextPane;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -27,18 +24,18 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.awt.Color;
 
 public class PantallaMatriculacion extends JFrame implements ActionListener{
 	
-	private JPanel contentPane;
-	private JTextPane textPaneEstado;
-	private DefaultListModel model_curso = new DefaultListModel();
-	private DefaultListModel model_estudiantes = new DefaultListModel();
-	private JList listCursos = new JList();
-	private JList list_estudiantes = new JList();
+	private DefaultListModel<String> modelCurso = new DefaultListModel<>();
+	private DefaultListModel<String> modelEstudiantes = new DefaultListModel<>();
+	
+	JButton btnRealizarMatricula = new JButton("Realizar Matricula");
+	
+	private JList<String> listCursos = new JList<>();
+	private JList<String> listEstudiantes = new JList<>();
 	private GestorMatriculacion gestor2 = new GestorMatriculacion();
 	
 	public PantallaMatriculacion () {
@@ -52,46 +49,29 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		setTitle("Interfaz de Matriculacion");
 		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 759, 450);
-		contentPane = new JPanel();
+		
+		JPanel contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		String font = "Tahoma";
+		
 		listCursos.setBounds(517, 74, 188, 278);
 		contentPane.add(listCursos);
-		
-		list_estudiantes.setBounds(33, 89, 173, 297);
-		contentPane.add(list_estudiantes);
-		
-		List<Estudiante> lista2 = new ArrayList<>();
-		lista2 = gestor2.listarEstudiantes();
-		int j = 0;
-		for (Iterator iterator = lista2.iterator(); iterator.hasNext();) {
-			model_estudiantes.addElement(lista2.get(j).getDni());
-			iterator.next();
-			j++;
-		}
-		
-		list_estudiantes.setModel(model_estudiantes);
 		
 		JLabel lblUsuario = new JLabel("Estudiante:");
 		lblUsuario.setBounds(33, 36, 67, 14);
 		contentPane.add(lblUsuario);
 		
-		JButton btnRealizarMatricula = new JButton("Realizar Matricula");
-		btnRealizarMatricula.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-			}
-		});
+		btnRealizarMatricula.addActionListener(this);
 		btnRealizarMatricula.setBounds(221, 363, 124, 23);
 		contentPane.add(btnRealizarMatricula);
 		
 		JLabel lblUsuarioReply = new JLabel("Usuario Login");
 		lblUsuarioReply.setBounds(95, 36, 81, 14);
 		contentPane.add(lblUsuarioReply);
-		
 		
 		JLabel lblListaCursos = new JLabel("ListaCursos");
 		lblListaCursos.setBounds(517, 49, 81, 14);
@@ -110,12 +90,12 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		contentPane.add(btnRealizarPago);
 		
 		JLabel lblFormaPago = new JLabel("Seleccionar forma de pago");
-		lblFormaPago.setFont(new Font("Tahoma", Font.ITALIC, 11));
+		lblFormaPago.setFont(new Font(font, Font.ITALIC, 11));
 		lblFormaPago.setBounds(274, 282, 145, 14);
 		contentPane.add(lblFormaPago);
 		
 		JLabel lblResumenMatricula = new JLabel("Resumen Matrícula");
-		lblResumenMatricula.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblResumenMatricula.setFont(new Font(font, Font.BOLD, 11));
 		lblResumenMatricula.setBounds(274, 36, 124, 14);
 		contentPane.add(lblResumenMatricula);
 		
@@ -140,7 +120,7 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		contentPane.add(lblCualificacion);
 		
 		JLabel lblEstudianteMatricula = new JLabel("Estudiante");
-		lblEstudianteMatricula.setFont(new Font("Tahoma", Font.ITALIC, 11));
+		lblEstudianteMatricula.setFont(new Font(font, Font.ITALIC, 11));
 		lblEstudianteMatricula.setBounds(274, 64, 67, 14);
 		contentPane.add(lblEstudianteMatricula);
 		
@@ -167,40 +147,51 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		JLabel lbListaEstudiantes = new JLabel("ListaEstudiantes");
 		lbListaEstudiantes.setBounds(33, 64, 81, 14);
 		contentPane.add(lbListaEstudiantes);
+		
+		listEstudiantes.setBounds(33, 89, 173, 297);
+		contentPane.add(listEstudiantes);
+		
+		List<Estudiante> listasDeEstudiantesAux = gestor2.listarEstudiantes();
+		for (int j =0; j<listasDeEstudiantesAux.size(); j++) {
+			modelEstudiantes.addElement(listasDeEstudiantesAux.get(j).getDni());}
+		listEstudiantes.setModel(modelEstudiantes);
+		
 		MouseListener mouseListener = new MouseAdapter() {
+			@Override
 			public void mouseClicked(MouseEvent e) {
-				if (e.getSource() == list_estudiantes) {
-					model_curso.clear();
-					listCursos.setModel(model_curso);
-					String selectedItem = (String) list_estudiantes.getSelectedValue();
+				if (e.getSource() == listEstudiantes) {
+					modelCurso.clear();
+					listCursos.setModel(modelCurso);
+					String selectedItem = listEstudiantes.getSelectedValue();
 					Estudiante estudiante = gestor2.listarEstudiante(selectedItem);
+					
 					lblNombreReply.setText(estudiante.getNombre());
 					lblApellidosReply.setText(estudiante.getApellidos());
 					lblDNIReply.setText(estudiante.getDni());
 					lblTitulacionReply.setText(estudiante.getTitulacion());
 					lblCualificacionReply.setText(estudiante.getCualificacion());
+					
 					GestorPropuestasCursos gestor = new GestorPropuestasCursos();
-					List<CursoPropio> lista = new ArrayList<>();
-					lista = gestor.listarCursosWhere(EstadoCurso.EN_MATRICULACION);
-					int i = 0;
-					for (Iterator iterator = lista.iterator(); iterator.hasNext();) {
-						model_curso.addElement(lista.get(i).getId());
-						iterator.next();
-						i++;
+					List<CursoPropio> listaCursosMatriculacion = gestor.listarCursosWhere(EstadoCurso.EN_MATRICULACION);
+					
+					for (int i = 0; i<listaCursosMatriculacion.size(); i++) {
+						modelCurso.addElement(listaCursosMatriculacion.get(i).getId());
 					}
-
-					listCursos.setModel(model_curso);
+					listCursos.setModel(modelCurso);
 				}else if (e.getSource() == listCursos) {
 					
 				}
 			}
 		};
-		list_estudiantes.addMouseListener(mouseListener);
-		listCursos.addMouseListener(mouseListener);
+		
+		listEstudiantes.addMouseListener(mouseListener);
+		listCursos.addMouseListener(mouseListener); 
 	}
-	@Override
+	@Override 
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		if (e.getSource() == btnRealizarMatricula) {
+			
+		}
 		
 	}
 }

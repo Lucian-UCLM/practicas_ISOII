@@ -1,1 +1,1 @@
-negocio.entities.ProfesorExterno#setDniProfesor(Ljava/lang/String;)V
+negocio.entities.ProfesorExterno#<init>(Ljava/lang/String;Ljava/lang/String;)V

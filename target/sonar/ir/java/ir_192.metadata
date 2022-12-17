@@ -1,3 +1,1 @@
-persistencia.EstudianteDAO#seleccionarEstudiante(Lnegocio/entities/Estudiante;)Lnegocio/entities/Estudiante;
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+persistencia.EstudianteDAO#<init>(Ljava/lang/Class;)V

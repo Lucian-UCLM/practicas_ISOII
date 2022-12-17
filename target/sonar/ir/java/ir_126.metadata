@@ -1,1 +1,1 @@
-persistencia.ProfesorDAO#crearNuevoProfesor(Lnegocio/entities/Profesor;)V
+persistencia.ProfesorDAO#instance-init#

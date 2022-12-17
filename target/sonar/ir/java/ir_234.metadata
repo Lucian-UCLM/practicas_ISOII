@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setDirector(Lnegocio/entities/ProfesorUCLM;)V
+negocio.entities.CursoPropio#setTipo(Lnegocio/entities/TipoCurso;)V

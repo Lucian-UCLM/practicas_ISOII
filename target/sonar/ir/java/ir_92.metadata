@@ -1,3 +1,3 @@
-presentacion.PantallaLogin#instance-init#
-javax.swing.JButton#<init>(Ljava/lang/String;)V
-javax.swing.JButton#instance-init#
+persistencia.CursoPropioDAO#listarIngresos(Lnegocio/entities/TipoCurso;Ljava/util/Date;Ljava/util/Date;)D
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

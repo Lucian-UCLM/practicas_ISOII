@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getMaterias()Ljava/util/Collection;
+negocio.entities.CursoPropio#getSecretario()Lnegocio/entities/ProfesorUCLM;

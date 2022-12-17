@@ -1,1 +1,1 @@
-negocio.entities.Centro#setNombre(Ljava/lang/String;)V
+negocio.entities.Centro#setIdCentro(I)V

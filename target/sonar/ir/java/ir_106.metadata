@@ -1,1 +1,1 @@
-negocio.entities.Profesor#getApellidos()Ljava/lang/String;
+negocio.entities.Profesor#getNombre()Ljava/lang/String;

@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getId()Ljava/lang/String;
+presentacion.PantallaDireccionCursos#mouseExited(Ljava/awt/event/MouseEvent;)V

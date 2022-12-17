@@ -1,1 +1,1 @@
-persistencia.MatriculaDAO#crearNuevaMatricula(Lnegocio/entities/Matricula;)V
+persistencia.MatriculaDAO#instance-init#

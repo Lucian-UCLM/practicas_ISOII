@@ -1,4 +1,2 @@
-presentacion.PantallaJefeGabineteVicerrectorado#rellenarMatriz(I[Ljava/lang/String;)V
-java.lang.String#equals(Ljava/lang/Object;)Z
-java.lang.String#valueOf(D)Ljava/lang/String;
-java.lang.System#arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+presentacion.PantallaJefeGabineteVicerrectorado#<init>()V
+presentacion.PantallaJefeGabineteVicerrectorado#inicializarComponentes()V

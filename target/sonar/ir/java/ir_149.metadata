@@ -1,1 +1,1 @@
-negocio.entities.Materia#setHoras(D)V
+negocio.entities.Materia#setNombre(Ljava/lang/String;)V

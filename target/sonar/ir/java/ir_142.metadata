@@ -1,3 +1,1 @@
-persistencia.AbstractEntityDAO#operation()V
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+persistencia.AbstractEntityDAO#show(Ljava/lang/String;)Ljava/lang/Object;

@@ -1,1 +1,1 @@
-negocio.entities.ProfesorUCLM#setCategoria(Lnegocio/entities/CategoriaProfesor;)V
+negocio.entities.ProfesorUCLM#setDniProfesor(Ljava/lang/String;)V

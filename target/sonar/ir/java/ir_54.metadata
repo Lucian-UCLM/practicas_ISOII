@@ -1,1 +1,3 @@
 negocio.controllers.GestorMatriculacion#instance-init#
+persistencia.EstudianteDAO#instance-init#
+persistencia.EstudianteDAO#<init>(Ljava/lang/Class;)V

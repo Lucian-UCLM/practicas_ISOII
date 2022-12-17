@@ -1,1 +1,1 @@
-negocio.entities.Materia#getIdResponsable()Ljava/lang/String;
+negocio.entities.Materia#getCurso()Lnegocio/entities/CursoPropio;

@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getEdicion()I
+negocio.entities.CursoPropio#getFechaFin()Ljava/util/Date;

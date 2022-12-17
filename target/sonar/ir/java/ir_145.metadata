@@ -1,1 +1,1 @@
-negocio.entities.Materia#<init>(Ljava/lang/String;DLjava/util/Date;Ljava/util/Date;Lnegocio/entities/Profesor;Lnegocio/entities/CursoPropio;)V
+negocio.entities.Materia#instance-init#

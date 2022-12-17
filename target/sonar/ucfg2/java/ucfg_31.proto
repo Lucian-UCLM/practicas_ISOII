@@ -1,25 +1,25 @@
 
-Jnegocio.controllers.GestorPropuestasCursos#listarCentros()Ljava/util/List;m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaD D(""1*Ä
+Qnegocio.controllers.GestorPropuestasCursos#listarProfesoresUCLM()Ljava/util/List;m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java@ @(/"1*ñ
 1m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaE	 E(Ò
-Ó
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaA	 A(˘
+ˆ
 m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaE	 E(
-%0persistencia.CentroDAO"__id*Y
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaA	 A(
+%0persistencia.ProfesorDAO"__id*_
 
-__unknown_file (=*;,
-*negocio.controllers.GestorPropuestasCursos"
-	centrodaoçä
+__unknown_file (C*A,
+*negocio.controllers.GestorPropuestasCursos"
+profesoruclmdaoõò
 m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaE	 E("
-%1java.util.List"6persistencia.CentroDAO#listarCentros()Ljava/util/List;*:
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaA	 A(-
+%1java.util.List"=persistencia.ProfesorDAO#listarProfesorUCLM()Ljava/util/List;*<
 
-__unknown_file (
-
-%0persistencia.CentroDAO2listarCentros()"á
+__unknown_file ( 
+
+%0persistencia.ProfesorDAO2listarProfesorUCLM()"á
 m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaE E(#
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.javaA A(.
 
 %1java.util.ListB.,
 *negocio.controllers.GestorPropuestasCursosH

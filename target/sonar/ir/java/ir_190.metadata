@@ -1,1 +1,1 @@
-persistencia.EstudianteDAO#<init>(Ljava/lang/Class;)V
+negocio.entities.Centro#toString()Ljava/lang/String;

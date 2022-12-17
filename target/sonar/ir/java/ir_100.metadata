@@ -1,1 +1,3 @@
-negocio.entities.Profesor#<init>()V
+presentacion.PantallaLogin#actionPerformed(Ljava/awt/event/ActionEvent;)V
+presentacion.PantallaPrincipal#instance-init#
+presentacion.PantallaPrincipal#<init>()V

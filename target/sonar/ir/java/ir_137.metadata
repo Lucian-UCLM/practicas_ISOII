@@ -1,1 +1,1 @@
-persistencia.AbstractEntityDAO#delete(Ljava/lang/Object;)V
+persistencia.AbstractEntityDAO#update(Ljava/lang/Object;)V

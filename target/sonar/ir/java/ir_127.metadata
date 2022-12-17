@@ -1,1 +1,1 @@
-persistencia.ProfesorDAO#listarProfesorUCLM()Ljava/util/List;
+persistencia.ProfesorDAO#<init>(Ljava/lang/Class;)V

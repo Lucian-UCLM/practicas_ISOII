@@ -1,1 +1,1 @@
-persistencia.MateriaDAO#<init>(Ljava/lang/Class;)V
+negocio.entities.Profesor#toString()Ljava/lang/String;

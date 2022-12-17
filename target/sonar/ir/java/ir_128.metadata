@@ -1,3 +1,1 @@
-persistencia.ProfesorDAO#listarProfesor(Lnegocio/entities/Profesor;)Lnegocio/entities/Profesor;
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+persistencia.ProfesorDAO#crearNuevoProfesor(Lnegocio/entities/Profesor;)V

@@ -1,1 +1,1 @@
-persistencia.EstudianteDAO#crearNuevoEstudiante(Lnegocio/entities/Estudiante;)V
+persistencia.EstudianteDAO#instance-init#
