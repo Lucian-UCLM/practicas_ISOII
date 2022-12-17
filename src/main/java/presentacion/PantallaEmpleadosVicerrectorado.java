@@ -135,7 +135,7 @@ public class PantallaEmpleadosVicerrectorado extends JFrame {
 					CursoPropio curso = gestor.listarCurso(selectedItem);
 					gestor.editarPropuestaCurso(curso.getId(), curso.getNombre(), curso.getECTS(),
 							curso.getFechaInicio(), curso.getFechaFin(), curso.getTasaMatricula(), curso.getEdicion(),
-							EstadoCurso.EN_IMPARTIZICION, curso.getTipo(), curso.getIdDirector(),
+							EstadoCurso.EN_MATRICULACION, curso.getTipo(), curso.getIdDirector(),
 							curso.getIdSecretario(), curso.getIdCentro());
 					model_curso_aprobado.removeElementAt(curso_aprobado_list.getSelectedIndex());
 				}
