@@ -56,7 +56,6 @@ public abstract class AbstractEntityDAO<E> {
 	public List<E> showAll() {
 		Session sesion=getSession();
 		sesion.beginTransaction();
-		System.out.println(entityClass);
 		Query query = sesion.createQuery("from " + entityClass.getSimpleName());
 		list = (List<E>)query.list();
 		sesion.getTransaction().commit();
@@ -67,7 +66,6 @@ public abstract class AbstractEntityDAO<E> {
 	public List<E> showAllWhere(String where) {
 		Session sesion=getSession();
 		sesion.beginTransaction();
-		System.out.println(entityClass);
 		Query query = sesion.createQuery("from " + entityClass.getSimpleName()+" where " + where);
 		list = (List<E>)query.list();
 		sesion.getTransaction().commit();

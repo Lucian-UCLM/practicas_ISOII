@@ -41,6 +41,7 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		listCursos.setBounds(33, 89, 183, 263);
 		contentPane.add(listCursos);
 		
+		String font = "Tahoma";
 		JLabel lblUsuario = new JLabel("Estudiante:");
 		lblUsuario.setBounds(33, 36, 67, 14);
 		contentPane.add(lblUsuario);
@@ -70,17 +71,17 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		contentPane.add(btnRealizarPago);
 		
 		JLabel lblFormaPago = new JLabel("Seleccionar forma de pago");
-		lblFormaPago.setFont(new Font("Tahoma", Font.ITALIC, 11));
+		lblFormaPago.setFont(new Font(font, Font.ITALIC, 11));
 		lblFormaPago.setBounds(274, 282, 145, 14);
 		contentPane.add(lblFormaPago);
 		
 		JLabel lblResumenMatricula = new JLabel("Resumen Matrícula");
-		lblResumenMatricula.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblResumenMatricula.setFont(new Font(font, Font.BOLD, 11));
 		lblResumenMatricula.setBounds(274, 36, 124, 14);
 		contentPane.add(lblResumenMatricula);
 		
 		JLabel lblCursoTituloResumen = new JLabel("Curso");
-		lblCursoTituloResumen.setFont(new Font("Tahoma", Font.ITALIC, 11));
+		lblCursoTituloResumen.setFont(new Font(font, Font.ITALIC, 11));
 		lblCursoTituloResumen.setBounds(274, 215, 46, 14);
 		contentPane.add(lblCursoTituloResumen);
 		
@@ -105,7 +106,7 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		contentPane.add(lblCualificacion);
 		
 		JLabel lblEstudianteMatricula = new JLabel("Estudiante");
-		lblEstudianteMatricula.setFont(new Font("Tahoma", Font.ITALIC, 11));
+		lblEstudianteMatricula.setFont(new Font(font, Font.ITALIC, 11));
 		lblEstudianteMatricula.setBounds(274, 64, 67, 14);
 		contentPane.add(lblEstudianteMatricula);
 		

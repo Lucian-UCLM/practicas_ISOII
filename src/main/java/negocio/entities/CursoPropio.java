@@ -19,7 +19,7 @@ public class CursoPropio {
 	private String nombre;
 
 	@Column(name = "ects")
-	private int ECTS;
+	private int ects;
 
 	@Column(name = "fechainicio")
 	private Date fechaInicio;
@@ -67,13 +67,13 @@ public class CursoPropio {
 
 	}
 
-	public CursoPropio(String id, String nombre, int ECTS, Date fechaInicio, Date fechaFin, double tasaMatricula,
+	public CursoPropio(String id, String nombre, int ects, Date fechaInicio, Date fechaFin, double tasaMatricula,
 			int edicion, EstadoCurso estado, TipoCurso tipo, Centro centro, ProfesorUCLM director,
 			ProfesorUCLM secretario) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
-		this.ECTS = ECTS;
+		this.ects = ects;
 		this.fechaInicio = fechaInicio;
 		this.fechaFin = fechaFin;
 		this.tasaMatricula = tasaMatricula;
@@ -105,11 +105,11 @@ public class CursoPropio {
 	}
 
 	public int getECTS() {
-		return ECTS;
+		return ects;
 	}
 
 	public void setECTS(int eCTS) {
-		ECTS = eCTS;
+		ects = eCTS;
 	}
 
 	public Date getFechaInicio() {
@@ -226,7 +226,7 @@ public class CursoPropio {
 
 	@Override
 	public String toString() {
-		return "CursoPropio [id=" + id + ", nombre=" + nombre + ", ECTS=" + ECTS + ", fechaInicio=" + fechaInicio
+		return "CursoPropio [id=" + id + ", nombre=" + nombre + ", ECTS=" + ects + ", fechaInicio=" + fechaInicio
 				+ ", fechaFin=" + fechaFin + ", tasaMatricula=" + tasaMatricula + ", edicion=" + edicion + ", estado="
 				+ estado + ", tipo=" + tipo + ", centro=" + centro + ", idCentro=" + idCentro + ", director=" + director
 				+ ", idDirector=" + idDirector + ", secretario=" + secretario + ", idSecretario=" + idSecretario

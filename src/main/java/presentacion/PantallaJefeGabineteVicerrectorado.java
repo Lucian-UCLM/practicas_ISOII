@@ -154,7 +154,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 		}
 
 		for (int j = 0; j < campos.length; j++) {
-
+ 
 			if (campos[j].equals("Centro")) {
 				for (int i = 0; i < listaConsulta.size(); i++) {
 					matriz[i][j] = listaConsulta.get(i).getIdCentro();

@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getSecretario()Lnegocio/entities/ProfesorUCLM;
+negocio.entities.CursoPropio#setTipo(Lnegocio/entities/TipoCurso;)V

@@ -2,9 +2,9 @@ package persistencia;
 
 import negocio.entities.*;
 
-public class MateriaDAO extends AbstractEntityDAO {
+public class MateriaDAO extends AbstractEntityDAO<Object> {
 	
-	private AbstractEntityDAO abstractEntityDAO;
+	private AbstractEntityDAO<Materia> abstractEntityDAO;
 
 	public MateriaDAO(Class entityClass) {
 		super(entityClass);

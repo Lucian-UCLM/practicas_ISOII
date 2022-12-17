@@ -2,9 +2,9 @@ package persistencia;
 
 import negocio.entities.*;
 
-public class MatriculaDAO extends AbstractEntityDAO {
+public class MatriculaDAO extends AbstractEntityDAO<Object> {
 
-	private AbstractEntityDAO abstractEntityDAO;
+	private AbstractEntityDAO<Matricula> abstractEntityDAO;
 
 	public MatriculaDAO(Class entityClass) {
 		super(entityClass);

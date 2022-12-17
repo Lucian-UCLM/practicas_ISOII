@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getMatriculas()Ljava/util/Collection;
+negocio.entities.CursoPropio#setCentro(Lnegocio/entities/Centro;)V

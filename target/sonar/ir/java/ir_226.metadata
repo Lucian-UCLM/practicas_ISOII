@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getCentro()Lnegocio/entities/Centro;
+negocio.entities.CursoPropio#setEdicion(I)V

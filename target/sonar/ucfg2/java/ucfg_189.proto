@@ -1,9 +1,18 @@
 
-'negocio.entities.CursoPropio#getECTS()I_
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javak k("1*Ï
+6negocio.entities.CursoPropio#getId()Ljava/lang/String;_
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java[ [("1*¬
 1_
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javal	 l("i
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java\	 \(È
+Å
 _
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javal l(
-""B 
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java\	 \(
+%0java.lang.String"__id*D
+
+__unknown_file ((*&
+negocio.entities.CursoPropio"
+id"{
+_
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java\ \(
+
+%0java.lang.StringB 
 negocio.entities.CursoPropioH

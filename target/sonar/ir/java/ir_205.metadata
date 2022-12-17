@@ -1,1 +1,4 @@
-negocio.entities.CursoPropio#instance-init#
+presentacion.PantallaDireccionCursos#mouseClicked(Ljava/awt/event/MouseEvent;)V
+java.lang.Integer#toString()Ljava/lang/String;
+java.lang.String#equals(Ljava/lang/Object;)Z
+negocio.entities.TipoCurso#values()[Lnegocio/entities/TipoCurso;

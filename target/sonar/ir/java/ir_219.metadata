@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setTasaMatricula(D)V
+negocio.entities.CursoPropio#getFechaInicio()Ljava/util/Date;

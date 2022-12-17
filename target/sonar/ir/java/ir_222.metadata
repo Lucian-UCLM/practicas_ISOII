@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getEstado()Lnegocio/entities/EstadoCurso;
+negocio.entities.CursoPropio#setFechaFin(Ljava/util/Date;)V

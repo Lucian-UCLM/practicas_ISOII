@@ -3,5 +3,5 @@ projectKey=Lucian-UCLM_practicas_ISOII
 serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.35767
 dashboardUrl=https://sonarcloud.io/dashboard?id=Lucian-UCLM_practicas_ISOII
-ceTaskId=AYUcWyyV63_XCRE5qptt
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYUcWyyV63_XCRE5qptt
+ceTaskId=AYUgsqIsfXyOWTJdMWHe
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYUgsqIsfXyOWTJdMWHe

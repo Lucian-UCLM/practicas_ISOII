@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setIdCentro(I)V
+negocio.entities.CursoPropio#setSecretario(Lnegocio/entities/ProfesorUCLM;)V

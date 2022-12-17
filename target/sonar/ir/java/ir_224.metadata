@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getTipo()Lnegocio/entities/TipoCurso;
+negocio.entities.CursoPropio#setTasaMatricula(D)V

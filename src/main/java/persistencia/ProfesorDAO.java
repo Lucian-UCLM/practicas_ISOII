@@ -4,7 +4,7 @@ import java.util.List;
 
 import negocio.entities.*;
 
-public class ProfesorDAO extends AbstractEntityDAO {
+public class ProfesorDAO extends AbstractEntityDAO<Object> {
 
 	private AbstractEntityDAO abstractEntityDAO;
 
