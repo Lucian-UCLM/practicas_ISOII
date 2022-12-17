@@ -44,11 +44,9 @@ import com.toedter.calendar.JDateChooser;
 
 public class PantallaJefeGabineteVicerrectorado extends JFrame implements ActionListener{
 	private JPanel contentPane;
-	private JTextPane textPaneEstado;
-	private JTable table;
 	
-	private JLabel not_selected_label = new JLabel("Seleccione Campos");
-	private JLabel ingresos_cantidad_label = new JLabel("");
+	private JLabel notSelectedLabel = new JLabel("Seleccione Campos");
+	private JLabel ingresosCantidadLabel = new JLabel("");
 	
 	private JComboBox<String> comboBox = new JComboBox<>();
 	private JCheckBox chckbxNombre = new JCheckBox("Nombre");
@@ -62,7 +60,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 	
 	private JButton botonConsulta = new JButton("Consultar");
 	
-	private DefaultListModel<String> model_curso = new DefaultListModel<>();
+	private DefaultListModel<String> modelCurso = new DefaultListModel<>();
 	private GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 	
 	//variables globales para las consultas
@@ -87,10 +85,10 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 		
 		String font = "Tahoma";
 		
-		not_selected_label.setHorizontalAlignment(SwingConstants.LEFT);
-		not_selected_label.setFont(new Font(font, Font.BOLD, 11));
-		not_selected_label.setBounds(29, 26, 157, 14);
-		contentPane.add(not_selected_label);
+		notSelectedLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		notSelectedLabel.setFont(new Font(font, Font.BOLD, 11));
+		notSelectedLabel.setBounds(29, 26, 157, 14);
+		contentPane.add(notSelectedLabel);
 		
 		chckbxNombre.setBounds(31, 47, 97, 23);
 		contentPane.add(chckbxNombre);
@@ -118,25 +116,25 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 		contentPane.add(fechaInicio);
 
 		JLabel fechaFin = new JLabel("Fecha Fin");
-		fechaFin.setBounds(29, 249, 73, 14);
+		fechaFin.setBounds(29, 237, 73, 14);
 		contentPane.add(fechaFin);
 
 		botonConsulta.setBounds(31, 326, 89, 23);
 		contentPane.add(botonConsulta);
 		
-		JLabel Ingresos_label = new JLabel("Ingresos");
-		Ingresos_label.setFont(new Font(font, Font.BOLD, 13));
-		Ingresos_label.setBounds(290, 330, 97, 13);
-		contentPane.add(Ingresos_label);
+		JLabel ingresosLabel = new JLabel("Ingresos");
+		ingresosLabel.setFont(new Font(font, Font.BOLD, 13));
+		ingresosLabel.setBounds(290, 330, 97, 13);
+		contentPane.add(ingresosLabel);
 		
-		ingresos_cantidad_label.setFont(new Font(font, Font.BOLD | Font.ITALIC, 15));
-		ingresos_cantidad_label.setBounds(398, 331, 216, 13);
-		contentPane.add(ingresos_cantidad_label);
+		ingresosCantidadLabel.setFont(new Font(font, Font.BOLD | Font.ITALIC, 15));
+		ingresosCantidadLabel.setBounds(398, 331, 216, 13);
+		contentPane.add(ingresosCantidadLabel);
 		
-		campoFechaInicio.setBounds(29, 204, 146, 23);
+		campoFechaInicio.setBounds(29, 204, 125, 23);
 		contentPane.add(campoFechaInicio);
 		
-		campoFechaFin.setBounds(29, 263, 146, 19);
+		campoFechaFin.setBounds(29, 250, 125, 23);
 		contentPane.add(campoFechaFin);
 		setBounds(100, 100, 900, 400);
 		
@@ -148,8 +146,8 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 		String[] campos = new String [numColumnas];
 		System.arraycopy(arrayToCopy, 0, campos, 0, numColumnas);
 		
-		ingresos_cantidad_label.setText(String.valueOf(ingresos) + " €");
-		ingresos_cantidad_label.setForeground(Color.BLUE);
+		ingresosCantidadLabel.setText(String.valueOf(ingresos) + " €");
+		ingresosCantidadLabel.setForeground(Color.BLUE);
 		
 		for (int i = 0; i < listaConsulta.size(); i++) {
 			matriz[i][0] = listaConsulta.get(i).getNombre();
@@ -187,7 +185,7 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 		scrollPane.setBounds(159, 47, 700, 277);
 		contentPane.add(scrollPane);
 		
-		table = new JTable(matrizInfo, campos);
+		JTable table = new JTable(matrizInfo, campos);
 		
 		table.setToolTipText("");
 		scrollPane.setViewportView(table);
@@ -200,13 +198,13 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 			
 			if(campoFechaInicio.getDate() != null && campoFechaFin.getDate() !=null) {
 				if (campoFechaInicio.getDate().compareTo(listacurso.get(j).getFechaInicio())<=0 && campoFechaFin.getDate().compareTo(listacurso.get(j).getFechaFin())>=0){
-					model_curso.addElement(listacurso.get(j).getId());
+					modelCurso.addElement(listacurso.get(j).getId());
 					listaConsulta.add(listacurso.get(j));
 					ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
 					numFilas++;
 				}
 			}else {
-				model_curso.addElement(listacurso.get(j).getId());
+				modelCurso.addElement(listacurso.get(j).getId());
 				listaConsulta.add(listacurso.get(j));
 				ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
 				numFilas++;
@@ -251,9 +249,9 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame implements Action
 			}
 			
 			if (numColumnas == 0) {
-				not_selected_label.setText("SELECCIONE CAMPOS");
-				not_selected_label.setForeground(Color.RED);
-				ingresos_cantidad_label.setText("");
+				notSelectedLabel.setText("SELECCIONE CAMPOS");
+				notSelectedLabel.setForeground(Color.RED);
+				ingresosCantidadLabel.setText("");
 				return;
 			}
 			realizarConsulta();

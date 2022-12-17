@@ -19,9 +19,7 @@ import java.awt.Color;
 
 public class PantallaMatriculacion extends JFrame implements ActionListener{
 	
-	private JPanel contentPane;
-	private JTextPane textPaneEstado;
-	private JList listCursos = new JList();
+	private JList<Object> listCursos = new JList<>();
 	
 	public PantallaMatriculacion () {
 		inicializarElementos();
@@ -34,7 +32,7 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		setTitle("Interfaz de Matriculacion");
 		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 594, 450);
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

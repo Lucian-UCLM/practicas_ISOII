@@ -34,6 +34,8 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import javax.swing.table.DefaultTableModel;
 
+import com.toedter.calendar.JDateChooser;
+
 import javax.swing.JScrollPane;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.JTextField;
@@ -45,24 +47,19 @@ import negocio.entities.EstadoCurso;
 import negocio.entities.ProfesorUCLM;
 import negocio.entities.TipoCurso;
 
-public class PantallaDireccionCursos extends JFrame implements ActionListener {
-	private JPanel contentPane;
-	private JTextPane textPaneEstado;
+public class PantallaDireccionCursos extends JFrame implements ActionListener, MouseListener {
 	private JLabel edicionlabel;
 	private JLabel idlabel;
 	
 	private JTextField nombretext;
 	private JTextField creditostext;
 	private JTextField importetext;
-	private JTextField fechainiciotext;
-	private JTextField fechafinaltext;
 	private JTextField ediciontext;
 	private JTextField estadotext;
 	private JTextField idtext;
 	
-	private SimpleDateFormat formatter = new SimpleDateFormat("yyyy/MM/dd");
-	private String fechainicio;
-	private String fechafin;
+	private JDateChooser fechainicio = new JDateChooser();
+	private JDateChooser fechafin = new JDateChooser();
 	
 	private JButton edicionbutton = new JButton("Nueva Edición");
 	private JButton limpiarbutton = new JButton("Limpiar todo");
@@ -90,7 +87,7 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		setTitle("Dirección de cursos");
 		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 967, 507);
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setForeground(new Color(255, 255, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -122,7 +119,6 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		secretariolist = new JList<>();
 		secretariolist.setBounds(744, 68, 158, 154);
 		contentPane.add(secretariolist);
-
 		
 		nuevocursobutton.setBounds(138, 414, 158, 21);
 		contentPane.add(nuevocursobutton);
@@ -180,11 +176,6 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		importelabel.setBounds(441, 292, 91, 13);
 		contentPane.add(importelabel);
 
-		fechainiciotext = new JTextField();
-		fechainiciotext.setColumns(10);
-		fechainiciotext.setBounds(370, 359, 135, 19);
-		contentPane.add(fechainiciotext);
-
 		JLabel fechainiciolabel = new JLabel("Fecha de inicio");
 		fechainiciolabel.setBounds(370, 345, 119, 13);
 		contentPane.add(fechainiciolabel);
@@ -201,11 +192,6 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		secretariolabel.setBounds(744, 56, 119, 13);
 		contentPane.add(secretariolabel);
 
-		fechafinaltext = new JTextField();
-		fechafinaltext.setColumns(10);
-		fechafinaltext.setBounds(515, 359, 135, 19);
-		contentPane.add(fechafinaltext);
-
 		JLabel fechafinallabel = new JLabel("Fecha de finalización");
 		fechafinallabel.setBounds(515, 345, 119, 13);
 		contentPane.add(fechafinallabel);
@@ -219,7 +205,6 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		edicionlabel.setBounds(547, 292, 91, 13);
 		contentPane.add(edicionlabel);
 
-		
 		limpiarbutton.setBounds(641, 414, 158, 21);
 		contentPane.add(limpiarbutton);
 
@@ -247,6 +232,12 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		JLabel tipolabel = new JLabel("Tipo");
 		tipolabel.setBounds(695, 290, 91, 13);
 		contentPane.add(tipolabel);
+		
+		fechainicio.setBounds(515, 359, 125, 23);
+		contentPane.add(fechainicio);
+		
+		fechafin.setBounds(370, 359, 125, 23);
+		contentPane.add(fechafin);
 
 		nuevocursobutton.addActionListener(this);
 		limpiarbutton.addActionListener(this);
@@ -272,62 +263,14 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		directorlist.setModel(modelprofesor);
 		secretariolist.setModel(modelprofesor);
 		
-		MouseListener mouseListener = new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (e.getClickCount() == 2) {
-					
-					String selectedItem = cursolist.getSelectedValue();
-					CursoPropio curso = gestor.listarCurso(selectedItem);
-					fechainicio = formatter.format(curso.getFechaInicio());
-					fechafin = formatter.format(curso.getFechaFin());
-					nombretext.setText(curso.getNombre());
-					creditostext.setText(curso.getECTS()+"");
-					importetext.setText(curso.getTasaMatricula()+"");
-					fechainiciotext.setText(fechainicio);
-					fechafinaltext.setText(fechafin);
-					ediciontext.setText(curso.getEdicion()+"");
-					estadotext.setText(curso.getEstado().toString());
-					idtext.setText(selectedItem);
-					ediciontext.setEditable(false);
-					idtext.setEditable(false);
-					edicionlabel.setEnabled(false);
-					idlabel.setEnabled(false);
-					nuevocursobutton.setEnabled(false);
-					editarcursobutton.setEnabled(true);
-					edicionbutton.setEnabled(true);
-					for (int i = 0; i < TipoCurso.values().length; i++) {
-						if(tipocombobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
-							tipocombobox.setSelectedItem(tipocombobox.getModel().getElementAt(i));
-						}
-					}
-					for (int i = 0; i < centrolist.getModel().getSize(); i++) {
-						if(centrolist.getModel().getElementAt(i).toString().equals(curso.getIdCentro() +"")) {
-							centrolist.setSelectedIndex(i);
-						}
-					}
-					for (int i = 0; i < directorlist.getModel().getSize(); i++) {
-						if(directorlist.getModel().getElementAt(i).equals(curso.getIdDirector())) {
-							directorlist.setSelectedIndex(i);
-						}
-					}
-					for (int i = 0; i < secretariolist.getModel().getSize(); i++) {
-						if(secretariolist.getModel().getElementAt(i).equals(curso.getIdSecretario())) {
-							secretariolist.setSelectedIndex(i);
-						}
-					}
-					
-				}
-			}
-		};
-		cursolist.addMouseListener(mouseListener);
+		cursolist.addMouseListener(this);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == nuevocursobutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
 			gestor.realizarPropuestaCurso(idtext.getText(), nombretext.getText(),
-					Integer.parseInt(creditostext.getText()), new Date(fechainiciotext.getText()),
-					new Date(fechafinaltext.getText()), Double.parseDouble(importetext.getText()),
+					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
+					fechafin.getDate(), Double.parseDouble(importetext.getText()),
 					Integer.parseInt(ediciontext.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
@@ -340,8 +283,8 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 			nombretext.setText("");
 			creditostext.setText("");
 			importetext.setText("");
-			fechainiciotext.setText("");
-			fechafinaltext.setText("");
+			fechainicio.setDate(null);
+			fechafin.setDate(null);
 			ediciontext.setText("");
 			estadotext.setText("");
 			idtext.setText("");
@@ -359,25 +302,92 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener {
 		}
 		if (e.getSource() == editarcursobutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
 			gestor.editarPropuestaCurso(idtext.getText(), nombretext.getText(),
-					Integer.parseInt(creditostext.getText()), new Date(fechainiciotext.getText()),
-					new Date(fechafinaltext.getText()), Double.parseDouble(importetext.getText()),
+					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
+					fechafin.getDate(), Double.parseDouble(importetext.getText()),
 					Integer.parseInt(ediciontext.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()).toString(), 
-					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()).toString(), 
+					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
+					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
 		}
 		if (e.getSource() == edicionbutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
 			String[] idnum = idtext.getText().split("CPR");
 			gestor.realizarPropuestaCurso(idtext.getText() + "(1)" /* "CPR" + Integer.parseInt(id[1])+1 */, nombretext.getText(),
-					Integer.parseInt(creditostext.getText()), new Date(fechainiciotext.getText()),
-					new Date(fechafinaltext.getText()), Double.parseDouble(importetext.getText()),
+					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
+					fechafin.getDate(), Double.parseDouble(importetext.getText()),
 					Integer.parseInt(ediciontext.getText())+1, EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()).toString(), 
-					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()).toString(), 
+					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
+					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
 
 			modelcurso.addElement(idtext.getText()+ "(1)");
 			cursolist.setModel(modelcurso);
 		}
 	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		if (e.getClickCount() == 2 && e.getSource() == cursolist) {
+			
+			String selectedItem = cursolist.getSelectedValue();
+			CursoPropio curso = gestor.listarCurso(selectedItem);
+			
+			fechainicio.setDate(curso.getFechaInicio());
+			fechafin.setDate(curso.getFechaFin());
+			
+			nombretext.setText(curso.getNombre());
+			creditostext.setText(curso.getECTS()+"");
+			importetext.setText(curso.getTasaMatricula()+"");
+			
+			ediciontext.setText(curso.getEdicion()+"");
+			estadotext.setText(curso.getEstado().toString());
+			idtext.setText(selectedItem);
+			ediciontext.setEditable(false);
+			idtext.setEditable(false);
+			edicionlabel.setEnabled(false);
+			idlabel.setEnabled(false);
+			nuevocursobutton.setEnabled(false);
+			editarcursobutton.setEnabled(true);
+			edicionbutton.setEnabled(true);
+			for (int i = 0; i < TipoCurso.values().length; i++) {
+				if(tipocombobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
+					tipocombobox.setSelectedItem(tipocombobox.getModel().getElementAt(i));
+				}
+			}
+			for (int i = 0; i < centrolist.getModel().getSize(); i++) {
+				if(centrolist.getModel().getElementAt(i).toString().equals(curso.getIdCentro() +"")) {
+					centrolist.setSelectedIndex(i);
+				}
+			}
+			for (int i = 0; i < directorlist.getModel().getSize(); i++) {
+				if(directorlist.getModel().getElementAt(i).equals(curso.getIdDirector())) {
+					directorlist.setSelectedIndex(i);
+				}
+			}
+			for (int i = 0; i < secretariolist.getModel().getSize(); i++) {
+				if(secretariolist.getModel().getElementAt(i).equals(curso.getIdSecretario())) {
+					secretariolist.setSelectedIndex(i);
+				}
+			}
+			
+		}
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+   // TODO document why this method is empty
+ }
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+   // TODO document why this method is empty
+ }
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+   // TODO document why this method is empty
+ }
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+   // TODO document why this method is empty
+ }
 }
