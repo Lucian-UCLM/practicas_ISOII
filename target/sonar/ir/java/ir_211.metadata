@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setFechaFin(Ljava/util/Date;)V
+presentacion.PantallaDireccionCursos#mouseReleased(Ljava/awt/event/MouseEvent;)V

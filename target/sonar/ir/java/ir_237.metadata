@@ -1,1 +1,1 @@
-negocio.controllers.GestorConsultas#instance-init#
+negocio.entities.CursoPropio#getDirector()Lnegocio/entities/ProfesorUCLM;

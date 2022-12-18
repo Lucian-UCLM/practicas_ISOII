@@ -1,1 +1,1 @@
-negocio.entities.ProfesorExterno#toString()Ljava/lang/String;
+negocio.entities.ProfesorExterno#getDniProfesor()Ljava/lang/String;

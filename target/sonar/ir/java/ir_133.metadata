@@ -1,2 +1,3 @@
-persistencia.AbstractEntityDAO#showAll()Ljava/util/List;
-java.lang.Class#getSimpleName()Ljava/lang/String;
+persistencia.AbstractEntityDAO#instance-init#
+java.util.ArrayList#<init>()V
+java.util.ArrayList#instance-init#

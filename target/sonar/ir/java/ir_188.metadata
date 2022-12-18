@@ -1,3 +1,1 @@
-persistencia.EstudianteDAO#editarEstudiante(Lnegocio/entities/Estudiante;)Lnegocio/entities/Estudiante;
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+negocio.entities.Centro#getPlantilla()Ljava/util/Collection;

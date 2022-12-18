@@ -1,1 +1,1 @@
-negocio.entities.TipoCurso#instance-init#
+negocio.entities.Estudiante#toString()Ljava/lang/String;

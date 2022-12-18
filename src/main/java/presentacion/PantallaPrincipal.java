@@ -18,18 +18,12 @@ import javax.swing.JTextField;
 import java.awt.Font;
 
 public class PantallaPrincipal extends JFrame implements ActionListener {
-	private JPanel contentPane;
-	private JTextPane textPaneEstado;
 	
 	private JButton vicerectorado = new JButton("Vicerectorado");
 	private JButton direccion = new JButton("Dirección");
 	private JButton estudiante = new JButton("Estudiante");
 	private JButton jefegabinete = new JButton("Jefe de Gabinete");
 	
-	public static void main(String[] args) {
-		PantallaPrincipal frame = new PantallaPrincipal ();
-		frame.setVisible(true);
-	}
 	public PantallaPrincipal () {
 		inicializarElementos();
 	}
@@ -38,7 +32,7 @@ public class PantallaPrincipal extends JFrame implements ActionListener {
 		setTitle("Pantalla Principal");
 		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 580, 280);
-		contentPane = new JPanel();
+		JPanel contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);

@@ -1,1 +1,1 @@
-negocio.entities.ProfesorUCLM#getIdCentroAdscripcion()I
+negocio.entities.ProfesorUCLM#<init>(Ljava/lang/String;Lnegocio/entities/CategoriaProfesor;Lnegocio/entities/Centro;)V

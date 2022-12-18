@@ -1,1 +1,1 @@
-negocio.entities.ProfesorUCLM#instance-init#
+negocio.entities.Materia#getCurso()Lnegocio/entities/CursoPropio;

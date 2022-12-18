@@ -1,1 +1,1 @@
-negocio.entities.Centro#instance-init#
+negocio.entities.ProfesorUCLM#getCategoria()Lnegocio/entities/CategoriaProfesor;

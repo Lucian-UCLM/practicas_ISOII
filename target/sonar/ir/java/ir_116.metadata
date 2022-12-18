@@ -1,1 +1,3 @@
-presentacion.PantallaPrincipal#instance-init#
+persistencia.MateriaDAO#listarMateria(Lnegocio/entities/Materia;)Lnegocio/entities/Materia;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

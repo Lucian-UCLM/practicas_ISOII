@@ -1,1 +1,3 @@
-negocio.entities.Materia#setHoras(D)V
+persistencia.AbstractEntityDAO#operation()V
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

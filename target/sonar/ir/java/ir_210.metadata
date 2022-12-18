@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getFechaFin()Ljava/util/Date;
+presentacion.PantallaDireccionCursos#mousePressed(Ljava/awt/event/MouseEvent;)V

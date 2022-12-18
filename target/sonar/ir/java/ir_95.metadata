@@ -1,1 +1,3 @@
-negocio.entities.Profesor#instance-init#
+presentacion.PantallaLogin#main([Ljava/lang/String;)V
+presentacion.PantallaLogin#instance-init#
+presentacion.PantallaLogin#<init>()V

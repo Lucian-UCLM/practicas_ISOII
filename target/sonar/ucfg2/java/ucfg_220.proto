@@ -1,17 +1,19 @@
 
-Inegocio.entities.CursoPropio#getDirector()Lnegocio/entities/ProfesorUCLM;a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java´ ´( "1*∑
+@negocio.entities.CursoPropio#getMaterias()Ljava/util/Collection;a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java√ √('"1*¡
 1a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java¨	 ¨(¡
-æ
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaƒ	 ƒ(‘
+—
 a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java¨	 ¨(#
-%0negocio.entities.ProfesorUCLM"__id*.*,
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaƒ	 ƒ(
+%0java.util.Collection"__id*J
+
+__unknown_file (.*,
 negocio.entities.CursoPropio"
 
-director"ä
+materias"Å
 a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java¨ ¨(%
-#
-%0negocio.entities.ProfesorUCLMB 
-negocio.entities.CursoPropio
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaƒ ƒ(
+
+%0java.util.CollectionB 
+negocio.entities.CursoPropioH

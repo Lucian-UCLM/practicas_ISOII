@@ -1,5 +1,3 @@
-presentacion.PantallaJefeGabineteVicerrectorado#instance-init#
-negocio.controllers.GestorPropuestasCursos#<init>()V
-negocio.controllers.GestorPropuestasCursos#instance-init#
-javax.swing.DefaultListModel#instance-init#
-javax.swing.DefaultListModel#<init>()V
+negocio.controllers.GestorMatriculacion#operation()V
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getSecretario()Lnegocio/entities/ProfesorUCLM;
+negocio.entities.CursoPropio#setFechaInicio(Ljava/util/Date;)V

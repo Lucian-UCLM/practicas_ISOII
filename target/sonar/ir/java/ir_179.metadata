@@ -1,1 +1,1 @@
-negocio.entities.Centro#getCursoPropios()Ljava/util/Collection;
+negocio.entities.Centro#<init>(ILjava/lang/String;Ljava/lang/String;)V

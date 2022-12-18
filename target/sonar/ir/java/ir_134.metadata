@@ -1,2 +1,3 @@
-persistencia.AbstractEntityDAO#showAllWhere(Ljava/lang/String;)Ljava/util/List;
-java.lang.Class#getSimpleName()Ljava/lang/String;
+persistencia.AbstractEntityDAO#<init>(Ljava/lang/Class;)V
+org.hibernate.cfg.Configuration#instance-init#
+org.hibernate.cfg.Configuration#<init>()V

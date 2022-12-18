@@ -1,1 +1,2 @@
-negocio.entities.Materia#<init>(Ljava/lang/String;DLjava/util/Date;Ljava/util/Date;Lnegocio/entities/Profesor;Lnegocio/entities/CursoPropio;)V
+persistencia.AbstractEntityDAO#showAll()Ljava/util/List;
+java.lang.Class#getSimpleName()Ljava/lang/String;

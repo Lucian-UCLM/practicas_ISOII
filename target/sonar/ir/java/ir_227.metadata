@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setMatriculas(Ljava/util/Collection;)V
+negocio.entities.CursoPropio#getTasaMatricula()D

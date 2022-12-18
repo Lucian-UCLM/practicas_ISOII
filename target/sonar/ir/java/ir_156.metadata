@@ -1,1 +1,1 @@
-negocio.entities.Materia#setIdCurso(Ljava/lang/String;)V
+negocio.entities.Materia#getResponsable()Lnegocio/entities/Profesor;

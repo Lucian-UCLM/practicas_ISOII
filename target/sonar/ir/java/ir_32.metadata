@@ -1,3 +1,1 @@
-negocio.controllers.GestorPropuestasCursos#listarCurso(Ljava/lang/String;)Lnegocio/entities/CursoPropio;
-negocio.entities.CursoPropio#<init>()V
-negocio.entities.CursoPropio#instance-init#
+negocio.controllers.GestorPropuestasCursos#listarCursos()Ljava/util/List;

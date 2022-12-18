@@ -1,1 +1,1 @@
-persistencia.MateriaDAO#editarMateria(Lnegocio/entities/Materia;)V
+negocio.entities.Profesor#setDoctor(Z)V

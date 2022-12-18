@@ -1,86 +1,124 @@
 
 6negocio.entities.Profesor#toString()Ljava/lang/String;\
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaI I("1*ë
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaG G("1*¿
 1\
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(§
-¤
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(Ã
+À
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(
-%0java.lang.String"__id*&*$
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH H(
+%0java.lang.String"__id*B
+
+__unknown_file (&*$
 negocio.entities.Profesor"
-dni±
-®
+dniñ
+î
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(
-%1java.lang.String"__concat*
-Profesor [dni=*
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(
+%1java.lang.String"__concat*r
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(
+Profesor [dni=*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH H(
 
-%0java.lang.String¬
-©
+%0java.lang.Stringì
+é
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(-
-%2java.lang.String"__concat*
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(-
+%2java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(
 
-%1java.lang.String*
-	, nombre=ª
-§
+%1java.lang.String*m
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ0 J(6
-%3java.lang.String"__id*)*'
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH" H(-
+	, nombre=Æ
+Ã
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH0 H(6
+%3java.lang.String"__id*E
+
+__unknown_file ()*'
 negocio.entities.Profesor"
-nombre·
-´
+nombre÷
+ô
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(6
-%4java.lang.String"__concat*
-
-%2java.lang.String*
-
-%3java.lang.String¯
-¬
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(6
+%4java.lang.String"__concat*x
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(G
-%5java.lang.String"__concat*
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(-
 
-%4java.lang.String*
-, apellidos=­
-ª
+%2java.lang.String*x
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJJ J(S
-%6java.lang.String"__id*,**
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH0 H(6
+
+%3java.lang.Stringï
+ì
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(G
+%5java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(6
+
+%4java.lang.String*p
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH9 H(G
+, apellidos=É
+Æ
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaHJ H(S
+%6java.lang.String"__id*H
+
+__unknown_file (,**
 negocio.entities.Profesor"
-	apellidos·
-´
+	apellidos÷
+ô
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(S
-%7java.lang.String"__concat*
-
-%5java.lang.String*
-
-%6java.lang.String¬
-©
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(S
+%7java.lang.String"__concat*x
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(a
-%8java.lang.String"__concat*
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(G
 
-%7java.lang.String*
-	, doctor=¥
-¢
+%5java.lang.String*x
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(j
-%9java.lang.String"__concat*
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaHJ H(S
 
-%8java.lang.String*
-""¥
-¢
+%6java.lang.Stringì
+é
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(p
-%10java.lang.String"__concat*
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(a
+%8java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(S
 
-%9java.lang.String*
+%7java.lang.String*m
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaHV H(a
+	, doctor=å
+â
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(j
+%9java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(a
+
+%8java.lang.String*f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaHd H(j
+""å
+â
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(p
+%10java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH	 H(j
+
+%9java.lang.String*e
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaHm H(p
 ]"y
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(q
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaH H(q
 
 %10java.lang.StringB
-negocio.entities.Profesor
+negocio.entities.ProfesorH

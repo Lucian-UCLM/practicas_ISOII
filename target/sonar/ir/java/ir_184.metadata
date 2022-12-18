@@ -1,1 +1,1 @@
-persistencia.EstudianteDAO#instance-init#
+negocio.entities.Centro#getLocalizacion()Ljava/lang/String;

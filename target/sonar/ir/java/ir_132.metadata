@@ -1,1 +1,1 @@
-persistencia.AbstractEntityDAO#delete(Ljava/lang/Object;)V
+negocio.entities.EstadoCurso#instance-init#

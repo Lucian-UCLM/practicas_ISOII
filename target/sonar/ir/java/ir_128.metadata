@@ -1,1 +1,1 @@
-persistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;
+persistencia.ProfesorDAO#crearNuevoProfesor(Lnegocio/entities/Profesor;)V

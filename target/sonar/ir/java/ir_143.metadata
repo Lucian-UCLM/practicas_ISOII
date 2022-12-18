@@ -1,1 +1,1 @@
-negocio.entities.Materia#getHoras()D
+persistencia.AbstractEntityDAO#show(I)Ljava/lang/Object;

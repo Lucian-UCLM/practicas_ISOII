@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setIdDirector(Ljava/lang/String;)V
+negocio.entities.CursoPropio#setEstado(Lnegocio/entities/EstadoCurso;)V

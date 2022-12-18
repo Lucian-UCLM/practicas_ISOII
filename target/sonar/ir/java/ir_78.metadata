@@ -1,1 +1,1 @@
-persistencia.CursoPropioDAO#instance-init#
+negocio.entities.ProfesorExterno#setDniProfesor(Ljava/lang/String;)V

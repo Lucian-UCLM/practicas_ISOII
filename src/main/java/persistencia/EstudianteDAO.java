@@ -4,9 +4,9 @@ import java.util.List;
 
 import negocio.entities.*;
 
-public class EstudianteDAO extends AbstractEntityDAO {
+public class EstudianteDAO extends AbstractEntityDAO<Object> {
 	
-	private AbstractEntityDAO abstractEntityDAO;
+	private AbstractEntityDAO<Estudiante> abstractEntityDAO;
 	
 	public EstudianteDAO(Class entityClass) {
 		super(entityClass);

@@ -1,1 +1,1 @@
-negocio.entities.ProfesorUCLM#<init>()V
+negocio.entities.Materia#setCurso(Lnegocio/entities/CursoPropio;)V

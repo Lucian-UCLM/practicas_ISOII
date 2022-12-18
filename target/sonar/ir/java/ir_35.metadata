@@ -1,3 +1,1 @@
-negocio.controllers.GestorPropuestasCursos#altaCursoAprobado(Lnegocio/entities/CursoPropio;)V
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+negocio.controllers.GestorPropuestasCursos#listarCentros()Ljava/util/List;

@@ -1,1 +1,1 @@
-negocio.entities.ProfesorUCLM#getDniProfesor()Ljava/lang/String;
+negocio.entities.Materia#setIdResponsable(Ljava/lang/String;)V

@@ -5,9 +5,9 @@ import java.util.List;
 
 import negocio.entities.*;
 
-public class CursoPropioDAO extends AbstractEntityDAO {
+public class CursoPropioDAO extends AbstractEntityDAO<Object> {
 
-	private AbstractEntityDAO abstractEntityDAO;
+	private AbstractEntityDAO<CursoPropio> abstractEntityDAO;
 	
 	public CursoPropioDAO(Class entityClass) {
 		super(entityClass);

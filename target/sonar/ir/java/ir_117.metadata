@@ -1,2 +1,1 @@
-presentacion.PantallaPrincipal#main([Ljava/lang/String;)V
-java.awt.EventQueue#invokeLater(Ljava/lang/Runnable;)V
+persistencia.MateriaDAO#editarMateria(Lnegocio/entities/Materia;)V

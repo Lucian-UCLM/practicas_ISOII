@@ -1,12 +1,14 @@
 
 :negocio.entities.Matricula#getIdTitulo()Ljava/lang/String;]
-SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javap p("1*Ž
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javap p("1*ª
 1]
-SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaq	 q(®
-«
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaq	 q(Ê
+Ç
 ]
 SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaq	 q(
-%0java.lang.String"__id*,**
+%0java.lang.String"__id*H
+
+__unknown_file (,**
 negocio.entities.Matricula"
 
 idTitulo"y
@@ -14,4 +16,4 @@ SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.
 SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaq q(
 
 %0java.lang.StringB
-negocio.entities.Matricula
+negocio.entities.MatriculaH

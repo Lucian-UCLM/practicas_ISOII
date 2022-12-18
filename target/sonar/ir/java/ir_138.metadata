@@ -1,1 +1,1 @@
-negocio.entities.Materia#instance-init#
+persistencia.AbstractEntityDAO#saveOrUpdate(Ljava/lang/Object;)V

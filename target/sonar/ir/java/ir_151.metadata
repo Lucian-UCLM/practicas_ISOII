@@ -1,1 +1,1 @@
-negocio.entities.Materia#getCurso()Lnegocio/entities/CursoPropio;
+negocio.entities.Materia#setHoras(D)V

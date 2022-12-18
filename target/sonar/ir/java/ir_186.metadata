@@ -1,1 +1,1 @@
-persistencia.EstudianteDAO#crearNuevoEstudiante(Lnegocio/entities/Estudiante;)V
+negocio.entities.Centro#getCursoPropios()Ljava/util/Collection;

@@ -1,1 +1,3 @@
-persistencia.AbstractEntityDAO#update(Ljava/lang/Object;)V
+persistencia.ProfesorDAO#listarProfesor(Lnegocio/entities/Profesor;)Lnegocio/entities/Profesor;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

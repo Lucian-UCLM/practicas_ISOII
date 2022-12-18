@@ -38,68 +38,75 @@ import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.JScrollPane;
 import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
+
 import com.toedter.calendar.JDateChooser;
 
-public class PantallaJefeGabineteVicerrectorado extends JFrame {
+public class PantallaJefeGabineteVicerrectorado extends JFrame implements ActionListener{
 	private JPanel contentPane;
-	private JTextPane textPaneEstado;
-	private JTable table;
-	private DefaultListModel model_curso = new DefaultListModel();
-	GestorPropuestasCursos gestor = new GestorPropuestasCursos();
-
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					PantallaLogin frame = new PantallaLogin();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
+	
+	private JLabel notSelectedLabel = new JLabel("Seleccione Campos");
+	private JLabel ingresosCantidadLabel = new JLabel("");
+	
+	private JComboBox<String> comboBox = new JComboBox<>();
+	private JCheckBox chckbxNombre = new JCheckBox("Nombre");
+	private JCheckBox chckbxCentro = new JCheckBox("Centro");
+	private JCheckBox chckbxCrditos = new JCheckBox("Créditos");
+	private JCheckBox chckbxImporte = new JCheckBox("Importe");
+	private JCheckBox chckbxEdicin = new JCheckBox("Edición");
+	
+	private JDateChooser campoFechaInicio = new JDateChooser();
+	private JDateChooser campoFechaFin = new JDateChooser();
+	
+	private JButton botonConsulta = new JButton("Consultar");
+	
+	private DefaultListModel<String> modelCurso = new DefaultListModel<>();
+	private GestorPropuestasCursos gestor = new GestorPropuestasCursos();
+	
+	//variables globales para las consultas
+	private int numFilas = 0;
+	private double ingresos = 0.0;
+	private List<CursoPropio> listacurso = gestor.listarCursos();
+	private List<CursoPropio> listaConsulta = new ArrayList<>();
+	
 	public PantallaJefeGabineteVicerrectorado() {
 		inicializarComponentes();
+	}
+
+	private void inicializarComponentes() {
 		setTitle("Interfaz de jefe de gabinete");
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 180, 400);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(192, 192, 192));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
-		JLabel not_selected_label = new JLabel("Seleccione Campos");
-		not_selected_label.setHorizontalAlignment(SwingConstants.LEFT);
-		not_selected_label.setFont(new Font("Tahoma", Font.BOLD, 11));
-		not_selected_label.setBounds(29, 26, 157, 14);
-		contentPane.add(not_selected_label);
-
-		JCheckBox chckbxNombre = new JCheckBox("Nombre");
+		
+		String font = "Tahoma";
+		
+		notSelectedLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		notSelectedLabel.setFont(new Font(font, Font.BOLD, 11));
+		notSelectedLabel.setBounds(29, 26, 157, 14);
+		contentPane.add(notSelectedLabel);
+		
 		chckbxNombre.setBounds(31, 47, 97, 23);
 		contentPane.add(chckbxNombre);
-
-		JCheckBox chckbxCentro = new JCheckBox("Centro");
+		
 		chckbxCentro.setBounds(31, 73, 97, 23);
 		contentPane.add(chckbxCentro);
-
-		JCheckBox chckbxCrditos = new JCheckBox("Créditos");
+		
 		chckbxCrditos.setBounds(31, 99, 97, 23);
 		contentPane.add(chckbxCrditos);
-
-		JCheckBox chckbxImporte = new JCheckBox("Importe");
+		
 		chckbxImporte.setBounds(31, 125, 97, 23);
 		contentPane.add(chckbxImporte);
-
-		JCheckBox chckbxEdicin = new JCheckBox("Edición");
+		
 		chckbxEdicin.setBounds(31, 151, 97, 23);
 		contentPane.add(chckbxEdicin);
 
-		JComboBox comboBox = new JComboBox();
 		comboBox.setMaximumRowCount(9);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"Ninguno seleccionado", "MASTER", "EXPERTO", "ESPECIALISTA", 
+		comboBox.setModel(new DefaultComboBoxModel<>(new String[] {"Ninguno seleccionado", "MASTER", "EXPERTO", "ESPECIALISTA", 
 				"FORMACION_AVANZADA", "FORMACION_CONTINUA", "MICROCREDENCIALES", "CORTA_DURACION", "CURSOS_DE_VERANO", "FORMACION_DE_MAYORES"}));
 		comboBox.setBounds(29, 292, 125, 22);
 		contentPane.add(comboBox);
@@ -109,170 +116,147 @@ public class PantallaJefeGabineteVicerrectorado extends JFrame {
 		contentPane.add(fechaInicio);
 
 		JLabel fechaFin = new JLabel("Fecha Fin");
-		fechaFin.setBounds(29, 249, 73, 14);
+		fechaFin.setBounds(29, 237, 73, 14);
 		contentPane.add(fechaFin);
 
-		JButton botonConsulta = new JButton("Consultar");
 		botonConsulta.setBounds(31, 326, 89, 23);
 		contentPane.add(botonConsulta);
 		
-		JLabel Ingresos_label = new JLabel("Ingresos");
-		Ingresos_label.setFont(new Font("Tahoma", Font.BOLD, 13));
-		Ingresos_label.setBounds(290, 330, 97, 13);
-		contentPane.add(Ingresos_label);
+		JLabel ingresosLabel = new JLabel("Ingresos");
+		ingresosLabel.setFont(new Font(font, Font.BOLD, 13));
+		ingresosLabel.setBounds(290, 330, 97, 13);
+		contentPane.add(ingresosLabel);
 		
-		JLabel ingresos_cantidad_label = new JLabel("");
-		ingresos_cantidad_label.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 15));
-		ingresos_cantidad_label.setBounds(398, 331, 216, 13);
-		contentPane.add(ingresos_cantidad_label);
+		ingresosCantidadLabel.setFont(new Font(font, Font.BOLD | Font.ITALIC, 15));
+		ingresosCantidadLabel.setBounds(398, 331, 216, 13);
+		contentPane.add(ingresosCantidadLabel);
 		
-		JDateChooser campoFechaInicio = new JDateChooser();
-		campoFechaInicio.setBounds(29, 204, 146, 23);
+		campoFechaInicio.setBounds(29, 204, 125, 23);
 		contentPane.add(campoFechaInicio);
 		
-		JDateChooser campoFechaFin = new JDateChooser();
-		campoFechaFin.setBounds(29, 263, 146, 19);
+		campoFechaFin.setBounds(29, 250, 125, 23);
 		contentPane.add(campoFechaFin);
 		setBounds(100, 100, 900, 400);
 		
-		botonConsulta.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						int numColumnas = 0,numFilas = 0;
-						double ingresos = 0.0;
-						List<CursoPropio> listacurso = new ArrayList<CursoPropio>();
-						List<CursoPropio> listaConsulta = new ArrayList<CursoPropio>();
-						String aux[] = new String[8];
-						listacurso = gestor.listarCursos();
-						if (!comboBox.getModel().getSelectedItem().equals("Ninguno seleccionado")) {
-							listacurso = gestor.listarCursosWhere(TipoCurso.valueOf(comboBox.getModel().getElementAt(comboBox.getSelectedIndex()).toString()));
-						}
-						
-						if (chckbxNombre.isSelected()) {
-							aux[numColumnas] = chckbxNombre.getText();
-							numColumnas++;
-							
-						}
-						if (chckbxCentro.isSelected()) {
-							aux[numColumnas] = chckbxCentro.getText();
-							numColumnas++;
-							
-						}
-						if (chckbxCrditos.isSelected()) {
-							aux[numColumnas] = chckbxCrditos.getText();
-							numColumnas++;
-							
-						}
-						if (chckbxImporte.isSelected()) {
-							aux[numColumnas] = chckbxImporte.getText();
-							numColumnas++;
-							
-						}
-						if (chckbxEdicin.isSelected()) {
-							aux[numColumnas] = chckbxEdicin.getText();
-							numColumnas++;
-							
-						}
-
-						for (int j = 0; j < listacurso.size(); j++) {
-//							if (campoFechaInicio.getDate().compareTo(listacurso.get(j).getFechaInicio())<=0 && campoFechaFin.getDate().compareTo(listacurso.get(j).getFechaFin())>=0){
-//								//Esta condicion sería cuando se cumple, es decir el curso se lleva a cabo entre las fechas introducidas. 
-//								//Ahora mismo no funciona por que los campos no son fechas
-//							}
-							if(campoFechaInicio.getDate() != null && campoFechaFin.getDate() !=null) {
-								if (campoFechaInicio.getDate().compareTo(listacurso.get(j).getFechaInicio())<=0 && campoFechaFin.getDate().compareTo(listacurso.get(j).getFechaFin())>=0){
-									model_curso.addElement(listacurso.get(j).getId());
-									listaConsulta.add(listacurso.get(j));
-									ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
-									numFilas++;
-								}
-							}else {
-								model_curso.addElement(listacurso.get(j).getId());
-								listaConsulta.add(listacurso.get(j));
-								ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
-								numFilas++;
-							}
-							
-							
-						}
-						Object matriz[][] = new Object[numFilas][numColumnas];
-						String campos[] = new String[numColumnas];
-						if (numColumnas == 0) {
-							not_selected_label.setText("SELECCIONE CAMPOS");
-							not_selected_label.setForeground(Color.RED);
-							ingresos_cantidad_label.setText("");
-						} else {
-							ingresos_cantidad_label.setText(String.valueOf(ingresos) + " €");
-							ingresos_cantidad_label.setForeground(Color.BLUE);
-							for (int k = 0; k < campos.length; k++) {
-								campos[k] = aux[k];
-							}
-
-							for (int i = 0; i < listaConsulta.size(); i++) {
-								matriz[i][0] = listaConsulta.get(i).getNombre();
-							}
-
-							for (int j = 0; j < campos.length; j++) {
-
-								if (campos[j].equals("Centro")) {
-									for (int i = 0; i < listaConsulta.size(); i++) {
-										matriz[i][j] = listaConsulta.get(i).getIdCentro();
-									}
-								}if (campos[j].equals("Créditos")) {
-									for (int i = 0; i < listaConsulta.size(); i++) {
-										matriz[i][j] = listaConsulta.get(i).getECTS();
-									}
-								}if (campos[j].equals("Importe")) {
-									for (int i = 0; i < listaConsulta.size(); i++) {
-										matriz[i][j] = listaConsulta.get(i).getTasaMatricula();
-									}
-								}if (campos[j].equals("Edición")) {
-									for (int i = 0; i < listaConsulta.size(); i++) {
-										matriz[i][j] = listaConsulta.get(i).getEdicion();
-									}
-								}if (campos[j].equals("Estado")) {
-									for (int i = 0; i < listaConsulta.size(); i++) {
-										matriz[i][j] = listaConsulta.get(i).getEstado();
-									}
-								}
-							}
-							
-							mostrarConsulta(matriz, campos);
-						}
-
-					}
-				});
-			}
-		});
-
+		botonConsulta.addActionListener(this);
 	}
+	public void rellenarMatriz(int numColumnas, String[] arrayToCopy) {
+		
+		Object[][] matriz = new Object[numFilas][numColumnas];
+		String[] campos = new String [numColumnas];
+		System.arraycopy(arrayToCopy, 0, campos, 0, numColumnas);
+		
+		ingresosCantidadLabel.setText(String.valueOf(ingresos) + " €");
+		ingresosCantidadLabel.setForeground(Color.BLUE);
+		
+		for (int i = 0; i < listaConsulta.size(); i++) {
+			matriz[i][0] = listaConsulta.get(i).getNombre();
+		}
 
-	public void mostrarConsulta(Object[][] matrizInfo, String campos[]) {
+		for (int j = 0; j < campos.length; j++) {
+ 
+			if (campos[j].equals("Centro")) {
+				for (int i = 0; i < listaConsulta.size(); i++) {
+					matriz[i][j] = listaConsulta.get(i).getIdCentro();
+				}
+			}else if (campos[j].equals("Créditos")) {
+				for (int i = 0; i < listaConsulta.size(); i++) {
+					matriz[i][j] = listaConsulta.get(i).getECTS();
+				}
+			}else if (campos[j].equals("Importe")) {
+				for (int i = 0; i < listaConsulta.size(); i++) {
+					matriz[i][j] = listaConsulta.get(i).getTasaMatricula();
+				}
+			}else if (campos[j].equals("Edición")) {
+				for (int i = 0; i < listaConsulta.size(); i++) {
+					matriz[i][j] = listaConsulta.get(i).getEdicion();
+				}
+			}else if (campos[j].equals("Estado")) {
+				for (int i = 0; i < listaConsulta.size(); i++) {
+					matriz[i][j] = listaConsulta.get(i).getEstado();
+				}
+			}
+		}
+		mostrarConsulta(matriz, campos);
+	}
+	
+	public void mostrarConsulta(Object[][] matrizInfo, String[] campos) {
 		JScrollPane scrollPane = new JScrollPane();
 		scrollPane.setBounds(159, 47, 700, 277);
 		contentPane.add(scrollPane);
-
-		table = new JTable(matrizInfo, campos);
-
+		
+		JTable table = new JTable(matrizInfo, campos);
+		
 		table.setToolTipText("");
 		scrollPane.setViewportView(table);
 		table.setEnabled(false);
 		table.setRowSelectionAllowed(false);
 	}
-
-	private void inicializarComponentes() {
-
-	}
-	public Object[][] rellenarMatriz(Object[][] matriz) {
-
-		for (int columnas = 0; columnas < matriz.length; columnas++) {
-			for (int filas = 0; filas < matriz[columnas].length; filas++) {
-
-
+	
+	public void realizarConsulta() {
+		for (int j = 0; j < listacurso.size(); j++) {
+			
+			if(campoFechaInicio.getDate() != null && campoFechaFin.getDate() !=null) {
+				if (campoFechaInicio.getDate().compareTo(listacurso.get(j).getFechaInicio())<=0 && campoFechaFin.getDate().compareTo(listacurso.get(j).getFechaFin())>=0){
+					modelCurso.addElement(listacurso.get(j).getId());
+					listaConsulta.add(listacurso.get(j));
+					ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
+					numFilas++;
+				}
+			}else {
+				modelCurso.addElement(listacurso.get(j).getId());
+				listaConsulta.add(listacurso.get(j));
+				ingresos += listacurso.get(j).getTasaMatricula(); //*listacurso.get(j).getNumeroDeMatriculas
+				numFilas++;
 			}
 		}
+	}
 
-		return matriz;
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == botonConsulta) { 
+			int numColumnas = 0;
+			numFilas = 0;
+			ingresos = 0.0;
+			
+			listacurso = gestor.listarCursos();
+			listaConsulta = new ArrayList<>();
+			String[] aux = new String[8];
+			
+			if (!comboBox.getModel().getSelectedItem().equals("Ninguno seleccionado")) {
+				listacurso = gestor.listarCursosWhere(TipoCurso.valueOf(comboBox.getModel().getElementAt(comboBox.getSelectedIndex())));
+			}
+			
+			if (chckbxNombre.isSelected()) {
+				aux[numColumnas] = chckbxNombre.getText();
+				numColumnas++;
+			}
+			if (chckbxCentro.isSelected()) {
+				aux[numColumnas] = chckbxCentro.getText();
+				numColumnas++;
+			}
+			if (chckbxCrditos.isSelected()) {
+				aux[numColumnas] = chckbxCrditos.getText();
+				numColumnas++;
+			}
+			if (chckbxImporte.isSelected()) {
+				aux[numColumnas] = chckbxImporte.getText();
+				numColumnas++;
+			}
+			if (chckbxEdicin.isSelected()) {
+				aux[numColumnas] = chckbxEdicin.getText();
+				numColumnas++;
+			}
+			
+			if (numColumnas == 0) {
+				notSelectedLabel.setText("SELECCIONE CAMPOS");
+				notSelectedLabel.setForeground(Color.RED);
+				ingresosCantidadLabel.setText("");
+				return;
+			}
+			realizarConsulta();
+			rellenarMatriz(numColumnas, aux);
+		}
+		
 	}
 }

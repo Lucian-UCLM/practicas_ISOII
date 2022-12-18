@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getId()Ljava/lang/String;
+persistencia.CentroDAO#listarCentros()Ljava/util/List;

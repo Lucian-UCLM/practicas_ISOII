@@ -1,1 +1,3 @@
-negocio.entities.ProfesorExterno#getDniProfesor()Ljava/lang/String;
+persistencia.MatriculaDAO#editarMatricula(Lnegocio/entities/Matricula;)Lnegocio/entities/Matricula;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

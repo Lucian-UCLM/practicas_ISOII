@@ -1,48 +1,26 @@
 
-hnegocio.controllers.GestorPropuestasCursos#listarCurso(Ljava/lang/String;)Lnegocio/entities/CursoPropio;m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java: :("1*Æ
+Inegocio.controllers.GestorPropuestasCursos#listarCursos()Ljava/util/List;m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java6 6(&"1*Œ
 1m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java; ;('´±
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java7	 7(õ
+ò
 m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java; ;(%"
-%0negocio.entities.CursoPropio"negocio.entities.CursoPropioÆ
-Ã
-m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java; ;('
-%1"&negocio.entities.CursoPropio#<init>()V*$
-"
-%0negocio.entities.CursoPropioÅ
-Â
-m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java; ;((%
-cursonegocio.entities.CursoPropio"__id*$
-"
-%0negocio.entities.CursoPropioš—
-m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java< <(
-
-%2void"7negocio.entities.CursoPropio#setId(Ljava/lang/String;)V*'
-%
-cursonegocio.entities.CursoPropio*
-
-idCursojava.lang.String2setId(Ljava/lang/String;)Ù
-Ö
-m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java=	 =(!
-%3persistencia.CursoPropioDAO"__id*<*:,
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java7	 7(!
+%0persistencia.CursoPropioDAO"__id*X
+
+__unknown_file (<*:,
 *negocio.controllers.GestorPropuestasCursos"
 
-cursodaoøõ
+cursodao•’
 m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java=	 =($"
-%4negocio.entities.CursoPropio"epersistencia.CursoPropioDAO#listarCurso(Lnegocio/entities/CursoPropio;)Lnegocio/entities/CursoPropio;*#
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java7	 7( 
+%1java.util.List":persistencia.CursoPropioDAO#listarCursos()Ljava/util/List;*?
+
+__unknown_file (#
 !
-%3persistencia.CursoPropioDAO*'
-%
-cursonegocio.entities.CursoPropio2+listarCurso(Lnegocio/entities/CursoPropio;)"•
+%0persistencia.CursoPropioDAO2listarCursos()"‡
 m
-cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java= =(%$
-"
-%4negocio.entities.CursoPropio:
-idCursojava.lang.StringB.,
-*negocio.controllers.GestorPropuestasCursos
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java7 7(!
+
+%1java.util.ListB.,
+*negocio.controllers.GestorPropuestasCursosH

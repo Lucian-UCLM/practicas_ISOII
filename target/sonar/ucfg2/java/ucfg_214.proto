@@ -1,16 +1,19 @@
 
-Fnegocio.entities.CursoPropio#getEstado()Lnegocio/entities/EstadoCurso;a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java“ “("1*³
+Inegocio.entities.CursoPropio#getDirector()Lnegocio/entities/ProfesorUCLM;a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java« «( "1*Ó
 1a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java”	 ”(¾
-»
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java¬	 ¬(Ý
+Ú
 a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java”	 ”("
-%0negocio.entities.EstadoCurso"__id*,**
-negocio.entities.CursoPropio"
-estado"‰
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java¬	 ¬(#
+%0negocio.entities.ProfesorUCLM"__id*J
+
+__unknown_file (.*,
+negocio.entities.CursoPropio"
+
+director"Š
 a
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java” ”($
-"
-%0negocio.entities.EstadoCursoB 
-negocio.entities.CursoPropio
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java¬ ¬(%
+#
+%0negocio.entities.ProfesorUCLMB 
+negocio.entities.CursoPropioH

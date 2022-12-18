@@ -1,1 +1,1 @@
-persistencia.AbstractEntityDAO#show(Ljava/lang/String;)Ljava/lang/Object;
+persistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;

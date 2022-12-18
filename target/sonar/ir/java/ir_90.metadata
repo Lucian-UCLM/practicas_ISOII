@@ -1,1 +1,1 @@
-presentacion.PantallaLogin#instance-init#
+persistencia.CursoPropioDAO#editarCurso(Lnegocio/entities/CursoPropio;)V

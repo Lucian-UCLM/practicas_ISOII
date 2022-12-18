@@ -1,1 +1,1 @@
-negocio.entities.Materia#<init>()V
+persistencia.AbstractEntityDAO#delete(Ljava/lang/Object;)V

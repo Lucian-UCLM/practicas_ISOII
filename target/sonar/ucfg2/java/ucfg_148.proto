@@ -1,16 +1,252 @@
 
-Dnegocio.entities.Materia#getResponsable()Lnegocio/entities/Profesor;[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaX X("1*œ
+5negocio.entities.Materia#toString()Ljava/lang/String;[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javay y("1*§;
 1[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaY	 Y(¶
-³
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(Ä
+Á
 [
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaY	 Y(
-%0negocio.entities.Profesor"__id*-*+
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz z($
+%0java.lang.String"__id*D
+
+__unknown_file ((*&
+negocio.entities.Materia"
+nombreð
+í
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z($
+%1java.lang.String"__concat*s
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(
+Materia [nombre=*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz z($
+
+%0java.lang.Stringè
+å
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(1
+%2java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z($
+
+%1java.lang.String*k
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz' z(1
+
+, horas=â
+ß
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(9
+%3java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(1
+
+%2java.lang.String*e
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz4 z(9
+""î
+ë
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(L
+%4java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(9
+
+%3java.lang.String*q
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz< z(L
+, fechaInicio=Ç
+Ä
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javazO z(Z
+%5java.util.Date"__id*I
+
+__unknown_file (-*+
 negocio.entities.Materia"
-responsable"€
+fechaInicioò
+ï
 [
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaY Y(!
-
-%0negocio.entities.ProfesorB
-negocio.entities.Materia
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(Z
+%6java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(L
+
+%4java.lang.String*u
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javazO z(Z
+
+%5java.util.Dateë
+è
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(j
+%7java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(Z
+
+%6java.lang.String*n
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz] z(j
+, fechaFin=Ä
+Á
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{ {(
+%8java.util.Date"__id*F
+
+__unknown_file (**(
+negocio.entities.Materia"
+
+fechaFinò
+ï
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(
+%9java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 z(j
+
+%7java.lang.String*u
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{ {(
+
+%8java.util.Dateï
+ì
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(!
+%10java.lang.String"__concat*w
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(
+
+%9java.lang.String*q
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{ {(!
+, responsable=Ó
+Ð
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{$ {(/ 
+%11negocio.entities.Profesor"__id*I
+
+__unknown_file (-*+
+negocio.entities.Materia"
+responsable
+þ
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(/
+%12java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(!
+
+%10java.lang.String*
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{$ {(/"
+ 
+%11negocio.entities.Profesorò
+ï
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(D
+%13java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(/
+
+%12java.lang.String*s
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{2 {(D
+, idResponsable=Ì
+É
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{G {(T
+%14java.lang.String"__id*K
+
+__unknown_file (/*-
+negocio.entities.Materia"
+idResponsable÷
+ô
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(T
+%15java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(D
+
+%13java.lang.String*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{G {(T
+
+%14java.lang.Stringê
+ç
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(a
+%16java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(T
+
+%15java.lang.String*k
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{W {(a
+
+, curso=Ð
+Í
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{d {(i#
+%17negocio.entities.CursoPropio"__id*C
+
+__unknown_file ('*%
+negocio.entities.Materia"
+curso„
+
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(i
+%18java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(a
+
+%16java.lang.String*„
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java{d {(i%
+#
+%17negocio.entities.CursoPropioì
+é
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 |(
+%19java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 {(i
+
+%18java.lang.String*m
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java| |(
+
+, idCurso=Æ
+Ã
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java| |(
+%20java.lang.String"__id*E
+
+__unknown_file ()*'
+negocio.entities.Materia"	
+idCurso÷
+ô
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 |(
+%21java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 |(
+
+%19java.lang.String*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java| |(
+
+%20java.lang.Stringã
+à
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 |("
+%22java.lang.String"__concat*x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz	 |(
+
+%21java.lang.String*d
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java| |("
+]"x
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaz |(#
+
+%22java.lang.StringB
+negocio.entities.MateriaH

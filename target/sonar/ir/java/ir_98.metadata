@@ -1,1 +1,3 @@
-negocio.entities.Profesor#getDni()Ljava/lang/String;
+presentacion.PantallaLogin#logout()V
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

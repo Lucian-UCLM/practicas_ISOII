@@ -1,1 +1,3 @@
-negocio.controllers.GestorPropuestasCursos#listarCursos()Ljava/util/List;
+negocio.controllers.GestorPropuestasCursos#evaluarPropuesta(Lnegocio/entities/CursoPropio;)Lnegocio/entities/EstadoCurso;
+java.lang.UnsupportedOperationException#<init>()V
+java.lang.UnsupportedOperationException#instance-init#

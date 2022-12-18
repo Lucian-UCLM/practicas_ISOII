@@ -1,1 +1,1 @@
-negocio.entities.Materia#setResponsable(Lnegocio/entities/Profesor;)V
+negocio.entities.Materia#getHoras()D

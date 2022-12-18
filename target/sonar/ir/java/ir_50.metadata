@@ -1,1 +1,1 @@
-negocio.entities.Estudiante#setMatriculas(Ljava/util/Collection;)V
+negocio.entities.Estudiante#getMatriculas()Ljava/util/Collection;

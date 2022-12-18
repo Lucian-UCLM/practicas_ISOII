@@ -1,16 +1,18 @@
 
-6negocio.entities.CursoPropio#getId()Ljava/lang/String;_
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java[ [("1*ê
+=negocio.entities.CursoPropio#getFechaInicio()Ljava/util/Date;_
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javas s("1*±
 1_
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java\	 \(¨
-©
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javat	 t(œ
+Ã
 _
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java\	 \(
-%0java.lang.String"__id*(*&
-negocio.entities.CursoPropio"
-id"{
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javat	 t(
+%0java.util.Date"__id*M
+
+__unknown_file (1*/
+negocio.entities.CursoPropio"
+fechaInicio"y
 _
-UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java\ \(
-
-%0java.lang.StringB 
-negocio.entities.CursoPropio
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javat t(
+
+%0java.util.DateB 
+negocio.entities.CursoPropioH

@@ -1,7 +1,1 @@
-negocio.controllers.GestorPropuestasCursos#instance-init#
-persistencia.ProfesorDAO#instance-init#
-persistencia.CursoPropioDAO#<init>(Ljava/lang/Class;)V
-persistencia.ProfesorDAO#<init>(Ljava/lang/Class;)V
-persistencia.CursoPropioDAO#instance-init#
-persistencia.CentroDAO#instance-init#
-persistencia.CentroDAO#<init>(Ljava/lang/Class;)V
+presentacion.PantallaMatriculacion#actionPerformed(Ljava/awt/event/ActionEvent;)V
