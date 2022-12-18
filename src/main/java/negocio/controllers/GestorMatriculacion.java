@@ -4,9 +4,11 @@ import java.util.List;
 
 import negocio.entities.*;
 import persistencia.EstudianteDAO;
+import persistencia.MatriculaDAO;
 
 public class GestorMatriculacion {
 	EstudianteDAO estudiantedao = new EstudianteDAO(Estudiante.class);
+	MatriculaDAO matriculadao = new MatriculaDAO(Matricula.class);
 	public void realizarMatriculacion(CursoPropio curso, Estudiante estudiante) {
 		throw new UnsupportedOperationException();
 	}
@@ -29,6 +31,10 @@ public class GestorMatriculacion {
 	
 	public List<Estudiante> listarEstudiantes() {
 		return estudiantedao.listarEstudiantes();
+	}
+	
+	public List<Matricula> listarMatriculasWhereEstudiante(Estudiante estudiante) {
+		return matriculadao.listarMatriculasWhereEstudiante(estudiante);
 	}
 	
 	public Estudiante listarEstudiante(String idEstudiante) {

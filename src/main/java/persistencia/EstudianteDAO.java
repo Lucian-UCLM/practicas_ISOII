@@ -4,12 +4,13 @@ import java.util.List;
 
 import negocio.entities.*;
 
-public class EstudianteDAO extends AbstractEntityDAO<Object> {
+public class EstudianteDAO extends AbstractEntityDAO {
 	
-	private AbstractEntityDAO<Estudiante> abstractEntityDAO;
+	private AbstractEntityDAO abstractEntityDAO;
 	
 	public EstudianteDAO(Class entityClass) {
 		super(entityClass);
+		System.out.println(entityClass);
 		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
 		};
 	}

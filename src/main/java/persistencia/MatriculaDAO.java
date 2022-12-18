@@ -1,5 +1,7 @@
 package persistencia;
 
+import java.util.List;
+
 import negocio.entities.*;
 
 public class MatriculaDAO extends AbstractEntityDAO<Object> {
@@ -10,6 +12,10 @@ public class MatriculaDAO extends AbstractEntityDAO<Object> {
 		super(entityClass);
 		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
 		};
+	}
+	
+	public List<Matricula> listarMatriculasWhereEstudiante(Estudiante estudiante){
+		return abstractEntityDAO.showAllWhere("'estudiante' = '"+estudiante.getDni()+"'");
 	}
 
 	public void crearNuevaMatricula(Matricula matricula) {

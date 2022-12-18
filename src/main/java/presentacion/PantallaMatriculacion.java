@@ -10,6 +10,7 @@ import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
 import negocio.entities.EstadoCurso;
 import negocio.entities.Estudiante;
+import negocio.entities.Matricula;
 
 import javax.swing.JList;
 import javax.swing.JLabel;
@@ -173,9 +174,21 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 					
 					GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 					List<CursoPropio> listaCursosMatriculacion = gestor.listarCursosWhere(EstadoCurso.EN_MATRICULACION);
+					List<Matricula> listaMatriculas = gestor2.listarMatriculasWhereEstudiante(estudiante);
+					List<String> listaCursosEstaMatriculado = new ArrayList<String>();
+					
+					System.out.println(listaMatriculas.isEmpty());
+					
+					for (int i = 0; i<listaMatriculas.size(); i++) {
+						listaCursosEstaMatriculado.add(listaMatriculas.get(i).getTitulo().getId());
+					}
+					
+					System.out.println(listaCursosEstaMatriculado);
 					
 					for (int i = 0; i<listaCursosMatriculacion.size(); i++) {
-						modelCurso.addElement(listaCursosMatriculacion.get(i).getId());
+						if (!listaCursosEstaMatriculado.contains(listaCursosMatriculacion.get(i))) {
+							modelCurso.addElement(listaCursosMatriculacion.get(i).getId());
+						}
 					}
 					listCursos.setModel(modelCurso);
 				}else if (e.getSource() == listCursos) {
