@@ -20,16 +20,10 @@ import org.junit.Test;
 public class GestorPropuestasCursosTest {
 
 	private GestorPropuestasCursos gestorPropuestasCursos;
-	private CursoPropioDAO cursoPropioDAO;
 	
 	
 	public void gestor() {
 		gestorPropuestasCursos = new GestorPropuestasCursos();
-
-	}
-	
-	public void cursoDAO() {
-		cursoPropioDAO = new CursoPropioDAO();
 
 	}
 	
