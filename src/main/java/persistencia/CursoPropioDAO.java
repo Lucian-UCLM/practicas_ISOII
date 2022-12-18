@@ -18,6 +18,10 @@ public class CursoPropioDAO extends AbstractEntityDAO {
 	public void crearNuevoCurso(CursoPropio curso) {
 		abstractEntityDAO.save(curso);
 	}
+	
+	public void eliminarCurso(CursoPropio curso) {
+		abstractEntityDAO.delete(curso);
+	}
 
 	public CursoPropio seleccionarCurso(CursoPropio curso) {
 		throw new UnsupportedOperationException();

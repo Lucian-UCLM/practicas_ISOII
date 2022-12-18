@@ -38,7 +38,7 @@ public class GestorPropuestasCursos {
 		cursodao.editarCurso(curso);
 		return curso;
 	}
-	
+
 	public List<CursoPropio> listarCursosWhere(EstadoCurso estado) {
 		return cursodao.listarCursosWhere(estado);
 	}
@@ -54,17 +54,17 @@ public class GestorPropuestasCursos {
 	public List<CursoPropio> listarCursos() {
 		return cursodao.listarCursos();
 	}
-	
+
 	public CursoPropio listarCurso(String idCurso) {
 		CursoPropio curso = new CursoPropio();
 		curso.setId(idCurso);
 		return cursodao.listarCurso(curso);
 	}
-	
+
 	public List<ProfesorUCLM> listarProfesoresUCLM() {
 		return profesoruclmdao.listarProfesorUCLM();
 	}
-	
+
 	public List<Centro> listarCentros() {
 		return centrodao.listarCentros();
 	}
