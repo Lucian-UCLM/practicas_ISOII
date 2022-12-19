@@ -21,14 +21,20 @@ public class GestorPropuestasCursosTest {
 
 	private GestorPropuestasCursos gestorPropuestasCursos = new GestorPropuestasCursos();
 
+	
+	public CursoPropio crearCurso() {
+		CursoPropio cursoCreado = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
+				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
+				"01234567B", "01234567D", 7);
+		return cursoCreado;
+	}
 	@Test
 	public void testCrearNuevoCurso() {
 
 		List<CursoPropio> listaCursosAntes = gestorPropuestasCursos.listarCursos();
 
-		CursoPropio cursoCreado = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
-				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
-				"01234567B", "01234567D", 7);
+		CursoPropio cursoCreado = crearCurso();
+
 		CursoPropio cursoEsperado = new CursoPropio("1000", "CursoTest", 12, new Date(2020 / 12 / 10),
 				new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER, new Centro(7, "", ""),
 				new ProfesorUCLM("01234567B", CategoriaProfesor.ASOCIADO, new Centro(7, "", "")),
@@ -52,9 +58,7 @@ public class GestorPropuestasCursosTest {
 
 		List<CursoPropio> listaCursosAntes = gestorPropuestasCursos.listarCursos();
 
-		CursoPropio cursoAniadido = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
-				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
-				"01234567B", "01234567D", 7);
+		CursoPropio cursoAniadido = crearCurso();
 		gestorPropuestasCursos.darBajaCurso(cursoAniadido);
 
 		List<CursoPropio> listaCursosDespues = gestorPropuestasCursos.listarCursos();
@@ -67,9 +71,7 @@ public class GestorPropuestasCursosTest {
 	@Test
 	public void testEditarPropuestaCurso() {
 		
-		CursoPropio cursoCreado = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
-				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
-				"01234567B", "01234567D", 7);
+		CursoPropio cursoCreado = crearCurso();
 		
 		CursoPropio CursoNoModificado = cursoCreado;
 		CursoPropio CursoSiModificado = gestorPropuestasCursos.editarPropuestaCurso("1000", "CursoTestModificado", 12,new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
