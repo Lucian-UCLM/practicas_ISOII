@@ -96,5 +96,22 @@ public class Estudiante {
 		return "Estudiante [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", titulacion="
 				+ titulacion + ", cualificacion=" + cualificacion + ", matriculas=" + matriculas + "]";
 	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Estudiante other = (Estudiante) obj;
+		return Objects.equals(dni, other.dni);
+	}
 	
 }

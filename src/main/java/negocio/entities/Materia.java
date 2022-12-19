@@ -1,6 +1,8 @@
 package negocio.entities;
 
 import java.util.Date;
+import java.util.Objects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
@@ -122,6 +124,24 @@ public class Materia {
 		return "Materia [nombre=" + nombre + ", horas=" + horas + ", fechaInicio=" + fechaInicio + ", fechaFin="
 				+ fechaFin + ", responsable=" + responsable + ", idResponsable=" + idResponsable + ", curso=" + curso
 				+ ", idCurso=" + idCurso + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(idCurso, idResponsable, nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Materia other = (Materia) obj;
+		return Objects.equals(idCurso, other.idCurso) && Objects.equals(idResponsable, other.idResponsable)
+				&& Objects.equals(nombre, other.nombre);
 	}
 
 }

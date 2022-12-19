@@ -22,6 +22,7 @@ public class GestorMatriculacionTest {
 
 		assertTrue(new Estudiante("76543210B", "Hugo", "Álvarez Ruiz", "Grado Superior", "Robótica") == gestorMatriculacion.listarEstudiante("76543210B"));
 
+		
 	}
 
 }

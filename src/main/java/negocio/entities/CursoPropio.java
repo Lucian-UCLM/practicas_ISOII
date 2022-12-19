@@ -233,4 +233,23 @@ public class CursoPropio {
 				+ ", matriculas=" + matriculas + ", materias=" + materias + "]";
 	}
 
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, nombre);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		CursoPropio other = (CursoPropio) obj;
+		return Objects.equals(id, other.id) && Objects.equals(nombre, other.nombre);
+	}
+
+	
+
 }

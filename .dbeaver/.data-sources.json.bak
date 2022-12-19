@@ -1,18 +1,30 @@
 {
 	"folders": {},
 	"connections": {
-		"derby-183dc66fa4c-5906bfbe04b9238c": {
+		"derby-1843344aec0-5464004c38ee9c3b": {
 			"provider": "generic",
 			"driver": "derby",
 			"name": "dbderby",
 			"save-password": true,
 			"read-only": false,
 			"configuration": {
-				"database": "C:\\Users\\Carlos\\git\\practicas_ISOII\\practicas_ISOII\\dbderby",
-				"url": "jdbc:derby:C:\\Users\\Carlos\\git\\practicas_ISOII\\practicas_ISOII\\dbderby",
+				"database": "C:\\Users\\lucas\\GitHub\\practicas_ISOII\\practicas_ISOII\\dbderby",
+				"url": "jdbc:derby:C:\\Users\\lucas\\GitHub\\practicas_ISOII\\practicas_ISOII\\dbderby",
 				"type": "dev",
-				"auth-model": "native",
-				"handlers": {}
+				"auth-model": "native"
+			}
+		},
+		"derby-1852b4bdb0f-45a86cb56a1b206": {
+			"provider": "generic",
+			"driver": "derby",
+			"name": "dbderby 2",
+			"save-password": true,
+			"read-only": false,
+			"configuration": {
+				"database": "C:\\Users\\dani-\\WS_GITHUB\\practicas_ISOII\\dbderby",
+				"url": "jdbc:derby:C:\\Users\\dani-\\WS_GITHUB\\practicas_ISOII\\dbderby",
+				"type": "dev",
+				"auth-model": "native"
 			}
 		}
 	},

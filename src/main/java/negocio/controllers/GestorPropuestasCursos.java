@@ -72,5 +72,8 @@ public class GestorPropuestasCursos {
 	public void altaCursoAprobado(CursoPropio curso) {
 		throw new UnsupportedOperationException();
 	}
+	public void darBajaCurso(CursoPropio curso) {
+		cursodao.eliminarCurso(curso);
+	}
 
 }

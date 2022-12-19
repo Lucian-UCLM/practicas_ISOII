@@ -19,57 +19,67 @@ import org.junit.Test;
 
 public class GestorPropuestasCursosTest {
 
-	private GestorPropuestasCursos gestorPropuestasCursos;
-	
-	
-	public void gestor() {
-		gestorPropuestasCursos = new GestorPropuestasCursos();
-
-	}
-	
+	private GestorPropuestasCursos gestorPropuestasCursos = new GestorPropuestasCursos();
 
 	@Test
-	public void realizarPropuestaCurso() {
-		CursoPropio curso = new CursoPropio("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-				TipoCurso.MASTER, new Centro(7,"",""),  new ProfesorUCLM("01234567B", CategoriaProfesor.ASOCIADO,new Centro(7,"","")), new ProfesorUCLM("01234567D", CategoriaProfesor.ASOCIADO,new Centro(7,"","")));
-				
-		assertTrue(curso == gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-				TipoCurso.MASTER, "01234567B", "01234567D", 7));
-//		assertTrue(gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-//				TipoCurso.MASTER, "01234567B", "01234567D", 7) == new CursoPropio("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-//						TipoCurso.MASTER, new Centro(7,"",""),  new ProfesorUCLM("01234567B", CategoriaProfesor.ASOCIADO,new Centro(7,"","")), new ProfesorUCLM("01234567D", CategoriaProfesor.ASOCIADO,new Centro(7,"",""))));
-		
-//		assertEquals(gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-//				TipoCurso.MASTER, "01234567B", "01234567D", 7),new CursoPropio("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-//						TipoCurso.MASTER, new Centro(7,"",""),  new ProfesorUCLM("01234567B", CategoriaProfesor.ASOCIADO,new Centro(7,"","")), new ProfesorUCLM("01234567D", CategoriaProfesor.ASOCIADO,new Centro(7,"",""))));
-		
+	public void testCrearNuevoCurso() {
+
+		List<CursoPropio> listaCursosAntes = gestorPropuestasCursos.listarCursos();
+
+		CursoPropio cursoCreado = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
+				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
+				"01234567B", "01234567D", 7);
+		CursoPropio cursoEsperado = new CursoPropio("1000", "CursoTest", 12, new Date(2020 / 12 / 10),
+				new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER, new Centro(7, "", ""),
+				new ProfesorUCLM("01234567B", CategoriaProfesor.ASOCIADO, new Centro(7, "", "")),
+				new ProfesorUCLM("01234567D", CategoriaProfesor.ASOCIADO, new Centro(7, "", "")));
+
+		List<CursoPropio> listaCursosDespues = gestorPropuestasCursos.listarCursos();
+
+		assertEquals(cursoCreado, cursoEsperado);
+		assertTrue(listaCursosDespues.size() == (listaCursosAntes.size() + 1));
+		assertFalse(listaCursosAntes.contains(cursoCreado));
+		assertTrue(listaCursosDespues.contains(cursoEsperado));
+
+		gestorPropuestasCursos.darBajaCurso(cursoCreado);
+
+		assertTrue(gestorPropuestasCursos.listarCurso(cursoCreado.getId()) == null);
+
 	}
-//	public static void main(String[] args) {
-		@Test
-	public void listarCursosTipo() {
-		gestor();
-		CursoPropioDAO cursodao = new CursoPropioDAO(CursoPropio.class);
-//		System.out.println(gestorPropuestasCursos.listarCursosWhere(TipoCurso.ESPECIALISTA));
-//		System.out.println(cursodao.listarCursosWhere(TipoCurso.ESPECIALISTA));
-		assertEquals(gestorPropuestasCursos.listarCursosWhere(TipoCurso.ESPECIALISTA), cursodao.listarCursosWhere(TipoCurso.ESPECIALISTA));
+
+	@Test
+	public void testDarBajaCurso() {
+
+		List<CursoPropio> listaCursosAntes = gestorPropuestasCursos.listarCursos();
+
+		CursoPropio cursoAniadido = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
+				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
+				"01234567B", "01234567D", 7);
+		gestorPropuestasCursos.darBajaCurso(cursoAniadido);
+
+		List<CursoPropio> listaCursosDespues = gestorPropuestasCursos.listarCursos();
+
+		assertTrue(listaCursosDespues.size() == listaCursosAntes.size());
+		assertFalse(listaCursosDespues.contains(cursoAniadido) && listaCursosAntes.contains(cursoAniadido));
+		assertFalse(listaCursosDespues.size() > listaCursosAntes.size());
 	}
+
+	@Test
+	public void testEditarPropuestaCurso() {
 		
-		@Test
-	public void listarCursosEstado() {
-//		GestorPropuestasCursos gestorPropuestasCursos = new GestorPropuestasCursos();
-		gestor();
-		CursoPropioDAO cursodao = new CursoPropioDAO(CursoPropio.class);
-//		System.out.println(gestorPropuestasCursos.listarCursosWhere(TipoCurso.ESPECIALISTA));
-//		System.out.println(cursodao.listarCursosWhere(TipoCurso.ESPECIALISTA));
-		assertEquals(gestorPropuestasCursos.listarCursosWhere(EstadoCurso.EN_MATRICULACION), cursodao.listarCursosWhere(EstadoCurso.EN_MATRICULACION));
+		CursoPropio cursoCreado = gestorPropuestasCursos.realizarPropuestaCurso("1000", "CursoTest", 12,
+				new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
+				"01234567B", "01234567D", 7);
+		
+		CursoPropio CursoNoModificado = cursoCreado;
+		CursoPropio CursoSiModificado = gestorPropuestasCursos.editarPropuestaCurso("1000", "CursoTestModificado", 12,new Date(2020 / 12 / 10), new Date(2021 / 12 / 10), 120.0, 10, EstadoCurso.VALIDADO, TipoCurso.MASTER,
+				"01234567B", "01234567D", 7);
+		
+		assertNotEquals(CursoNoModificado, CursoSiModificado);
+		assertEquals(CursoNoModificado.getId(), CursoSiModificado.getId());
+		assertNotEquals(CursoNoModificado.getNombre(), CursoSiModificado.getNombre());
+		
+		gestorPropuestasCursos.darBajaCurso(CursoSiModificado);
 	}
-		@Test
-		public void comprobarCurso() {
-			GestorPropuestasCursos gestorPropuestasCursos = new GestorPropuestasCursos();
-			CursoPropioDAO cursodao = new CursoPropioDAO(CursoPropio.class);
-			CursoPropio curso = new CursoPropio("1000", "CursoTest", 12, new Date(2020/12/10), new Date(2021/12/10), 120.0, 10, EstadoCurso.VALIDADO,
-					TipoCurso.MASTER, new Centro(7,"",""),  new ProfesorUCLM("01234567B", CategoriaProfesor.ASOCIADO,new Centro(7,"","")), new ProfesorUCLM("01234567D", CategoriaProfesor.ASOCIADO,new Centro(7,"","")));
-			assertTrue(gestorPropuestasCursos.listarCurso("1000")!= null);
-		}
-	
+
 }

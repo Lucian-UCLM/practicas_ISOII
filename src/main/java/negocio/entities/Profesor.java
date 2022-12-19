@@ -1,5 +1,7 @@
 package negocio.entities;
 
+import java.util.Objects;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
@@ -70,6 +72,23 @@ public class Profesor {
 	@Override
 	public String toString() {
 		return "Profesor [dni=" + dni + ", nombre=" + nombre + ", apellidos=" + apellidos + ", doctor=" + doctor + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(dni);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Profesor other = (Profesor) obj;
+		return Objects.equals(dni, other.dni);
 	}
 
 }
