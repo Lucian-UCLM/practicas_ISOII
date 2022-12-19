@@ -29,6 +29,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.awt.Color;
 
@@ -157,7 +158,11 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		
 		btnRealizarMatricula.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-//				gestor2.crearMatricula();
+				String selectedItemEstudiante = listEstudiantes.getSelectedValue();
+				String selectedItemCurso = listCursos.getSelectedValue();
+				List<Matricula> listaMatriculas = gestor2.listarMatriculas();
+				int idMatricula = listaMatriculas.get(listaMatriculas.size()-1).getIdMatricula() + 1;
+				gestor2.realizarMatriculacion(idMatricula, new Date(), false, ModoPago.TARJETA_CREDITO, selectedItemEstudiante, selectedItemCurso);
 			}
 		});
 		
@@ -167,14 +172,23 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 				String selectedItemCurso = listCursos.getSelectedValue();
 				List<Matricula> listaMatriculas = gestor2.listarMatriculas();
 				Matricula matricula = null;
+				ModoPago modopago = null;
+				if ((chckbxPagoConTarjeta.isSelected() && chckbxPagoTransferencia.isSelected()) || (!chckbxPagoConTarjeta.isSelected() && !chckbxPagoTransferencia.isSelected())) {
+					return;
+				} else if (chckbxPagoConTarjeta.isSelected()) {
+					modopago = ModoPago.TARJETA_CREDITO;
+				} else {
+					modopago = ModoPago.TRANSFERENCIA;
+				}
 				for (int i = 0; i<listaMatriculas.size(); i++) {
 					if(listaMatriculas.get(i).getIdEstudiante().equals(selectedItemEstudiante) && listaMatriculas.get(i).getIdTitulo().equals(selectedItemCurso)) {
 						matricula = listaMatriculas.get(i);
 						break;
 					}
 				}
-				gestor2.realizarPagoMatricula(matricula.getIdMatricula(), matricula.getFecha(), true, ModoPago.TRANSFERENCIA, matricula.getIdEstudiante(), matricula.getIdTitulo());
-				listCursos.remove(listCursos.getSelectedIndex());
+				modelCurso.remove(listCursos.getSelectedIndex());
+				listCursos.setModel(modelCurso);
+				gestor2.realizarPagoMatricula(matricula.getIdMatricula(), matricula.getFecha(), true, modopago, matricula.getIdEstudiante(), matricula.getIdTitulo());
 			}
 		});
 		

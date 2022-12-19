@@ -10,8 +10,9 @@ import persistencia.MatriculaDAO;
 public class GestorMatriculacion {
 	EstudianteDAO estudiantedao = new EstudianteDAO(Estudiante.class);
 	MatriculaDAO matriculadao = new MatriculaDAO(Matricula.class);
-	public void realizarMatriculacion(int idMatricula, Date fecha, boolean pagado, int tipoPago, String estudiante, String titulo) {
-		throw new UnsupportedOperationException();
+	public void realizarMatriculacion(int idMatricula, Date fecha, boolean pagado, ModoPago tipoPago, String estudiante, String titulo) {
+		Matricula matricula = new Matricula(idMatricula, fecha, pagado, tipoPago, estudiante, titulo);
+		matriculadao.crearNuevaMatricula(matricula);
 	}
 
 	public void realizarPagoMatricula(int idMatricula, Date fecha, boolean pagado, ModoPago tipoPago, String estudiante, String titulo) {
