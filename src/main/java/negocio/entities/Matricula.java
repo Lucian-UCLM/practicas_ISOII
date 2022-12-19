@@ -40,17 +40,15 @@ public class Matricula {
 
 	}
 
-	public Matricula(int idMatricula, Date fecha, boolean pagado, ModoPago tipoPago, Estudiante estudiante,
-			CursoPropio titulo) {
+	public Matricula(int idMatricula, Date fecha, boolean pagado, ModoPago tipoPago, String estudiante,
+			String titulo) {
 		super();
 		this.idMatricula = idMatricula;
 		this.fecha = fecha;
 		this.pagado = pagado;
 		this.tipoPago = tipoPago;
-		this.estudiante = estudiante;
-		this.titulo = titulo;
-		this.idEstudiante = estudiante.getDni();
-		this.idTitulo = titulo.getId();
+		this.idEstudiante = estudiante;
+		this.idTitulo = titulo;
 	}
 
 	public int getIdMatricula() {

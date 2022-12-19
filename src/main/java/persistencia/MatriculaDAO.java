@@ -14,10 +14,10 @@ public class MatriculaDAO extends AbstractEntityDAO<Object> {
 		};
 	}
 	
-	public List<Matricula> listarMatriculasWhereEstudiante(Estudiante estudiante){
-		return abstractEntityDAO.showAllWhere("'estudiante' = '"+estudiante.getDni()+"'");
+	public List<Matricula> listarMatriculas(){
+		return abstractEntityDAO.showAll();
 	}
-
+	
 	public void crearNuevaMatricula(Matricula matricula) {
 		abstractEntityDAO.save(matricula);
 	}
@@ -26,8 +26,8 @@ public class MatriculaDAO extends AbstractEntityDAO<Object> {
 		throw new UnsupportedOperationException();
 	}
 
-	public Matricula editarMatricula(Matricula matricula) {
-		throw new UnsupportedOperationException();
+	public void editarMatricula(Matricula matricula) {
+		abstractEntityDAO.update(matricula);
 	}
 
 }

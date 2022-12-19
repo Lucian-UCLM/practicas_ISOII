@@ -5,12 +5,16 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
+import org.apache.derby.impl.store.access.RAMTransaction;
+
 import negocio.controllers.GestorMatriculacion;
 import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
 import negocio.entities.EstadoCurso;
 import negocio.entities.Estudiante;
 import negocio.entities.Matricula;
+import negocio.entities.ModoPago;
+import negocio.entities.TipoCurso;
 
 import javax.swing.JList;
 import javax.swing.JLabel;
@@ -32,8 +36,6 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 	
 	private DefaultListModel<String> modelCurso = new DefaultListModel<>();
 	private DefaultListModel<String> modelEstudiantes = new DefaultListModel<>();
-	
-	JButton btnRealizarMatricula = new JButton("Realizar Matricula");
 	
 	private JList<String> listCursos = new JList<>();
 	private JList<String> listEstudiantes = new JList<>();
@@ -66,6 +68,7 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		lblUsuario.setBounds(33, 36, 67, 14);
 		contentPane.add(lblUsuario);
 		
+		JButton btnRealizarMatricula = new JButton("Realizar Matricula");
 		btnRealizarMatricula.addActionListener(this);
 		btnRealizarMatricula.setBounds(221, 363, 124, 23);
 		contentPane.add(btnRealizarMatricula);
@@ -152,6 +155,32 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		listEstudiantes.setBounds(33, 89, 173, 297);
 		contentPane.add(listEstudiantes);
 		
+		btnRealizarMatricula.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+//				gestor2.crearMatricula();
+			}
+		});
+		
+		btnRealizarPago.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String selectedItemEstudiante = listEstudiantes.getSelectedValue();
+				String selectedItemCurso = listCursos.getSelectedValue();
+				List<Matricula> listaMatriculas = gestor2.listarMatriculas();
+				Matricula matricula = null;
+				for (int i = 0; i<listaMatriculas.size(); i++) {
+					if(listaMatriculas.get(i).getIdEstudiante().equals(selectedItemEstudiante) && listaMatriculas.get(i).getIdTitulo().equals(selectedItemCurso)) {
+						matricula = listaMatriculas.get(i);
+						break;
+					}
+				}
+				gestor2.realizarPagoMatricula(matricula.getIdMatricula(), matricula.getFecha(), true, ModoPago.TRANSFERENCIA, matricula.getIdEstudiante(), matricula.getIdTitulo());
+				listCursos.remove(listCursos.getSelectedIndex());
+			}
+		});
+		
+		btnRealizarPago.setEnabled(false);
+		btnRealizarMatricula.setEnabled(false);
+		
 		List<Estudiante> listasDeEstudiantesAux = gestor2.listarEstudiantes();
 		for (int j =0; j<listasDeEstudiantesAux.size(); j++) {
 			modelEstudiantes.addElement(listasDeEstudiantesAux.get(j).getDni());}
@@ -174,25 +203,40 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 					
 					GestorPropuestasCursos gestor = new GestorPropuestasCursos();
 					List<CursoPropio> listaCursosMatriculacion = gestor.listarCursosWhere(EstadoCurso.EN_MATRICULACION);
-					List<Matricula> listaMatriculas = gestor2.listarMatriculasWhereEstudiante(estudiante);
+					List<Matricula> listaMatriculas = gestor2.listarMatriculas();
 					List<String> listaCursosEstaMatriculado = new ArrayList<String>();
 					
-					System.out.println(listaMatriculas.isEmpty());
-					
 					for (int i = 0; i<listaMatriculas.size(); i++) {
-						listaCursosEstaMatriculado.add(listaMatriculas.get(i).getTitulo().getId());
+						if(listaMatriculas.get(i).getIdEstudiante().equals(estudiante.getDni()) && listaMatriculas.get(i).isPagado()) {
+							listaCursosEstaMatriculado.add(listaMatriculas.get(i).getIdTitulo());
+						}
 					}
 					
-					System.out.println(listaCursosEstaMatriculado);
-					
 					for (int i = 0; i<listaCursosMatriculacion.size(); i++) {
-						if (!listaCursosEstaMatriculado.contains(listaCursosMatriculacion.get(i))) {
+						if (!listaCursosEstaMatriculado.contains(listaCursosMatriculacion.get(i).getId())) {
 							modelCurso.addElement(listaCursosMatriculacion.get(i).getId());
 						}
 					}
 					listCursos.setModel(modelCurso);
 				}else if (e.getSource() == listCursos) {
+					boolean existeMatricula = false;
+					String selectedItemEstudiante = listEstudiantes.getSelectedValue();
+					String selectedItemCurso = listCursos.getSelectedValue();
+					List<Matricula> listaMatriculas = gestor2.listarMatriculas();
 					
+					for (int i = 0; i<listaMatriculas.size(); i++) {
+						if(listaMatriculas.get(i).getIdEstudiante().equals(selectedItemEstudiante)&&listaMatriculas.get(i).getIdTitulo().equals(selectedItemCurso)) {
+							existeMatricula=true;
+						}
+					}
+					
+					if(existeMatricula) {
+						btnRealizarPago.setEnabled(true);
+						btnRealizarMatricula.setEnabled(false);
+					}else {
+						btnRealizarPago.setEnabled(false);
+						btnRealizarMatricula.setEnabled(true);
+					}
 				}
 			}
 		};
@@ -200,11 +244,9 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		listEstudiantes.addMouseListener(mouseListener);
 		listCursos.addMouseListener(mouseListener); 
 	}
-	@Override 
+	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == btnRealizarMatricula) {
-			
-		}
+		// TODO Auto-generated method stub
 		
-	}
+	}	
 }
