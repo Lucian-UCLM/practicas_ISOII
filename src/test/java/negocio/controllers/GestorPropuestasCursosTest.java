@@ -28,6 +28,7 @@ public class GestorPropuestasCursosTest {
 				"01234567B", "01234567D", 7);
 		return cursoCreado;
 	}
+	
 	@Test
 	public void testCrearNuevoCurso() {
 

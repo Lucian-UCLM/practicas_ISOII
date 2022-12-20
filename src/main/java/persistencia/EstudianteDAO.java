@@ -17,6 +17,9 @@ public class EstudianteDAO extends AbstractEntityDAO<Object> {
 	public void crearNuevoEstudiante(Estudiante estudiante){
 		abstractEntityDAO.save(estudiante);
 	}
+	public void eliminarEstudiante(Estudiante estudiante) {
+		abstractEntityDAO.delete(estudiante);
+	}
 	
 	public List<Estudiante> listarEstudiantes(){
 		return abstractEntityDAO.showAll();

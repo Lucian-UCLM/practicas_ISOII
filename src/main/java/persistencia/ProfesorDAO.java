@@ -17,6 +17,9 @@ public class ProfesorDAO extends AbstractEntityDAO<Object> {
 	public void crearNuevoProfesor(Profesor profesor) {
 		abstractEntityDAO.save(profesor);
 	}
+	public void eliminarProfesor(Profesor profesor) {
+		abstractEntityDAO.delete(profesor);
+	}
 
 	public List<ProfesorUCLM> listarProfesorUCLM(){
 		return abstractEntityDAO.showAll();

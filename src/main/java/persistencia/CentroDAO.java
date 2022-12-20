@@ -16,6 +16,10 @@ public class CentroDAO extends AbstractEntityDAO<Object> {
 	public void crearNuevoCentro(Centro centro) {
 		abstractEntityDAO.save(centro); 
 	}
+	
+	public void eliminarCentro(Centro centro) {
+		abstractEntityDAO.delete(centro);
+	}
 
 	public List<Centro> listarCentros(){
 		return abstractEntityDAO.showAll();
