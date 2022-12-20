@@ -1,8 +1,5 @@
 package presentacion;
 
-import java.awt.EventQueue;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
@@ -16,28 +13,18 @@ import javax.swing.JButton;
 
 import java.awt.Color;
 import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Iterator;
 import java.awt.event.ActionEvent;
-import javax.swing.JTextPane;
 import javax.swing.JList;
 import javax.swing.JComboBox;
 import java.awt.Font;
-import javax.swing.JTable;
-import javax.swing.JSlider;
 import javax.swing.JSeparator;
 import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
-import javax.swing.table.DefaultTableModel;
 
 import com.toedter.calendar.JDateChooser;
 
-import javax.swing.JScrollPane;
-import javax.swing.ScrollPaneConstants;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
 import negocio.controllers.*;
@@ -310,8 +297,7 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
 		}
 		if (e.getSource() == edicionbutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
-			String[] idnum = idtext.getText().split("CPR");
-			gestor.realizarPropuestaCurso(idtext.getText() + "(1)" /* "CPR" + Integer.parseInt(id[1])+1 */, nombretext.getText(),
+			gestor.realizarPropuestaCurso(idtext.getText() + "(1)", nombretext.getText(),
 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
 					fechafin.getDate(), Double.parseDouble(importetext.getText()),
 					Integer.parseInt(ediciontext.getText())+1, EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
@@ -373,21 +359,21 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-   // TODO document why this method is empty
+		throw new UnsupportedOperationException();
  }
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-   // TODO document why this method is empty
+		throw new UnsupportedOperationException();
  }
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-   // TODO document why this method is empty
+		throw new UnsupportedOperationException();
  }
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-   // TODO document why this method is empty
+		throw new UnsupportedOperationException();
  }
 }

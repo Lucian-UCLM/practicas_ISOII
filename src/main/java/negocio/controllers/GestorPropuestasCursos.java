@@ -2,9 +2,6 @@ package negocio.controllers;
 
 import java.util.*;
 
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-
 import negocio.entities.*;
 import persistencia.CentroDAO;
 import persistencia.CursoPropioDAO;

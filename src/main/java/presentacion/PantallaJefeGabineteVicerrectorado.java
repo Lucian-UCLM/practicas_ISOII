@@ -1,37 +1,25 @@
 package presentacion;
 
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextPane;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JList;
 import javax.swing.JLabel;
-import javax.swing.JTextField;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
 
-import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.text.AttributeSet.ColorAttribute;
 
 import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
-import negocio.entities.EstadoCurso;
 import negocio.entities.TipoCurso;
-
-import javax.swing.border.LineBorder;
-import javax.swing.plaf.synth.ColorType;
 
 import java.awt.Color;
 import javax.swing.JButton;

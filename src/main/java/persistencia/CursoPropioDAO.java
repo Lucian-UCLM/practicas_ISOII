@@ -11,7 +11,7 @@ public class CursoPropioDAO extends AbstractEntityDAO<Object> {
 	
 	public CursoPropioDAO(Class entityClass) {
 		super(entityClass);
-		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
+		this.abstractEntityDAO = new AbstractEntityDAO<CursoPropio>(entityClass) {
 		};
 	}
 
