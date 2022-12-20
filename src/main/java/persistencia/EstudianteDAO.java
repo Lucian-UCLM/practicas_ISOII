@@ -6,12 +6,11 @@ import negocio.entities.*;
 
 public class EstudianteDAO extends AbstractEntityDAO {
 	
-	private AbstractEntityDAO abstractEntityDAO;
+	private AbstractEntityDAO<Estudiante> abstractEntityDAO;
 	
 	public EstudianteDAO(Class entityClass) {
 		super(entityClass);
-		System.out.println(entityClass);
-		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
+		this.abstractEntityDAO = new AbstractEntityDAO<Estudiante>(entityClass) {
 		};
 	}
 

@@ -10,7 +10,7 @@ public class MatriculaDAO extends AbstractEntityDAO<Object> {
 
 	public MatriculaDAO(Class entityClass) {
 		super(entityClass);
-		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
+		this.abstractEntityDAO = new AbstractEntityDAO<Matricula>(entityClass) {
 		};
 	}
 	

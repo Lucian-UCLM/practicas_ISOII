@@ -8,7 +8,7 @@ public class MateriaDAO extends AbstractEntityDAO<Object> {
 
 	public MateriaDAO(Class entityClass) {
 		super(entityClass);
-		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {
+		this.abstractEntityDAO = new AbstractEntityDAO<Materia>(entityClass) {
 		};
 	}
 
