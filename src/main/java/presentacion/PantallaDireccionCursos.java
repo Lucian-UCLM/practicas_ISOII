@@ -37,40 +37,39 @@ import negocio.entities.TipoCurso;
 public class PantallaDireccionCursos extends JFrame implements ActionListener, MouseListener {
 	private JLabel edicionlabel;
 	private JLabel idlabel;
-	
+
 	private JTextField nombretext;
 	private JTextField creditostext;
 	private JTextField importetext;
 	private JTextField ediciontext;
 	private JTextField estadotext;
 	private JTextField idtext;
-	
+
 	private JDateChooser fechainicio = new JDateChooser();
 	private JDateChooser fechafin = new JDateChooser();
-	
+
 	private JButton edicionbutton = new JButton("Nueva Edición");
 	private JButton limpiarbutton = new JButton("Limpiar todo");
 	private JButton editarcursobutton = new JButton("Editar Curso");
 	private JButton nuevocursobutton = new JButton("Nuevo Curso");
-	
+
 	private JList<String> cursolist;
 	private JList<Integer> centrolist;
 	private JList<String> directorlist;
 	private JList<String> secretariolist;
-	
+
 	private JComboBox<TipoCurso> tipocombobox;
-	
+
 	private GestorPropuestasCursos gestor;
 	private DefaultListModel<String> modelprofesor = new DefaultListModel<>();
 	private DefaultListModel<String> modelcurso = new DefaultListModel<>();
 	private DefaultListModel<Integer> modelcentro = new DefaultListModel<>();
-	
-	
+
 	public PantallaDireccionCursos() {
 		inicializarComponentes();
 	}
-	
-	public void inicializarComponentes () {
+
+	public void inicializarComponentes() {
 		setTitle("Dirección de cursos");
 		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
 		setBounds(100, 100, 967, 507);
@@ -106,23 +105,23 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 		secretariolist = new JList<>();
 		secretariolist.setBounds(744, 68, 158, 154);
 		contentPane.add(secretariolist);
-		
+
 		nuevocursobutton.setBounds(138, 414, 158, 21);
 		contentPane.add(nuevocursobutton);
 
 		tipocombobox = new JComboBox<>();
-		tipocombobox.setModel(new DefaultComboBoxModel<>(new TipoCurso[] {TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,TipoCurso.FORMACION_AVANZADA,
-				TipoCurso.FORMACION_CONTINUA,TipoCurso.MICROCREDENCIALES,TipoCurso.CORTA_DURACION,TipoCurso.CURSOS_DE_VERANO,TipoCurso.FORMACION_DE_MAYORES}));
+		tipocombobox.setModel(new DefaultComboBoxModel<>(
+				new TipoCurso[] { TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,
+						TipoCurso.FORMACION_AVANZADA, TipoCurso.FORMACION_CONTINUA, TipoCurso.MICROCREDENCIALES,
+						TipoCurso.CORTA_DURACION, TipoCurso.CURSOS_DE_VERANO, TipoCurso.FORMACION_DE_MAYORES }));
 		tipocombobox.setToolTipText("-Cursos-\r\n");
 		tipocombobox.setBounds(690, 303, 212, 22);
 		contentPane.add(tipocombobox);
 
-			
 		editarcursobutton.setEnabled(false);
 		editarcursobutton.setBounds(306, 414, 158, 21);
 		contentPane.add(editarcursobutton);
 
-		
 		edicionbutton.setEnabled(false);
 		edicionbutton.setBounds(473, 414, 158, 21);
 		contentPane.add(edicionbutton);
@@ -219,10 +218,11 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 		JLabel tipolabel = new JLabel("Tipo");
 		tipolabel.setBounds(695, 290, 91, 13);
 		contentPane.add(tipolabel);
-		
+
 		fechainicio.setBounds(515, 359, 125, 23);
 		contentPane.add(fechainicio);
-		
+		fechafin.setToolTipText("");
+
 		fechafin.setBounds(370, 359, 125, 23);
 		contentPane.add(fechafin);
 
@@ -230,18 +230,18 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 		limpiarbutton.addActionListener(this);
 		editarcursobutton.addActionListener(this);
 		edicionbutton.addActionListener(this);
-		
+
 		List<CursoPropio> listacurso = gestor.listarCursos();
 		List<ProfesorUCLM> listaprofesor = gestor.listarProfesoresUCLM();
-		List<Centro> listacentro = gestor.listarCentros(); 
-		
-		for (int i=0; i< listacurso.size(); i++) {
+		List<Centro> listacentro = gestor.listarCentros();
+
+		for (int i = 0; i < listacurso.size(); i++) {
 			modelcurso.addElement(listacurso.get(i).getId());
 		}
-		for (int i=0; i< listacentro.size(); i++) {
+		for (int i = 0; i < listacentro.size(); i++) {
 			modelcentro.addElement(listacentro.get(i).getIdCentro());
 		}
-		for (int i=0; i< listaprofesor.size(); i++) {
+		for (int i = 0; i < listaprofesor.size(); i++) {
 			modelprofesor.addElement(listaprofesor.get(i).getDniProfesor());
 		}
 
@@ -249,22 +249,58 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 		centrolist.setModel(modelcentro);
 		directorlist.setModel(modelprofesor);
 		secretariolist.setModel(modelprofesor);
-		
+
 		cursolist.addMouseListener(this);
 	}
+
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == nuevocursobutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
-			gestor.realizarPropuestaCurso(idtext.getText(), nombretext.getText(),
-					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
-					fechafin.getDate(), Double.parseDouble(importetext.getText()),
-					Integer.parseInt(ediciontext.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
-					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
-					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
+		if (e.getSource() == nuevocursobutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty()
+				&& !centrolist.isSelectionEmpty()) {
 
+			try {
+				Integer.parseInt(creditostext.getText());
+			} catch (NumberFormatException excepcion) {
+				creditostext.setText("<Número>");
+				creditostext.setForeground(Color.RED);
+				return;
+			}
+
+			try {
+				Integer.parseInt(importetext.getText());
+			} catch (NumberFormatException excepcion) {
+				importetext.setText("<Número>");
+				importetext.setForeground(Color.RED);
+				return;
+			}
+
+			try {
+				Integer.parseInt(ediciontext.getText());
+			} catch (NumberFormatException excepcion) {
+				ediciontext.setText("<Número>");
+				ediciontext.setForeground(Color.RED);
+				return;
+			}
+			
+		
+
+			gestor.realizarPropuestaCurso(idtext.getText(), nombretext.getText(),
+					Integer.parseInt(creditostext.getText()), fechainicio.getDate(), fechafin.getDate(),
+					Double.parseDouble(importetext.getText()), Integer.parseInt(ediciontext.getText()),
+					EstadoCurso.PROPUESTO,
+					TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()),
+					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()),
+					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()),
+					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
+					
 			modelcurso.addElement(idtext.getText());
 			cursolist.setModel(modelcurso);
+			ediciontext.setForeground(Color.BLACK);
+			importetext.setForeground(Color.BLACK);
+			creditostext.setForeground(Color.BLACK);
+
+			
+
 		}
 		if (e.getSource() == limpiarbutton) {
 			nombretext.setText("");
@@ -287,43 +323,48 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 			directorlist.clearSelection();
 			secretariolist.clearSelection();
 		}
-		if (e.getSource() == editarcursobutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
+		if (e.getSource() == editarcursobutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty()
+				&& !centrolist.isSelectionEmpty()) {
 			gestor.editarPropuestaCurso(idtext.getText(), nombretext.getText(),
-					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
-					fechafin.getDate(), Double.parseDouble(importetext.getText()),
-					Integer.parseInt(ediciontext.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
-					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
+					Integer.parseInt(creditostext.getText()), fechainicio.getDate(), fechafin.getDate(),
+					Double.parseDouble(importetext.getText()), Integer.parseInt(ediciontext.getText()),
+					EstadoCurso.PROPUESTO,
+					TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()),
+					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()),
+					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()),
 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
 		}
-		if (e.getSource() == edicionbutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty() && !centrolist.isSelectionEmpty()) {
+		if (e.getSource() == edicionbutton && !secretariolist.isSelectionEmpty() && !directorlist.isSelectionEmpty()
+				&& !centrolist.isSelectionEmpty()) {
 			gestor.realizarPropuestaCurso(idtext.getText() + "(1)", nombretext.getText(),
-					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
-					fechafin.getDate(), Double.parseDouble(importetext.getText()),
-					Integer.parseInt(ediciontext.getText())+1, EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
-					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
+					Integer.parseInt(creditostext.getText()), fechainicio.getDate(), fechafin.getDate(),
+					Double.parseDouble(importetext.getText()), Integer.parseInt(ediciontext.getText()) + 1,
+					EstadoCurso.PROPUESTO,
+					TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()),
+					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()),
+					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()),
 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
 
-			modelcurso.addElement(idtext.getText()+ "(1)");
+			modelcurso.addElement(idtext.getText() + "(1)");
 			cursolist.setModel(modelcurso);
 		}
 	}
+
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if (e.getClickCount() == 2 && e.getSource() == cursolist) {
-			
+
 			String selectedItem = cursolist.getSelectedValue();
 			CursoPropio curso = gestor.listarCurso(selectedItem);
-			
+
 			fechainicio.setDate(curso.getFechaInicio());
 			fechafin.setDate(curso.getFechaFin());
-			
+
 			nombretext.setText(curso.getNombre());
-			creditostext.setText(curso.getECTS()+"");
-			importetext.setText(curso.getTasaMatricula()+"");
-			
-			ediciontext.setText(curso.getEdicion()+"");
+			creditostext.setText(curso.getECTS() + "");
+			importetext.setText(curso.getTasaMatricula() + "");
+
+			ediciontext.setText(curso.getEdicion() + "");
 			estadotext.setText(curso.getEstado().toString());
 			idtext.setText(selectedItem);
 			ediciontext.setEditable(false);
@@ -334,46 +375,46 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 			editarcursobutton.setEnabled(true);
 			edicionbutton.setEnabled(true);
 			for (int i = 0; i < TipoCurso.values().length; i++) {
-				if(tipocombobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
+				if (tipocombobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
 					tipocombobox.setSelectedItem(tipocombobox.getModel().getElementAt(i));
 				}
 			}
 			for (int i = 0; i < centrolist.getModel().getSize(); i++) {
-				if(centrolist.getModel().getElementAt(i).toString().equals(curso.getIdCentro() +"")) {
+				if (centrolist.getModel().getElementAt(i).toString().equals(curso.getIdCentro() + "")) {
 					centrolist.setSelectedIndex(i);
 				}
 			}
 			for (int i = 0; i < directorlist.getModel().getSize(); i++) {
-				if(directorlist.getModel().getElementAt(i).equals(curso.getIdDirector())) {
+				if (directorlist.getModel().getElementAt(i).equals(curso.getIdDirector())) {
 					directorlist.setSelectedIndex(i);
 				}
 			}
 			for (int i = 0; i < secretariolist.getModel().getSize(); i++) {
-				if(secretariolist.getModel().getElementAt(i).equals(curso.getIdSecretario())) {
+				if (secretariolist.getModel().getElementAt(i).equals(curso.getIdSecretario())) {
 					secretariolist.setSelectedIndex(i);
 				}
 			}
-			
+
 		}
 	}
 
 	@Override
 	public void mousePressed(MouseEvent e) {
-		throw new UnsupportedOperationException();
- }
+		return;
+	}
 
 	@Override
 	public void mouseReleased(MouseEvent e) {
-		throw new UnsupportedOperationException();
- }
+		return;
+	}
 
 	@Override
 	public void mouseEntered(MouseEvent e) {
-		throw new UnsupportedOperationException();
- }
+		return;
+	}
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		throw new UnsupportedOperationException();
- }
+		return;
+	}
 }
