@@ -10,7 +10,7 @@ public class CentroDAO extends AbstractEntityDAO<Object> {
 	
 	public CentroDAO(Class entityClass) {
 		super(entityClass);
-		this.abstractEntityDAO = new AbstractEntityDAO(entityClass) {};
+		this.abstractEntityDAO = new AbstractEntityDAO<Centro>(entityClass) {};
 	}
 
 	public void crearNuevoCentro(Centro centro) {

@@ -21,7 +21,7 @@ public abstract class AbstractEntityDAO<E> {
 	protected Session getSession() {
 		return this.sessionfactory.openSession();
 	}
-	
+
 	public void save(E entity) {
 		Session sesion=getSession();
 		sesion.beginTransaction();
@@ -56,8 +56,8 @@ public abstract class AbstractEntityDAO<E> {
 	public List<E> showAll() {
 		Session sesion=getSession();
 		sesion.beginTransaction();
-		Query query = sesion.createQuery("from " + entityClass.getSimpleName());
-		list = (List<E>)query.list();
+		Query<E> query = sesion.createQuery("from " + entityClass.getSimpleName(), entityClass);
+		list = query.list();
 		sesion.getTransaction().commit();
 		sesion.close();
 		return list;
@@ -66,8 +66,8 @@ public abstract class AbstractEntityDAO<E> {
 	public List<E> showAllWhere(String where) {
 		Session sesion=getSession();
 		sesion.beginTransaction();
-		Query query = sesion.createQuery("from " + entityClass.getSimpleName()+" where " + where);
-		list = (List<E>)query.list();
+		Query<E> query = sesion.createQuery("from " + entityClass.getSimpleName()+" where " + where, entityClass);
+		list = query.list();
 		sesion.getTransaction().commit();
 		sesion.close();
 		return list;
@@ -89,9 +89,5 @@ public abstract class AbstractEntityDAO<E> {
 		sesion.getTransaction().commit();
 		sesion.close();
 		return entidad;
-	}
-	
-	public void operation() {
-		throw new UnsupportedOperationException();
 	}
 }

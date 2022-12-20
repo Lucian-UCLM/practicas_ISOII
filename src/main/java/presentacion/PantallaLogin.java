@@ -1,5 +1,4 @@
 package presentacion;
-import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -12,7 +11,6 @@ import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JTextPane;
 import javax.swing.WindowConstants;
 import javax.swing.JTextField;
 
@@ -26,15 +24,7 @@ public class PantallaLogin extends JFrame implements ActionListener {
 	public PantallaLogin () {
 		inicializarElementos();
 	}
-	public void login() {
-		// TODO - implement PantallaLogin.login
-		throw new UnsupportedOperationException();
-	}
-
-	public void logout() {
-		// TODO - implement PantallaLogin.logout
-		throw new UnsupportedOperationException();
-	}
+	
 	public void inicializarElementos() {
 		setTitle("Interfaz de login");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
