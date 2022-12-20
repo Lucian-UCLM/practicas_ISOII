@@ -44,10 +44,6 @@ public class GestorPropuestasCursos {
 		return cursodao.listarCursosWhere(tipo);
 	}
 
-	public EstadoCurso evaluarPropuesta(CursoPropio curso) {
-		throw new UnsupportedOperationException();
-	}
-
 	public List<CursoPropio> listarCursos() {
 		return cursodao.listarCursos();
 	}
@@ -66,9 +62,6 @@ public class GestorPropuestasCursos {
 		return centrodao.listarCentros();
 	}
 
-	public void altaCursoAprobado(CursoPropio curso) {
-		throw new UnsupportedOperationException();
-	}
 	public void darBajaCurso(CursoPropio curso) {
 		cursodao.eliminarCurso(curso);
 	}
