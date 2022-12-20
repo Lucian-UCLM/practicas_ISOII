@@ -8,7 +8,7 @@ import negocio.entities.*;
 public class CursoPropioDAO extends AbstractEntityDAO<Object> {
 
 	private AbstractEntityDAO<CursoPropio> abstractEntityDAO;
-	
+
 	public CursoPropioDAO(Class entityClass) {
 		super(entityClass);
 		this.abstractEntityDAO = new AbstractEntityDAO<CursoPropio>(entityClass) {
@@ -18,45 +18,29 @@ public class CursoPropioDAO extends AbstractEntityDAO<Object> {
 	public void crearNuevoCurso(CursoPropio curso) {
 		abstractEntityDAO.save(curso);
 	}
-	
+
 	public void eliminarCurso(CursoPropio curso) {
 		abstractEntityDAO.delete(curso);
 	}
 
-	public CursoPropio seleccionarCurso(CursoPropio curso) {
-		throw new UnsupportedOperationException();
-	}
-	
-	public List<CursoPropio> listarCursos(){
+	public List<CursoPropio> listarCursos() {
 		return abstractEntityDAO.showAll();
 	}
-	
-	public List<CursoPropio> listarCursosWhere(EstadoCurso estado){
-		return abstractEntityDAO.showAllWhere("estado = "+estado.ordinal());
+
+	public List<CursoPropio> listarCursosWhere(EstadoCurso estado) {
+		return abstractEntityDAO.showAllWhere("estado = " + estado.ordinal());
 	}
-	
-	public List<CursoPropio> listarCursosWhere(TipoCurso tipo){
-		return abstractEntityDAO.showAllWhere("tipo = "+tipo.ordinal());
+
+	public List<CursoPropio> listarCursosWhere(TipoCurso tipo) {
+		return abstractEntityDAO.showAllWhere("tipo = " + tipo.ordinal());
 	}
-	
-	public CursoPropio listarCurso(CursoPropio curso){
+
+	public CursoPropio listarCurso(CursoPropio curso) {
 		return (CursoPropio) abstractEntityDAO.show(curso.getId());
 	}
 
 	public void editarCurso(CursoPropio curso) {
 		abstractEntityDAO.update(curso);
-	}
-
-	public List<CursoPropio> listarCursosPorEstado(EstadoCurso estado, Date fechaInicio, Date fechaFin) {
-		throw new UnsupportedOperationException();
-	}
-
-	public double listarIngresos(TipoCurso tipo, Date fechaInicio, Date fechaFin) {
-		throw new UnsupportedOperationException();
-	}
-	
-	public void listarEdicionesCursos(Date fechaInicio, Date fechaFin) {
-		throw new UnsupportedOperationException();
 	}
 
 }

@@ -16,10 +16,6 @@ public class MateriaDAO extends AbstractEntityDAO<Object> {
 		abstractEntityDAO.save(materia);
 	}
 
-	public Materia listarMateria(Materia materia) {
-		throw new UnsupportedOperationException();
-	}
-
 	public void editarMateria(Materia materia) {
 		abstractEntityDAO.update(materia);
 	}

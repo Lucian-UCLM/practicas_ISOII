@@ -28,13 +28,5 @@ public class ProfesorDAO extends AbstractEntityDAO<Object> {
 	public List<ProfesorUCLM> listarProfesorUCLM(){
 		return abstractEntityDAO.showAll();
 	}
-	
-	public Profesor listarProfesor(Profesor profesor) {
-		throw new UnsupportedOperationException();
-	}
-
-	public Profesor editarProfesor(Profesor profesor) {
-		throw new UnsupportedOperationException();
-	}
 
 }

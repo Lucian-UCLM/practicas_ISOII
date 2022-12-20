@@ -38,13 +38,13 @@ public class GestorPropuestasCursosTest {
 		List<CursoPropio> listaCursosDespues = gestorPropuestasCursos.listarCursos();
 
 		assertEquals(cursoCreado, cursoEsperado);
-		assertTrue(listaCursosDespues.size() == (listaCursosAntes.size() + 1));
+		assertEquals(listaCursosDespues.size(), (listaCursosAntes.size() + 1));
 		assertFalse(listaCursosAntes.contains(cursoCreado));
 		assertTrue(listaCursosDespues.contains(cursoEsperado));
 
 		gestorPropuestasCursos.darBajaCurso(cursoCreado);
 
-		assertTrue(gestorPropuestasCursos.listarCurso(cursoCreado.getId()) == null);
+		assertNull(gestorPropuestasCursos.listarCurso(cursoCreado.getId()));
 
 	}
 

@@ -24,13 +24,5 @@ public class CentroDAO extends AbstractEntityDAO<Object> {
 	public List<Centro> listarCentros(){
 		return abstractEntityDAO.showAll();
 	}
-	
-	public Centro editarCentro(Centro centro) {
-		throw new UnsupportedOperationException();
-	}
- 
-	public Centro listarCentro(Centro centro) {
-		throw new UnsupportedOperationException();
-	}
 
 }

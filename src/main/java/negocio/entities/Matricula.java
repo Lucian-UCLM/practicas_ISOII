@@ -126,7 +126,7 @@ public class Matricula {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(idMatricula);
+		return Objects.hash(estudiante, fecha, idEstudiante, idMatricula, idTitulo, pagado, tipoPago, titulo);
 	}
 
 	@Override
@@ -138,7 +138,12 @@ public class Matricula {
 		if (getClass() != obj.getClass())
 			return false;
 		Matricula other = (Matricula) obj;
-		return idMatricula == other.idMatricula;
+		return Objects.equals(estudiante, other.estudiante) && Objects.equals(fecha, other.fecha)
+				&& Objects.equals(idEstudiante, other.idEstudiante) && idMatricula == other.idMatricula
+				&& Objects.equals(idTitulo, other.idTitulo) && pagado == other.pagado && tipoPago == other.tipoPago
+				&& Objects.equals(titulo, other.titulo);
 	}
+
+
 
 }

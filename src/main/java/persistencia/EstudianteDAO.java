@@ -28,13 +28,5 @@ public class EstudianteDAO extends AbstractEntityDAO {
 	public Estudiante listarEstudiante(Estudiante estudiante){
 		return (Estudiante) abstractEntityDAO.show(estudiante.getDni());
 	}
-	
-	public Estudiante seleccionarEstudiante(Estudiante estudiante) {
-		throw new UnsupportedOperationException();
-	}
-
-	public Estudiante editarEstudiante(Estudiante estudiante) {
-		throw new UnsupportedOperationException();
-	}
 
 }

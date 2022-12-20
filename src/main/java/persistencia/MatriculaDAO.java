@@ -22,12 +22,11 @@ public class MatriculaDAO extends AbstractEntityDAO<Object> {
 		abstractEntityDAO.save(matricula);
 	}
 
-	public Matricula seleccionarMatricula(Matricula matricula) {
-		throw new UnsupportedOperationException();
-	}
-
 	public void editarMatricula(Matricula matricula) {
 		abstractEntityDAO.update(matricula);
+	}
+	public void eliminarMatricula(Matricula matricula) {
+		abstractEntityDAO.delete(matricula);
 	}
 
 }
