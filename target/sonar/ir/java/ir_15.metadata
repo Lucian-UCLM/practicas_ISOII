@@ -1,1 +1,1 @@
-negocio.entities.Matricula#getIdEstudiante()Ljava/lang/String;
+negocio.entities.Matricula#setTitulo(Lnegocio/entities/CursoPropio;)V

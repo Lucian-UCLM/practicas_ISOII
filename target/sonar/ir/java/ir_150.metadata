@@ -1,1 +1,1 @@
-negocio.entities.Materia#getHoras()D
+negocio.entities.Materia#getFechaFin()Ljava/util/Date;

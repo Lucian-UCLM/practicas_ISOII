@@ -1,3 +1,11 @@
-presentacion.PantallaPrincipal#instance-init#
-javax.swing.JButton#<init>(Ljava/lang/String;)V
-javax.swing.JButton#instance-init#
+presentacion.PantallaPrincipal#inicializarElementos()V
+javax.swing.border.EmptyBorder#<init>(IIII)V
+java.awt.Color#instance-init#
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+java.awt.Color#<init>(III)V
+javax.swing.JPanel#<init>()V
+javax.swing.JLabel#instance-init#
+java.awt.Font#<init>(Ljava/lang/String;II)V
+javax.swing.border.EmptyBorder#instance-init#
+java.awt.Font#instance-init#
+javax.swing.JPanel#instance-init#

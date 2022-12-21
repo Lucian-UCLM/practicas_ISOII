@@ -1,1 +1,1 @@
-negocio.entities.Estudiante#instance-init#
+negocio.controllers.GestorPropuestasCursos#darBajaCurso(Lnegocio/entities/CursoPropio;)V

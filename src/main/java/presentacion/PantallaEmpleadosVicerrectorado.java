@@ -10,6 +10,7 @@ import javax.swing.border.EmptyBorder;
 import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
 import negocio.entities.EstadoCurso;
+import negocio.entities.Generated;
 
 import javax.swing.JList;
 import javax.swing.JLabel;
@@ -22,7 +23,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.ListSelectionModel;
 import javax.swing.WindowConstants;
 import java.awt.Color;
-
+@Generated
 public class PantallaEmpleadosVicerrectorado extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	private DefaultListModel<String> modelCurso = new DefaultListModel<>();

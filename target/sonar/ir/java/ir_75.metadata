@@ -1,1 +1,1 @@
-negocio.entities.ProfesorExterno#<init>()V
+persistencia.MatriculaDAO#editarMatricula(Lnegocio/entities/Matricula;)V

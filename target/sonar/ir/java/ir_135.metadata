@@ -1,1 +1,1 @@
-persistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;
+persistencia.AbstractEntityDAO#update(Ljava/lang/Object;)V

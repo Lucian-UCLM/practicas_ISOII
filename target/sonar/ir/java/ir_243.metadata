@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getMaterias()Ljava/util/Collection;
+negocio.entities.CursoPropio#getIdDirector()Ljava/lang/String;

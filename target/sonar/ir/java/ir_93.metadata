@@ -1,3 +1,1 @@
-persistencia.CursoPropioDAO#listarEdicionesCursos(Ljava/util/Date;Ljava/util/Date;)V
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+persistencia.CursoPropioDAO#editarCurso(Lnegocio/entities/CursoPropio;)V

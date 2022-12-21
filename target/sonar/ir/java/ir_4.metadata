@@ -1,1 +1,1 @@
-negocio.entities.Matricula#setIdMatricula(I)V
+negocio.entities.Matricula#getIdMatricula()I

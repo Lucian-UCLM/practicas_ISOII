@@ -1,1 +1,1 @@
-negocio.entities.ProfesorExterno#instance-init#
+persistencia.MatriculaDAO#crearNuevaMatricula(Lnegocio/entities/Matricula;)V

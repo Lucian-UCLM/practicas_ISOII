@@ -1,1 +1,2 @@
-negocio.entities.Materia#setIdResponsable(Ljava/lang/String;)V
+negocio.entities.Materia#hashCode()I
+java.util.Objects#hash([Ljava/lang/Object;)I

@@ -1,1 +1,1 @@
-negocio.entities.Matricula#setTipoPago(Lnegocio/entities/ModoPago;)V
+negocio.entities.Matricula#getTipoPago()Lnegocio/entities/ModoPago;

@@ -1,18 +1,83 @@
 
-?negocio.entities.Centro#getCursoPropios()Ljava/util/Collection;Z
-PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaA  A(/"1*ª
-1Z
-PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaB	 B(Ì
-É
+3negocio.entities.Centro#equals(Ljava/lang/Object;)ZZ
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java] ]("startingBlock*Å
+2Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javac
+ c("d
 Z
-PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaB	 B(
-%0java.util.Collection"__id*I
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javac c(
+""*½
+3Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javab b(éæ
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javab b(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*7
 
-__unknown_file (-*+
-negocio.entities.Centro"
-cursoPropios"z
+__unknown_file (
+negocio.entities.Centro2
+getClass()çä
 Z
-PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaB B(
-
-%0java.util.CollectionB
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javab b("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()*
+2
+1*‚
+startingBlockZ
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java] ]("Ü
+Ù
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java\ \(
+
+%2"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.Objectª
+§
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java] ](!
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%2*	
+3
+4
+6*Å
+4Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaa
+ a("d
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javaa a(
+""*Å
+6Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java_
+ _("d
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java_ _(
+""*†
+1Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javad d(¾
+»
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javad d( 
+othernegocio.entities.Centro"__id*5
+
+__unknown_file (
+
+objjava.lang.Object"d
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.javae e($
+"":u
+Z
+PC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Centro.java] ](!
+objjava.lang.ObjectB
 negocio.entities.CentroH

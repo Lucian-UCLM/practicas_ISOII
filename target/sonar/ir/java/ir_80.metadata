@@ -1,1 +1,1 @@
-negocio.entities.ProfesorExterno#setTitulacion(Ljava/lang/String;)V
+negocio.entities.ProfesorExterno#getDniProfesor()Ljava/lang/String;

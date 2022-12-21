@@ -1,1 +1,1 @@
-negocio.entities.Matricula#getEstudiante()Lnegocio/entities/Estudiante;
+negocio.entities.Matricula#setTipoPago(Lnegocio/entities/ModoPago;)V

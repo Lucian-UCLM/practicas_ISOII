@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getEdicion()I
+negocio.entities.CursoPropio#setEstado(Lnegocio/entities/EstadoCurso;)V

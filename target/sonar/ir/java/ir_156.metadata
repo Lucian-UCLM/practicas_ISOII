@@ -1,1 +1,1 @@
-negocio.entities.Materia#getResponsable()Lnegocio/entities/Profesor;
+negocio.entities.Materia#getIdResponsable()Ljava/lang/String;

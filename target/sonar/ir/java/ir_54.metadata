@@ -1,3 +1,2 @@
-negocio.controllers.GestorMatriculacion#instance-init#
-persistencia.EstudianteDAO#instance-init#
-persistencia.EstudianteDAO#<init>(Ljava/lang/Class;)V
+negocio.entities.Estudiante#hashCode()I
+java.util.Objects#hash([Ljava/lang/Object;)I

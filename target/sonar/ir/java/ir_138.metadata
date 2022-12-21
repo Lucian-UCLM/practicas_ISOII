@@ -1,1 +1,2 @@
-persistencia.AbstractEntityDAO#saveOrUpdate(Ljava/lang/Object;)V
+persistencia.AbstractEntityDAO#showAllWhere(Ljava/lang/String;)Ljava/util/List;
+java.lang.Class#getSimpleName()Ljava/lang/String;

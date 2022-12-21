@@ -1,19 +1,18 @@
 
-6negocio.entities.Materia#getFechaFin()Ljava/util/Date;[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaP P("1*ž
+7negocio.entities.Materia#getIdCurso()Ljava/lang/String;[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javar r("1*¡
 1[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaQ	 Q(Ä
-Á
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javas	 s(Å
+Â
 [
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaQ	 Q(
-%0java.util.Date"__id*F
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javas	 s(
+%0java.lang.String"__id*E
 
-__unknown_file (**(
-negocio.entities.Materia"
-
-fechaFin"u
+__unknown_file ()*'
+negocio.entities.Materia"	
+idCurso"w
 [
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaQ Q(
-
-%0java.util.DateB
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javas s(
+
+%0java.lang.StringB
 negocio.entities.MateriaH

@@ -1,1 +1,1 @@
-presentacion.PantallaDireccionCursos#mouseExited(Ljava/awt/event/MouseEvent;)V
+negocio.entities.CursoPropio#<init>(Ljava/lang/String;Ljava/lang/String;ILjava/util/Date;Ljava/util/Date;DILnegocio/entities/EstadoCurso;Lnegocio/entities/TipoCurso;Lnegocio/entities/Centro;Lnegocio/entities/ProfesorUCLM;Lnegocio/entities/ProfesorUCLM;)V

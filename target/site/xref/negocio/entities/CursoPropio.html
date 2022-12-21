@@ -241,7 +241,26 @@
 <a class="jxr_linenumber" name="L233" href="#L233">233</a> 				+ <span class="jxr_string">", matriculas="</span> + matriculas + <span class="jxr_string">", materias="</span> + materias + <span class="jxr_string">"]"</span>;
 <a class="jxr_linenumber" name="L234" href="#L234">234</a> 	}
 <a class="jxr_linenumber" name="L235" href="#L235">235</a> 
-<a class="jxr_linenumber" name="L236" href="#L236">236</a> }
+<a class="jxr_linenumber" name="L236" href="#L236">236</a> 	@Override
+<a class="jxr_linenumber" name="L237" href="#L237">237</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> hashCode() {
+<a class="jxr_linenumber" name="L238" href="#L238">238</a> 		<strong class="jxr_keyword">return</strong> Objects.hash(id, nombre);
+<a class="jxr_linenumber" name="L239" href="#L239">239</a> 	}
+<a class="jxr_linenumber" name="L240" href="#L240">240</a> 
+<a class="jxr_linenumber" name="L241" href="#L241">241</a> 	@Override
+<a class="jxr_linenumber" name="L242" href="#L242">242</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> equals(Object obj) {
+<a class="jxr_linenumber" name="L243" href="#L243">243</a> 		<strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong> == obj)
+<a class="jxr_linenumber" name="L244" href="#L244">244</a> 			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L245" href="#L245">245</a> 		<strong class="jxr_keyword">if</strong> (obj == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="L246" href="#L246">246</a> 			<strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L247" href="#L247">247</a> 		<strong class="jxr_keyword">if</strong> (getClass() != obj.getClass())
+<a class="jxr_linenumber" name="L248" href="#L248">248</a> 			<strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L249" href="#L249">249</a> 		CursoPropio other = (<a name="CursoPropio" href="../../negocio/entities/CursoPropio.html#CursoPropio">CursoPropio</a>) obj;
+<a class="jxr_linenumber" name="L250" href="#L250">250</a> 		<strong class="jxr_keyword">return</strong> Objects.equals(id, other.id) &amp;&amp; Objects.equals(nombre, other.nombre);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a> 	}
+<a class="jxr_linenumber" name="L252" href="#L252">252</a> 
+<a class="jxr_linenumber" name="L253" href="#L253">253</a> 	
+<a class="jxr_linenumber" name="L254" href="#L254">254</a> 
+<a class="jxr_linenumber" name="L255" href="#L255">255</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2022. All rights reserved.</div>

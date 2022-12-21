@@ -1,1 +1,1 @@
-persistencia.ProfesorDAO#<init>(Ljava/lang/Class;)V
+persistencia.ProfesorDAO#eliminarProfesor(Lnegocio/entities/Profesor;)V

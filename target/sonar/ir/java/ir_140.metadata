@@ -1,2 +1,1 @@
-persistencia.AbstractEntityDAO#showAll()Ljava/util/List;
-java.lang.Class#getSimpleName()Ljava/lang/String;
+persistencia.AbstractEntityDAO#show(I)Ljava/lang/Object;

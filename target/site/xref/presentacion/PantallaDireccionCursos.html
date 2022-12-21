@@ -8,397 +8,425 @@
 <div id="overview"><a href="../../apidocs/presentacion/PantallaDireccionCursos.html">View Javadoc</a></div><pre>
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> presentacion;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
-<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> java.awt.EventQueue;
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> java.util.List;
 <a class="jxr_linenumber" name="L4" href="#L4">4</a>   
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> java.util.ArrayList;
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> java.util.List;
-<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> javax.swing.JFrame;
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> javax.swing.JPanel;
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> javax.swing.border.EmptyBorder;
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> javax.swing.JLabel;
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> javax.swing.DefaultComboBoxModel;
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> javax.swing.DefaultListModel;
-<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> javax.swing.JButton;
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> java.awt.Color;
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionListener;
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> java.awt.event.MouseAdapter;
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> java.awt.event.MouseEvent;
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> java.awt.event.MouseListener;
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> java.text.SimpleDateFormat;
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> java.util.Date;
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> java.util.Iterator;
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> javax.swing.JTextPane;
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> javax.swing.JList;
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> javax.swing.JComboBox;
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> java.awt.Font;
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> javax.swing.JTable;
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> javax.swing.JSlider;
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">import</strong> javax.swing.JSeparator;
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> javax.swing.SwingConstants;
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> javax.swing.WindowConstants;
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">import</strong> javax.swing.table.DefaultTableModel;
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <strong class="jxr_keyword">import</strong> com.toedter.calendar.JDateChooser;
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
-<a class="jxr_linenumber" name="L39" href="#L39">39</a>  <strong class="jxr_keyword">import</strong> javax.swing.JScrollPane;
-<a class="jxr_linenumber" name="L40" href="#L40">40</a>  <strong class="jxr_keyword">import</strong> javax.swing.ScrollPaneConstants;
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>  <strong class="jxr_keyword">import</strong> javax.swing.JTextField;
-<a class="jxr_linenumber" name="L42" href="#L42">42</a>  <strong class="jxr_keyword">import</strong> javax.swing.ListSelectionModel;
-<a class="jxr_linenumber" name="L43" href="#L43">43</a>  <strong class="jxr_keyword">import</strong> negocio.controllers.*;
-<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <strong class="jxr_keyword">import</strong> negocio.entities.Centro;
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>  <strong class="jxr_keyword">import</strong> negocio.entities.CursoPropio;
-<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <strong class="jxr_keyword">import</strong> negocio.entities.EstadoCurso;
-<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <strong class="jxr_keyword">import</strong> negocio.entities.ProfesorUCLM;
-<a class="jxr_linenumber" name="L48" href="#L48">48</a>  <strong class="jxr_keyword">import</strong> negocio.entities.TipoCurso;
-<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="PantallaDireccionCursos" href="../presentacion/PantallaDireccionCursos.html#PantallaDireccionCursos">PantallaDireccionCursos</a> <strong class="jxr_keyword">extends</strong> JFrame <strong class="jxr_keyword">implements</strong> ActionListener, MouseListener {
-<a class="jxr_linenumber" name="L51" href="#L51">51</a>  	<strong class="jxr_keyword">private</strong> JLabel edicionlabel;
-<a class="jxr_linenumber" name="L52" href="#L52">52</a>  	<strong class="jxr_keyword">private</strong> JLabel idlabel;
-<a class="jxr_linenumber" name="L53" href="#L53">53</a>  	
-<a class="jxr_linenumber" name="L54" href="#L54">54</a>  	<strong class="jxr_keyword">private</strong> JTextField nombretext;
-<a class="jxr_linenumber" name="L55" href="#L55">55</a>  	<strong class="jxr_keyword">private</strong> JTextField creditostext;
-<a class="jxr_linenumber" name="L56" href="#L56">56</a>  	<strong class="jxr_keyword">private</strong> JTextField importetext;
-<a class="jxr_linenumber" name="L57" href="#L57">57</a>  	<strong class="jxr_keyword">private</strong> JTextField ediciontext;
-<a class="jxr_linenumber" name="L58" href="#L58">58</a>  	<strong class="jxr_keyword">private</strong> JTextField estadotext;
-<a class="jxr_linenumber" name="L59" href="#L59">59</a>  	<strong class="jxr_keyword">private</strong> JTextField idtext;
-<a class="jxr_linenumber" name="L60" href="#L60">60</a>  	
-<a class="jxr_linenumber" name="L61" href="#L61">61</a>  	<strong class="jxr_keyword">private</strong> JDateChooser fechainicio = <strong class="jxr_keyword">new</strong> JDateChooser();
-<a class="jxr_linenumber" name="L62" href="#L62">62</a>  	<strong class="jxr_keyword">private</strong> JDateChooser fechafin = <strong class="jxr_keyword">new</strong> JDateChooser();
-<a class="jxr_linenumber" name="L63" href="#L63">63</a>  	
-<a class="jxr_linenumber" name="L64" href="#L64">64</a>  	<strong class="jxr_keyword">private</strong> JButton edicionbutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Nueva Edición"</span>);
-<a class="jxr_linenumber" name="L65" href="#L65">65</a>  	<strong class="jxr_keyword">private</strong> JButton limpiarbutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Limpiar todo"</span>);
-<a class="jxr_linenumber" name="L66" href="#L66">66</a>  	<strong class="jxr_keyword">private</strong> JButton editarcursobutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Editar Curso"</span>);
-<a class="jxr_linenumber" name="L67" href="#L67">67</a>  	<strong class="jxr_keyword">private</strong> JButton nuevocursobutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Nuevo Curso"</span>);
-<a class="jxr_linenumber" name="L68" href="#L68">68</a>  	
-<a class="jxr_linenumber" name="L69" href="#L69">69</a>  	<strong class="jxr_keyword">private</strong> JList&lt;String&gt; cursolist;
-<a class="jxr_linenumber" name="L70" href="#L70">70</a>  	<strong class="jxr_keyword">private</strong> JList&lt;Integer&gt; centrolist;
-<a class="jxr_linenumber" name="L71" href="#L71">71</a>  	<strong class="jxr_keyword">private</strong> JList&lt;String&gt; directorlist;
-<a class="jxr_linenumber" name="L72" href="#L72">72</a>  	<strong class="jxr_keyword">private</strong> JList&lt;String&gt; secretariolist;
-<a class="jxr_linenumber" name="L73" href="#L73">73</a>  	
-<a class="jxr_linenumber" name="L74" href="#L74">74</a>  	<strong class="jxr_keyword">private</strong> JComboBox&lt;TipoCurso&gt; tipocombobox;
-<a class="jxr_linenumber" name="L75" href="#L75">75</a>  	
-<a class="jxr_linenumber" name="L76" href="#L76">76</a>  	<strong class="jxr_keyword">private</strong> <a name="GestorPropuestasCursos" href="../negocio/controllers/GestorPropuestasCursos.html#GestorPropuestasCursos">GestorPropuestasCursos</a> gestor;
-<a class="jxr_linenumber" name="L77" href="#L77">77</a>  	<strong class="jxr_keyword">private</strong> DefaultListModel&lt;String&gt; modelprofesor = <strong class="jxr_keyword">new</strong> DefaultListModel&lt;&gt;();
-<a class="jxr_linenumber" name="L78" href="#L78">78</a>  	<strong class="jxr_keyword">private</strong> DefaultListModel&lt;String&gt; modelcurso = <strong class="jxr_keyword">new</strong> DefaultListModel&lt;&gt;();
-<a class="jxr_linenumber" name="L79" href="#L79">79</a>  	<strong class="jxr_keyword">private</strong> DefaultListModel&lt;Integer&gt; modelcentro = <strong class="jxr_keyword">new</strong> DefaultListModel&lt;&gt;();
-<a class="jxr_linenumber" name="L80" href="#L80">80</a>  	
-<a class="jxr_linenumber" name="L81" href="#L81">81</a>  	
-<a class="jxr_linenumber" name="L82" href="#L82">82</a>  	<strong class="jxr_keyword">public</strong> <a name="PantallaDireccionCursos" href="../presentacion/PantallaDireccionCursos.html#PantallaDireccionCursos">PantallaDireccionCursos</a>() {
-<a class="jxr_linenumber" name="L83" href="#L83">83</a>  		inicializarComponentes();
-<a class="jxr_linenumber" name="L84" href="#L84">84</a>  	}
-<a class="jxr_linenumber" name="L85" href="#L85">85</a>  	
-<a class="jxr_linenumber" name="L86" href="#L86">86</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> inicializarComponentes () {
-<a class="jxr_linenumber" name="L87" href="#L87">87</a>  		setTitle(<span class="jxr_string">"Dirección de cursos"</span>);
-<a class="jxr_linenumber" name="L88" href="#L88">88</a>  		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
-<a class="jxr_linenumber" name="L89" href="#L89">89</a>  		setBounds(100, 100, 967, 507);
-<a class="jxr_linenumber" name="L90" href="#L90">90</a>  		JPanel contentPane = <strong class="jxr_keyword">new</strong> JPanel();
-<a class="jxr_linenumber" name="L91" href="#L91">91</a>  		contentPane.setBackground(<strong class="jxr_keyword">new</strong> Color(192, 192, 192));
-<a class="jxr_linenumber" name="L92" href="#L92">92</a>  		contentPane.setForeground(<strong class="jxr_keyword">new</strong> Color(255, 255, 255));
-<a class="jxr_linenumber" name="L93" href="#L93">93</a>  		contentPane.setBorder(<strong class="jxr_keyword">new</strong> EmptyBorder(5, 5, 5, 5));
-<a class="jxr_linenumber" name="L94" href="#L94">94</a>  		setContentPane(contentPane);
-<a class="jxr_linenumber" name="L95" href="#L95">95</a>  		contentPane.setLayout(<strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L96" href="#L96">96</a>  
-<a class="jxr_linenumber" name="L97" href="#L97">97</a>  		gestor = <strong class="jxr_keyword">new</strong> <a name="GestorPropuestasCursos" href="../negocio/controllers/GestorPropuestasCursos.html#GestorPropuestasCursos">GestorPropuestasCursos</a>();
-<a class="jxr_linenumber" name="L98" href="#L98">98</a>  
-<a class="jxr_linenumber" name="L99" href="#L99">99</a>  		JLabel cursoslabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Cursos"</span>);
-<a class="jxr_linenumber" name="L100" href="#L100">100</a> 		cursoslabel.setBounds(55, 45, 45, 13);
-<a class="jxr_linenumber" name="L101" href="#L101">101</a> 		cursoslabel.setFont(<strong class="jxr_keyword">new</strong> Font(<span class="jxr_string">"Tahoma"</span>, Font.PLAIN, 15));
-<a class="jxr_linenumber" name="L102" href="#L102">102</a> 		contentPane.add(cursoslabel);
-<a class="jxr_linenumber" name="L103" href="#L103">103</a> 
-<a class="jxr_linenumber" name="L104" href="#L104">104</a> 		cursolist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
-<a class="jxr_linenumber" name="L105" href="#L105">105</a> 		cursolist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-<a class="jxr_linenumber" name="L106" href="#L106">106</a> 		cursolist.setBounds(55, 68, 240, 320);
-<a class="jxr_linenumber" name="L107" href="#L107">107</a> 		contentPane.add(cursolist);
-<a class="jxr_linenumber" name="L108" href="#L108">108</a> 
-<a class="jxr_linenumber" name="L109" href="#L109">109</a> 		centrolist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
-<a class="jxr_linenumber" name="L110" href="#L110">110</a> 		centrolist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-<a class="jxr_linenumber" name="L111" href="#L111">111</a> 		centrolist.setBounds(370, 68, 158, 154);
-<a class="jxr_linenumber" name="L112" href="#L112">112</a> 		contentPane.add(centrolist);
-<a class="jxr_linenumber" name="L113" href="#L113">113</a> 
-<a class="jxr_linenumber" name="L114" href="#L114">114</a> 		directorlist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
-<a class="jxr_linenumber" name="L115" href="#L115">115</a> 		directorlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-<a class="jxr_linenumber" name="L116" href="#L116">116</a> 		directorlist.setBounds(558, 68, 158, 154);
-<a class="jxr_linenumber" name="L117" href="#L117">117</a> 		contentPane.add(directorlist);
-<a class="jxr_linenumber" name="L118" href="#L118">118</a> 
-<a class="jxr_linenumber" name="L119" href="#L119">119</a> 		secretariolist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
-<a class="jxr_linenumber" name="L120" href="#L120">120</a> 		secretariolist.setBounds(744, 68, 158, 154);
-<a class="jxr_linenumber" name="L121" href="#L121">121</a> 		contentPane.add(secretariolist);
-<a class="jxr_linenumber" name="L122" href="#L122">122</a> 		
-<a class="jxr_linenumber" name="L123" href="#L123">123</a> 		nuevocursobutton.setBounds(138, 414, 158, 21);
-<a class="jxr_linenumber" name="L124" href="#L124">124</a> 		contentPane.add(nuevocursobutton);
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> javax.swing.JFrame;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> javax.swing.JPanel;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> javax.swing.border.EmptyBorder;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> javax.swing.JLabel;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> javax.swing.DefaultComboBoxModel;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> javax.swing.DefaultListModel;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> javax.swing.JButton;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> java.awt.Color;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionListener;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> java.awt.event.MouseEvent;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> java.awt.event.MouseListener;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> javax.swing.JList;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> javax.swing.JComboBox;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> java.awt.Font;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> javax.swing.JSeparator;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> javax.swing.SwingConstants;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> javax.swing.WindowConstants;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> com.toedter.calendar.JDateChooser;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> javax.swing.JTextField;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> javax.swing.ListSelectionModel;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> negocio.controllers.*;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> negocio.entities.Centro;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <strong class="jxr_keyword">import</strong> negocio.entities.CursoPropio;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> negocio.entities.EstadoCurso;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> negocio.entities.Generated;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">import</strong> negocio.entities.ProfesorUCLM;
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <strong class="jxr_keyword">import</strong> negocio.entities.TipoCurso;
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  @Generated
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="PantallaDireccionCursos" href="../presentacion/PantallaDireccionCursos.html#PantallaDireccionCursos">PantallaDireccionCursos</a> <strong class="jxr_keyword">extends</strong> JFrame <strong class="jxr_keyword">implements</strong> ActionListener, MouseListener {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  	<strong class="jxr_keyword">private</strong> JLabel edicionlabel;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  	<strong class="jxr_keyword">private</strong> JLabel idlabel;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  	<strong class="jxr_keyword">private</strong> JTextField nombretext;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  	<strong class="jxr_keyword">private</strong> JTextField creditostext;
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  	<strong class="jxr_keyword">private</strong> JTextField importetext;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  	<strong class="jxr_keyword">private</strong> JTextField ediciontext;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  	<strong class="jxr_keyword">private</strong> JTextField estadotext;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  	<strong class="jxr_keyword">private</strong> JTextField idtext;
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  	<strong class="jxr_keyword">private</strong> JDateChooser fechainicio = <strong class="jxr_keyword">new</strong> JDateChooser();
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  	<strong class="jxr_keyword">private</strong> JDateChooser fechafin = <strong class="jxr_keyword">new</strong> JDateChooser();
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  	<strong class="jxr_keyword">private</strong> JButton edicionbutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Nueva Edición"</span>);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  	<strong class="jxr_keyword">private</strong> JButton limpiarbutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Limpiar todo"</span>);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  	<strong class="jxr_keyword">private</strong> JButton editarcursobutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Editar Curso"</span>);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  	<strong class="jxr_keyword">private</strong> JButton nuevocursobutton = <strong class="jxr_keyword">new</strong> JButton(<span class="jxr_string">"Nuevo Curso"</span>);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>  
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  	<strong class="jxr_keyword">private</strong> JList&lt;String&gt; cursolist;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  	<strong class="jxr_keyword">private</strong> JList&lt;Integer&gt; centrolist;
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  	<strong class="jxr_keyword">private</strong> JList&lt;String&gt; directorlist;
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  	<strong class="jxr_keyword">private</strong> JList&lt;String&gt; secretariolist;
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  	<strong class="jxr_keyword">private</strong> JComboBox&lt;TipoCurso&gt; tipocombobox;
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  	<strong class="jxr_keyword">private</strong> <a name="GestorPropuestasCursos" href="../negocio/controllers/GestorPropuestasCursos.html#GestorPropuestasCursos">GestorPropuestasCursos</a> gestor;
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  	<strong class="jxr_keyword">private</strong> DefaultListModel&lt;String&gt; modelprofesor = <strong class="jxr_keyword">new</strong> DefaultListModel&lt;&gt;();
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  	<strong class="jxr_keyword">private</strong> DefaultListModel&lt;String&gt; modelcurso = <strong class="jxr_keyword">new</strong> DefaultListModel&lt;&gt;();
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  	<strong class="jxr_keyword">private</strong> DefaultListModel&lt;Integer&gt; modelcentro = <strong class="jxr_keyword">new</strong> DefaultListModel&lt;&gt;();
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  	<strong class="jxr_keyword">public</strong> <a name="PantallaDireccionCursos" href="../presentacion/PantallaDireccionCursos.html#PantallaDireccionCursos">PantallaDireccionCursos</a>() {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  		inicializarComponentes();
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  	}
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> inicializarComponentes() {
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  		setTitle(<span class="jxr_string">"Dirección de cursos"</span>);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  		setDefaultCloseOperation(WindowConstants.HIDE_ON_CLOSE);
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  		setBounds(100, 100, 967, 507);
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>  		JPanel contentPane = <strong class="jxr_keyword">new</strong> JPanel();
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  		contentPane.setBackground(<strong class="jxr_keyword">new</strong> Color(192, 192, 192));
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  		contentPane.setForeground(<strong class="jxr_keyword">new</strong> Color(255, 255, 255));
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>  		contentPane.setBorder(<strong class="jxr_keyword">new</strong> EmptyBorder(5, 5, 5, 5));
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>  		setContentPane(contentPane);
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  		contentPane.setLayout(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>  
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  		gestor = <strong class="jxr_keyword">new</strong> <a name="GestorPropuestasCursos" href="../negocio/controllers/GestorPropuestasCursos.html#GestorPropuestasCursos">GestorPropuestasCursos</a>();
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>  		JLabel cursoslabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Cursos"</span>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  		cursoslabel.setBounds(55, 45, 45, 13);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  		cursoslabel.setFont(<strong class="jxr_keyword">new</strong> Font(<span class="jxr_string">"Tahoma"</span>, Font.PLAIN, 15));
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  		contentPane.add(cursoslabel);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>  
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>  		cursolist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>  		cursolist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  		cursolist.setBounds(55, 68, 240, 320);
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>  		contentPane.add(cursolist);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>  
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>  		centrolist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>  		centrolist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>  		centrolist.setBounds(370, 68, 158, 154);
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  		contentPane.add(centrolist);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a> 
+<a class="jxr_linenumber" name="L101" href="#L101">101</a> 		directorlist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
+<a class="jxr_linenumber" name="L102" href="#L102">102</a> 		directorlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> 		directorlist.setBounds(558, 68, 158, 154);
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> 		contentPane.add(directorlist);
+<a class="jxr_linenumber" name="L105" href="#L105">105</a> 
+<a class="jxr_linenumber" name="L106" href="#L106">106</a> 		secretariolist = <strong class="jxr_keyword">new</strong> JList&lt;&gt;();
+<a class="jxr_linenumber" name="L107" href="#L107">107</a> 		secretariolist.setBounds(744, 68, 158, 154);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a> 		contentPane.add(secretariolist);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a> 
+<a class="jxr_linenumber" name="L110" href="#L110">110</a> 		nuevocursobutton.setBounds(138, 414, 158, 21);
+<a class="jxr_linenumber" name="L111" href="#L111">111</a> 		contentPane.add(nuevocursobutton);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a> 
+<a class="jxr_linenumber" name="L113" href="#L113">113</a> 		tipocombobox = <strong class="jxr_keyword">new</strong> JComboBox&lt;&gt;();
+<a class="jxr_linenumber" name="L114" href="#L114">114</a> 		tipocombobox.setModel(<strong class="jxr_keyword">new</strong> DefaultComboBoxModel&lt;&gt;(
+<a class="jxr_linenumber" name="L115" href="#L115">115</a> 				<strong class="jxr_keyword">new</strong> <a name="TipoCurso" href="../negocio/entities/TipoCurso.html#TipoCurso">TipoCurso</a>[] { TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,
+<a class="jxr_linenumber" name="L116" href="#L116">116</a> 						TipoCurso.FORMACION_AVANZADA, TipoCurso.FORMACION_CONTINUA, TipoCurso.MICROCREDENCIALES,
+<a class="jxr_linenumber" name="L117" href="#L117">117</a> 						TipoCurso.CORTA_DURACION, TipoCurso.CURSOS_DE_VERANO, TipoCurso.FORMACION_DE_MAYORES }));
+<a class="jxr_linenumber" name="L118" href="#L118">118</a> 		tipocombobox.setToolTipText(<span class="jxr_string">"-Cursos-\r\n"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a> 		tipocombobox.setBounds(690, 303, 212, 22);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a> 		contentPane.add(tipocombobox);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a> 
+<a class="jxr_linenumber" name="L122" href="#L122">122</a> 		editarcursobutton.setEnabled(false);
+<a class="jxr_linenumber" name="L123" href="#L123">123</a> 		editarcursobutton.setBounds(306, 414, 158, 21);
+<a class="jxr_linenumber" name="L124" href="#L124">124</a> 		contentPane.add(editarcursobutton);
 <a class="jxr_linenumber" name="L125" href="#L125">125</a> 
-<a class="jxr_linenumber" name="L126" href="#L126">126</a> 		tipocombobox = <strong class="jxr_keyword">new</strong> JComboBox&lt;&gt;();
-<a class="jxr_linenumber" name="L127" href="#L127">127</a> 		tipocombobox.setModel(<strong class="jxr_keyword">new</strong> DefaultComboBoxModel&lt;&gt;(<strong class="jxr_keyword">new</strong> <a name="TipoCurso" href="../negocio/entities/TipoCurso.html#TipoCurso">TipoCurso</a>[] {TipoCurso.MASTER, TipoCurso.EXPERTO, TipoCurso.ESPECIALISTA,TipoCurso.FORMACION_AVANZADA,
-<a class="jxr_linenumber" name="L128" href="#L128">128</a> 				TipoCurso.FORMACION_CONTINUA,TipoCurso.MICROCREDENCIALES,TipoCurso.CORTA_DURACION,TipoCurso.CURSOS_DE_VERANO,TipoCurso.FORMACION_DE_MAYORES}));
-<a class="jxr_linenumber" name="L129" href="#L129">129</a> 		tipocombobox.setToolTipText(<span class="jxr_string">"-Cursos-\r\n"</span>);
-<a class="jxr_linenumber" name="L130" href="#L130">130</a> 		tipocombobox.setBounds(690, 303, 212, 22);
-<a class="jxr_linenumber" name="L131" href="#L131">131</a> 		contentPane.add(tipocombobox);
-<a class="jxr_linenumber" name="L132" href="#L132">132</a> 
-<a class="jxr_linenumber" name="L133" href="#L133">133</a> 			
-<a class="jxr_linenumber" name="L134" href="#L134">134</a> 		editarcursobutton.setEnabled(false);
-<a class="jxr_linenumber" name="L135" href="#L135">135</a> 		editarcursobutton.setBounds(306, 414, 158, 21);
-<a class="jxr_linenumber" name="L136" href="#L136">136</a> 		contentPane.add(editarcursobutton);
-<a class="jxr_linenumber" name="L137" href="#L137">137</a> 
-<a class="jxr_linenumber" name="L138" href="#L138">138</a> 		
-<a class="jxr_linenumber" name="L139" href="#L139">139</a> 		edicionbutton.setEnabled(false);
-<a class="jxr_linenumber" name="L140" href="#L140">140</a> 		edicionbutton.setBounds(473, 414, 158, 21);
-<a class="jxr_linenumber" name="L141" href="#L141">141</a> 		contentPane.add(edicionbutton);
-<a class="jxr_linenumber" name="L142" href="#L142">142</a> 
-<a class="jxr_linenumber" name="L143" href="#L143">143</a> 		JSeparator separator = <strong class="jxr_keyword">new</strong> JSeparator();
-<a class="jxr_linenumber" name="L144" href="#L144">144</a> 		separator.setBounds(333, 68, 2, 320);
-<a class="jxr_linenumber" name="L145" href="#L145">145</a> 		separator.setOrientation(SwingConstants.VERTICAL);
-<a class="jxr_linenumber" name="L146" href="#L146">146</a> 		contentPane.add(separator);
-<a class="jxr_linenumber" name="L147" href="#L147">147</a> 
-<a class="jxr_linenumber" name="L148" href="#L148">148</a> 		nombretext = <strong class="jxr_keyword">new</strong> JTextField();
-<a class="jxr_linenumber" name="L149" href="#L149">149</a> 		nombretext.setBounds(371, 259, 316, 19);
-<a class="jxr_linenumber" name="L150" href="#L150">150</a> 		contentPane.add(nombretext);
-<a class="jxr_linenumber" name="L151" href="#L151">151</a> 		nombretext.setColumns(10);
-<a class="jxr_linenumber" name="L152" href="#L152">152</a> 
-<a class="jxr_linenumber" name="L153" href="#L153">153</a> 		creditostext = <strong class="jxr_keyword">new</strong> JTextField();
-<a class="jxr_linenumber" name="L154" href="#L154">154</a> 		creditostext.setColumns(10);
-<a class="jxr_linenumber" name="L155" href="#L155">155</a> 		creditostext.setBounds(371, 306, 60, 19);
-<a class="jxr_linenumber" name="L156" href="#L156">156</a> 		contentPane.add(creditostext);
+<a class="jxr_linenumber" name="L126" href="#L126">126</a> 		edicionbutton.setEnabled(false);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a> 		edicionbutton.setBounds(473, 414, 158, 21);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a> 		contentPane.add(edicionbutton);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a> 
+<a class="jxr_linenumber" name="L130" href="#L130">130</a> 		JSeparator separator = <strong class="jxr_keyword">new</strong> JSeparator();
+<a class="jxr_linenumber" name="L131" href="#L131">131</a> 		separator.setBounds(333, 68, 2, 320);
+<a class="jxr_linenumber" name="L132" href="#L132">132</a> 		separator.setOrientation(SwingConstants.VERTICAL);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a> 		contentPane.add(separator);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a> 
+<a class="jxr_linenumber" name="L135" href="#L135">135</a> 		nombretext = <strong class="jxr_keyword">new</strong> JTextField();
+<a class="jxr_linenumber" name="L136" href="#L136">136</a> 		nombretext.setBounds(371, 259, 316, 19);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a> 		contentPane.add(nombretext);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a> 		nombretext.setColumns(10);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a> 
+<a class="jxr_linenumber" name="L140" href="#L140">140</a> 		creditostext = <strong class="jxr_keyword">new</strong> JTextField();
+<a class="jxr_linenumber" name="L141" href="#L141">141</a> 		creditostext.setColumns(10);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> 		creditostext.setBounds(371, 306, 60, 19);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a> 		contentPane.add(creditostext);
+<a class="jxr_linenumber" name="L144" href="#L144">144</a> 
+<a class="jxr_linenumber" name="L145" href="#L145">145</a> 		importetext = <strong class="jxr_keyword">new</strong> JTextField();
+<a class="jxr_linenumber" name="L146" href="#L146">146</a> 		importetext.setColumns(10);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a> 		importetext.setBounds(441, 306, 96, 19);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a> 		contentPane.add(importetext);
+<a class="jxr_linenumber" name="L149" href="#L149">149</a> 
+<a class="jxr_linenumber" name="L150" href="#L150">150</a> 		JLabel nombrecursolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Nombre curso"</span>);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a> 		nombrecursolabel.setBounds(370, 245, 91, 13);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a> 		contentPane.add(nombrecursolabel);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a> 
+<a class="jxr_linenumber" name="L154" href="#L154">154</a> 		JSeparator separator1 = <strong class="jxr_keyword">new</strong> JSeparator();
+<a class="jxr_linenumber" name="L155" href="#L155">155</a> 		separator1.setBounds(55, 396, 847, 8);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a> 		contentPane.add(separator1);
 <a class="jxr_linenumber" name="L157" href="#L157">157</a> 
-<a class="jxr_linenumber" name="L158" href="#L158">158</a> 		importetext = <strong class="jxr_keyword">new</strong> JTextField();
-<a class="jxr_linenumber" name="L159" href="#L159">159</a> 		importetext.setColumns(10);
-<a class="jxr_linenumber" name="L160" href="#L160">160</a> 		importetext.setBounds(441, 306, 96, 19);
-<a class="jxr_linenumber" name="L161" href="#L161">161</a> 		contentPane.add(importetext);
-<a class="jxr_linenumber" name="L162" href="#L162">162</a> 
-<a class="jxr_linenumber" name="L163" href="#L163">163</a> 		JLabel nombrecursolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Nombre curso"</span>);
-<a class="jxr_linenumber" name="L164" href="#L164">164</a> 		nombrecursolabel.setBounds(370, 245, 91, 13);
-<a class="jxr_linenumber" name="L165" href="#L165">165</a> 		contentPane.add(nombrecursolabel);
-<a class="jxr_linenumber" name="L166" href="#L166">166</a> 
-<a class="jxr_linenumber" name="L167" href="#L167">167</a> 		JSeparator separator1 = <strong class="jxr_keyword">new</strong> JSeparator();
-<a class="jxr_linenumber" name="L168" href="#L168">168</a> 		separator1.setBounds(55, 396, 847, 8);
-<a class="jxr_linenumber" name="L169" href="#L169">169</a> 		contentPane.add(separator1);
-<a class="jxr_linenumber" name="L170" href="#L170">170</a> 
-<a class="jxr_linenumber" name="L171" href="#L171">171</a> 		JLabel creditoslabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Créditos"</span>);
-<a class="jxr_linenumber" name="L172" href="#L172">172</a> 		creditoslabel.setBounds(370, 292, 61, 13);
-<a class="jxr_linenumber" name="L173" href="#L173">173</a> 		contentPane.add(creditoslabel);
-<a class="jxr_linenumber" name="L174" href="#L174">174</a> 
-<a class="jxr_linenumber" name="L175" href="#L175">175</a> 		JLabel importelabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Importe"</span>);
-<a class="jxr_linenumber" name="L176" href="#L176">176</a> 		importelabel.setBounds(441, 292, 91, 13);
-<a class="jxr_linenumber" name="L177" href="#L177">177</a> 		contentPane.add(importelabel);
-<a class="jxr_linenumber" name="L178" href="#L178">178</a> 
-<a class="jxr_linenumber" name="L179" href="#L179">179</a> 		JLabel fechainiciolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Fecha de inicio"</span>);
-<a class="jxr_linenumber" name="L180" href="#L180">180</a> 		fechainiciolabel.setBounds(370, 345, 119, 13);
-<a class="jxr_linenumber" name="L181" href="#L181">181</a> 		contentPane.add(fechainiciolabel);
-<a class="jxr_linenumber" name="L182" href="#L182">182</a> 
-<a class="jxr_linenumber" name="L183" href="#L183">183</a> 		JLabel centrolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Centro"</span>);
-<a class="jxr_linenumber" name="L184" href="#L184">184</a> 		centrolabel.setBounds(370, 56, 91, 13);
-<a class="jxr_linenumber" name="L185" href="#L185">185</a> 		contentPane.add(centrolabel);
-<a class="jxr_linenumber" name="L186" href="#L186">186</a> 
-<a class="jxr_linenumber" name="L187" href="#L187">187</a> 		JLabel directorlabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Director"</span>);
-<a class="jxr_linenumber" name="L188" href="#L188">188</a> 		directorlabel.setBounds(561, 57, 135, 13);
-<a class="jxr_linenumber" name="L189" href="#L189">189</a> 		contentPane.add(directorlabel);
+<a class="jxr_linenumber" name="L158" href="#L158">158</a> 		JLabel creditoslabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Créditos"</span>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a> 		creditoslabel.setBounds(370, 292, 61, 13);
+<a class="jxr_linenumber" name="L160" href="#L160">160</a> 		contentPane.add(creditoslabel);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a> 
+<a class="jxr_linenumber" name="L162" href="#L162">162</a> 		JLabel importelabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Importe"</span>);
+<a class="jxr_linenumber" name="L163" href="#L163">163</a> 		importelabel.setBounds(441, 292, 91, 13);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a> 		contentPane.add(importelabel);
+<a class="jxr_linenumber" name="L165" href="#L165">165</a> 
+<a class="jxr_linenumber" name="L166" href="#L166">166</a> 		JLabel fechainiciolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Fecha de inicio"</span>);
+<a class="jxr_linenumber" name="L167" href="#L167">167</a> 		fechainiciolabel.setBounds(370, 345, 119, 13);
+<a class="jxr_linenumber" name="L168" href="#L168">168</a> 		contentPane.add(fechainiciolabel);
+<a class="jxr_linenumber" name="L169" href="#L169">169</a> 
+<a class="jxr_linenumber" name="L170" href="#L170">170</a> 		JLabel centrolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Centro"</span>);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a> 		centrolabel.setBounds(370, 56, 91, 13);
+<a class="jxr_linenumber" name="L172" href="#L172">172</a> 		contentPane.add(centrolabel);
+<a class="jxr_linenumber" name="L173" href="#L173">173</a> 
+<a class="jxr_linenumber" name="L174" href="#L174">174</a> 		JLabel directorlabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Director"</span>);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a> 		directorlabel.setBounds(561, 57, 135, 13);
+<a class="jxr_linenumber" name="L176" href="#L176">176</a> 		contentPane.add(directorlabel);
+<a class="jxr_linenumber" name="L177" href="#L177">177</a> 
+<a class="jxr_linenumber" name="L178" href="#L178">178</a> 		JLabel secretariolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Secretario"</span>);
+<a class="jxr_linenumber" name="L179" href="#L179">179</a> 		secretariolabel.setBounds(744, 56, 119, 13);
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> 		contentPane.add(secretariolabel);
+<a class="jxr_linenumber" name="L181" href="#L181">181</a> 
+<a class="jxr_linenumber" name="L182" href="#L182">182</a> 		JLabel fechafinallabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Fecha de finalización"</span>);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a> 		fechafinallabel.setBounds(515, 345, 119, 13);
+<a class="jxr_linenumber" name="L184" href="#L184">184</a> 		contentPane.add(fechafinallabel);
+<a class="jxr_linenumber" name="L185" href="#L185">185</a> 
+<a class="jxr_linenumber" name="L186" href="#L186">186</a> 		ediciontext = <strong class="jxr_keyword">new</strong> JTextField();
+<a class="jxr_linenumber" name="L187" href="#L187">187</a> 		ediciontext.setColumns(10);
+<a class="jxr_linenumber" name="L188" href="#L188">188</a> 		ediciontext.setBounds(547, 306, 96, 19);
+<a class="jxr_linenumber" name="L189" href="#L189">189</a> 		contentPane.add(ediciontext);
 <a class="jxr_linenumber" name="L190" href="#L190">190</a> 
-<a class="jxr_linenumber" name="L191" href="#L191">191</a> 		JLabel secretariolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Secretario"</span>);
-<a class="jxr_linenumber" name="L192" href="#L192">192</a> 		secretariolabel.setBounds(744, 56, 119, 13);
-<a class="jxr_linenumber" name="L193" href="#L193">193</a> 		contentPane.add(secretariolabel);
+<a class="jxr_linenumber" name="L191" href="#L191">191</a> 		edicionlabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Edición"</span>);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a> 		edicionlabel.setBounds(547, 292, 91, 13);
+<a class="jxr_linenumber" name="L193" href="#L193">193</a> 		contentPane.add(edicionlabel);
 <a class="jxr_linenumber" name="L194" href="#L194">194</a> 
-<a class="jxr_linenumber" name="L195" href="#L195">195</a> 		JLabel fechafinallabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Fecha de finalización"</span>);
-<a class="jxr_linenumber" name="L196" href="#L196">196</a> 		fechafinallabel.setBounds(515, 345, 119, 13);
-<a class="jxr_linenumber" name="L197" href="#L197">197</a> 		contentPane.add(fechafinallabel);
-<a class="jxr_linenumber" name="L198" href="#L198">198</a> 
-<a class="jxr_linenumber" name="L199" href="#L199">199</a> 		ediciontext = <strong class="jxr_keyword">new</strong> JTextField();
-<a class="jxr_linenumber" name="L200" href="#L200">200</a> 		ediciontext.setColumns(10);
-<a class="jxr_linenumber" name="L201" href="#L201">201</a> 		ediciontext.setBounds(547, 306, 96, 19);
-<a class="jxr_linenumber" name="L202" href="#L202">202</a> 		contentPane.add(ediciontext);
-<a class="jxr_linenumber" name="L203" href="#L203">203</a> 
-<a class="jxr_linenumber" name="L204" href="#L204">204</a> 		edicionlabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Edición"</span>);
-<a class="jxr_linenumber" name="L205" href="#L205">205</a> 		edicionlabel.setBounds(547, 292, 91, 13);
-<a class="jxr_linenumber" name="L206" href="#L206">206</a> 		contentPane.add(edicionlabel);
-<a class="jxr_linenumber" name="L207" href="#L207">207</a> 
-<a class="jxr_linenumber" name="L208" href="#L208">208</a> 		limpiarbutton.setBounds(641, 414, 158, 21);
-<a class="jxr_linenumber" name="L209" href="#L209">209</a> 		contentPane.add(limpiarbutton);
-<a class="jxr_linenumber" name="L210" href="#L210">210</a> 
-<a class="jxr_linenumber" name="L211" href="#L211">211</a> 		estadotext = <strong class="jxr_keyword">new</strong> JTextField();
-<a class="jxr_linenumber" name="L212" href="#L212">212</a> 		estadotext.setEnabled(false);
-<a class="jxr_linenumber" name="L213" href="#L213">213</a> 		estadotext.setEditable(false);
-<a class="jxr_linenumber" name="L214" href="#L214">214</a> 		estadotext.setColumns(10);
-<a class="jxr_linenumber" name="L215" href="#L215">215</a> 		estadotext.setBounds(670, 359, 232, 19);
-<a class="jxr_linenumber" name="L216" href="#L216">216</a> 		contentPane.add(estadotext);
-<a class="jxr_linenumber" name="L217" href="#L217">217</a> 
-<a class="jxr_linenumber" name="L218" href="#L218">218</a> 		JLabel estadolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Estado"</span>);
-<a class="jxr_linenumber" name="L219" href="#L219">219</a> 		estadolabel.setEnabled(false);
-<a class="jxr_linenumber" name="L220" href="#L220">220</a> 		estadolabel.setBounds(670, 345, 91, 13);
-<a class="jxr_linenumber" name="L221" href="#L221">221</a> 		contentPane.add(estadolabel);
+<a class="jxr_linenumber" name="L195" href="#L195">195</a> 		limpiarbutton.setBounds(641, 414, 158, 21);
+<a class="jxr_linenumber" name="L196" href="#L196">196</a> 		contentPane.add(limpiarbutton);
+<a class="jxr_linenumber" name="L197" href="#L197">197</a> 
+<a class="jxr_linenumber" name="L198" href="#L198">198</a> 		estadotext = <strong class="jxr_keyword">new</strong> JTextField();
+<a class="jxr_linenumber" name="L199" href="#L199">199</a> 		estadotext.setEnabled(false);
+<a class="jxr_linenumber" name="L200" href="#L200">200</a> 		estadotext.setEditable(false);
+<a class="jxr_linenumber" name="L201" href="#L201">201</a> 		estadotext.setColumns(10);
+<a class="jxr_linenumber" name="L202" href="#L202">202</a> 		estadotext.setBounds(670, 359, 232, 19);
+<a class="jxr_linenumber" name="L203" href="#L203">203</a> 		contentPane.add(estadotext);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a> 
+<a class="jxr_linenumber" name="L205" href="#L205">205</a> 		JLabel estadolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Estado"</span>);
+<a class="jxr_linenumber" name="L206" href="#L206">206</a> 		estadolabel.setEnabled(false);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a> 		estadolabel.setBounds(670, 345, 91, 13);
+<a class="jxr_linenumber" name="L208" href="#L208">208</a> 		contentPane.add(estadolabel);
+<a class="jxr_linenumber" name="L209" href="#L209">209</a> 
+<a class="jxr_linenumber" name="L210" href="#L210">210</a> 		idtext = <strong class="jxr_keyword">new</strong> JTextField();
+<a class="jxr_linenumber" name="L211" href="#L211">211</a> 		idtext.setColumns(10);
+<a class="jxr_linenumber" name="L212" href="#L212">212</a> 		idtext.setBounds(724, 259, 178, 19);
+<a class="jxr_linenumber" name="L213" href="#L213">213</a> 		contentPane.add(idtext);
+<a class="jxr_linenumber" name="L214" href="#L214">214</a> 
+<a class="jxr_linenumber" name="L215" href="#L215">215</a> 		idlabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Id"</span>);
+<a class="jxr_linenumber" name="L216" href="#L216">216</a> 		idlabel.setBounds(724, 244, 91, 13);
+<a class="jxr_linenumber" name="L217" href="#L217">217</a> 		contentPane.add(idlabel);
+<a class="jxr_linenumber" name="L218" href="#L218">218</a> 
+<a class="jxr_linenumber" name="L219" href="#L219">219</a> 		JLabel tipolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Tipo"</span>);
+<a class="jxr_linenumber" name="L220" href="#L220">220</a> 		tipolabel.setBounds(695, 290, 91, 13);
+<a class="jxr_linenumber" name="L221" href="#L221">221</a> 		contentPane.add(tipolabel);
 <a class="jxr_linenumber" name="L222" href="#L222">222</a> 
-<a class="jxr_linenumber" name="L223" href="#L223">223</a> 		idtext = <strong class="jxr_keyword">new</strong> JTextField();
-<a class="jxr_linenumber" name="L224" href="#L224">224</a> 		idtext.setColumns(10);
-<a class="jxr_linenumber" name="L225" href="#L225">225</a> 		idtext.setBounds(724, 259, 178, 19);
-<a class="jxr_linenumber" name="L226" href="#L226">226</a> 		contentPane.add(idtext);
-<a class="jxr_linenumber" name="L227" href="#L227">227</a> 
-<a class="jxr_linenumber" name="L228" href="#L228">228</a> 		idlabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Id"</span>);
-<a class="jxr_linenumber" name="L229" href="#L229">229</a> 		idlabel.setBounds(724, 244, 91, 13);
-<a class="jxr_linenumber" name="L230" href="#L230">230</a> 		contentPane.add(idlabel);
-<a class="jxr_linenumber" name="L231" href="#L231">231</a> 
-<a class="jxr_linenumber" name="L232" href="#L232">232</a> 		JLabel tipolabel = <strong class="jxr_keyword">new</strong> JLabel(<span class="jxr_string">"Tipo"</span>);
-<a class="jxr_linenumber" name="L233" href="#L233">233</a> 		tipolabel.setBounds(695, 290, 91, 13);
-<a class="jxr_linenumber" name="L234" href="#L234">234</a> 		contentPane.add(tipolabel);
-<a class="jxr_linenumber" name="L235" href="#L235">235</a> 		
-<a class="jxr_linenumber" name="L236" href="#L236">236</a> 		fechainicio.setBounds(515, 359, 125, 23);
-<a class="jxr_linenumber" name="L237" href="#L237">237</a> 		contentPane.add(fechainicio);
-<a class="jxr_linenumber" name="L238" href="#L238">238</a> 		
-<a class="jxr_linenumber" name="L239" href="#L239">239</a> 		fechafin.setBounds(370, 359, 125, 23);
-<a class="jxr_linenumber" name="L240" href="#L240">240</a> 		contentPane.add(fechafin);
-<a class="jxr_linenumber" name="L241" href="#L241">241</a> 
-<a class="jxr_linenumber" name="L242" href="#L242">242</a> 		nuevocursobutton.addActionListener(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="L243" href="#L243">243</a> 		limpiarbutton.addActionListener(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="L244" href="#L244">244</a> 		editarcursobutton.addActionListener(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="L245" href="#L245">245</a> 		edicionbutton.addActionListener(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="L246" href="#L246">246</a> 		
-<a class="jxr_linenumber" name="L247" href="#L247">247</a> 		List&lt;CursoPropio&gt; listacurso = gestor.listarCursos();
-<a class="jxr_linenumber" name="L248" href="#L248">248</a> 		List&lt;ProfesorUCLM&gt; listaprofesor = gestor.listarProfesoresUCLM();
-<a class="jxr_linenumber" name="L249" href="#L249">249</a> 		List&lt;Centro&gt; listacentro = gestor.listarCentros(); 
-<a class="jxr_linenumber" name="L250" href="#L250">250</a> 		
-<a class="jxr_linenumber" name="L251" href="#L251">251</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i=0; i&lt; listacurso.size(); i++) {
-<a class="jxr_linenumber" name="L252" href="#L252">252</a> 			modelcurso.addElement(listacurso.get(i).getId());
-<a class="jxr_linenumber" name="L253" href="#L253">253</a> 		}
-<a class="jxr_linenumber" name="L254" href="#L254">254</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i=0; i&lt; listacentro.size(); i++) {
-<a class="jxr_linenumber" name="L255" href="#L255">255</a> 			modelcentro.addElement(listacentro.get(i).getIdCentro());
-<a class="jxr_linenumber" name="L256" href="#L256">256</a> 		}
-<a class="jxr_linenumber" name="L257" href="#L257">257</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i=0; i&lt; listaprofesor.size(); i++) {
-<a class="jxr_linenumber" name="L258" href="#L258">258</a> 			modelprofesor.addElement(listaprofesor.get(i).getDniProfesor());
-<a class="jxr_linenumber" name="L259" href="#L259">259</a> 		}
-<a class="jxr_linenumber" name="L260" href="#L260">260</a> 
-<a class="jxr_linenumber" name="L261" href="#L261">261</a> 		cursolist.setModel(modelcurso);
-<a class="jxr_linenumber" name="L262" href="#L262">262</a> 		centrolist.setModel(modelcentro);
-<a class="jxr_linenumber" name="L263" href="#L263">263</a> 		directorlist.setModel(modelprofesor);
-<a class="jxr_linenumber" name="L264" href="#L264">264</a> 		secretariolist.setModel(modelprofesor);
-<a class="jxr_linenumber" name="L265" href="#L265">265</a> 		
-<a class="jxr_linenumber" name="L266" href="#L266">266</a> 		cursolist.addMouseListener(<strong class="jxr_keyword">this</strong>);
-<a class="jxr_linenumber" name="L267" href="#L267">267</a> 	}
-<a class="jxr_linenumber" name="L268" href="#L268">268</a> 	@Override
-<a class="jxr_linenumber" name="L269" href="#L269">269</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent e) {
-<a class="jxr_linenumber" name="L270" href="#L270">270</a> 		<strong class="jxr_keyword">if</strong>(e.getSource() == nuevocursobutton &amp;&amp; !secretariolist.isSelectionEmpty() &amp;&amp; !directorlist.isSelectionEmpty() &amp;&amp; !centrolist.isSelectionEmpty()) {
-<a class="jxr_linenumber" name="L271" href="#L271">271</a> 			gestor.realizarPropuestaCurso(idtext.getText(), nombretext.getText(),
-<a class="jxr_linenumber" name="L272" href="#L272">272</a> 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
-<a class="jxr_linenumber" name="L273" href="#L273">273</a> 					fechafin.getDate(), Double.parseDouble(importetext.getText()),
-<a class="jxr_linenumber" name="L274" href="#L274">274</a> 					Integer.parseInt(ediciontext.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-<a class="jxr_linenumber" name="L275" href="#L275">275</a> 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
-<a class="jxr_linenumber" name="L276" href="#L276">276</a> 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
-<a class="jxr_linenumber" name="L277" href="#L277">277</a> 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
-<a class="jxr_linenumber" name="L278" href="#L278">278</a> 
-<a class="jxr_linenumber" name="L279" href="#L279">279</a> 			modelcurso.addElement(idtext.getText());
-<a class="jxr_linenumber" name="L280" href="#L280">280</a> 			cursolist.setModel(modelcurso);
-<a class="jxr_linenumber" name="L281" href="#L281">281</a> 		}
-<a class="jxr_linenumber" name="L282" href="#L282">282</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == limpiarbutton) {
-<a class="jxr_linenumber" name="L283" href="#L283">283</a> 			nombretext.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L284" href="#L284">284</a> 			creditostext.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L285" href="#L285">285</a> 			importetext.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L286" href="#L286">286</a> 			fechainicio.setDate(<strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L287" href="#L287">287</a> 			fechafin.setDate(<strong class="jxr_keyword">null</strong>);
-<a class="jxr_linenumber" name="L288" href="#L288">288</a> 			ediciontext.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L289" href="#L289">289</a> 			estadotext.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L290" href="#L290">290</a> 			idtext.setText(<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L291" href="#L291">291</a> 			ediciontext.setEditable(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L292" href="#L292">292</a> 			idtext.setEditable(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L293" href="#L293">293</a> 			edicionlabel.setEnabled(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L294" href="#L294">294</a> 			idlabel.setEnabled(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L295" href="#L295">295</a> 			nuevocursobutton.setEnabled(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L296" href="#L296">296</a> 			editarcursobutton.setEnabled(false);
-<a class="jxr_linenumber" name="L297" href="#L297">297</a> 			edicionbutton.setEnabled(false);
-<a class="jxr_linenumber" name="L298" href="#L298">298</a> 			cursolist.clearSelection();
-<a class="jxr_linenumber" name="L299" href="#L299">299</a> 			centrolist.clearSelection();
-<a class="jxr_linenumber" name="L300" href="#L300">300</a> 			directorlist.clearSelection();
-<a class="jxr_linenumber" name="L301" href="#L301">301</a> 			secretariolist.clearSelection();
-<a class="jxr_linenumber" name="L302" href="#L302">302</a> 		}
-<a class="jxr_linenumber" name="L303" href="#L303">303</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == editarcursobutton &amp;&amp; !secretariolist.isSelectionEmpty() &amp;&amp; !directorlist.isSelectionEmpty() &amp;&amp; !centrolist.isSelectionEmpty()) {
-<a class="jxr_linenumber" name="L304" href="#L304">304</a> 			gestor.editarPropuestaCurso(idtext.getText(), nombretext.getText(),
-<a class="jxr_linenumber" name="L305" href="#L305">305</a> 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
-<a class="jxr_linenumber" name="L306" href="#L306">306</a> 					fechafin.getDate(), Double.parseDouble(importetext.getText()),
-<a class="jxr_linenumber" name="L307" href="#L307">307</a> 					Integer.parseInt(ediciontext.getText()), EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-<a class="jxr_linenumber" name="L308" href="#L308">308</a> 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
-<a class="jxr_linenumber" name="L309" href="#L309">309</a> 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
-<a class="jxr_linenumber" name="L310" href="#L310">310</a> 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
-<a class="jxr_linenumber" name="L311" href="#L311">311</a> 		}
-<a class="jxr_linenumber" name="L312" href="#L312">312</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == edicionbutton &amp;&amp; !secretariolist.isSelectionEmpty() &amp;&amp; !directorlist.isSelectionEmpty() &amp;&amp; !centrolist.isSelectionEmpty()) {
-<a class="jxr_linenumber" name="L313" href="#L313">313</a> 			String[] idnum = idtext.getText().split(<span class="jxr_string">"CPR"</span>);
-<a class="jxr_linenumber" name="L314" href="#L314">314</a> 			gestor.realizarPropuestaCurso(idtext.getText() + <span class="jxr_string">"(1)"</span> <em class="jxr_comment">/* "CPR" + Integer.parseInt(id[1])+1 */</em>, nombretext.getText(),
-<a class="jxr_linenumber" name="L315" href="#L315">315</a> 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(),
-<a class="jxr_linenumber" name="L316" href="#L316">316</a> 					fechafin.getDate(), Double.parseDouble(importetext.getText()),
-<a class="jxr_linenumber" name="L317" href="#L317">317</a> 					Integer.parseInt(ediciontext.getText())+1, EstadoCurso.PROPUESTO,TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()), 
-<a class="jxr_linenumber" name="L318" href="#L318">318</a> 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()), 
-<a class="jxr_linenumber" name="L319" href="#L319">319</a> 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()), 
-<a class="jxr_linenumber" name="L320" href="#L320">320</a> 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
-<a class="jxr_linenumber" name="L321" href="#L321">321</a> 
-<a class="jxr_linenumber" name="L322" href="#L322">322</a> 			modelcurso.addElement(idtext.getText()+ <span class="jxr_string">"(1)"</span>);
-<a class="jxr_linenumber" name="L323" href="#L323">323</a> 			cursolist.setModel(modelcurso);
-<a class="jxr_linenumber" name="L324" href="#L324">324</a> 		}
-<a class="jxr_linenumber" name="L325" href="#L325">325</a> 	}
-<a class="jxr_linenumber" name="L326" href="#L326">326</a> 	@Override
-<a class="jxr_linenumber" name="L327" href="#L327">327</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseClicked(MouseEvent e) {
-<a class="jxr_linenumber" name="L328" href="#L328">328</a> 		<strong class="jxr_keyword">if</strong> (e.getClickCount() == 2 &amp;&amp; e.getSource() == cursolist) {
-<a class="jxr_linenumber" name="L329" href="#L329">329</a> 			
-<a class="jxr_linenumber" name="L330" href="#L330">330</a> 			String selectedItem = cursolist.getSelectedValue();
-<a class="jxr_linenumber" name="L331" href="#L331">331</a> 			CursoPropio curso = gestor.listarCurso(selectedItem);
-<a class="jxr_linenumber" name="L332" href="#L332">332</a> 			
-<a class="jxr_linenumber" name="L333" href="#L333">333</a> 			fechainicio.setDate(curso.getFechaInicio());
-<a class="jxr_linenumber" name="L334" href="#L334">334</a> 			fechafin.setDate(curso.getFechaFin());
-<a class="jxr_linenumber" name="L335" href="#L335">335</a> 			
-<a class="jxr_linenumber" name="L336" href="#L336">336</a> 			nombretext.setText(curso.getNombre());
-<a class="jxr_linenumber" name="L337" href="#L337">337</a> 			creditostext.setText(curso.getECTS()+<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L338" href="#L338">338</a> 			importetext.setText(curso.getTasaMatricula()+<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L339" href="#L339">339</a> 			
-<a class="jxr_linenumber" name="L340" href="#L340">340</a> 			ediciontext.setText(curso.getEdicion()+<span class="jxr_string">""</span>);
-<a class="jxr_linenumber" name="L341" href="#L341">341</a> 			estadotext.setText(curso.getEstado().toString());
-<a class="jxr_linenumber" name="L342" href="#L342">342</a> 			idtext.setText(selectedItem);
-<a class="jxr_linenumber" name="L343" href="#L343">343</a> 			ediciontext.setEditable(false);
-<a class="jxr_linenumber" name="L344" href="#L344">344</a> 			idtext.setEditable(false);
-<a class="jxr_linenumber" name="L345" href="#L345">345</a> 			edicionlabel.setEnabled(false);
-<a class="jxr_linenumber" name="L346" href="#L346">346</a> 			idlabel.setEnabled(false);
-<a class="jxr_linenumber" name="L347" href="#L347">347</a> 			nuevocursobutton.setEnabled(false);
-<a class="jxr_linenumber" name="L348" href="#L348">348</a> 			editarcursobutton.setEnabled(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L349" href="#L349">349</a> 			edicionbutton.setEnabled(<strong class="jxr_keyword">true</strong>);
-<a class="jxr_linenumber" name="L350" href="#L350">350</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; TipoCurso.values().length; i++) {
-<a class="jxr_linenumber" name="L351" href="#L351">351</a> 				<strong class="jxr_keyword">if</strong>(tipocombobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
-<a class="jxr_linenumber" name="L352" href="#L352">352</a> 					tipocombobox.setSelectedItem(tipocombobox.getModel().getElementAt(i));
-<a class="jxr_linenumber" name="L353" href="#L353">353</a> 				}
-<a class="jxr_linenumber" name="L354" href="#L354">354</a> 			}
-<a class="jxr_linenumber" name="L355" href="#L355">355</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; centrolist.getModel().getSize(); i++) {
-<a class="jxr_linenumber" name="L356" href="#L356">356</a> 				<strong class="jxr_keyword">if</strong>(centrolist.getModel().getElementAt(i).toString().equals(curso.getIdCentro() +<span class="jxr_string">""</span>)) {
-<a class="jxr_linenumber" name="L357" href="#L357">357</a> 					centrolist.setSelectedIndex(i);
-<a class="jxr_linenumber" name="L358" href="#L358">358</a> 				}
-<a class="jxr_linenumber" name="L359" href="#L359">359</a> 			}
-<a class="jxr_linenumber" name="L360" href="#L360">360</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; directorlist.getModel().getSize(); i++) {
-<a class="jxr_linenumber" name="L361" href="#L361">361</a> 				<strong class="jxr_keyword">if</strong>(directorlist.getModel().getElementAt(i).equals(curso.getIdDirector())) {
-<a class="jxr_linenumber" name="L362" href="#L362">362</a> 					directorlist.setSelectedIndex(i);
-<a class="jxr_linenumber" name="L363" href="#L363">363</a> 				}
-<a class="jxr_linenumber" name="L364" href="#L364">364</a> 			}
-<a class="jxr_linenumber" name="L365" href="#L365">365</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; secretariolist.getModel().getSize(); i++) {
-<a class="jxr_linenumber" name="L366" href="#L366">366</a> 				<strong class="jxr_keyword">if</strong>(secretariolist.getModel().getElementAt(i).equals(curso.getIdSecretario())) {
-<a class="jxr_linenumber" name="L367" href="#L367">367</a> 					secretariolist.setSelectedIndex(i);
-<a class="jxr_linenumber" name="L368" href="#L368">368</a> 				}
-<a class="jxr_linenumber" name="L369" href="#L369">369</a> 			}
-<a class="jxr_linenumber" name="L370" href="#L370">370</a> 			
-<a class="jxr_linenumber" name="L371" href="#L371">371</a> 		}
-<a class="jxr_linenumber" name="L372" href="#L372">372</a> 	}
-<a class="jxr_linenumber" name="L373" href="#L373">373</a> 
-<a class="jxr_linenumber" name="L374" href="#L374">374</a> 	@Override
-<a class="jxr_linenumber" name="L375" href="#L375">375</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mousePressed(MouseEvent e) {
-<a class="jxr_linenumber" name="L376" href="#L376">376</a>    <em class="jxr_comment">// TODO document why this method is empty</em>
-<a class="jxr_linenumber" name="L377" href="#L377">377</a>  }
-<a class="jxr_linenumber" name="L378" href="#L378">378</a> 
-<a class="jxr_linenumber" name="L379" href="#L379">379</a> 	@Override
-<a class="jxr_linenumber" name="L380" href="#L380">380</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseReleased(MouseEvent e) {
-<a class="jxr_linenumber" name="L381" href="#L381">381</a>    <em class="jxr_comment">// TODO document why this method is empty</em>
-<a class="jxr_linenumber" name="L382" href="#L382">382</a>  }
-<a class="jxr_linenumber" name="L383" href="#L383">383</a> 
-<a class="jxr_linenumber" name="L384" href="#L384">384</a> 	@Override
-<a class="jxr_linenumber" name="L385" href="#L385">385</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseEntered(MouseEvent e) {
-<a class="jxr_linenumber" name="L386" href="#L386">386</a>    <em class="jxr_comment">// TODO document why this method is empty</em>
-<a class="jxr_linenumber" name="L387" href="#L387">387</a>  }
-<a class="jxr_linenumber" name="L388" href="#L388">388</a> 
-<a class="jxr_linenumber" name="L389" href="#L389">389</a> 	@Override
-<a class="jxr_linenumber" name="L390" href="#L390">390</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseExited(MouseEvent e) {
-<a class="jxr_linenumber" name="L391" href="#L391">391</a>    <em class="jxr_comment">// TODO document why this method is empty</em>
-<a class="jxr_linenumber" name="L392" href="#L392">392</a>  }
-<a class="jxr_linenumber" name="L393" href="#L393">393</a> }
+<a class="jxr_linenumber" name="L223" href="#L223">223</a> 		fechainicio.setBounds(515, 359, 125, 23);
+<a class="jxr_linenumber" name="L224" href="#L224">224</a> 		contentPane.add(fechainicio);
+<a class="jxr_linenumber" name="L225" href="#L225">225</a> 		fechafin.setToolTipText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L226" href="#L226">226</a> 
+<a class="jxr_linenumber" name="L227" href="#L227">227</a> 		fechafin.setBounds(370, 359, 125, 23);
+<a class="jxr_linenumber" name="L228" href="#L228">228</a> 		contentPane.add(fechafin);
+<a class="jxr_linenumber" name="L229" href="#L229">229</a> 
+<a class="jxr_linenumber" name="L230" href="#L230">230</a> 		nuevocursobutton.addActionListener(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L231" href="#L231">231</a> 		limpiarbutton.addActionListener(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L232" href="#L232">232</a> 		editarcursobutton.addActionListener(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L233" href="#L233">233</a> 		edicionbutton.addActionListener(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L234" href="#L234">234</a> 
+<a class="jxr_linenumber" name="L235" href="#L235">235</a> 		List&lt;CursoPropio&gt; listacurso = gestor.listarCursos();
+<a class="jxr_linenumber" name="L236" href="#L236">236</a> 		List&lt;ProfesorUCLM&gt; listaprofesor = gestor.listarProfesoresUCLM();
+<a class="jxr_linenumber" name="L237" href="#L237">237</a> 		List&lt;Centro&gt; listacentro = gestor.listarCentros();
+<a class="jxr_linenumber" name="L238" href="#L238">238</a> 
+<a class="jxr_linenumber" name="L239" href="#L239">239</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; listacurso.size(); i++) {
+<a class="jxr_linenumber" name="L240" href="#L240">240</a> 			modelcurso.addElement(listacurso.get(i).getId());
+<a class="jxr_linenumber" name="L241" href="#L241">241</a> 		}
+<a class="jxr_linenumber" name="L242" href="#L242">242</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; listacentro.size(); i++) {
+<a class="jxr_linenumber" name="L243" href="#L243">243</a> 			modelcentro.addElement(listacentro.get(i).getIdCentro());
+<a class="jxr_linenumber" name="L244" href="#L244">244</a> 		}
+<a class="jxr_linenumber" name="L245" href="#L245">245</a> 		<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; listaprofesor.size(); i++) {
+<a class="jxr_linenumber" name="L246" href="#L246">246</a> 			modelprofesor.addElement(listaprofesor.get(i).getDniProfesor());
+<a class="jxr_linenumber" name="L247" href="#L247">247</a> 		}
+<a class="jxr_linenumber" name="L248" href="#L248">248</a> 
+<a class="jxr_linenumber" name="L249" href="#L249">249</a> 		cursolist.setModel(modelcurso);
+<a class="jxr_linenumber" name="L250" href="#L250">250</a> 		centrolist.setModel(modelcentro);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a> 		directorlist.setModel(modelprofesor);
+<a class="jxr_linenumber" name="L252" href="#L252">252</a> 		secretariolist.setModel(modelprofesor);
+<a class="jxr_linenumber" name="L253" href="#L253">253</a> 
+<a class="jxr_linenumber" name="L254" href="#L254">254</a> 		cursolist.addMouseListener(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a> 	}
+<a class="jxr_linenumber" name="L256" href="#L256">256</a> 
+<a class="jxr_linenumber" name="L257" href="#L257">257</a> 	@Override
+<a class="jxr_linenumber" name="L258" href="#L258">258</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent e) {
+<a class="jxr_linenumber" name="L259" href="#L259">259</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == nuevocursobutton &amp;&amp; !secretariolist.isSelectionEmpty() &amp;&amp; !directorlist.isSelectionEmpty()
+<a class="jxr_linenumber" name="L260" href="#L260">260</a> 				&amp;&amp; !centrolist.isSelectionEmpty()) {
+<a class="jxr_linenumber" name="L261" href="#L261">261</a> 
+<a class="jxr_linenumber" name="L262" href="#L262">262</a> 			<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L263" href="#L263">263</a> 				Integer.parseInt(creditostext.getText());
+<a class="jxr_linenumber" name="L264" href="#L264">264</a> 			} <strong class="jxr_keyword">catch</strong> (NumberFormatException excepcion) {
+<a class="jxr_linenumber" name="L265" href="#L265">265</a> 				creditostext.setText(<span class="jxr_string">"&lt;Número&gt;"</span>);
+<a class="jxr_linenumber" name="L266" href="#L266">266</a> 				creditostext.setForeground(Color.RED);
+<a class="jxr_linenumber" name="L267" href="#L267">267</a> 				<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L268" href="#L268">268</a> 			}
+<a class="jxr_linenumber" name="L269" href="#L269">269</a> 
+<a class="jxr_linenumber" name="L270" href="#L270">270</a> 			<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L271" href="#L271">271</a> 				Integer.parseInt(importetext.getText());
+<a class="jxr_linenumber" name="L272" href="#L272">272</a> 			} <strong class="jxr_keyword">catch</strong> (NumberFormatException excepcion) {
+<a class="jxr_linenumber" name="L273" href="#L273">273</a> 				importetext.setText(<span class="jxr_string">"&lt;Número&gt;"</span>);
+<a class="jxr_linenumber" name="L274" href="#L274">274</a> 				importetext.setForeground(Color.RED);
+<a class="jxr_linenumber" name="L275" href="#L275">275</a> 				<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L276" href="#L276">276</a> 			}
+<a class="jxr_linenumber" name="L277" href="#L277">277</a> 
+<a class="jxr_linenumber" name="L278" href="#L278">278</a> 			<strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L279" href="#L279">279</a> 				Integer.parseInt(ediciontext.getText());
+<a class="jxr_linenumber" name="L280" href="#L280">280</a> 			} <strong class="jxr_keyword">catch</strong> (NumberFormatException excepcion) {
+<a class="jxr_linenumber" name="L281" href="#L281">281</a> 				ediciontext.setText(<span class="jxr_string">"&lt;Número&gt;"</span>);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a> 				ediciontext.setForeground(Color.RED);
+<a class="jxr_linenumber" name="L283" href="#L283">283</a> 				<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L284" href="#L284">284</a> 			}
+<a class="jxr_linenumber" name="L285" href="#L285">285</a> 			
+<a class="jxr_linenumber" name="L286" href="#L286">286</a> 		
+<a class="jxr_linenumber" name="L287" href="#L287">287</a> 
+<a class="jxr_linenumber" name="L288" href="#L288">288</a> 			gestor.realizarPropuestaCurso(idtext.getText(), nombretext.getText(),
+<a class="jxr_linenumber" name="L289" href="#L289">289</a> 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(), fechafin.getDate(),
+<a class="jxr_linenumber" name="L290" href="#L290">290</a> 					Double.parseDouble(importetext.getText()), Integer.parseInt(ediciontext.getText()),
+<a class="jxr_linenumber" name="L291" href="#L291">291</a> 					EstadoCurso.PROPUESTO,
+<a class="jxr_linenumber" name="L292" href="#L292">292</a> 					TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()),
+<a class="jxr_linenumber" name="L293" href="#L293">293</a> 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()),
+<a class="jxr_linenumber" name="L294" href="#L294">294</a> 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()),
+<a class="jxr_linenumber" name="L295" href="#L295">295</a> 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
+<a class="jxr_linenumber" name="L296" href="#L296">296</a> 					
+<a class="jxr_linenumber" name="L297" href="#L297">297</a> 			modelcurso.addElement(idtext.getText());
+<a class="jxr_linenumber" name="L298" href="#L298">298</a> 			cursolist.setModel(modelcurso);
+<a class="jxr_linenumber" name="L299" href="#L299">299</a> 			ediciontext.setForeground(Color.BLACK);
+<a class="jxr_linenumber" name="L300" href="#L300">300</a> 			importetext.setForeground(Color.BLACK);
+<a class="jxr_linenumber" name="L301" href="#L301">301</a> 			creditostext.setForeground(Color.BLACK);
+<a class="jxr_linenumber" name="L302" href="#L302">302</a> 
+<a class="jxr_linenumber" name="L303" href="#L303">303</a> 			
+<a class="jxr_linenumber" name="L304" href="#L304">304</a> 
+<a class="jxr_linenumber" name="L305" href="#L305">305</a> 		}
+<a class="jxr_linenumber" name="L306" href="#L306">306</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == limpiarbutton) {
+<a class="jxr_linenumber" name="L307" href="#L307">307</a> 			nombretext.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L308" href="#L308">308</a> 			creditostext.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L309" href="#L309">309</a> 			importetext.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L310" href="#L310">310</a> 			fechainicio.setDate(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L311" href="#L311">311</a> 			fechafin.setDate(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L312" href="#L312">312</a> 			ediciontext.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L313" href="#L313">313</a> 			estadotext.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L314" href="#L314">314</a> 			idtext.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a> 			ediciontext.setEditable(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L316" href="#L316">316</a> 			idtext.setEditable(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L317" href="#L317">317</a> 			edicionlabel.setEnabled(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L318" href="#L318">318</a> 			idlabel.setEnabled(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L319" href="#L319">319</a> 			nuevocursobutton.setEnabled(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L320" href="#L320">320</a> 			editarcursobutton.setEnabled(false);
+<a class="jxr_linenumber" name="L321" href="#L321">321</a> 			edicionbutton.setEnabled(false);
+<a class="jxr_linenumber" name="L322" href="#L322">322</a> 			cursolist.clearSelection();
+<a class="jxr_linenumber" name="L323" href="#L323">323</a> 			centrolist.clearSelection();
+<a class="jxr_linenumber" name="L324" href="#L324">324</a> 			directorlist.clearSelection();
+<a class="jxr_linenumber" name="L325" href="#L325">325</a> 			secretariolist.clearSelection();
+<a class="jxr_linenumber" name="L326" href="#L326">326</a> 		}
+<a class="jxr_linenumber" name="L327" href="#L327">327</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == editarcursobutton &amp;&amp; !secretariolist.isSelectionEmpty() &amp;&amp; !directorlist.isSelectionEmpty()
+<a class="jxr_linenumber" name="L328" href="#L328">328</a> 				&amp;&amp; !centrolist.isSelectionEmpty()) {
+<a class="jxr_linenumber" name="L329" href="#L329">329</a> 			gestor.editarPropuestaCurso(idtext.getText(), nombretext.getText(),
+<a class="jxr_linenumber" name="L330" href="#L330">330</a> 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(), fechafin.getDate(),
+<a class="jxr_linenumber" name="L331" href="#L331">331</a> 					Double.parseDouble(importetext.getText()), Integer.parseInt(ediciontext.getText()),
+<a class="jxr_linenumber" name="L332" href="#L332">332</a> 					EstadoCurso.PROPUESTO,
+<a class="jxr_linenumber" name="L333" href="#L333">333</a> 					TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()),
+<a class="jxr_linenumber" name="L334" href="#L334">334</a> 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()),
+<a class="jxr_linenumber" name="L335" href="#L335">335</a> 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()),
+<a class="jxr_linenumber" name="L336" href="#L336">336</a> 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
+<a class="jxr_linenumber" name="L337" href="#L337">337</a> 		}
+<a class="jxr_linenumber" name="L338" href="#L338">338</a> 		<strong class="jxr_keyword">if</strong> (e.getSource() == edicionbutton &amp;&amp; !secretariolist.isSelectionEmpty() &amp;&amp; !directorlist.isSelectionEmpty()
+<a class="jxr_linenumber" name="L339" href="#L339">339</a> 				&amp;&amp; !centrolist.isSelectionEmpty()) {
+<a class="jxr_linenumber" name="L340" href="#L340">340</a> 			gestor.realizarPropuestaCurso(idtext.getText() + <span class="jxr_string">"(1)"</span>, nombretext.getText(),
+<a class="jxr_linenumber" name="L341" href="#L341">341</a> 					Integer.parseInt(creditostext.getText()), fechainicio.getDate(), fechafin.getDate(),
+<a class="jxr_linenumber" name="L342" href="#L342">342</a> 					Double.parseDouble(importetext.getText()), Integer.parseInt(ediciontext.getText()) + 1,
+<a class="jxr_linenumber" name="L343" href="#L343">343</a> 					EstadoCurso.PROPUESTO,
+<a class="jxr_linenumber" name="L344" href="#L344">344</a> 					TipoCurso.valueOf(tipocombobox.getModel().getElementAt(tipocombobox.getSelectedIndex()).toString()),
+<a class="jxr_linenumber" name="L345" href="#L345">345</a> 					directorlist.getModel().getElementAt(directorlist.getSelectedIndex()),
+<a class="jxr_linenumber" name="L346" href="#L346">346</a> 					secretariolist.getModel().getElementAt(secretariolist.getSelectedIndex()),
+<a class="jxr_linenumber" name="L347" href="#L347">347</a> 					Integer.parseInt(centrolist.getModel().getElementAt(centrolist.getSelectedIndex()).toString()));
+<a class="jxr_linenumber" name="L348" href="#L348">348</a> 
+<a class="jxr_linenumber" name="L349" href="#L349">349</a> 			modelcurso.addElement(idtext.getText() + <span class="jxr_string">"(1)"</span>);
+<a class="jxr_linenumber" name="L350" href="#L350">350</a> 			cursolist.setModel(modelcurso);
+<a class="jxr_linenumber" name="L351" href="#L351">351</a> 		}
+<a class="jxr_linenumber" name="L352" href="#L352">352</a> 	}
+<a class="jxr_linenumber" name="L353" href="#L353">353</a> 
+<a class="jxr_linenumber" name="L354" href="#L354">354</a> 	@Override
+<a class="jxr_linenumber" name="L355" href="#L355">355</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseClicked(MouseEvent e) {
+<a class="jxr_linenumber" name="L356" href="#L356">356</a> 		<strong class="jxr_keyword">if</strong> (e.getClickCount() == 2 &amp;&amp; e.getSource() == cursolist) {
+<a class="jxr_linenumber" name="L357" href="#L357">357</a> 
+<a class="jxr_linenumber" name="L358" href="#L358">358</a> 			String selectedItem = cursolist.getSelectedValue();
+<a class="jxr_linenumber" name="L359" href="#L359">359</a> 			CursoPropio curso = gestor.listarCurso(selectedItem);
+<a class="jxr_linenumber" name="L360" href="#L360">360</a> 
+<a class="jxr_linenumber" name="L361" href="#L361">361</a> 			fechainicio.setDate(curso.getFechaInicio());
+<a class="jxr_linenumber" name="L362" href="#L362">362</a> 			fechafin.setDate(curso.getFechaFin());
+<a class="jxr_linenumber" name="L363" href="#L363">363</a> 
+<a class="jxr_linenumber" name="L364" href="#L364">364</a> 			nombretext.setText(curso.getNombre());
+<a class="jxr_linenumber" name="L365" href="#L365">365</a> 			creditostext.setText(curso.getECTS() + <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L366" href="#L366">366</a> 			importetext.setText(curso.getTasaMatricula() + <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L367" href="#L367">367</a> 
+<a class="jxr_linenumber" name="L368" href="#L368">368</a> 			ediciontext.setText(curso.getEdicion() + <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L369" href="#L369">369</a> 			estadotext.setText(curso.getEstado().toString());
+<a class="jxr_linenumber" name="L370" href="#L370">370</a> 			idtext.setText(selectedItem);
+<a class="jxr_linenumber" name="L371" href="#L371">371</a> 			ediciontext.setEditable(false);
+<a class="jxr_linenumber" name="L372" href="#L372">372</a> 			idtext.setEditable(false);
+<a class="jxr_linenumber" name="L373" href="#L373">373</a> 			edicionlabel.setEnabled(false);
+<a class="jxr_linenumber" name="L374" href="#L374">374</a> 			idlabel.setEnabled(false);
+<a class="jxr_linenumber" name="L375" href="#L375">375</a> 			nuevocursobutton.setEnabled(false);
+<a class="jxr_linenumber" name="L376" href="#L376">376</a> 			editarcursobutton.setEnabled(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L377" href="#L377">377</a> 			edicionbutton.setEnabled(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L378" href="#L378">378</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; TipoCurso.values().length; i++) {
+<a class="jxr_linenumber" name="L379" href="#L379">379</a> 				<strong class="jxr_keyword">if</strong> (tipocombobox.getModel().getElementAt(i).toString().equals(curso.getTipo().toString())) {
+<a class="jxr_linenumber" name="L380" href="#L380">380</a> 					tipocombobox.setSelectedItem(tipocombobox.getModel().getElementAt(i));
+<a class="jxr_linenumber" name="L381" href="#L381">381</a> 				}
+<a class="jxr_linenumber" name="L382" href="#L382">382</a> 			}
+<a class="jxr_linenumber" name="L383" href="#L383">383</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; centrolist.getModel().getSize(); i++) {
+<a class="jxr_linenumber" name="L384" href="#L384">384</a> 				<strong class="jxr_keyword">if</strong> (centrolist.getModel().getElementAt(i).toString().equals(curso.getIdCentro() + <span class="jxr_string">""</span>)) {
+<a class="jxr_linenumber" name="L385" href="#L385">385</a> 					centrolist.setSelectedIndex(i);
+<a class="jxr_linenumber" name="L386" href="#L386">386</a> 				}
+<a class="jxr_linenumber" name="L387" href="#L387">387</a> 			}
+<a class="jxr_linenumber" name="L388" href="#L388">388</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; directorlist.getModel().getSize(); i++) {
+<a class="jxr_linenumber" name="L389" href="#L389">389</a> 				<strong class="jxr_keyword">if</strong> (directorlist.getModel().getElementAt(i).equals(curso.getIdDirector())) {
+<a class="jxr_linenumber" name="L390" href="#L390">390</a> 					directorlist.setSelectedIndex(i);
+<a class="jxr_linenumber" name="L391" href="#L391">391</a> 				}
+<a class="jxr_linenumber" name="L392" href="#L392">392</a> 			}
+<a class="jxr_linenumber" name="L393" href="#L393">393</a> 			<strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; secretariolist.getModel().getSize(); i++) {
+<a class="jxr_linenumber" name="L394" href="#L394">394</a> 				<strong class="jxr_keyword">if</strong> (secretariolist.getModel().getElementAt(i).equals(curso.getIdSecretario())) {
+<a class="jxr_linenumber" name="L395" href="#L395">395</a> 					secretariolist.setSelectedIndex(i);
+<a class="jxr_linenumber" name="L396" href="#L396">396</a> 				}
+<a class="jxr_linenumber" name="L397" href="#L397">397</a> 			}
+<a class="jxr_linenumber" name="L398" href="#L398">398</a> 
+<a class="jxr_linenumber" name="L399" href="#L399">399</a> 		}
+<a class="jxr_linenumber" name="L400" href="#L400">400</a> 	}
+<a class="jxr_linenumber" name="L401" href="#L401">401</a> 
+<a class="jxr_linenumber" name="L402" href="#L402">402</a> 	@Override
+<a class="jxr_linenumber" name="L403" href="#L403">403</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mousePressed(MouseEvent e) {
+<a class="jxr_linenumber" name="L404" href="#L404">404</a> 		<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L405" href="#L405">405</a> 	}
+<a class="jxr_linenumber" name="L406" href="#L406">406</a> 
+<a class="jxr_linenumber" name="L407" href="#L407">407</a> 	@Override
+<a class="jxr_linenumber" name="L408" href="#L408">408</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseReleased(MouseEvent e) {
+<a class="jxr_linenumber" name="L409" href="#L409">409</a> 		<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L410" href="#L410">410</a> 	}
+<a class="jxr_linenumber" name="L411" href="#L411">411</a> 
+<a class="jxr_linenumber" name="L412" href="#L412">412</a> 	@Override
+<a class="jxr_linenumber" name="L413" href="#L413">413</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseEntered(MouseEvent e) {
+<a class="jxr_linenumber" name="L414" href="#L414">414</a> 		<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L415" href="#L415">415</a> 	}
+<a class="jxr_linenumber" name="L416" href="#L416">416</a> 
+<a class="jxr_linenumber" name="L417" href="#L417">417</a> 	@Override
+<a class="jxr_linenumber" name="L418" href="#L418">418</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> mouseExited(MouseEvent e) {
+<a class="jxr_linenumber" name="L419" href="#L419">419</a> 		<strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L420" href="#L420">420</a> 	}
+<a class="jxr_linenumber" name="L421" href="#L421">421</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2022. All rights reserved.</div>

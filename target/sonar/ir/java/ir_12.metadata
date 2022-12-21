@@ -1,1 +1,1 @@
-negocio.entities.Matricula#setEstudiante(Lnegocio/entities/Estudiante;)V
+negocio.entities.Matricula#getEstudiante()Lnegocio/entities/Estudiante;

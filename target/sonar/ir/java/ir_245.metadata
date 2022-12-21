@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setIdCentro(I)V
+negocio.entities.CursoPropio#getIdSecretario()Ljava/lang/String;

@@ -1,1 +1,1 @@
-negocio.entities.Matricula#setPagado(Z)V
+negocio.entities.Matricula#isPagado()Z

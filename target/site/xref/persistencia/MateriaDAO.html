@@ -16,7 +16,7 @@
 <a class="jxr_linenumber" name="L8" href="#L8">8</a>   
 <a class="jxr_linenumber" name="L9" href="#L9">9</a>   	<strong class="jxr_keyword">public</strong> <a name="MateriaDAO" href="../persistencia/MateriaDAO.html#MateriaDAO">MateriaDAO</a>(Class entityClass) {
 <a class="jxr_linenumber" name="L10" href="#L10">10</a>  		<strong class="jxr_keyword">super</strong>(entityClass);
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  		<strong class="jxr_keyword">this</strong>.abstractEntityDAO = <strong class="jxr_keyword">new</strong> <a name="AbstractEntityDAO" href="../persistencia/AbstractEntityDAO.html#AbstractEntityDAO">AbstractEntityDAO</a>(entityClass) {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  		<strong class="jxr_keyword">this</strong>.abstractEntityDAO = <strong class="jxr_keyword">new</strong> AbstractEntityDAO&lt;Materia&gt;(entityClass) {
 <a class="jxr_linenumber" name="L12" href="#L12">12</a>  		};
 <a class="jxr_linenumber" name="L13" href="#L13">13</a>  	}
 <a class="jxr_linenumber" name="L14" href="#L14">14</a>  
@@ -24,15 +24,11 @@
 <a class="jxr_linenumber" name="L16" href="#L16">16</a>  		abstractEntityDAO.save(materia);
 <a class="jxr_linenumber" name="L17" href="#L17">17</a>  	}
 <a class="jxr_linenumber" name="L18" href="#L18">18</a>  
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  	<strong class="jxr_keyword">public</strong> <a name="Materia" href<a name="Materia" href="../negocio/entities/Materia.html#Materia">Materia</a>gocio/entities/Materia.html#Materia">Materia</a> listarMateria(<a name="Materia" href="../negocio/entities/Materia.html#Materia">Materia</a> materia) {
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>  		<strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException();
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> editarMateria(<a name="Materia" href="../negocio/entities/Materia.html#Materia">Materia</a> materia) {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  		abstractEntityDAO.update(materia);
 <a class="jxr_linenumber" name="L21" href="#L21">21</a>  	}
 <a class="jxr_linenumber" name="L22" href="#L22">22</a>  
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> editarMateria(<a name="Materia" href="../negocio/entities/Materia.html#Materia">Materia</a> materia) {
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>  		abstractEntityDAO.update(materia);
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  	}
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  }
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2022. All rights reserved.</div>

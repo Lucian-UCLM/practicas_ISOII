@@ -1,1 +1,1 @@
-negocio.entities.Matricula#isPagado()Z
+negocio.entities.Matricula#setFecha(Ljava/util/Date;)V

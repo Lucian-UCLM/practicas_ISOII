@@ -1,1 +1,1 @@
-negocio.entities.Centro#setLocalizacion(Ljava/lang/String;)V
+negocio.entities.Centro#setCursoPropios(Ljava/util/Collection;)V

@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#getECTS()I
+negocio.entities.CursoPropio#setFechaInicio(Ljava/util/Date;)V

@@ -1,1 +1,1 @@
-negocio.entities.Centro#getPlantilla()Ljava/util/Collection;
+negocio.entities.Centro#toString()Ljava/lang/String;

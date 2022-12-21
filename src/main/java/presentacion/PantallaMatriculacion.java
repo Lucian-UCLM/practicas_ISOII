@@ -10,6 +10,7 @@ import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
 import negocio.entities.EstadoCurso;
 import negocio.entities.Estudiante;
+import negocio.entities.Generated;
 import negocio.entities.Matricula;
 import negocio.entities.ModoPago;
 
@@ -28,7 +29,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.awt.Color;
-
+@Generated
 public class PantallaMatriculacion extends JFrame implements ActionListener{
 	
 	private DefaultListModel<String> modelCurso = new DefaultListModel<>();
@@ -161,7 +162,7 @@ public class PantallaMatriculacion extends JFrame implements ActionListener{
 		listEstudiantes.setModel(modelEstudiantes);
 		
 		MouseListener mouseListener = new MouseAdapter() {
-			@Override
+			@Override @Generated
 			public void mouseClicked(MouseEvent e) {
 				if (e.getSource() == listEstudiantes) {
 					modelCurso.clear();

@@ -1,87 +1,18 @@
 
-8persistencia.AbstractEntityDAO#show(I)Ljava/lang/Object;a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaU U("1*”
-1a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaV V(•’
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaV V(
-%0org.hibernate.Session"Bpersistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;*>
+9negocio.entities.Materia#getFechaInicio()Ljava/util/Date;[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaJ J("1*¡
+1[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaK	 K(Ç
+Ä
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaK	 K(
+%0java.util.Date"__id*I
 
-__unknown_file (" 
-persistencia.AbstractEntityDAO2getSession()È
-Å
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaV V(
-sesionorg.hibernate.Session"__id*9
-
-__unknown_file (
-
-%0org.hibernate.Session­ª
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaW W(
-%1org.hibernate.Transaction"Qorg.hibernate.SharedSessionContract#beginTransaction()Lorg/hibernate/Transaction;*=
-
-__unknown_file (!
-
-sesionorg.hibernate.Session2beginTransaction()Ô
-Ñ
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaX X()
-%2java.lang.Class"__id*O
-
-__unknown_file (3*1 
-persistencia.AbstractEntityDAO"
-entityClassƒ€
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaX X(.
-%3E"Porg.hibernate.Session#get(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*=
-
-__unknown_file (!
-
-sesionorg.hibernate.Session*3
-
-__unknown_file (
-
-%2java.lang.Class*"
-
-__unknown_file (
-""2(get(Ljava/lang/Class;Ljava/lang/Object;)°
-­
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaX X(/
-entidadjava.lang.Object"__id*%
-
-__unknown_file (	
-
-%3E©¦
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaY Y(
-%4org.hibernate.Transaction"Oorg.hibernate.SharedSessionContract#getTransaction()Lorg/hibernate/Transaction;*=
-
-__unknown_file (!
-
-sesionorg.hibernate.Session2getTransaction()ìé
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaY Y("
-
-%5void"/jakarta.persistence.EntityTransaction#commit()V*=
-
-__unknown_file (!
-
-%4org.hibernate.Transaction2commit()èå
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.javaZ Z(
-
-%6void",org.hibernate.SharedSessionContract#close()V*=
-
-__unknown_file (!
-
-sesionorg.hibernate.Session2close()"‚
-a
-WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java[ [(
-
-entidadjava.lang.Object: 
-
-__unknown_file (
-""B" 
-persistencia.AbstractEntityDAOH
+__unknown_file (-*+
+negocio.entities.Materia"
+fechaInicio"u
+[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaK K(
+
+%0java.util.DateB
+negocio.entities.MateriaH

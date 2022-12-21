@@ -1,9 +1,28 @@
 
-%negocio.entities.Profesor#isDoctor()Z\
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java> >("1*É
+%negocio.entities.Profesor#hashCode()I\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaN N("1*•
 1\
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java?	 ?("f
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaO	 O(Ã
+À
 \
-RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java? ?(
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaO O(
+%0java.lang.String"__id*B
+
+__unknown_file (&*$
+negocio.entities.Profesor"
+dniƒ
+€
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaO	 O(	
+%1int",java.util.Objects#hash([Ljava/lang/Object;)I*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%0java.lang.String"f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaO O(
 ""B
 negocio.entities.ProfesorH

@@ -1,3 +1,0 @@
-negocio.controllers.GestorConsultas#consultarEstadoCursos(Lnegocio/entities/EstadoCurso;Ljava/util/Date;Ljava/util/Date;)Ljava/util/List;
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#

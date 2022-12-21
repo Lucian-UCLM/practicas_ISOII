@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#instance-init#
+negocio.entities.CursoPropio#getId()Ljava/lang/String;

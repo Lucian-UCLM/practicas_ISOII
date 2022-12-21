@@ -4,6 +4,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
+import negocio.entities.Generated;
+
 import javax.swing.JLabel;
 
 import javax.swing.JButton;
@@ -13,7 +15,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.WindowConstants;
 import javax.swing.JTextField;
-
+@Generated
 public class PantallaLogin extends JFrame implements ActionListener {
 	
 	private JButton loginButton = new JButton("Login");

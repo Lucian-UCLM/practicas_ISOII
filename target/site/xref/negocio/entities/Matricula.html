@@ -9,56 +9,56 @@
 <a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> negocio.entities;
 <a class="jxr_linenumber" name="L2" href="#L2">2</a>   
 <a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> java.util.Date;
-<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Column;
-<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Entity;
-<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Id;
-<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Table;
-<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Transient;
-<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
-<a class="jxr_linenumber" name="L10" href="#L10">10</a>  @Entity
-<a class="jxr_linenumber" name="L11" href="#L11">11</a>  @Table(name = <span class="jxr_string">"Matricula"</span>)
-<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a> {
-<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
-<a class="jxr_linenumber" name="L14" href="#L14">14</a>  	@Id
-<a class="jxr_linenumber" name="L15" href="#L15">15</a>  	@Column(name = <span class="jxr_string">"idmatricula"</span>)
-<a class="jxr_linenumber" name="L16" href="#L16">16</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> idMatricula;
-<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
-<a class="jxr_linenumber" name="L18" href="#L18">18</a>  	@Column(name = <span class="jxr_string">"fecha"</span>)
-<a class="jxr_linenumber" name="L19" href="#L19">19</a>  	<strong class="jxr_keyword">private</strong> Date fecha;
-<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
-<a class="jxr_linenumber" name="L21" href="#L21">21</a>  	@Column(name = <span class="jxr_string">"pagado"</span>)
-<a class="jxr_linenumber" name="L22" href="#L22">22</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> pagado;
-<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
-<a class="jxr_linenumber" name="L24" href="#L24">24</a>  	@Column(name = <span class="jxr_string">"tipopago"</span>)
-<a class="jxr_linenumber" name="L25" href="#L25">25</a>  	ModoPago tipoPago;
-<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
-<a class="jxr_linenumber" name="L27" href="#L27">27</a>  	@Transient
-<a class="jxr_linenumber" name="L28" href="#L28">28</a>  	Estudiante estudiante;
-<a class="jxr_linenumber" name="L29" href="#L29">29</a>  
-<a class="jxr_linenumber" name="L30" href="#L30">30</a>  	@Column(name = <span class="jxr_string">"estudiante"</span>)
-<a class="jxr_linenumber" name="L31" href="#L31">31</a>  	String idEstudiante;
-<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
-<a class="jxr_linenumber" name="L33" href="#L33">33</a>  	@Transient
-<a class="jxr_linenumber" name="L34" href="#L34">34</a>  	CursoPropio titulo;
-<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
-<a class="jxr_linenumber" name="L36" href="#L36">36</a>  	@Column(name = <span class="jxr_string">"titulo"</span>)
-<a class="jxr_linenumber" name="L37" href="#L37">37</a>  	String idTitulo;
-<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
-<a class="jxr_linenumber" name="L39" href="#L39">39</a>  	<strong class="jxr_keyword">public</strong> <a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a>() {
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> java.util.Objects;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Column;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Entity;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Id;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> jakarta.persistence.Table;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> jakarta.persistence.Transient;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  @Entity
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  @Table(name = <span class="jxr_string">"Matricula"</span>)
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  	@Id
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  	@Column(name = <span class="jxr_string">"idmatricula"</span>)
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> idMatricula;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  	@Column(name = <span class="jxr_string">"fecha"</span>)
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  	<strong class="jxr_keyword">private</strong> Date fecha;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  	@Column(name = <span class="jxr_string">"pagado"</span>)
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  	<strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> pagado;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  	@Column(name = <span class="jxr_string">"tipopago"</span>)
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  	ModoPago tipoPago;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  	@Transient
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  	Estudiante estudiante;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  	@Column(name = <span class="jxr_string">"estudiante"</span>)
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  	String idEstudiante;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  	@Transient
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  	CursoPropio titulo;
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  	@Column(name = <span class="jxr_string">"titulo"</span>)
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  	String idTitulo;
 <a class="jxr_linenumber" name="L40" href="#L40">40</a>  
-<a class="jxr_linenumber" name="L41" href="#L41">41</a>  	}
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  	<strong class="jxr_keyword">public</strong> <a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a>() {
 <a class="jxr_linenumber" name="L42" href="#L42">42</a>  
-<a class="jxr_linenumber" name="L43" href="#L43">43</a>  	<strong class="jxr_keyword">public</strong> <a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a>(<strong class="jxr_keyword">int</strong> idMatricula, Date fecha, <strong class="jxr_keyword">boolean</strong> pagado, <a name="ModoPago" href="../../negocio/entities/ModoPago.html#ModoPago">ModoPago</a> tipoPago, <a name="Estudiante" href="../../negocio/entities/Estudiante.html#Estudiante">Estudiante</a> estudiante,
-<a class="jxr_linenumber" name="L44" href="#L44">44</a>  			CursoPropio titulo) {
-<a class="jxr_linenumber" name="L45" href="#L45">45</a>  		<strong class="jxr_keyword">super</strong>();
-<a class="jxr_linenumber" name="L46" href="#L46">46</a>  		<strong class="jxr_keyword">this</strong>.idMatricula = idMatricula;
-<a class="jxr_linenumber" name="L47" href="#L47">47</a>  		<strong class="jxr_keyword">this</strong>.fecha = fecha;
-<a class="jxr_linenumber" name="L48" href="#L48">48</a>  		<strong class="jxr_keyword">this</strong>.pagado = pagado;
-<a class="jxr_linenumber" name="L49" href="#L49">49</a>  		<strong class="jxr_keyword">this</strong>.tipoPago = tipoPago;
-<a class="jxr_linenumber" name="L50" href="#L50">50</a>  		<strong class="jxr_keyword">this</strong>.estudiante = estudiante;
-<a class="jxr_linenumber" name="L51" href="#L51">51</a>  		<strong class="jxr_keyword">this</strong>.titulo = titulo;
-<a class="jxr_linenumber" name="L52" href="#L52">52</a>  		<strong class="jxr_keyword">this</strong>.idEstudiante = estudiante.getDni();
-<a class="jxr_linenumber" name="L53" href="#L53">53</a>  		<strong class="jxr_keyword">this</strong>.idTitulo = titulo.getId();
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  	}
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  	<strong class="jxr_keyword">public</strong> <a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a>(<strong class="jxr_keyword">int</strong> idMatricula, Date fecha, <strong class="jxr_keyword">boolean</strong> pagado, <a name="ModoPago" href="../../negocio/entities/ModoPago.html#ModoPago">ModoPago</a> tipoPago, String estudiante,
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  			String titulo) {
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  		<strong class="jxr_keyword">super</strong>();
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  		<strong class="jxr_keyword">this</strong>.idMatricula = idMatricula;
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  		<strong class="jxr_keyword">this</strong>.fecha = fecha;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  		<strong class="jxr_keyword">this</strong>.pagado = pagado;
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  		<strong class="jxr_keyword">this</strong>.tipoPago = tipoPago;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  		<strong class="jxr_keyword">this</strong>.idEstudiante = estudiante;
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  		<strong class="jxr_keyword">this</strong>.idTitulo = titulo;
 <a class="jxr_linenumber" name="L54" href="#L54">54</a>  	}
 <a class="jxr_linenumber" name="L55" href="#L55">55</a>  
 <a class="jxr_linenumber" name="L56" href="#L56">56</a>  	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getIdMatricula() {
@@ -132,7 +132,29 @@
 <a class="jxr_linenumber" name="L124" href="#L124">124</a> 				+ <span class="jxr_string">", idTitulo="</span> + idTitulo + <span class="jxr_string">"]"</span>;
 <a class="jxr_linenumber" name="L125" href="#L125">125</a> 	}
 <a class="jxr_linenumber" name="L126" href="#L126">126</a> 
-<a class="jxr_linenumber" name="L127" href="#L127">127</a> }
+<a class="jxr_linenumber" name="L127" href="#L127">127</a> 	@Override
+<a class="jxr_linenumber" name="L128" href="#L128">128</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> hashCode() {
+<a class="jxr_linenumber" name="L129" href="#L129">129</a> 		<strong class="jxr_keyword">return</strong> Objects.hash(estudiante, fecha, idEstudiante, idMatricula, idTitulo, pagado, tipoPago, titulo);
+<a class="jxr_linenumber" name="L130" href="#L130">130</a> 	}
+<a class="jxr_linenumber" name="L131" href="#L131">131</a> 
+<a class="jxr_linenumber" name="L132" href="#L132">132</a> 	@Override
+<a class="jxr_linenumber" name="L133" href="#L133">133</a> 	<strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> equals(Object obj) {
+<a class="jxr_linenumber" name="L134" href="#L134">134</a> 		<strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong> == obj)
+<a class="jxr_linenumber" name="L135" href="#L135">135</a> 			<strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L136" href="#L136">136</a> 		<strong class="jxr_keyword">if</strong> (obj == <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="L137" href="#L137">137</a> 			<strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L138" href="#L138">138</a> 		<strong class="jxr_keyword">if</strong> (getClass() != obj.getClass())
+<a class="jxr_linenumber" name="L139" href="#L139">139</a> 			<strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L140" href="#L140">140</a> 		Matricula other = (<a name="Matricula" href="../../negocio/entities/Matricula.html#Matricula">Matricula</a>) obj;
+<a class="jxr_linenumber" name="L141" href="#L141">141</a> 		<strong class="jxr_keyword">return</strong> Objects.equals(estudiante, other.estudiante) &amp;&amp; Objects.equals(fecha, other.fecha)
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> 				&amp;&amp; Objects.equals(idEstudiante, other.idEstudiante) &amp;&amp; idMatricula == other.idMatricula
+<a class="jxr_linenumber" name="L143" href="#L143">143</a> 				&amp;&amp; Objects.equals(idTitulo, other.idTitulo) &amp;&amp; pagado == other.pagado &amp;&amp; tipoPago == other.tipoPago
+<a class="jxr_linenumber" name="L144" href="#L144">144</a> 				&amp;&amp; Objects.equals(titulo, other.titulo);
+<a class="jxr_linenumber" name="L145" href="#L145">145</a> 	}
+<a class="jxr_linenumber" name="L146" href="#L146">146</a> 
+<a class="jxr_linenumber" name="L147" href="#L147">147</a> 
+<a class="jxr_linenumber" name="L148" href="#L148">148</a> 
+<a class="jxr_linenumber" name="L149" href="#L149">149</a> }
 </pre>
 <hr/>
 <div id="footer">Copyright &#169; 2022. All rights reserved.</div>

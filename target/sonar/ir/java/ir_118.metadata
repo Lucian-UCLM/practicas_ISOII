@@ -1,3 +1,13 @@
-presentacion.PantallaEmpleadosVicerrectorado#instance-init#
-javax.swing.DefaultListModel#instance-init#
-javax.swing.DefaultListModel#<init>()V
+presentacion.PantallaEmpleadosVicerrectorado#<init>()V
+javax.swing.border.EmptyBorder#<init>(IIII)V
+java.util.ArrayList#<init>()V
+java.awt.Color#instance-init#
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+java.awt.Color#<init>(III)V
+java.util.ArrayList#instance-init#
+javax.swing.JPanel#<init>()V
+javax.swing.JLabel#instance-init#
+javax.swing.DefaultComboBoxModel#instance-init#
+javax.swing.border.EmptyBorder#instance-init#
+javax.swing.JPanel#instance-init#
+javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V

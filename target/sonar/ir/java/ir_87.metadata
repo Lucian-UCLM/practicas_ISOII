@@ -1,2 +1,1 @@
-persistencia.CursoPropioDAO#listarCursosWhere(Lnegocio/entities/EstadoCurso;)Ljava/util/List;
-java.lang.Enum#ordinal()I
+persistencia.CursoPropioDAO#crearNuevoCurso(Lnegocio/entities/CursoPropio;)V

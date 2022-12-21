@@ -19,6 +19,7 @@ import javax.swing.JTable;
 
 import negocio.controllers.GestorPropuestasCursos;
 import negocio.entities.CursoPropio;
+import negocio.entities.Generated;
 import negocio.entities.TipoCurso;
 
 import java.awt.Color;
@@ -29,7 +30,7 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 
 import com.toedter.calendar.JDateChooser;
-
+@Generated
 public class PantallaJefeGabineteVicerrectorado extends JFrame implements ActionListener{
 	private JPanel contentPane;
 	

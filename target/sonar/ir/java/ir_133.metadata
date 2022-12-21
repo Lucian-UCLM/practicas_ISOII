@@ -1,3 +1,1 @@
-persistencia.AbstractEntityDAO#instance-init#
-java.util.ArrayList#<init>()V
-java.util.ArrayList#instance-init#
+persistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;

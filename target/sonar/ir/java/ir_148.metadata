@@ -1,1 +1,1 @@
-negocio.entities.Materia#getNombre()Ljava/lang/String;
+negocio.entities.Materia#getFechaInicio()Ljava/util/Date;

@@ -1,1 +1,1 @@
-negocio.entities.Matricula#<init>(ILjava/util/Date;ZLnegocio/entities/ModoPago;Lnegocio/entities/Estudiante;Lnegocio/entities/CursoPropio;)V
+negocio.entities.Matricula#<init>()V

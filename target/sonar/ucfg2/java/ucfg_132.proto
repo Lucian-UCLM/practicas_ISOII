@@ -1,18 +1,18 @@
 
-6negocio.entities.Materia#getNombre()Ljava/lang/String;[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java8 8("1* 
+Dnegocio.entities.Materia#getResponsable()Lnegocio/entities/Profesor;[
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaZ Z("1*¸
 1[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java9	 9(Ä
-Á
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java[	 [(Ò
+Ï
 [
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java9	 9(
-%0java.lang.String"__id*D
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java[	 [(
+%0negocio.entities.Profesor"__id*I
 
-__unknown_file ((*&
-negocio.entities.Materia"
-nombre"w
+__unknown_file (-*+
+negocio.entities.Materia"
+responsable"€
 [
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java9 9(
-
-%0java.lang.StringB
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java[ [(!
+
+%0negocio.entities.ProfesorB
 negocio.entities.MateriaH

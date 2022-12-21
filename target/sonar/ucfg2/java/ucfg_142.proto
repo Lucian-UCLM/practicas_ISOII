@@ -1,18 +1,192 @@
 
-Anegocio.entities.Materia#getCurso()Lnegocio/entities/CursoPropio;[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.java` `("1*∏
-1[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaa	 a(œ
-Ã
-[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaa	 a("
-%0negocio.entities.CursoPropio"__id*C
+4negocio.entities.Materia#equals(Ljava/lang/Object;)Z]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaá á("startingBlock*’
+2]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaê ê(∆
+√
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaê ê(
+%8java.lang.String"__id*D
 
-__unknown_file ('*%
-negocio.entities.Materia"
-curso"É
-[
-QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaa a($
-"
-%0negocio.entities.CursoPropioB
+__unknown_file ((*&
+negocio.entities.Materia"
+nombreÕ
+ 
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaê ê(*
+%9java.lang.String"__id*K
+
+__unknown_file (/*-
+!
+othernegocio.entities.Materia"
+nombre“
+œ
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaê ê(+
+%10boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%8java.lang.String*4
+
+__unknown_file (
+
+%9java.lang.String*
+1*é
+startingBlock]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaá á("‡
+›
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaÜ Ü(
+
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.ObjectÆ
+´
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaá á(!
+objjava.lang.Object"__annotation*#
+
+__unknown_file (
+
+%11*
+
+7
+8
+10*Â
+4]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè3 è(:Õ
+ 
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaèB è(O
+%5java.lang.String"__id*K
+
+__unknown_file (/*-
+negocio.entities.Materia"
+idResponsable‘
+—
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaèQ è(d
+%6java.lang.String"__id*R
+
+__unknown_file (6*4
+!
+othernegocio.entities.Materia"
+idResponsable—
+Œ
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè3 è(e
+%7boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%5java.lang.String*4
+
+__unknown_file (
+
+%6java.lang.String*
+2
+1*°
+5]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaé é(¬
+ø
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaé é( !
+othernegocio.entities.Materia"__id*5
+
+__unknown_file (
+
+objjava.lang.Object«
+ƒ
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè è(
+%2java.lang.String"__id*E
+
+__unknown_file ()*'
+negocio.entities.Materia"	
+idCursoŒ
+À
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè! è(.
+%3java.lang.String"__id*L
+
+__unknown_file (0*.
+!
+othernegocio.entities.Materia"	
+idCurso—
+Œ
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè	 è(/
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String*	
+2
+4
+1*À
+6]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaç
+ ç("g
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaç ç(
+""*«
+7]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaå å(ÌÍ
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaå å(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+negocio.entities.Materia2
+getClass()ÍÁ
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaå å("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()*
+5
+6*À
+8]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaã
+ ã("g
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaã ã(
+""*Ã
+10]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaâ
+ â("g
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaâ â(
+""*À
+1]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè ê(,"g
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaè ê(,
+"":x
+]
+QC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Materia.javaá á(!
+objjava.lang.ObjectB
 negocio.entities.MateriaH

@@ -1,1 +1,1 @@
-negocio.entities.Matricula#getFecha()Ljava/util/Date;
+negocio.entities.Matricula#setIdMatricula(I)V

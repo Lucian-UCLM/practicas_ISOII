@@ -1,3 +1,5 @@
-negocio.controllers.GestorMatriculacion#realizarPagoTarjeta(Lnegocio/entities/CursoPropio;Lnegocio/entities/Estudiante;)V
-java.lang.UnsupportedOperationException#<init>()V
-java.lang.UnsupportedOperationException#instance-init#
+negocio.controllers.GestorMatriculacion#instance-init#
+persistencia.EstudianteDAO#instance-init#
+persistencia.MatriculaDAO#instance-init#
+persistencia.EstudianteDAO#<init>(Ljava/lang/Class;)V
+persistencia.MatriculaDAO#<init>(Ljava/lang/Class;)V

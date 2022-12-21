@@ -1,1 +1,1 @@
-negocio.entities.Estudiante#getNombre()Ljava/lang/String;
+negocio.entities.Estudiante#setDni(Ljava/lang/String;)V

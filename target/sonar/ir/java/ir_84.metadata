@@ -1,1 +1,1 @@
-persistencia.CursoPropioDAO#crearNuevoCurso(Lnegocio/entities/CursoPropio;)V
+negocio.entities.ProfesorExterno#toString()Ljava/lang/String;

@@ -1,1 +1,1 @@
-negocio.entities.Profesor#isDoctor()Z
+negocio.entities.Profesor#toString()Ljava/lang/String;

@@ -1,1 +1,1 @@
-negocio.entities.ProfesorUCLM#getCategoria()Lnegocio/entities/CategoriaProfesor;
+negocio.entities.ProfesorUCLM#getCentroAdscripcion()Lnegocio/entities/Centro;

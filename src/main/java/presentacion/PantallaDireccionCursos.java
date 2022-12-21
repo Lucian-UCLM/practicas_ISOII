@@ -31,9 +31,10 @@ import negocio.controllers.*;
 import negocio.entities.Centro;
 import negocio.entities.CursoPropio;
 import negocio.entities.EstadoCurso;
+import negocio.entities.Generated;
 import negocio.entities.ProfesorUCLM;
 import negocio.entities.TipoCurso;
-
+@Generated
 public class PantallaDireccionCursos extends JFrame implements ActionListener, MouseListener {
 	private JLabel edicionlabel;
 	private JLabel idlabel;

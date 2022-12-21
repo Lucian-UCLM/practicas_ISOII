@@ -1,1 +1,2 @@
-negocio.entities.Profesor#setDoctor(Z)V
+negocio.entities.Profesor#hashCode()I
+java.util.Objects#hash([Ljava/lang/Object;)I

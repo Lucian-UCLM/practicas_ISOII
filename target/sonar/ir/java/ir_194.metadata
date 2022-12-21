@@ -1,1 +1,1 @@
-persistencia.EstudianteDAO#listarEstudiantes()Ljava/util/List;
+persistencia.EstudianteDAO#eliminarEstudiante(Lnegocio/entities/Estudiante;)V

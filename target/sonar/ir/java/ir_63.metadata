@@ -1,2 +1,3 @@
-presentacion.PantallaJefeGabineteVicerrectorado#<init>()V
-presentacion.PantallaJefeGabineteVicerrectorado#inicializarComponentes()V
+negocio.controllers.GestorMatriculacion#listarEstudiante(Ljava/lang/String;)Lnegocio/entities/Estudiante;
+negocio.entities.Estudiante#<init>()V
+negocio.entities.Estudiante#instance-init#

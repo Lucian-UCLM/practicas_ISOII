@@ -1,1 +1,1 @@
-negocio.entities.Estudiante#getCualificacion()Ljava/lang/String;
+negocio.entities.Estudiante#setTitulacion(Ljava/lang/String;)V

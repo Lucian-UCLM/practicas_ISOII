@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#setEstado(Lnegocio/entities/EstadoCurso;)V
+negocio.entities.CursoPropio#getCentro()Lnegocio/entities/Centro;

@@ -1,1 +1,1 @@
-persistencia.CentroDAO#<init>(Ljava/lang/Class;)V
+persistencia.CentroDAO#crearNuevoCentro(Lnegocio/entities/Centro;)V

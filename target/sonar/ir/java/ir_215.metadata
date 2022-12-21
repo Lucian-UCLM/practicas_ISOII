@@ -1,1 +1,1 @@
-negocio.entities.CursoPropio#<init>()V
+negocio.entities.CursoPropio#setId(Ljava/lang/String;)V

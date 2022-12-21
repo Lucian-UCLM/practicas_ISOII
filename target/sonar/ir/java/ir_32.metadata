@@ -1,1 +1,1 @@
-negocio.controllers.GestorPropuestasCursos#listarCursos()Ljava/util/List;
+negocio.controllers.GestorPropuestasCursos#listarCursosWhere(Lnegocio/entities/TipoCurso;)Ljava/util/List;
