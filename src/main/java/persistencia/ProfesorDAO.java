@@ -14,10 +14,10 @@ public class ProfesorDAO extends AbstractEntityDAO<Object> {
 		};
 	}
 
-	public void crearNuevoProfesor(Profesor profesor) {
+	public void crearNuevoProfesor(ProfesorUCLM profesor) {
 		abstractEntityDAO.save(profesor);
 	}
-	public void eliminarProfesor(Profesor profesor) {
+	public void eliminarProfesor(ProfesorUCLM profesor) {
 		abstractEntityDAO.delete(profesor);
 	}
 	

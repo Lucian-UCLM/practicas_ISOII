@@ -95,16 +95,16 @@ public class PantallaDireccionCursos extends JFrame implements ActionListener, M
 
 		centrolist = new JList<>();
 		centrolist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		centrolist.setBounds(370, 68, 158, 154);
+		centrolist.setBounds(370, 68, 158, 166);
 		contentPane.add(centrolist);
 
 		directorlist = new JList<>();
 		directorlist.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-		directorlist.setBounds(558, 68, 158, 154);
+		directorlist.setBounds(558, 68, 158, 166);
 		contentPane.add(directorlist);
 
 		secretariolist = new JList<>();
-		secretariolist.setBounds(744, 68, 158, 154);
+		secretariolist.setBounds(744, 68, 158, 166);
 		contentPane.add(secretariolist);
 
 		nuevocursobutton.setBounds(138, 414, 158, 21);

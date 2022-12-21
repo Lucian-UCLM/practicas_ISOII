@@ -138,10 +138,7 @@ public class Matricula {
 		if (getClass() != obj.getClass())
 			return false;
 		Matricula other = (Matricula) obj;
-		return Objects.equals(estudiante, other.estudiante) && Objects.equals(fecha, other.fecha)
-				&& Objects.equals(idEstudiante, other.idEstudiante) && idMatricula == other.idMatricula
-				&& Objects.equals(idTitulo, other.idTitulo) && pagado == other.pagado && tipoPago == other.tipoPago
-				&& Objects.equals(titulo, other.titulo);
+		return Objects.equals(idMatricula, other.idMatricula) && Objects.equals(tipoPago, other.tipoPago);
 	}
 
 
