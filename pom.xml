@@ -16,7 +16,6 @@
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.projectKey>Lucian-UCLM_practicas_ISOII</sonar.projectKey>
 		<sonar.login>14891a49bf1f697fe90e7b71c8a86255362c425e</sonar.login>
-		<sonar.coverage.exclusions> </sonar.coverage.exclusions>
 	</properties>
 
 	<dependencies>
@@ -53,6 +52,16 @@
 			<artifactId>jcalendar</artifactId>
 			<version>1.4</version>
 		</dependency>
+		<dependency>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-surefire-plugin</artifactId>
+		    <version>3.0.0-M7</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.maven.plugins</groupId>
+		    <artifactId>maven-surefire-report-plugin</artifactId>
+		    <version>3.0.0-M7</version>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -70,11 +79,7 @@
 			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
-			</plugin>
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.22.1</version>
+				<version>3.10.1</version>
 			</plugin>
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
@@ -98,8 +103,6 @@
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>3.0.0</version>
 			</plugin>
-			
-			
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
@@ -144,7 +147,7 @@
 										<limit implementation="org.jacoco.report.check.Limit">
 											<counter>COMPLEXITY</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>0.10</minimum>
+											<minimum>0.20</minimum>
 										</limit>
 									</limits>
 								</rule>
@@ -153,8 +156,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			
-			
 		</plugins>
 	</build>
 	<reporting>
@@ -172,7 +173,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-report-plugin</artifactId>
-				<version>3.0.0-M5</version>
+				<version>3.0.0-M7</version>
 				<configuration>
 					<skipEmptyReport>false</skipEmptyReport>
 				</configuration>
