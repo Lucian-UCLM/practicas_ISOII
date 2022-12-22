@@ -1,0 +1,3 @@
+negocio.controllers.GestorMatriculacion#listarEstudiante(Ljava/lang/String;)Lnegocio/entities/Estudiante;
+negocio.entities.Estudiante#<init>()V
+negocio.entities.Estudiante#instance-init#

@@ -1,0 +1,115 @@
+
+5negocio.entities.Profesor#equals(Ljava/lang/Object;)Z\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaS S("startingBlock*É
+2\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaY
+ Y("f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaY Y(
+""*Å
+3\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaX X(íê
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaX X(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*9
+
+__unknown_file (
+negocio.entities.Profesor2
+getClass()éæ
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaX X("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()*
+2
+1*ˆ
+startingBlock\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaS S("Þ
+Û
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaR R(
+
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.Object¬
+©
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaS S(!
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%5*	
+3
+4
+6*É
+4\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaW
+ W("f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaW W(
+""*É
+6\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaU
+ U("f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaU U(
+""*ô
+1\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaZ Z(!Â
+¿
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaZ Z(""
+othernegocio.entities.Profesor"__id*5
+
+__unknown_file (
+
+objjava.lang.ObjectÃ
+À
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java[ [(
+%2java.lang.String"__id*B
+
+__unknown_file (&*$
+negocio.entities.Profesor"
+dniÊ
+Ç
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java[ [(&
+%3java.lang.String"__id*I
+
+__unknown_file (-*+
+"
+othernegocio.entities.Profesor"
+dniÐ
+Í
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java[	 [('
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.java[ [((
+"":w
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaS S(!
+objjava.lang.ObjectB
+negocio.entities.ProfesorH

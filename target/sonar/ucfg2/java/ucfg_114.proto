@@ -1,0 +1,25 @@
+
+Bpersistencia.AbstractEntityDAO#getSession()Lorg/hibernate/Session;a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java ("1*ì
+1a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java	 (ä
+á
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java	 ("
+%0org.hibernate.SessionFactory"__id*R
+
+__unknown_file (6*4 
+persistencia.AbstractEntityDAO"
+sessionfactory—”
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java	 (*
+%1org.hibernate.Session"Aorg.hibernate.SessionFactory#openSession()Lorg/hibernate/Session;*@
+
+__unknown_file ($
+"
+%0org.hibernate.SessionFactory2openSession()"‚
+a
+WC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/AbstractEntityDAO.java (+
+
+%1org.hibernate.SessionB" 
+persistencia.AbstractEntityDAO

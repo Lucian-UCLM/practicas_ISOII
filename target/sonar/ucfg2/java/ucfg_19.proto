@@ -1,0 +1,97 @@
+
+&negocio.entities.Matricula#hashCode()I_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÄ Ä("1*≈
+1_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ	 Å(Ÿ
+÷
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ Å( !
+%0negocio.entities.Estudiante"__id*J
+
+__unknown_file (.*,
+negocio.entities.Matricula"
+
+estudiante«
+ƒ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ" Å('
+%1java.util.Date"__id*E
+
+__unknown_file ()*'
+negocio.entities.Matricula"
+fecha–
+Õ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ) Å(5
+%2java.lang.String"__id*L
+
+__unknown_file (0*.
+negocio.entities.Matricula"
+idEstudianteÃ
+…
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅD Å(L
+%3java.lang.String"__id*H
+
+__unknown_file (,**
+negocio.entities.Matricula"
+
+idTitulo’
+“
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅV Å(^
+%4negocio.entities.ModoPago"__id*H
+
+__unknown_file (,**
+negocio.entities.Matricula"
+
+tipoPago÷
+”
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ` Å(f"
+%5negocio.entities.CursoPropio"__id*F
+
+__unknown_file (**(
+negocio.entities.Matricula"
+titulo˙
+˜
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ	 Å(g	
+%6int",java.util.Objects#hash([Ljava/lang/Object;)I*1
+
+__unknown_file ("
+java.util.Objects*?
+
+__unknown_file (#
+!
+%0negocio.entities.Estudiante*2
+
+__unknown_file (
+
+%1java.util.Date*4
+
+__unknown_file (
+
+%2java.lang.String*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+%3java.lang.String*"
+
+__unknown_file (
+""*=
+
+__unknown_file (!
+
+%4negocio.entities.ModoPago*@
+
+__unknown_file ($
+"
+%5negocio.entities.CursoPropio"i
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÅ Å(h
+""B
+negocio.entities.MatriculaH

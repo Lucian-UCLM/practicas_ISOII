@@ -1,0 +1,7 @@
+negocio.controllers.GestorPropuestasCursos#realizarPropuestaCurso(Ljava/lang/String;Ljava/lang/String;ILjava/util/Date;Ljava/util/Date;DILnegocio/entities/EstadoCurso;Lnegocio/entities/TipoCurso;Ljava/lang/String;Ljava/lang/String;I)Lnegocio/entities/CursoPropio;
+negocio.entities.CursoPropio#<init>(Ljava/lang/String;Ljava/lang/String;ILjava/util/Date;Ljava/util/Date;DILnegocio/entities/EstadoCurso;Lnegocio/entities/TipoCurso;Lnegocio/entities/Centro;Lnegocio/entities/ProfesorUCLM;Lnegocio/entities/ProfesorUCLM;)V
+negocio.entities.ProfesorUCLM#<init>(Ljava/lang/String;Lnegocio/entities/CategoriaProfesor;Lnegocio/entities/Centro;)V
+negocio.entities.Centro#instance-init#
+negocio.entities.ProfesorUCLM#instance-init#
+negocio.entities.CursoPropio#instance-init#
+negocio.entities.Centro#<init>(ILjava/lang/String;Ljava/lang/String;)V

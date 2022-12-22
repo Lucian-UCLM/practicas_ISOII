@@ -1,0 +1,124 @@
+
+6negocio.entities.Profesor#toString()Ljava/lang/String;\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaI I("1*¿
+1\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(Ã
+À
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(
+%0java.lang.String"__id*B
+
+__unknown_file (&*$
+negocio.entities.Profesor"
+dniñ
+î
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(
+%1java.lang.String"__concat*r
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(
+Profesor [dni=*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(
+
+%0java.lang.Stringì
+é
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(-
+%2java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(
+
+%1java.lang.String*m
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ" J(-
+	, nombre=Æ
+Ã
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ0 J(6
+%3java.lang.String"__id*E
+
+__unknown_file ()*'
+negocio.entities.Profesor"
+nombre÷
+ô
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(6
+%4java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(-
+
+%2java.lang.String*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ0 J(6
+
+%3java.lang.Stringï
+ì
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(G
+%5java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(6
+
+%4java.lang.String*p
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ9 J(G
+, apellidos=É
+Æ
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJJ J(S
+%6java.lang.String"__id*H
+
+__unknown_file (,**
+negocio.entities.Profesor"
+	apellidos÷
+ô
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(S
+%7java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(G
+
+%5java.lang.String*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJJ J(S
+
+%6java.lang.Stringì
+é
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(a
+%8java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(S
+
+%7java.lang.String*m
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJV J(a
+	, doctor=å
+â
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(j
+%9java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(a
+
+%8java.lang.String*f
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJd J(j
+""å
+â
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(p
+%10java.lang.String"__concat*x
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ	 J(j
+
+%9java.lang.String*e
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJm J(p
+]"y
+\
+RC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Profesor.javaJ J(q
+
+%10java.lang.StringB
+negocio.entities.ProfesorH

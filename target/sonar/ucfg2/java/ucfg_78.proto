@@ -1,0 +1,25 @@
+
+:persistencia.CursoPropioDAO#listarCursos()Ljava/util/List;^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java (&"1*È
+1^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java	 (ã
+à
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java	 ($
+%0persistencia.AbstractEntityDAO"__id*R
+
+__unknown_file (6*4
+persistencia.CursoPropioDAO"
+abstractEntityDAO‚ÿ
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java	 ($
+%1java.util.List"8persistencia.AbstractEntityDAO#showAll()Ljava/util/List;*B
+
+__unknown_file (&
+$
+%0persistencia.AbstractEntityDAO2	showAll()"x
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/persistencia/CursoPropioDAO.java (%
+
+%1java.util.ListB
+persistencia.CursoPropioDAOH

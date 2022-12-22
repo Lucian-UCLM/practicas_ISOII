@@ -1,0 +1,1 @@
+persistencia.CursoPropioDAO#listarCurso(Lnegocio/entities/CursoPropio;)Lnegocio/entities/CursoPropio;

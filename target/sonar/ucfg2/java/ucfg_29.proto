@@ -1,0 +1,26 @@
+
+Inegocio.controllers.GestorPropuestasCursos#listarCursos()Ljava/util/List;m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java/ /(&"1*Œ
+1m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java0	 0(õ
+ò
+m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java0	 0(!
+%0persistencia.CursoPropioDAO"__id*X
+
+__unknown_file (<*:,
+*negocio.controllers.GestorPropuestasCursos"
+
+cursodao•’
+m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java0	 0( 
+%1java.util.List":persistencia.CursoPropioDAO#listarCursos()Ljava/util/List;*?
+
+__unknown_file (#
+!
+%0persistencia.CursoPropioDAO2listarCursos()"‡
+m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java0 0(!
+
+%1java.util.ListB.,
+*negocio.controllers.GestorPropuestasCursosH

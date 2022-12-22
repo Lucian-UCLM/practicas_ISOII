@@ -1,0 +1,13 @@
+presentacion.PantallaMatriculacion#instance-init#
+negocio.controllers.GestorMatriculacion#<init>()V
+javax.swing.JLabel#<init>(Ljava/lang/String;)V
+javax.swing.JCheckBox#<init>(Ljava/lang/String;)V
+javax.swing.JList#<init>()V
+negocio.controllers.GestorMatriculacion#instance-init#
+javax.swing.JCheckBox#instance-init#
+javax.swing.JLabel#instance-init#
+javax.swing.JButton#<init>(Ljava/lang/String;)V
+javax.swing.DefaultListModel#instance-init#
+javax.swing.DefaultListModel#<init>()V
+javax.swing.JList#instance-init#
+javax.swing.JButton#instance-init#

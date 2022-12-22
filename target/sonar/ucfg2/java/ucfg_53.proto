@@ -1,0 +1,25 @@
+
+Knegocio.controllers.GestorMatriculacion#listarEstudiantes()Ljava/util/List;j
+`C:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorMatriculacion.java (*"1*‰
+1j
+`C:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorMatriculacion.java	 (ó
+ð
+j
+`C:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorMatriculacion.java	 ( 
+%0persistencia.EstudianteDAO"__id*Z
+
+__unknown_file (>*<)
+'negocio.controllers.GestorMatriculacion"
+estudiantedaoš—
+j
+`C:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorMatriculacion.java	 (*
+%1java.util.List">persistencia.EstudianteDAO#listarEstudiantes()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+%0persistencia.EstudianteDAO2listarEstudiantes()"„
+j
+`C:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorMatriculacion.java (+
+
+%1java.util.ListB+)
+'negocio.controllers.GestorMatriculacionH

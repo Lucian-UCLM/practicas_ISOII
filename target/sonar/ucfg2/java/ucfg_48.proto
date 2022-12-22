@@ -1,0 +1,197 @@
+
+8negocio.entities.Estudiante#toString()Ljava/lang/String;^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java_ _("1*ò/
+1^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(«
+ƒ
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java` `(!
+%0java.lang.String"__id*D
+
+__unknown_file ((*&
+negocio.entities.Estudiante"
+dni˘
+ˆ
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(!
+%1java.lang.String"__concat*v
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(
+Estudiante [dni=*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java` `(!
+
+%0java.lang.StringÚ
+Ô
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(/
+%2java.lang.String"__concat*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(!
+
+%1java.lang.String*o
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`$ `(/
+	, nombre= 
+«
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`2 `(8
+%3java.lang.String"__id*G
+
+__unknown_file (+*)
+negocio.entities.Estudiante"
+nombre˝
+˙
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(8
+%4java.lang.String"__concat*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(/
+
+%2java.lang.String*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`2 `(8
+
+%3java.lang.Stringı
+Ú
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(I
+%5java.lang.String"__concat*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(8
+
+%4java.lang.String*r
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`; `(I
+, apellidos=Õ
+ 
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`L `(U
+%6java.lang.String"__id*J
+
+__unknown_file (.*,
+negocio.entities.Estudiante"
+	apellidos˝
+˙
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(U
+%7java.lang.String"__concat*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(I
+
+%5java.lang.String*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`L `(U
+
+%6java.lang.Stringˆ
+Û
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(g
+%8java.lang.String"__concat*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(U
+
+%7java.lang.String*s
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`X `(g
+, titulacion=Œ
+À
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaa a(
+%9java.lang.String"__id*K
+
+__unknown_file (/*-
+negocio.entities.Estudiante"
+
+titulacion˛
+˚
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(
+%10java.lang.String"__concat*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 `(g
+
+%8java.lang.String*z
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaa a(
+
+%9java.lang.String˚
+¯
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(%
+%11java.lang.String"__concat*{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(
+
+%10java.lang.String*v
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaa a(%
+, cualificacion=“
+œ
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaa( a(5
+%12java.lang.String"__id*N
+
+__unknown_file (2*0
+negocio.entities.Estudiante"
+cualificacionÄ
+˝
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(5
+%13java.lang.String"__concat*{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(%
+
+%11java.lang.String*{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaa( a(5
+
+%12java.lang.String¯
+ı
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(G
+%14java.lang.String"__concat*{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(5
+
+%13java.lang.String*s
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaa8 a(G
+, matriculas=”
+–
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaaJ a(T
+%15java.util.Collection"__id*K
+
+__unknown_file (/*-
+negocio.entities.Estudiante"
+
+matriculasÑ
+Å
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(T
+%16java.lang.String"__concat*{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(G
+
+%14java.lang.String*
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaaJ a(T
+
+%15java.util.CollectionÏ
+È
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(Z
+%17java.lang.String"__concat*{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java`	 a(T
+
+%16java.lang.String*g
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.javaaW a(Z
+]"{
+^
+TC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Estudiante.java` a([
+
+%17java.lang.StringB
+negocio.entities.EstudianteH

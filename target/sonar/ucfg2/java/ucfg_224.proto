@@ -1,0 +1,154 @@
+
+8negocio.entities.CursoPropio#equals(Ljava/lang/Object;)Za
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaò ò("startingBlock*ì
+2a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú) ú(0Î
+Ë
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú8 ú(>
+%5java.lang.String"__id*H
+
+__unknown_file (,**
+negocio.entities.CursoPropio"
+nombreÕ
+Ò
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú@ ú(L
+%6java.lang.String"__id*O
+
+__unknown_file (3*1
+%
+othernegocio.entities.CursoPropio"
+nombreÕ
+Ò
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú) ú(M
+%7boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%5java.lang.String*4
+
+__unknown_file (
+
+%6java.lang.String*
+1*´
+3a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaù$ ù('Ê
+Ç
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaù ù((%
+othernegocio.entities.CursoPropio"__id*5
+
+__unknown_file (
+
+objjava.lang.ObjectÊ
+Ç
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú ú(
+%2java.lang.String"__id*D
+
+__unknown_file ((*&
+negocio.entities.CursoPropio"
+idÑ
+Î
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú ú($
+%3java.lang.String"__id*K
+
+__unknown_file (/*-
+%
+othernegocio.entities.CursoPropio"
+idÕ
+Ò
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú	 ú(%
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String*
+2
+1*—
+startingBlocka
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaò ò("ã
+à
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javañ ñ(
+
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.Object±
+®
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaò ò(!
+objjava.lang.Object"__annotation*"
+
+__unknown_file (
+
+%8*	
+5
+6
+8*Ó
+4a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaø
+ ø("k
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaø ø(
+""*×
+5a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java÷ ÷(õò
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java÷ ÷(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*<
+
+__unknown_file ( 
+negocio.entities.CursoPropio2
+getClass()îë
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.java÷ ÷("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()*
+3
+4*Ó
+6a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaö
+ ö("k
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaö ö(
+""*Ó
+8a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaô
+ ô("k
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaô ô(
+""*Ó
+1a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú ú(N"k
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaú ú(N
+"":|
+a
+UC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/CursoPropio.javaò ò(!
+objjava.lang.ObjectB 
+negocio.entities.CursoPropioH

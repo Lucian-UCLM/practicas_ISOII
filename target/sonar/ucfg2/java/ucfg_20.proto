@@ -1,0 +1,299 @@
+
+6negocio.entities.Matricula#equals(Ljava/lang/Object;)Z_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÖ Ö("startingBlock*ï
+2_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaê ê(◊
+‘
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaê ê(#
+%16negocio.entities.CursoPropio"__id*F
+
+__unknown_file (**(
+negocio.entities.Matricula"
+tituloﬁ
+€
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaê ê(*#
+%17negocio.entities.CursoPropio"__id*M
+
+__unknown_file (1*/
+#
+othernegocio.entities.Matricula"
+tituloÓ
+Î
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaê ê(+
+%18boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*A
+
+__unknown_file (%
+#
+%16negocio.entities.CursoPropio*A
+
+__unknown_file (%
+#
+%17negocio.entities.CursoPropio*
+1*‰
+14_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç9 ç(@«
+ƒ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaçH ç(M
+%5java.util.Date"__id*E
+
+__unknown_file ()*'
+negocio.entities.Matricula"
+fechaŒ
+À
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaçO ç(Z
+%6java.util.Date"__id*L
+
+__unknown_file (0*.
+#
+othernegocio.entities.Matricula"
+fechaœ
+Ã
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç9 ç([
+%7boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*2
+
+__unknown_file (
+
+%5java.util.Date*2
+
+__unknown_file (
+
+%6java.util.Date*
+2
+4
+8
+12
+1*ñ
+startingBlock_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÖ Ö("‚
+ﬂ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÑ Ñ(
+
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+objjava.lang.Object∞
+≠
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÖ Ö(!
+objjava.lang.Object"__annotation*#
+
+__unknown_file (
+
+%19*
+17
+18
+20*Ô
+15_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaå  å(#∆
+√
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaå å($#
+othernegocio.entities.Matricula"__id*5
+
+__unknown_file (
+
+objjava.lang.ObjectŸ
+÷
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç ç("!
+%2negocio.entities.Estudiante"__id*J
+
+__unknown_file (.*,
+negocio.entities.Matricula"
+
+estudiante‡
+›
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç$ ç(4!
+%3negocio.entities.Estudiante"__id*Q
+
+__unknown_file (5*3
+#
+othernegocio.entities.Matricula"
+
+estudianteÈ
+Ê
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç	 ç(5
+%4boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*?
+
+__unknown_file (#
+!
+%2negocio.entities.Estudiante*?
+
+__unknown_file (#
+!
+%3negocio.entities.Estudiante*
+2
+14
+4
+8
+12
+1*•
+4_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaèM è(U÷
+”
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaèM è(U 
+%14negocio.entities.ModoPago"__id*H
+
+__unknown_file (,**
+negocio.entities.Matricula"
+
+tipoPago›
+⁄
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaèY è(g 
+%15negocio.entities.ModoPago"__id*O
+
+__unknown_file (3*1
+#
+othernegocio.entities.Matricula"
+
+tipoPago*
+2
+1*–
+16_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaã
+ ã("i
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaã ã(
+""*“
+17_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaä ä(ÒÓ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaä ä(
+%0java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*:
+
+__unknown_file (
+negocio.entities.Matricula2
+getClass()ÏÈ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaä ä("
+%1java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*5
+
+__unknown_file (
+
+objjava.lang.Object2
+getClass()*
+15
+16*–
+18_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaâ
+ â("i
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaâ â(
+""*Ô
+8_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaè è(Õ
+ 
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaè è(
+%11java.lang.String"__id*H
+
+__unknown_file (,**
+negocio.entities.Matricula"
+
+idTitulo‘
+—
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaè  è(.
+%12java.lang.String"__id*O
+
+__unknown_file (3*1
+#
+othernegocio.entities.Matricula"
+
+idTitulo÷
+”
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaè è(/
+%13boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*5
+
+__unknown_file (
+
+%11java.lang.String*5
+
+__unknown_file (
+
+%12java.lang.String*	
+2
+4
+1*–
+20_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaá
+ á("i
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaá á(
+""*˜
+12_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaé é(–
+Õ
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaé é("
+%8java.lang.String"__id*L
+
+__unknown_file (0*.
+negocio.entities.Matricula"
+idEstudiante◊
+‘
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaé$ é(6
+%9java.lang.String"__id*S
+
+__unknown_file (7*5
+#
+othernegocio.entities.Matricula"
+idEstudiante‘
+—
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaé é(7
+%10boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*4
+
+__unknown_file (
+
+%8java.lang.String*4
+
+__unknown_file (
+
+%9java.lang.String*
+2
+4
+8
+1*œ
+1_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç ê(,"i
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaç ê(,
+"":z
+_
+SC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/Matricula.javaÖ Ö(!
+objjava.lang.ObjectB
+negocio.entities.MatriculaH

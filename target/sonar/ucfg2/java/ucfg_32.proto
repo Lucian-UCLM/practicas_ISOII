@@ -1,0 +1,25 @@
+
+Jnegocio.controllers.GestorPropuestasCursos#listarCentros()Ljava/util/List;m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java= =(""1*€
+1m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java>	 >(ñ
+î
+m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java>	 >(
+%0persistencia.CentroDAO"__id*Y
+
+__unknown_file (=*;,
+*negocio.controllers.GestorPropuestasCursos"
+	centrodaoŠ
+m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java>	 >("
+%1java.util.List"6persistencia.CentroDAO#listarCentros()Ljava/util/List;*:
+
+__unknown_file (
+
+%0persistencia.CentroDAO2listarCentros()"‡
+m
+cC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/controllers/GestorPropuestasCursos.java> >(#
+
+%1java.util.ListB.,
+*negocio.controllers.GestorPropuestasCursosH

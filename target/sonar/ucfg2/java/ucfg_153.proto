@@ -1,0 +1,124 @@
+
+:negocio.entities.ProfesorUCLM#toString()Ljava/lang/String;`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaI I("1*«
+1`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(%Ó
+Ð
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ( J(3
+%0java.lang.String"__id*N
+
+__unknown_file (2*0
+negocio.entities.ProfesorUCLM"
+dniProfesorŠ
+‡
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(3
+%1java.lang.String"__concat*‚
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(%
+ProfesorUCLM [dniProfesor=*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ( J(3
+
+%0java.lang.Stringû
+ø
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(D
+%2java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(3
+
+%1java.lang.String*t
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ6 J(D
+, categoria=ã
+à
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJG J(P(
+%3"negocio.entities.CategoriaProfesor"__id*L
+
+__unknown_file (0*.
+negocio.entities.ProfesorUCLM"
+	categoria–
+“
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(P
+%4java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(D
+
+%2java.lang.String*Ž
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJG J(P*
+(
+%3"negocio.entities.CategoriaProfesorƒ
+€
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(i
+%5java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(P
+
+%4java.lang.String*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJS J(i
+, centroAdscripcion=à
+Ý
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaK K(
+%6negocio.entities.Centro"__id*T
+
+__unknown_file (8*6
+negocio.entities.ProfesorUCLM"
+centroAdscripcion‹
+ˆ
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(
+%7java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 J(i
+
+%5java.lang.String*ƒ
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaK K(
+
+%6negocio.entities.Centro…
+‚
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(2
+%8java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(
+
+%7java.lang.String*~
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaK K(2
+, idCentroAdscripcion=ñ
+î
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(H
+%9java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(2
+
+%8java.lang.String*j
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaK5 K(H
+""ñ
+î
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(N
+%10java.lang.String"__concat*|
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ	 K(H
+
+%9java.lang.String*i
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaKK K(N
+]"}
+`
+VC:/Users/lucas/GitHub/practicas_ISOII/src/main/java/negocio/entities/ProfesorUCLM.javaJ K(O
+
+%10java.lang.StringB!
+negocio.entities.ProfesorUCLMH
