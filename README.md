@@ -16,14 +16,19 @@
         2. [Develop](#develop)
         3. [Feature-bbdd](#bbdd)
         4. [Feature-interfaces](#interface)
+        5. [SonarCloud](#sonarcloud)
+        6. [Testing](#testing)
+        7. [Mantenimiento](#mantenimiento)
 2. [Proceso de construcción del sistema](#construccion)
     1. [Maven](#maven)
 3. [Gestión de proyectos](#proyectos)
     1. [SCRUM](#scrum)
     2. [Product Backlog](#backlog)
-    3. [Sprint 1](#sprint)
-    4. [Issues en Github](#issues)
-    5. [Futuros sprints](#futuros)
+    3. [Issues en Github](#issues)
+    4. [Sprint 1](#sprint1)
+    5. [Sprint 2](#sprint2)
+    6. [Sprint 3](#sprint3)
+    7. [Sprint 4](#sprint4)
 4. [Persistencia](#persistencia)
     1. [Base de Datos Embebida](#embebida)
     2. [Acceso con hibernate](#hibernate)
@@ -37,6 +42,9 @@
     4. [PantallaJefeGabinete](#gabinete)
     5. [PantallaEmpleadosVicerrectorado](#vicerectorado)
     6. [PantallaMatricula](#matricula)
+6. [Gestión de Calidad](#gestionCalidad)
+7. [Testing](#testingCalidad)
+8. [Mantenimiento](#mantenimientoo)
 
 ## Control de versiones <a name="control"></a>
   ### Github <a name="github"></a>
@@ -58,6 +66,12 @@ En adición a Github usamos en la creación del repositorio local Github Desktop
   #### Feature-interfaces <a name="interface"></a>
   En esta rama se han creado las interfaces con un diseño no definitivo, pero orientado a los casos de uso del sistema, se irá editando en la rama develop cuando se haga merge a medida que se requiera
 
+  #### Sonarcloud <a name="sonarcloud"></a>
+  En esta rama se ha creado la configuración del proyecto con nuestro sonarcloud para poder mantenerlo de una forma más sencilla.
+  #### Testing <a name="testing"></a>
+  En esta rama se han creado todos los test con respecto a los controladores. También se ha configurado jacoco para poder ver el coverage de los tests.
+  #### Mantenimiento <a name="mantenimiento"></a>
+  En esta rama se ha reestructurado el código del proyecto para que sea más fácil de mantener en un futuro haciendo caso a las recomendaciones con respecto a bugs, code smells, security hotspots y código duplicado que nos proporciona el análisis estático de sonarcloud.
 
 ## Proceso de construcción del sistema <a name="construccion"></a>
   ### Maven <a name="maven"></a>
@@ -96,9 +110,103 @@ En adición a Github usamos en la creación del repositorio local Github Desktop
  ```
 * Junit lo usaremos más adelante para la automatización de pruebas.
 * Las tres dependencias de derby las usamos para crear la base de datos y editarla, tanto sus columnas, como sus relaciones, como el contenido que tiene.
-* Hibernate-core importa todos los jars necesarios para acceder a la base de datos usando hibernate
+* Hibernate-core importa todos los jars necesarios para acceder a la base de datos usando hibernate.
 
-## Control de versiones <a name="proyectos"></a>
+También usaremos los siguientes plugins para analizar el coverage de los test que hacemos además de otras cosas de utilidad para los desarrolladores
+```
+<plugin>
+	<groupId>org.jacoco</groupId>
+	<artifactId>jacoco-maven-plugin</artifactId>
+	<version>0.8.8</version>
+	<executions>
+		<execution>
+			<id>default-prepare-agent</id>
+			<goals>
+				<goal>prepare-agent</goal>
+			</goals>
+		</execution>
+		<execution>
+			<id>default-prepare-agent-integration</id>
+			<goals>
+				<goal>prepare-agent-integration</goal>
+			</goals>
+		</execution>
+		<execution>
+			<id>default-report</id>
+			<goals>
+				<goal>report</goal>
+			</goals>
+		</execution>
+		<execution>
+			<id>default-report-integration</id>
+			<goals>
+				<goal>report-integration</goal>
+			</goals>
+		</execution>
+		<execution>
+			<id>default-check</id>
+			<goals>
+				<goal>check</goal>
+			</goals>
+			<configuration>
+				<rules>
+					<!-- implementation is needed only for Maven 2 -->
+					<rule implementation="org.jacoco.maven.RuleConfiguration">
+						<element>BUNDLE</element>
+						<limits>
+							<!-- implementation is needed only for Maven 2 -->
+							<limit implementation="org.jacoco.report.check.Limit">
+								<counter>COMPLEXITY</counter>
+								<value>COVEREDRATIO</value>
+								<minimum>0.10</minimum>
+							</limit>
+						</limits>
+					</rule>
+				</rules>
+			</configuration>
+		</execution>
+	</executions>
+</plugin>
+```
+
+```
+<plugins>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-project-info-reports-plugin</artifactId>
+	</plugin>
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-jxr-plugin</artifactId>
+		<version>3.0.0</version>
+	</plugin>
+
+	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-surefire-report-plugin</artifactId>
+		<version>3.0.0-M5</version>
+		<configuration>
+			<skipEmptyReport>false</skipEmptyReport>
+		</configuration>
+	</plugin>
+
+	<plugin>
+		<groupId>org.jacoco</groupId>
+		<artifactId>jacoco-maven-plugin</artifactId>
+		<version>0.8.8</version>
+		<reportSets>
+			<reportSet>
+				<reports>
+					<report>report</report>
+				</reports>
+			</reportSet>
+		</reportSets>
+	</plugin>
+
+</plugins>
+```
+
+## Gestión de proyectos <a name="proyectos"></a>
   ### SCRUM <a name="scrum"></a>
   Como metodología de gestión de proyectos hemos escogido SCRUM debido a la naturaleza del proyecto y la necesidad de realizar entregas cada cierto tiempo. Esto implica que el equipo ha sido multifuncional y todos hemos realizado un mínimo en cada aspecto del proyecto. También es importante tener en cuenta que no hemos establecido un Scrum Master si no que todos hemos tenido alguna influencia en este papel al proyectar el plan de desarrollo e ir asegurando el Scrum entre el equipo .
 Al ser Scrum hemos definido una plantilla de sprints que nos servirá de guía a lo largo del desarrollo del proyecto, que de forma resumida consiste en: un sprint inicial más extenso en el que se desarrollará la arquitectura del sistema junto con una de las historias de usuario; y el resto de sprints que tendrán un duración normal y abarcan una historia de usuario cada uno.
@@ -118,14 +226,36 @@ Todas las historias se pueden ver a través de nuestro Trello en el siguiente [e
   ### Issues en Github <a name="issues"></a>
   Una vez realizado todo el Backlog, hemos incorporado cada historia de usuario al repositorio de GitHub en forma de issues. Además cuando definimos el sprint, las issues seleccionadas pasan al SprintBacklog y se les adjudica la etiqueta correspondiente. Esto ayuda a localizar rápidamente el estado actual de cada issue y cualquier información adicional. Para ver todas las etiquetas y su función, se recomienda visitar el apartado de “Labels” dentro de las Issues del repositorio.
 
-  ### Sprint 1 <a name="sprint"></a>
+  ### Sprint 1 <a name="sprint1"></a>
   El primer sprint que se corresponde con esta primera entrega, tenía una estimación de dos semanas, sin embargo debido a varias dificultades con la base de datos el sprint ha concluido a las tres semanas. Inicialmente este sprint abarcaría la construcción de la arquitectura junto a la historia de usuario de “Yo, como director de cursos quiero listar todos los cursos, poder hacer una nueva propuesta, editar un curso y crear una nueva edición de un curso”, pero un aspecto que no hemos tenido en cuenta al comienzo del proyecto ha sido la gestión de la configuración, lo cual ha dificultado la aplicación de Scrum los primeros 10 días del sprint. 
   
-  ### Futuros sprints <a name="futuros"></a>
-  Para los próximos sprints se pretende seguir la guía mencionada anteriormente, es decir cada sprint se correspondería con una historia de usuario y el tiempo estimado para cada uno es de 10 días. Por último, algunos de los sprint finales también abarcarían otros aspectos como testing, calidad y despliegue del software.
+  ### Sprint 2 <a name="sprint2"></a>
+  Para el Sprint 2 cubriremos las siguientes issues:
+* Yo, como jefe de gabinete vicerrectorado quiero poder consultar diferente información sobre los cursos.
+* Yo, como director de cursos quiero poder visualizar las propuestas de cada curso.
+* Yo, como vicerrector quiero poder evaluar la propuesta de un curso.
+
+Con una fecha límite de mediados de noviembre
+
+  ### Sprint 3 <a name="sprint3"></a>
+Para el Sprint 3 cubriremos las siguientes issues:
+* Desarrollar la cobertura de SonarQube.
+* Yo, como estudiante quiero poder matricularme en un curso así como elegir el método de pago.
+
+Con una fecha límite de principios de diciembre aunque se alargará la entrega por cuestiones no consideradas.
+
+  ### Sprint 4 <a name="sprint4"></a>
+Para el Sprint 4 cubriremos las siguientes issues:
+* Implementación testing con Junit
+* Yo, como usuario quiero poder logearme en el sistema para realizar diferentes acciones ICEBOX (al final no desarrollada)
+* Yo, como usuario del sistema deseo que la interfaz sea usable, confidencial, persistente, etc ICEBOX (al final no desarrollada)
+* Mejorar Hibernate utilizando relaciones ICEBOX (al final no desarrollada)
+
+Con una fecha límite del 22 de diciembre.\
+En esta fecha haremos la release 2.0
 
 
-## Control de versiones <a name="persistencia"></a>
+## Persistencia <a name="persistencia"></a>
 
   ### Base de Datos Embebida <a name="embebida"></a>
   La base de datos es embebida y está creada con DBeaver, esto implica que está integrada en el sistema por lo que no tiene contraseña, las tablas están localizadas en el usuario root. El diagrama es el siguiente:
@@ -223,6 +353,7 @@ protected Session getSession() {
 ```
 Vamos a necesitar que el programa haga con genéricos las siguientes operaciones de base de datos:
 * save(): guarda el objeto pasado por parámetro en la base de datos
+
 ```Apex
 
 public void save(E entity) {
@@ -235,6 +366,7 @@ public void save(E entity) {
 
 ```
 * update(): edita el objeto pasado por parámetro en la base de datos
+
 ```Apex
 
 public void update(E entity) {
@@ -246,6 +378,7 @@ public void update(E entity) {
 	}
 ```
 * delete(): borra el objeto pasado por parámetro en la base de datos
+
 ```Apex
 
 public void delete(E entity) {
@@ -258,6 +391,7 @@ public void delete(E entity) {
 ```
 
 * showAll(): recoge en una lista de objetos todos los objetos de una clase determinada (entityClass) de la base de datos
+
 ```Apex
 
 public List<E> showAll() {
@@ -271,7 +405,24 @@ public List<E> showAll() {
 		return list;
 	}
 ```
+
+* showAllWhere(where): recoge una lista de objetos con una sentencia where un atributo específico es igual a un entero/String específico, depende de lo que se le pase desde el DAO que lo invoca
+
+```Apex
+
+public List<E> showAllWhere(String where) {
+		Session sesion = getSession();
+		sesion.beginTransaction();
+		Query<E> query = sesion.createQuery("from " + entityClass.getSimpleName() + " where " + where, entityClass);
+		list = query.list();
+		sesion.getTransaction().commit();
+		sesion.close();
+		return list;
+	}
+```
+
 * show(id): recoge un objeto determinado por entityClass con una id igual a lo que se pasa por parámetro en la base de datos. Son dos métodos que se sobreescriben ya que a veces el id es una cadena de carácteres y otras veces es un entero.
+
 ```Apex
 
 public Object show(String id) {
@@ -310,27 +461,82 @@ public Object show(int id) {
   ### PantallaDireccionCurso <a name="direccion"></a>
   En esta pantalla el usuario podrá ver una lista con todos los cursos guardados en la base de datos y podrá realizar diferentes acciones con ellos: cambiar el nombre, los creditos ECTS, el importe, el tipo, la fecha de inicio y fin, el centro, director y secretario.
 Para introducir un nuevo curso, no tiene que haber otro curso seleccionado (lo podemos deseleccionar con el botón “Limpiar todo”) rellenamos todos los campos y presionamos el botón “Nuevo Curso”.
- PantallaDireccionCurso        |
+| PantallaDireccionCurso        |
 :-------------------------:|
 ![direccion](/SOURCE_README/direccion.png)  |
 
 
 ***Las 3 pantallas restantes se han planteado para ver como serán desarrolladas en el futuro.***
   ### PantallaJefeGabinete <a name="gabinete"></a>
-  En esta pantalla el jefe de gabinete podrá consultar diferente información sobre cursos seleccionando con los checkbox, filtrando por fechas de inicio y fin y por estado del curso
-   PantallaJefeGabinete        |
+  En esta pantalla el jefe de gabinete podrá consultar diferente información sobre cursos seleccionando con los checkbox, filtrando por fechas de inicio y fin y por estado del curso, también se mostrarán los ingresos de esos cursos filtrados
+|   PantallaJefeGabinete        |
 :-------------------------:|
-![jefe_gabinete](/SOURCE_README/jede_gabinete.png)  |
+| ![](/SOURCE_README/jefe_gabinete.jpeg)  |
 
 
   ### PantallaEmpleadosVicerrectorado <a name="vicerectorado"></a>
-  En esta pantalla se mostrarán los cursos disponibles y se podrán editar así como dar de alta los cursos que tengan estado validado
-   PantallaEmpleadosVicerrectorado        |
+  En esta pantalla se mostrarán los cursos PROPUESTOS a la izquierda, se podrán poner a VALIDADO o a PROPUESTA_RECHAZADA, a la derecha se mostrarán los cursos VALIDADOS, si le das al botón “Dar de Alta” el curso cambiará a EN_MATRICULACION.
+|   PantallaEmpleadosVicerrectorado        |
 :-------------------------:|
-![vicerectorado](/SOURCE_README/vicerectorado.png)  |
+| ![](/SOURCE_README/vicerectorado.jpeg)  |
 
   ### PantallaMatricula <a name="matricula"></a>
-  En esta pantalla el usuario podrá matricularse en un curso, por lo que se mostrará una lista con todos los cursos disponibles, al pulsar el botón de realizar matricula se rellenarán los datos del estudiante que se esta matriculando así como el curso al que se quiere matricular. Podrá elegir con 2 botones el método de pago, paco con transferencia o con Tarjeta.
-    PantallaMatricula        |
+  En esta pantalla el usuario podrá matricularse en un curso, cuando se seleccione el alumno se mostrarán en una lista los cursos en los que no tiene una matrícula o los cursos donde tiene una matrícula y no está pagada.
+En el caso de que pinche en uno de los cursos en los que no está matriculado se habilitará el botón de “Realizar Matriculación”, esto creará una matrícula del alumno en ese curso sin pagar. Sin embargo si pincha en un curso en el que está matriculado pero no está pagado se habilitará el botón de “Realizar Pago”, al pinchar en el botón la matrícula será pagada en la forma de pago que se haya marcado en las checkbox arriba.
+
+|    PantallaMatricula        |
 :-------------------------:|
-![matriculacion](/SOURCE_README/matriculacion.png)  |
+| ![](/SOURCE_README/matriculacion.jpeg)  |
+
+## Gestión de calidad <a name="gestionCalidad"></a>
+A la hora de adaptar la calidad al software hemos utilizado las bases del concepto de Quality By Design, utilizando el ciclo de Process Understanding, Design, Scientific Knowledge, Process Control. De esta manera al realizar nuevas funcionalidades siempre comenzamos **entendiendo** lo que debería hacer una nueva funcionalidad (por ejemplo, realizar una consulta debería permitir acceder a la información de la base de datos y obtener un informe sobre los datos solicitados), después procedemos a **diseñar** como se realizaria esta implementación (sobre toda la parte visual, referente a la interfaz con la que va a interactuar el usuario). \
+A continuación definiremos los **procesos** que se realizarán para poder llevar a cabo dicha funcionalidad (en este caso una sentencia SQL que devuelva la información adecuada) y por último un **control del proceso** para asegurar el correcto funcionamiento (para las consulta un control de error en el que se obligue al usuario rellenar los campos de la consulta). \
+Este ha sido el esquema seguido en la mayoría de las nuevas funcionalidades en las que es el dominio y el software los que se adaptan a los requisitos y no al contrario.
+
+Para la gestión de la calidad hemos utilizado principalmente Sonar Cloud para los análisis, pero además hemos hecho uso de Sonar Lint como principal herramienta dentro de nuestro IDE para una resolución más rápida y efectiva de las diferentes “issues”. \
+Después de configurar apropiadamente Sonar Cloud con Github Actions para una integración continua, hemos continuado el desarrollo del proyecto siempre teniendo en cuenta las diferentes soluciones que Sonar Lint nos indicaba para cualquier bug, code smell y el resto de “issues” posibles. \
+La entrega de los nuevos Sprints realizados a partir de esta configuración han tenido la siguiente estructura:
+* Implementación de nueva funcionalidad
+* Análisis para conocer las diferentes issues provocadas por el desarrollo y la implementación de la nueva funcionalidad.
+* Mejora a nivel de código junto a Sonar Lint para resolver las issues.
+* Nuevo análisis en Sonar Cloud para conocer la mejora.
+Además de resolver los problemas que indicaba Sonar Lint, hemos reestructurado varias clases para un mejor entendimiento del código y su funcionamiento, incluyendo cierta abstracción en las interfaces a la hora de interactuar con estas. 
+
+Por otro lado, para hacer un análisis más ajustado de Sonar Cloud se han modificado la Quality Gate y algunos Quality Profiles. En concreto, se ha creado una nueva Quality Gate en la que se ha bajado el requerimiento mínimo de coverage a un 30%; el Quality Profile de XML ha sido copiado y modificado, desactivando un regla de seguridad debido a su complicado manejo y se ha realizado lo mismo con el Quality Profile de Java editando y desactivando algunas de las reglas por la misma razón. Las reglas modificadas o desactivadas son las siguientes:
+* Cognitive Complexity of methods should not be too high (java:S3776)
+* Jump statements should not be redundant (java:S3626)
+* Fields in a "Serializable" class should either be transient or serializable (java:S1948)
+* Formatting SQL queries is security-sensitive (java:S2077)
+* Methods should not have too many parameters (java:S107)
+* Hard-coded credentials are security-sensitive (xml:S2068)
+
+## Testing <a name="testingCalidad"></a>
+  **[Link para acceder a informes de Maven](https://empresauriossa.000webhostapp.com/site/index.html)**
+  
+  **[Link a carpeta testing](/practicas_ISOII/Tablas_Testing/)**
+  
+Al realizar el plan de testing hemos analizado los diferentes requisitos e historias de usuario existentes para poder idear las pruebas más ajustadas a estas. Una vez analizado, hemos llegado a la conclusión de que la capa más crítica para realizar los test se trataba de la capa de negocio, en concreto los controladores, ya que contiene gran parte del dominio del sistema. Debido a esto la mayoría de pruebas que se han realizado han sido de caja blanca, en concreto pruebas unitarias para poder comprobar el correcto funcionamiento de las entidades y la persistencia. \
+Debido al deseo de automatizar estas pruebas no ha sido posible realizar pruebas a la capa de presentación ya que está formada en su totalidad por elementos cuyo testeo resulta problemático en entornos sin interfaz gráfica como Github Actions, además que la mayoría requieren estimulación por parte del usuario. 
+
+**Para poder ver todas las tablas puede acceder desde los siguientes enlaces:**
+
+**[testDarBajaCurso](https://empresauriossa.000webhostapp.com/testDarBajaCurso.html)** \
+**[testEditarPropuestaCurso](https://empresauriossa.000webhostapp.com/testEditarPropuestaCurso.html)** \
+**[testListarCentros](https://empresauriossa.000webhostapp.com/testListarCentros.html)** \
+**[testListarCurso](https://empresauriossa.000webhostapp.com/testListarCurso.html)** \
+**[testListarCursos](https://empresauriossa.000webhostapp.com/testListarCursos.html)** \
+**[testListarCursosWhereEstadoCurso](https://empresauriossa.000webhostapp.com/testListarCursosWhereEstadoCurso.html)** \
+**[testListarCursosWhereTipoCurso](https://empresauriossa.000webhostapp.com/testListarCursosWhereTipoCurso.html)** \
+**[testListarEstudiante](https://empresauriossa.000webhostapp.com/testListarEstudiante.html)** \
+**[testListarEstudiantes](https://empresauriossa.000webhostapp.com/testListarEstudiantes.html)** \
+**[testListarMatriculas](https://empresauriossa.000webhostapp.com/testListarMatriculas.html)** \
+**[testListarProfesoresUCLM](https://empresauriossa.000webhostapp.com/testListarProfesoresUCLM.html)** \
+**[testRealizarMatriculacion](https://empresauriossa.000webhostapp.com/testRealizarMatriculacion.html)** \
+**[testRealizarPagoMatricula](https://empresauriossa.000webhostapp.com/testRealizarPagoMatricula.html)** \
+**[testRealizarPropuestaCurso](https://empresauriossa.000webhostapp.com/testRealizarPropuestaCurso.html)**
+
+## Mantenimiento <a name="mantenimientoo"></a>
+
+Gracias a los análisis de Sonar Cloud y la herramiento de Sonar Lint, al realizar el plan de mantenimiento se han ordenado de mayor a menor prioridad los diferentes tipos de issues de la siguiente manera: Vulnerabilidades, Bugs, Security Hotspots y Code Smells. \
+Debido a que no hemos tenido ningún tipo de vulnerabilidad hemos podido pasar a resolver directamente los bugs que simplemente se trataban de variables que se inicializan a null. Por otra parte ha sido necesario un mayor esfera en las Security Hotspots ya que algunos se trataban de contraseñas o usuarios que se guardaban directamente en el código para realizar pruebas o conexiones a la base de datos, la mejor solución a este problema es realizar un archivo de configuración personal para guardar este tipo de información sensible. \
+Por último para resolver gran parte de los Code Smells se ha hecho uso de la herramienta de Sonar Lint que permite una rápida modificación para los smells más sencillos y una gran ayuda para los más complicados. Algunos de estos han sido definiciones abstractas de variables sin parametrizar adecuadamente, nombres inapropiados para variables, código residual y comentarios, etc.
